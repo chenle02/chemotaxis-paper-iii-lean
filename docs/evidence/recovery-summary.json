@@ -32,6 +32,6 @@
     "receipt": "c749b53b0221-systemd-user-chemotaxis-public-evidence.service-4aa33770c3694c2795ff01001fe5756a-h-24e00fc5da6c.json",
     "original_driver_sha256": "c27b932b4da7dc07efc25084c44ce142256eacba00f75f70b6754a3fdc8e5b0d",
     "normalized_listing_sha256": "dd35b1af3ab3f3ac7bcd269f9c382e48f5f3532a300ce0856fc07078e1030d71",
-    "normalization": "Only three private location strings replaced with explicit placeholders. Original driver remains preserved privately and hash-bound by the collector manifest; this listing is not asserted byte-identical or runnable."
+    "normalization": "Three configured location substitutions; two matched literals (checkout and installation); state rule matched zero. Original driver remains preserved privately and hash-bound by the collector manifest; this listing is not asserted byte-identical or runnable."
   }
 }

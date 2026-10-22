@@ -294,4 +294,3 @@ ChemotaxisBifurcation.WeakH2MeanJet.quadratic_constant_zero : ∀ {L : ℝ} (hL 
 | Signed off by | Lean kernel/audit evidence and AI-assisted export review, 2026-10-22 |
 
 </details>
-

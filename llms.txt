@@ -1,0 +1,6 @@
+# Chemotaxis III Lean companion
+
+Public repository: https://github.com/chenle02/chemotaxis-paper-iii-lean
+Paper: https://github.com/chenle02/chemotaxis-paper-iii
+
+Read README.md, docs/what-is-proved.md, docs/verification.md and data/public-scope-ledger.json before interpreting claims. Coverage is 47 verified scopes, 23 conditional scopes and 3 exclusions across 73 overlapping scopes, not a whole-paper correctness percentage. There are 1525 indexed public declarations including definitions. Whole PDE bifurcation, center manifolds, global alternatives/correspondence and stability are not certified. Supplied analytic family/jet/branch hypotheses remain explicit. Build with ./verify.sh; toolchain and dependency pins are immutable for a release. See LICENSE and CITATION.cff.

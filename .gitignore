@@ -1,0 +1,7 @@
+.lake/
+.verification/
+__pycache__/
+site/
+.lean-pkg-private-patterns
+**/emails/
+**/correspondence/

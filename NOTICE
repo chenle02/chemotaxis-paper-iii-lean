@@ -1,0 +1,12 @@
+chemotaxis-bifurcation-spikes-lean
+Copyright 2026 Le Chen
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The reused finite-verification Lean modules were first published by their
+sole author, Le Chen, under the MIT license in chenle02/Chemataxis_Numerics;
+he has relicensed them here under the Apache License, Version 2.0.
+
+scripts/AuditInventory.lean.txt adapts module enumeration from
+leanprover-community/axiom-audit (commit 46024e00), Apache License,
+Version 2.0; its license text is kept in scripts/LICENSE.axiom-audit.

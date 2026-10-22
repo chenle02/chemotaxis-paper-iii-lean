@@ -1,0 +1,27 @@
+name = "chemotaxis-bifurcation-lean"
+version = "0.1.0"
+defaultTargets = ["ChemotaxisBifurcation"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "ChemotaxisBifurcation"
+
+# Comparator tier (Palomar layout): trusted Mathlib-only statements and the
+# untrusted proofs. Not default targets; `Challenge` contains `sorry` by design.
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+# Headline comparator tier: twelve curated statements (HeadlineChallenge under
+# 300 lines, Mathlib only). Not default targets; `HeadlineChallenge` has `sorry`.
+[[lean_lib]]
+name = "HeadlineChallenge"
+
+[[lean_lib]]
+name = "HeadlineSolution"

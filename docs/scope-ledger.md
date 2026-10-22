@@ -1,0 +1,2434 @@
+# Manuscript scope ledger
+
+These 73 overlapping scopes retain the accepted manuscript correspondence and explicit input boundaries. This public summary does not reproduce private review histories or count full theorems. Fresh release receipts check the exported proof source; they do not by themselves re-review prose fidelity.
+
+Counts: **47 verified / 23 conditional / 3 excluded**.
+
+## Proposition 1.1 — verified
+
+Reference: p. 5; `paper3/P:review-prop-2/mode-sign-core`.
+
+V2 scope: The semigroup and nonlinear PDE stability conclusions in the proposition are excluded; this row covers only modewise ordered-field algebra.
+
+## Theorem 1.1 — outside-agreed-scope
+
+Reference: p. 6; `paper3/T:local-bifurcation/part-1-pde`.
+
+V2 scope: Requires center-manifold construction, finite-regularity remainder control, implicit bifurcation, and PDE spectral stability.
+
+## Theorem 1.1 — verified-conditional
+
+Reference: p. 6; `paper3/T:local-bifurcation/part-1-scalar-core`.
+
+V2 scope: The finite scalar side, derivative-sign, and amplitude conclusions are proved from the explicit reduced equation and separate remainder interfaces. Center-manifold reduction, branch existence, and PDE stability lifting remain outside this row.
+
+Supplied inputs:
+
+- identification of η=χ₀−χ* and s=u_n₀ with the reduced scalar equation
+- α>0 and β≠0
+- fixed C≥0 and 0<r≤1
+- uniform bound |R(η,s)|≤C(|s|η²+|s|³|η|+s⁴) on |η|,|s|≤r, or its stronger Eq. 2.43 version
+- HasDerivAt (R η) (Rs η s) s throughout that box
+- uniform derivative bound |Rs(η,s)|≤C(η²+s²|η|+|s|³), or the stronger matching version
+
+## Theorem 1.2(1) — verified-conditional
+
+Reference: p. 8; `paper3/T:local-bifurcation/part-2`.
+
+Case (iii) is covered for the corrected statement (negativity for beta >= 0, beta != beta_0); see finding v1-misprint-thm12-iii-beta-range.
+
+Supplied inputs:
+
+- identification of the reduced cubic coefficient with E:beta-n0
+- quadratic graph coefficients E:a_0,i and E:a_k,i>0 and cubic assembly E:Gamma-n0-explicit
+- fixed-mass coefficient identification E:beta-n0-minimal with a=b=a₀=0
+
+## Theorem 1.2(2) — verified-conditional
+
+Reference: p. 8; `paper3/T:local-bifurcation/part-3`.
+
+V2 scope: The all-parameter physical rational formula, degree/cancellation bounds, admissible mode corridors, roots, limits, and finite sign consequences are proved. Excluded tie bifurcations and PDE branch/stability conclusions are not classified.
+
+Supplied inputs:
+
+- identification of the non-minimal reduced cubic coefficient with E:beta-n0
+- its quadratic graph and cubic assembly formulas E:a_0,i, E:a_k,i>0, and E:Gamma-n0-explicit
+
+## Remark 1.1(1) — verified-conditional
+
+Reference: p. 7; `paper3/R:local-bifurcation-minimal`.
+
+V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE reduction and PDE spectral stability remain inputs.
+
+Supplied inputs:
+
+- identification of the minimal-model scalar equation and its coefficients, including the fixed-mass reduction
+- α>0 and β≠0
+- fixed C≥0 and 0<r≤1
+- uniform weak mixed value bound on |η|,|s|≤r
+- differentiability in s and the uniform weak derivative bound for the full mapped scalar interface
+- For the stronger v2 value and derivative bounds: C4 reduced-field JetHyp and exact TrivialBranchLinearization in the physical Fourier amplitude and original time coordinate.
+
+## Theorem 1.3 — outside-agreed-scope
+
+Reference: p. 10; `paper3/T:global-extension`.
+
+V2 scope: Requires unilateral global bifurcation, compactness, and PDE a priori theory.
+
+## Theorem 1.4 — verified
+
+Reference: p. 11; `paper3/T:spiky-solu-thm`.
+
+the whole frozen Theorem 1.4 is proved for given actual positive nonconstant classical stationary families: gradient blowup for every gamma>0 in both models, with prescribed mass only in the minimal model and actual PDE-derived mass in the logistic model; for logistic gamma<1+alpha the same subsequence has constant C1 signal limit, every conjugate-Lq source and signal derivative test, and 0<=c<=uStar^gamma. Actual maxima and all analytic compactness/extraction inputs are constructed, not assumed. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.
+
+## Remark 1.3(2) — verified
+
+Reference: p. 11; `paper3/R:no-delta-concentration`.
+
+The exact quantitative local-mass bounds, uniform decay and atomless-limit/no-Dirac wrappers together prove the whole exclusion remark for all given stationary spike families. The remark does not assert such a family exists; the manuscript explicitly leaves nonminimal-family existence open. Promotion of this parent exclusion to verified is honest within that universal exclusion scope.
+
+## Proposition 1.2 — verified
+
+Reference: p. 12; `paper3/T:semidiscrete-threshold`.
+
+V2 scope: The discrete eigenvalue/threshold functions, changing-mode minima, physical identification, and convergence are proved together with the concrete scheme-to-modal bridge. No semidiscrete trajectory existence or nonlinear stability theorem is asserted.
+
+## Equation 1.24 (read with -Delta_h) — verified
+
+Reference: p. 12; `paper3/T:semidiscrete-threshold/discrete-stencil-spectrum`.
+
+Verified for the corrected statement: Equation 1.24 read with -Delta_h (eigenvalues 4 h^-2 sin^2(n pi/(2N)), n=0..N, of the reflected Neumann stencil).
+
+## Equation 6.1 — verified
+
+Reference: p. 36; `paper3/T:semidiscrete-threshold/discrete-linearization`.
+
+V2 scope: Directional derivatives of both literal schemes, the conservative all-node identity, fixed-mass composition, elliptic elimination, modal growth, and threshold minimum are proved. No ODE trajectory existence, nonlinear stability, or PDE semigroup conclusion is asserted.
+
+## Lemma 2.1, Equations 2.1-2.4 — verified
+
+Reference: p. 13; `paper3/L:trig-integrals`.
+
+V2 scope: Current scope is finite identities only; the former ell-one infinite-series lemma is a different statement.
+
+## Equation 2.16 — outside-agreed-scope
+
+Reference: p. 15; `paper3/E:center-manifold-eq`.
+
+V2 scope: The center graph is an analytic input to conditional finite-jet theorems.
+
+## Equation 2.8 — verified
+
+Reference: p. 14; `paper3/E:B0-Bu-Bv-eq`.
+
+V2 scope: The retained declarations are the derivative formulas of the mobility from which B0, Bu and Bv follow at (u*, 1+v*); the formulas are identical with the same positive-base domain. Their later infinite-mode use does not change the primitive derivative types.
+
+## Equation 2.9 — verified
+
+Reference: p. 14; `paper3/E:Buu-Buv-Bvv-eq`.
+
+V2 scope: The factorial-normalized Buu, Buv and Bvv formulas and positive-base hypotheses are unchanged.
+
+## Equation 2.10 — verified
+
+Reference: p. 14; `paper3/E:L1-L2-eq`.
+
+V2 scope: A-prime, A-second and A-third retain the same factorial convention (Taylor coefficients of the logistic source at u*).
+
+## Equation 2.11 — verified
+
+Reference: p. 14; `paper3/E:C-const`.
+
+V2 scope: The three signal-source Taylor coefficients are formula-identical and retain the same factorial normalization.
+
+## Equation 2.20 — verified
+
+Reference: p. 16; `paper3/E:Ck-restated`.
+
+actual nonlinear Neumann signal response: all three physical Ck coefficients are identified by a derived actual cubic response jet with quartic bound, preserving zero/positive mode normalization and manuscript factors2 and4. The first actual normalized modal derivative is derived, including the Mathlib-only actual_modal_derivative interface, without a projected balance, response differentiability, response Taylor remainder or abstract resolvent-response assumption. Positive base/equilibrium/mu/L and ordinary given actual solution-family regularity/PDE/Neumann data are explicit. Equation2.20(p16) is covered at this coefficient/actual-family scope; center-manifold or response-family existence is not claimed.
+
+## Equation 2.32 — verified-conditional
+
+Reference: p. 19; `paper3/E:Gamma2n0-explicit`.
+
+V2 scope: The displayed second-harmonic coefficient is identical. Current infinite convolution formulas reduce at quadratic center order to the same constant/second-mode support; no infinite-series theorem is claimed by this row.
+
+Supplied inputs:
+
+- audited primitive Taylor coefficients and quadratic elliptic signal jet
+- positive equilibrium with signal equilibrium relation and nu,gamma>0
+- L>0 and n0>0 with x=lambda_n0
+
+## Equation 2.33 — verified-conditional
+
+Reference: p. 19; `paper3/E:a_0,i`.
+
+All original quadratic coefficient extraction and logistic formula scope are retained; center-graph existence and actual invariance remain conditional. Separately, the minimal fixed-mass constant coefficient is now derived: an actual mean-zero weak-H2 perturbation family with the prescribed cubic phase-norm Peano expansion and eventual zero population mass has jet.a0=0. Positive length and mode remain explicit; no mass or critical-kernel hypothesis on H3 is needed. For a physical positive fixed-mean population, the mean-zero family is obtained by the existing homogeneous subtraction dictionary; the theorem does not claim that a positive population has zero mass. This is a conservation-based minimal consumer, not a proof of the logistic coefficient value, actual graph construction, or dynamical invariance. No primary promotion is inferred.
+
+Supplied inputs:
+
+- degree-two constant-mode invariance residual obtained from the center-graph equations
+- zero mean of the quadratic graph profile for the separate fixed-mass consumer
+- positive domain length and positive mode index when applying that consumer
+
+Further accepted input reductions:
+
+```json
+{
+  "date": "2026-10-22",
+  "date_basis": "UTC",
+  "source_gate": "d0a898282bdb2e08b283eda564439fe36e1cb08e",
+  "boundary": "Scoped actual complement, elliptic-family and conservation ingredients are supplied by the new exact types. Population family/jet construction, critical sensitivity/mode, actual operator/branch identification, global bifurcation and PDE stability remain. No parent status change."
+}
+```
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/E:a_0,i/cosine-complement-support/minimal-mass-quadratic-constant",
+    "status": "verified-conditional",
+    "scope": "For an actual mean-zero weak-H2 perturbation family with a genuine cubic phase-norm Peano expansion, eventual population mass zero forces the quadratic constant coefficient jet.a0=0. No mass or Fourier-kernel condition on H3 is assumed. This is the separate minimal fixed-mass conservation consumer, not a derivation of the logistic quadratic constant formula.",
+    "declarations": [
+      "ChemotaxisBifurcation.WeakH2MeanJet.quadratic_constant_zero"
+    ],
+    "conditional_inputs": [
+      "0<L and positive integer mode n; arbitrary QuadraticJetData jet, actual phase vector H3, and phase family J: real amplitude to weak-H2 phase.",
+      "Eventually in ordinary two-sided nhds 0, populationMass(J(t))=0. J is the mean-zero perturbation family; identifying it with a fixed-positive-mean population minus its homogeneous base uses the existing affine dictionary.",
+      "In the genuine phase norm, J(t)-[t*mode_n+t^2*(jet.a0*const1+jet.a2*mode_2n)+t^3*H3]=o(t^3). No H3 mass/kernel premise, no graph construction, and no dynamical invariance premise or conclusion. Exact printed type retains all domains."
+    ]
+  }
+]
+```
+
+</details>
+
+## Equation 2.36b — verified-conditional
+
+Reference: p. 20; `paper3/E:a_k,i>0`.
+
+V2 scope: The bA''/2 term is mandatory. Any legacy wrapper omitting it is rejected.
+
+Supplied inputs:
+
+- vanishing degree-two center-graph invariance polynomial and projected stable-mode balances
+- audited quadratic forcing and physical coefficient identification
+- positive physical parameters and equilibrium relations
+- unique strict critical mode, supplying nonzero stable growth rates, particularly sigma_(2n0)
+
+## Equation 2.42 — verified-conditional
+
+Reference: p. 20; `paper3/E:E-F-G-H`.
+
+All original finite E, F, G, Q, R and S algebra and prior H evidence are retained. The critical cubic H signal response now follows for an actual Neumann elliptic signal family from a genuine weak-H2 population cubic norm Peano expansion with prescribed constant/second-harmonic quadratic term and critical-orthogonal H3. Weighted integrability, projection algebra and negligible modal residual are derived; no projected cubic signal balance or signal response jet is assumed in this consumer. Positive length/mode, positive uStar and mu, SignalEquilibrium, exact representatives and eventual actual elliptic solutions remain explicit. The given a0/a2 and population jet are not derived from center-graph invariance. The conclusion is a critical Fourier-coordinate asymptotic at fixed physical parameters and two-sided amplitude nhds0, not a full signal-space jet, mixed parameter jet, or graph/branch/stability construction. Parent scope remains conditional and earlier histories are retained.
+
+Supplied inputs:
+
+- projected cubic elliptic signal balance
+- weighted interval integrability of h3φₙ, (φh2)φₙ, and φ³φₙ
+- zero critical projection of h3
+- identification of φ and h2 with the critical cosine and quadratic graph profile giving Π(φh2)=a0+a2/2 and Π(φ³)=3/4
+- physical signal-equilibrium relation and positive parameters for the scaled-to-physical identification
+
+Further accepted input reductions:
+
+```json
+{
+  "date": "2026-10-22",
+  "date_basis": "UTC",
+  "source_gate": "d0a898282bdb2e08b283eda564439fe36e1cb08e",
+  "boundary": "Scoped actual complement, elliptic-family and conservation ingredients are supplied by the new exact types. Population family/jet construction, critical sensitivity/mode, actual operator/branch identification, global bifurcation and PDE stability remain. No parent status change."
+}
+```
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/E:E-F-G-H/cosine-complement-support/curved-actual-signal-response",
+    "status": "verified-conditional",
+    "scope": "The critical cubic H coefficient of an actual elliptic signal family is derived from a genuine weak-H2 population norm Peano expansion, with prescribed constant/second-harmonic quadratic term and critical-orthogonal cubic term. No projected signal balance or signal-family jet is assumed. Nine theorems and one continuous projection definition; the result is a critical Fourier-coordinate asymptotic, not a full signal-space jet, graph construction, or invariance proof.",
+    "declarations": [
+      "ChemotaxisBifurcation.CurvedSignalResponse.actual_residual_cubic_negligible",
+      "ChemotaxisBifurcation.CurvedSignalResponse.profile_power_jets",
+      "ChemotaxisBifurcation.CurvedSignalResponse.profileProjection",
+      "ChemotaxisBifurcation.CurvedSignalResponse.projected_source_jet",
+      "ChemotaxisBifurcation.CurvedSignalResponse.profileProjection_eq",
+      "ChemotaxisBifurcation.CurvedSignalResponse.family_isBigO_linear",
+      "ChemotaxisBifurcation.CurvedSignalResponse.profileProjection_eq_cosineCoeff",
+      "ChemotaxisBifurcation.CurvedSignalResponse.actual_profile_response_jet",
+      "ChemotaxisBifurcation.CurvedSignalResponse.profile_cosine_square_zero",
+      "ChemotaxisBifurcation.CurvedSignalResponse.actual_phase_cubic_response"
+    ],
+    "conditional_inputs": [
+      "All exact types are retained per declaration. Generic profile-power and projected-source lemmas quantify over any compact topological K, continuous real-valued profiles a,b,c, a profile family f and, for projected_source_jet, an arbitrary continuous linear functional P and real coefficients C1,C2,C3; their hypothesis is a cubic norm Peano remainder at ordinary nhds 0. family_isBigO_linear quantifies over a real normed space and the same norm remainder.",
+      "Physical consumers require 0<L, 0<p.uStar, 0<p.mu and p.SignalEquilibrium; positive n is required for positive-mode cosine/projection identities and the main response. actual_residual_cubic_negligible allows any k, but requires an explicit B>0 and eventual uniform bound |U(t,x)|<=B|t|.",
+      "Actual elliptic family: eventually for t in ordinary two-sided nhds 0, U(t) is continuous on [0,L], V(t),dV(t) satisfy NeumannW21, and deriv(dV(t))(x)-mu*(vStar+V(t,x))+nu*(uStar+U(t,x))^gamma=0 for 0<x<L. This is a hypothesis of existence/identification, not a constructed solution map.",
+      "Profile response requires exact all-t representative equality U(t,x)=f(t)(x), and a genuine cubic norm Peano expansion. The phase consumer specializes this to U(t,x)=profileCLM(J(t))(x), J(t)=t*mode_n+t^2*(jet.a0*const1+jet.a2*mode_2n)+t^3*H3+o(t^3) in phase norm, and coefficient_n(H3)=0. QuadraticJetData coefficients and H3 remain supplied.",
+      "Length and physical parameters are fixed; t is amplitude. No critical sensitivity identity, mixed eta/amplitude jet, population dynamical invariance, PDE branch/stability, or derivative of the signal family is inferred. All implicit typeclass/domain/representative hypotheses are preserved in the exact printed types."
+    ]
+  }
+]
+```
+
+</details>
+
+## Equation 2.41 — verified-conditional
+
+Reference: p. 20; `paper3/E:Gamma-n0-explicit`.
+
+V2 scope: Conditional on weighted interval integrability and the analytic center-graph condition that the critical projection of h3 is zero; all remaining cubic extraction/projection algebra is proved.
+
+Supplied inputs:
+
+- audited primitive and quadratic-jet coefficients and elliptic signal aggregates
+- projected cubic elliptic balance with nonzero denominator
+- weighted interval integrability of h3, phi*h2 and phi^3 against the critical mode
+- zero critical projection of h3
+- identification phi=cos(n0*pi*x/L) and h2=a0+a2*cos(2*n0*pi*x/L)
+- positive physical equilibrium and L>0,n0>0
+
+## Equation 2.44 — verified
+
+Reference: p. 21; `paper3/E:alpha_n0`.
+
+V2 scope: The linear crossing coefficient and positivity hypotheses are unchanged.
+
+## Equation 2.45 — verified-conditional
+
+Reference: p. 21; `paper3/E:beta-n0`.
+
+V2 scope: The corrected finite cubic assembly is derived from the accepted quadratic and cubic projection components. It proves the coefficient identity, not center-manifold or PDE branch existence.
+
+Supplied inputs:
+
+- accepted quadratic center jet and cubic critical projection, including their analytic application inputs
+- positive physical equilibrium satisfying logistic and signal equilibrium relations
+- nonzero critical eigenvalue and valid stable-mode denominators when identifying the jet with the center graph
+
+## Equation 2.43 — verified-conditional
+
+Reference: p. 20; `paper3/E:center-ODE-final`.
+
+V2 scope: Only the exact cubic polynomial and deductions from an explicit remainder interface are formalized. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.
+
+Supplied inputs:
+
+- identification of the reduced field with Eq. 2.43
+- α>0 and β≠0
+- fixed C≥0 and 0<r≤1
+- uniform bound |R(η,s)|≤C(s²η²+|s|³|η|+s⁴) on the local box
+- HasDerivAt (R η) (Rs η s) s there
+- separate uniform bound |Rs(η,s)|≤C(|s|η²+s²|η|+|s|³)
+
+## Equation 2.49 — verified-conditional
+
+Reference: p. 22; `paper3/E:beta-n0-minimal`.
+
+V2 scope: The fixed-mass coefficient remains -chi-star Gamma3 with a0=0 and no logistic channels. The constant signal correction is still retained.
+
+Supplied inputs:
+
+- fixed-mass phase-space identification of the population constant correction with zero
+- a=b=0 and positive signal equilibrium
+- audited fixed-mass quadratic jet and cubic projection, including their analytic application inputs and nonzero modal denominators
+
+## Equation 3.1 — verified-conditional
+
+Reference: p. 23; `paper3/E:beta-n0-pq`.
+
+V2 scope: The p(beta), q(beta), beta-independent Pi and coefficient decomposition are unchanged after movement to Section 3.
+
+Supplied inputs:
+
+- audited identification of the assembled cubic coefficient with the reduced-equation coefficient
+- quadratic graph coefficient formulas and the model-appropriate constant mode
+- positive equilibrium relations and strict critical-mode guards supplied in the surrounding manuscript
+
+## Equation 3.3 — verified
+
+Reference: p. 23; `paper3/E:A-B-C-simple`.
+
+V2 scope: The exact derivative formulas A=-q''(0)/2, B=bA''p'(0)-q'(0), and C at beta=0 are unchanged.
+
+## Equation 3.4 — verified
+
+Reference: p. 24; `paper3/E:A-closed-form`.
+
+V2 scope: The closed form and strict negative sign under a strict critical mode are unchanged for both model classes.
+
+## Equation 1.15 and Section 3.2 — verified
+
+Reference: p. 8; `paper3/E:beta-n0-eq1/general-rational`.
+
+V2 scope: The general physical numerator/denominator construction, positive denominator, degree-five bound, and balanced degree-four cancellation are proved; the normalized example is only a downstream specialization.
+
+## Equation 3.6 — verified
+
+Reference: p. 26; `paper3/E:n0-branch`.
+
+V2 scope: The unique minimizing mode cells and exactly two adjacent modes at tie lengths are unchanged.
+
+## Theorem 1.2(2) interval display — verified
+
+Reference: p. 8; `paper3/E:lambda-k`.
+
+V2 scope: The exact lambda corridor is unchanged but no longer has its own label; it appears in Theorem 1.2(2) and again in the proof near line 2564. Large-length convergence to sqrt(a alpha mu) is unchanged along admissible lengths.
+
+## Equation 3.7 — verified
+
+Reference: p. 27; `paper3/E:new-beta-eq1/normalized-rational-chain`.
+
+V2 scope: This is a downstream specialization and regression test, never a replacement for the all-parameter M4 theorem.
+
+## Equation 3.8 — verified-conditional
+
+Reference: p. 27; `paper3/E:new-beta-eq2`.
+
+V2 scope: The normalized large-domain quadratic, positive root beta_ld and sign split are unchanged.
+
+Supplied inputs:
+
+- the all-ones physical coefficient identification
+- mode data with lengths tending to infinity and eventually strict critical modes
+- β≥0 for the stated nonnegative-parameter sign classification
+- the local bifurcation theorem converting a nonzero cubic-coefficient sign into bifurcation direction
+
+## Table 3.2 — verified-conditional
+
+Reference: p. 27; `paper3/Tb:polynomial-roots`.
+
+V2 scope: Exact rational isolating intervals, exhaustive admissible-root counts, rounding cells, physical signs, and finite mode comparisons are proved. Decimal displays are presentation corollaries.
+
+Supplied inputs:
+
+- identification of the normalized rational expression with the reduced cubic coefficient on λ>1/2
+- interpretation through untied critical-mode intervals
+- the local bifurcation theorem converting coefficient signs into super-critical or sub-critical bifurcation
+
+## Lemma 4.1 — verified
+
+Reference: p. 28; `paper3/L:spiky-solu-lm1`.
+
+to the COMPLETE frozen Lemma4.1(p28), L:spiky-solu-lm1, not merely its Holder proof step. Part(1), for every alpha,gamma,m>0, follows from StationaryMassIdentity.ClassicalProfile.interval_bounds: actual stationary population PDE and Neumann data derive mass_balance, then strict min/equilibrium/max and strict first/(1+alpha)-moments, with NO m>=1 restriction on this part. Part(2) for 0<gamma<=1+alpha and1<=m<=alpha+2 follows from ClassicalHolderNorm.logistic_uniform_norm_bound on literal physical classical solutions. It proves actual C2+theta norms bounded by C, with theta,C existential BEFORE all sensitivities and solutions; a,b,alpha,mu>0,nu>=0,beta>=0,abs(chi)<=X. The frozen nu>0 and0<=chi<=X,X>0 are contained. Ordinary positive nonconstant population/classical solution hypotheses remain; no bound, target regularity, coefficient-Holder estimate, extraction or Schauder conclusion is assumed. Supplied continuous second derivatives and closed-interval derivative identities are ordinary C2 classical data; their Holder regularity is DERIVED. The full parent can be promoted after required gates/registry binding, preserving the exact two-part frozen statement rather than conflating historical extra subrows.
+
+## Lemma 4.2 — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds`.
+
+to the COMPLETE frozen Lemma4.2(p29), L:minimal-spike-bounds. Standing1<=m<=2,0<gamma<=1,a=b=0,positive prescribed-mass solutions. Part(1) is exactly IntervalMoments.minimal_interval_bounds for continuous positive nonconstant u with actual model mass int u=LuStar: strict min/mean/max and strict quadratic moment. There is no missing PDE conclusion in that mass hypothesis; it is literally the model assumption. Part(2) follows from ClassicalHolderNorm.minimal_uniform_norm_bound: theta,C are chosen BEFORE every actual physical solution; all actual C2+theta norms bounded, including m=2. The theorem even covers constant positive families and gamma=0, stronger than the frozen nonconstant/gamma>0 statement. alpha=0 in the minimal physical profile is harmless because a=b=0 removes the reaction term; no alpha dependence enters C. The positive constant vStar need not be constructed: neither assertion uses it except the ordinary specified positive mass uStar. No independent flux, gradient, moment estimate or target regularity assumption remains. The full parent can be promoted after required gates/registry binding, while historical extra support subrows retain their own scope.
+
+## Lemma 4.1 and Lemma 4.2, bounded-sensitivity proof context — verified
+
+Reference: p. 28; `paper3/L:bounded-sensitivity-compactness`.
+
+actual bounded-sensitivity stationary-family compactness in the genuine all-weak-H2 Neumann phase norm. Both physical logistic and fixed-mass minimal families yield strict parameter/phase norm-convergent subsequences to original classical PDE profiles. The all-positive logistic extension derives the constant case from actual population mass balance, removing the earlier all-nonconstant family restriction.
+
+## Lemma 5.1 — verified
+
+Reference: p. 34; `paper3/L:minimal-spike-limit`.
+
+actual positive classical stationary solution families and the manuscript uniform Lr bound yield one strict subsequence with constant source c>=0, uniform C1 signal limit, and EVERY conjugate-Lq test for the source and signal derivatives of orders zero, one and two. Population first integral, mass/source bounds and denominator bound are derived from actual PDE/Neumann data; no weak or extraction premises remain. Weak Lq/W2q is represented explicitly by all conjugate integral tests of classical derivative representatives, not a claimed Mathlib WeakSpace/bundled Sobolev equivalence. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.
+
+## Equation 6.2 — verified
+
+Reference: p. 36; `paper3/E:main-DIS-conservative`.
+
+V2 scope: The literal finite face-flux divergence telescopes under trapezoidal weights, and its directional derivative is connected to the reflected fixed-mass modal system. Numerical trajectory existence and differentiability are not asserted.
+
+## 1.2 — verified
+
+Reference: p. 8; `paper3/new-minimal-rational-degree-three`.
+
+Minimal-model degree-three numerator/denominator clause; existing non-minimal bindings do not certify it.
+
+## Lemma 2.1, Equations 2.1-2.4 — verified
+
+Reference: p. 13; `paper3/infinite-fourier-convolution`.
+
+ell1 summability, exchange of sums/integrals, and convolution multiplicities; finite identities are ingredients only.
+
+## 2.43 — verified-conditional
+
+Reference: p. 20; `paper3/current-remainder-consumer`.
+
+Current mixed remainder and derivative interface; retain analytic hypotheses. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.
+
+Supplied inputs:
+
+- identification of the application remainder and scalar coefficients
+- α>0 and β≠0
+- fixed C≥0 and 0<r≤1
+- either stated uniform value-bound interface on the local box
+- actual differentiability in s
+- the corresponding independently supplied uniform derivative bound
+
+## Theorem 1.3(1) — verified-conditional
+
+Reference: p. 10; `paper3/relative-component-topology`.
+
+All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier curve topology retains half-curve continuity, stationary membership and open-neighborhood exhaustion. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.
+
+Supplied inputs:
+
+- the actual admissible subtype V and its topology
+- the solution closure
+- base membership from the local branch
+- relative openness of the removed punctured arc from local uniqueness
+- connectedness and solution-closure containment of the retained arc with its base
+- disjointness from the removed arc
+- a selector on the retained arc
+- not proved here: the unilateral alternatives and their bifurcation foundations
+
+Further accepted input reductions:
+
+```json
+{
+  "date": "2026-10-22",
+  "date_basis": "UTC",
+  "source_gate": "d0a898282bdb2e08b283eda564439fe36e1cb08e",
+  "boundary": "Scoped actual complement, elliptic-family and conservation ingredients are supplied by the new exact types. Population family/jet construction, critical sensitivity/mode, actual operator/branch identification, global bifurcation and PDE stability remain. No parent status change."
+}
+```
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/relative-component-topology/selected-round-support/selected_properties",
+    "status": "verified-conditional",
+    "scope": "Generic metric/topological ingredient; its analytic extraction/admissibility inputs are supplied by the actual-model wrappers. The removed arc is relatively open in the parent-component subtype; the exact dependent type below is authoritative.",
+    "declarations": [
+      "ChemotaxisBifurcation.SelectedSolutionComponents.selected_properties"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace E] (typed topology context)",
+      "base ∈ closure (Subtype.val ⁻¹' S)",
+      "IsOpen (Subtype.val ⁻¹' removedArc)",
+      "selector ∈ ChemotaxisBifurcation.unilateralRemainder (closure (Subtype.val ⁻¹' S)) removedArc base",
+      "closure S ⊆ V",
+      "∀ (X : ℝ), IsCompact (closure (S ∩ {z | z.1 ≤ X}))"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/selected-round-support/logistic_selected_properties",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed. The removed arc is relatively open in the parent-component subtype; the exact dependent type below is authoritative.",
+    "declarations": [
+      "ChemotaxisBifurcation.SelectedSolutionComponents.logistic_selected_properties"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "base ∈ closure (Subtype.val ⁻¹' S)",
+      "IsOpen (Subtype.val ⁻¹' removedArc)",
+      "selector ∈ ChemotaxisBifurcation.unilateralRemainder (closure (Subtype.val ⁻¹' S)) removedArc base"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/selected-round-support/minimal_selected_properties",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed. The removed arc is relatively open in the parent-component subtype; the exact dependent type below is authoritative.",
+    "declarations": [
+      "ChemotaxisBifurcation.SelectedSolutionComponents.minimal_selected_properties"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "base ∈ closure (Subtype.val ⁻¹' S)",
+      "IsOpen (Subtype.val ⁻¹' removedArc)",
+      "selector ∈ ChemotaxisBifurcation.unilateralRemainder (closure (Subtype.val ⁻¹' S)) removedArc base"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/insert_image_Ioo",
+    "status": "verified-conditional",
+    "scope": "Exact set identity between inserted base with punctured image and image of [0,epsilon); positive epsilon required. No topology or injectivity assumed.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalBranchGeometry.insert_image_Ioo"
+    ],
+    "conditional_inputs": [
+      "0 < eps"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/halfcurve_selected",
+    "status": "verified-conditional",
+    "scope": "Positive-half continuity and punctured F membership derive endpoint closure; interval image gives connectedness; amplitude separation gives disjointness. Existing component lemmas derive selector remainder membership, whole retained half-curve and base inclusion. None of these conclusions is supplied as an input.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalBranchGeometry.halfcurve_selected"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace X] (typed topology context)",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo 0 eps, c t ∈ F",
+      "∀ t ∈ Set.Ico 0 eps, A (c t) = t",
+      "∀ x ∈ removed, A x < 0"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/halfcurve_selector_independent",
+    "status": "verified-conditional",
+    "scope": "Positive selectors on this same retained curve choose the same component through the derived whole-arc inclusion. No independence from arbitrary alternative parametrizations is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalBranchGeometry.halfcurve_selector_independent"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace X] (typed topology context)",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "eta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo 0 eps, c t ∈ F",
+      "∀ t ∈ Set.Ico 0 eps, A (c t) = t",
+      "∀ x ∈ removed, A x < 0"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/negative_arc_relatively_open",
+    "status": "verified-conditional",
+    "scope": "Local exhaustion states parent intersect U is covered by the given parametrization, not that its negative image is open. The proof derives exact equality of the parent-subtype arc preimage with preimage U intersect amplitude-preimage (-epsilon,0), then proves openness. Chart existence/exhaustion remain explicit. Relative openness is in the parent subtype, as the source binder specifies.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalBranchGeometry.negative_arc_relatively_open"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace X] (typed topology context)",
+      "0 < eps",
+      "IsOpen U",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ parent, x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/selectedImage_of_local_curve",
+    "status": "verified-conditional",
+    "scope": "Exact selectedImage composition derives base membership, retained connectedness/inclusion, selector remainder membership, and relative openness from local curve inputs. Base makes the previously preconnected image nonempty and connected. Generic admissible closure and compact closure slices remain supplied. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.selectedImage_of_local_curve"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace E] (typed topology context)",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "closure S ⊆ V",
+      "∀ (X : ℝ), IsCompact (closure (S ∩ {z | z.1 ≤ X}))"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/local-arc-support/selectedImage_selector_independent",
+    "status": "verified-conditional",
+    "scope": "Ambient image equality follows from half-curve selector independence. Does not require amplitude continuity, exhaustion or compactness since they are irrelevant to this conclusion. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.selectedImage_selector_independent"
+    ],
+    "conditional_inputs": [
+      "[TopologicalSpace E] (typed topology context)",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "eta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient",
+    "status": "verified-conditional",
+    "scope": "Coordinate definition, not a theorem. Definition is exactly2/L times the population profile cosine integral on the actual interval measure. Positive-mode normalization agrees with the manuscript. Definition also accepts n=0, where it is twice the mean; no mean-normalization equality is claimed there.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "Typed coordinate data: n : ℕ and population jet or parameter/population pair as specified by the full definition type."
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/continuous_coefficient",
+    "status": "verified-conditional",
+    "scope": "Derives continuity on the genuine weak-H2 Neumann phase from its certified continuous profile realization, continuous multiplication by the fixed cosine, continuous toLp map and integral. No assumed coordinate continuity.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.continuous_coefficient"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_add",
+    "status": "verified-conditional",
+    "scope": "Integrability of both weighted continuous profiles is proved on the compact interval before integral additivity; coefficient is additive.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_add"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_smul",
+    "status": "verified-conditional",
+    "scope": "Linear scaling of the profile and integral proves scalar linearity of the actual coefficient.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_smul"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficientCLM",
+    "status": "verified-conditional",
+    "scope": "Coordinate definition, not a theorem. Packages the proved actual coefficient, additivity, scalar linearity and continuity as a continuous linear functional; no new coordinate or premise.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficientCLM"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "Typed coordinate data: n : ℕ and population jet or parameter/population pair as specified by the full definition type."
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_eq_projection",
+    "status": "verified-conditional",
+    "scope": "Exact representative equality on the closed interval identifies the subtype integral with the literal interval-integral actualCriticalProjection. Does not silently replace population by signal.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_eq_projection"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "∀ (x : ↑(Set.Icc 0 L)), u ↑x = ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) J) x"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_const",
+    "status": "verified-conditional",
+    "scope": "Positive-mode n>0 and positive L prove every constant population coefficient zero, using the vanishing cosine integral.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_const"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < n"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/isClosed_zero_coordinate",
+    "status": "verified-conditional",
+    "scope": "Kernel zero level set of the continuous population coordinate is closed. This proves closedness only, not a direct-sum complement theorem.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.isClosed_zero_coordinate"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_eq_cosineCoeff",
+    "status": "verified-conditional",
+    "scope": "For n>0, exact representative identification gives the existing cosine-series convention2/L; n=0 is correctly excluded.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_eq_cosineCoeff"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < n",
+      "∀ (x : ↑(Set.Icc 0 L)), u ↑x = ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) J) x"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_sub_const",
+    "status": "verified-conditional",
+    "scope": "Continuous linearity plus vanishing positive-mode constant coefficient gives invariance under subtracting any constant population, matching perturbation coordinates.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_sub_const"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < n"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_eq_zero_iff",
+    "status": "verified-conditional",
+    "scope": "Positive L ensures nonzero normalization; the normalized zero-coordinate test is equivalent to the literal unnormalized orthogonality integral.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_eq_zero_iff"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/isClosed_orthogonal",
+    "status": "verified-conditional",
+    "scope": "Transfers zero-coordinate closedness to the exact literal cosine orthogonality set in the full genuine Neumann phase.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.isClosed_orthogonal"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/isClosed_minimal_orthogonal",
+    "status": "verified-conditional",
+    "scope": "Intersecting the actual closed fixedMeanSet0 with literal orthogonality proves closedness in the minimal mean-zero perturbation setting. No complement/direct-sum construction.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.isClosed_minimal_orthogonal"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/coefficient_of_decomposition",
+    "status": "verified-conditional",
+    "scope": "From the supplied pointwise population expansion U+a*cos+K and K zero-coordinate, integrates constant/cosine cross terms and cosine square L/2 to obtain coefficient=a. Positive n and L retained; the expansion itself is not constructed.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient_of_decomposition"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < n",
+      "∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) J) x = U + a * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) K) x",
+      "ChemotaxisBifurcation.FourierAmplitude.coefficient hL n K = 0"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/amplitude",
+    "status": "verified-conditional",
+    "scope": "Coordinate definition, not a theorem. Definition applies the population coefficient to the second component of parameter/population pairs. It is neither the parameter nor the signal amplitude.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.amplitude"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "Typed coordinate data: n : ℕ and population jet or parameter/population pair as specified by the full definition type."
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/continuous_amplitude",
+    "status": "verified-conditional",
+    "scope": "Continuity follows by composing the proved coefficient with continuous second projection.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.continuous_amplitude"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/curve_amplitude",
+    "status": "verified-conditional",
+    "scope": "Given the actual curve expansion and literal remainder orthogonality on (-eps,eps), derives amplitude(c t)=t for n>0. It assumes neither amplitude equality nor continuity; it does not construct the curve or its expansion.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.curve_amplitude"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < n",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = U + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∫ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x * ChemotaxisBifurcation.neumannMode L n ↑x ∂ChemotaxisBifurcation.SignalWeakSource.intervalVolume L = 0"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/fourier-coordinate-support/curve_base_population",
+    "status": "verified-conditional",
+    "scope": "With eps>0, expansion at0 and r0=0 give the constant population profile; certified profile injectivity upgrades this to equality of genuine weak-H2 jets. No positive-mode hypothesis needed for this base-only argument and no critical-parameter identity inferred.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.curve_base_population"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 < eps",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = U + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "r 0 = 0"
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/cosine-complement-support/actual-cosine-realization",
+    "status": "verified-conditional",
+    "scope": "Actual unnormalized cosine jet is constructed from its classical derivatives and Neumann endpoint traces, with exact continuous population profile. Positive modes have zero mass and Kronecker Fourier coordinates, giving coefficient=1. Seven theorems and one construction definition; no assumed mode realization or normalization.",
+    "declarations": [
+      "ChemotaxisBifurcation.WeakH2CosineMode.mode_H2",
+      "ChemotaxisBifurcation.WeakH2CosineMode.mode_neumann",
+      "ChemotaxisBifurcation.WeakH2CosineMode.mode",
+      "ChemotaxisBifurcation.WeakH2CosineMode.profile_mode",
+      "ChemotaxisBifurcation.WeakH2CosineMode.mass_mode",
+      "ChemotaxisBifurcation.WeakH2CosineMode.mode_mem_fixedMeanSet",
+      "ChemotaxisBifurcation.WeakH2CosineMode.coefficient_mode_kronecker",
+      "ChemotaxisBifurcation.WeakH2CosineMode.coefficient_mode"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL).",
+      "Positive modes n>0 for coordinate normalization, direct sum, mass and canonical remainder; k>0 as well for Kronecker coefficient.",
+      "Typed actual weak-H2 populations and real constants. Membership, supplied reconstruction and coefficient=t appear only in the exact declarations that consume them. Full independently printed types control every quantifier."
+    ]
+  },
+  {
+    "id": "paper3/relative-component-topology/cosine-complement-support/literal-closed-complement",
+    "status": "verified-conditional",
+    "scope": "Literal Fourier-orthogonality kernel is a closed submodule of the genuine weak-H2 phase and a complement of the actual cosine span. Mathlib continuous right-inverse equivalence supplies the actual physical amplitude/remainder split, reconstruction and uniqueness. Eight theorems and three definitions; neither operator range nor fractional X_theta/stable spectral identity is asserted.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierComplement.complement",
+      "ChemotaxisBifurcation.FourierComplement.mem_complement_iff",
+      "ChemotaxisBifurcation.FourierComplement.isClosed_complement",
+      "ChemotaxisBifurcation.FourierComplement.modeLine",
+      "ChemotaxisBifurcation.FourierComplement.coefficient_modeLine",
+      "ChemotaxisBifurcation.FourierComplement.splitting",
+      "ChemotaxisBifurcation.FourierComplement.splitting_amplitude",
+      "ChemotaxisBifurcation.FourierComplement.splitting_remainder",
+      "ChemotaxisBifurcation.FourierComplement.splitting_reconstruct",
+      "ChemotaxisBifurcation.FourierComplement.decomposition_unique",
+      "ChemotaxisBifurcation.FourierComplement.isCompl_span_complement"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL).",
+      "Positive modes n>0 for coordinate normalization, direct sum, mass and canonical remainder; k>0 as well for Kronecker coefficient.",
+      "Typed actual weak-H2 populations and real constants. Membership, supplied reconstruction and coefficient=t appear only in the exact declarations that consume them. Full independently printed types control every quantifier."
+    ]
+  }
+]
+```
+
+</details>
+
+## Theorem 1.3(3) — verified
+
+Reference: p. 10; `paper3/tail-mass-dirac-consumer`.
+
+to the scoped finite-density-measure implication, now with its actual-PDE tail producer. PhysicalEndpointConcentration constructs the genuine finite measure q.u(x)dx on the closed interval from ordinary continuous nonnegative classical solutions and proves full finite-measure weak convergence to L*uStar times the endpoint Dirac. No finite measure, common-mass identification, sine bound, pointwise decay, tail bound, neighborhood containment or density/test integral identification is assumed. Minimal population and signal equations, actual Neumann data, positive population, nonnegative signal, fixed prescribed mass, chi->infinity and ordinary strict decreasing/increasing orientation are explicit. Parameter range m>=1,beta>=0,mu,nu>0,0<gamma<=1 contains the entire frozen1<=m<=2 range. Scoped consumer/tail production can be certified after gates; deriving that orientation from branch membership is not this row and remains separate.
+
+## Lemma 4.1(1), Equation 4.1 — verified
+
+Reference: p. 28; `paper3/L:spiky-solu-lm1/part-1`.
+
+ClassicalProfile.interval_bounds proves all four strict extremum/moment conclusions for every given positive nonconstant classical stationary profile. The literal flux, equation and both u/v Neumann data derive mass balance; no independent mass identity remains. Verified within this entire classical-solution statement, without asserting existence.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:spiky-solu-lm1/part-1/campaign-comparator-support/mass_identity",
+    "status": "verified-conditional",
+    "scope": "Integrated logistic mass identity from supplied stationary divergence equation, derivative identifications and zero endpoint population derivative/flux; no strict extrema or PDE existence claimed by this helper.",
+    "declarations": [
+      "ChemotaxisBifurcation.StationaryMassIdentity.logistic_mass_identity_of_stationary"
+    ],
+    "conditional_inputs": [
+      "0 ≤ L",
+      "0 ≤ alpha",
+      "ContinuousOn u (Set.Icc 0 L)",
+      "ContinuousOn du (Set.Icc 0 L)",
+      "ContinuousOn J (Set.Icc 0 L)",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt du (ddu x) x",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt J (dJ x) x",
+      "∀ x ∈ Set.Ioo 0 L, ddu x - dJ x + a * u x - b * u x ^ (1 + alpha) = 0",
+      "du 0 = 0",
+      "du L = 0",
+      "J 0 = 0",
+      "J L = 0"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.StationaryMassIdentity.logistic_mass_identity_of_stationary": {
+          "hypotheses": [
+            "0 ≤ L",
+            "0 ≤ alpha",
+            "ContinuousOn u (Set.Icc 0 L)",
+            "ContinuousOn du (Set.Icc 0 L)",
+            "ContinuousOn J (Set.Icc 0 L)",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt du (ddu x) x",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt J (dJ x) x",
+            "∀ x ∈ Set.Ioo 0 L, ddu x - dJ x + a * u x - b * u x ^ (1 + alpha) = 0",
+            "du 0 = 0",
+            "du L = 0",
+            "J 0 = 0",
+            "J L = 0"
+          ],
+          "conclusion": "a * ∫ (x : ℝ) in 0..L, u x = b * ∫ (x : ℝ) in 0..L, u x ^ (1 + alpha)"
+        }
+      }
+    }
+  }
+]
+```
+
+</details>
+
+## Lemma 4.1(2), Equation 4.6 — verified
+
+Reference: p. 28; `paper3/L:spiky-solu-lm1/part-2-moment-step`.
+
+The new direct ClassicalProfile.power_moment supplies the exact gamma-moment bound for0<gamma<=1+alpha from the actual stationary equation through interval_bounds; the higher moment is no longer independently assumed. Its current kernel type was printed and read.
+
+## Equation 4.14 (proof of Lemma 4.2(2)) — verified
+
+Reference: p. 30; `paper3/L:minimal-spike-bounds/part-1`.
+
+ClassicalMinimalEstimates.flux_identity derives the literal flux identity from the actual a=b=0 stationary population equation and Neumann data. No first-integral assumption remains; classical derivatives and the original equation are standing solution data.
+
+## Lemma 4.2(1) — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds/part-2`.
+
+Actual prescribed-mass positive nonconstant classical solution supplies both strict extrema and strict second moment; prescribed mass is the ordinary model hypothesis.
+
+## Proof of Lemma 4.2(2) (applies Equation 4.6, p. 28, TeX line 2687) — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds/jensen-step`.
+
+ClassicalMinimalEstimates.power_moment proves the exact prescribed-mass concave moment estimate for all0<=r<=1. Prescribed mass is an explicit model hypothesis of the manuscript, not an unresolved analytic inference. In particular r=m-1 covers both endpoints m=1 and m=2.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:minimal-spike-bounds/jensen-step/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.StationaryMassBounds.fixed_mean_power_average"
+    ],
+    "conditional_inputs": [
+      "L>0",
+      "0≤gamma≤1",
+      "continuity and nonnegativity of u on [0,L]",
+      "prescribed mass integral(u)=L*uStar"
+    ]
+  }
+]
+```
+
+</details>
+
+## Proof of Lemma 4.2(2), m=1 case of the variation-of-constants display — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds/part-5-exp-representation`.
+
+Literal minimal PDE derives flux at m=1; integrating-factor continuity follows from actual signal regularity and1+v>0. The exact exponential representation is concluded.
+
+## Remark 1.3(2) — verified
+
+Reference: p. 11; `paper3/R:no-delta-concentration/local-mass`.
+
+ClassicalProfile.window_mass_bounds states both the exact Holder-type displayed inequality and its strict equilibrium envelope; mass balance is derived. window_mass_decay_of_classical_profiles proves uniform decay in the family index and center. This covers the quantitative local-mass row end to end for given profiles.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/R:no-delta-concentration/local-mass/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalizedMassBounds.local_mass_le_uniform_bound"
+    ],
+    "conditional_inputs": [
+      "common a,b,alpha,L>0 across the family",
+      "continuity, strict positivity and nonconstancy of each density",
+      "logistic mass identity for each density",
+      "absence of atoms in a weak limit is explicitly outside this row"
+    ]
+  }
+]
+```
+
+</details>
+
+## Theorem 1.3(3) — verified
+
+Reference: p. 10; `paper3/T:global-extension/part-3-concentration`.
+
+to the concentration clause under its explicitly separate ordinary monotonicity input. For actual positive strictly decreasing/increasing fixed-mass minimal classical stationary families, m>=1 and0<gamma<=1, the code DERIVES the sine-test obstruction, sensitivity-uniform actual signal envelope, every interior u_n(delta)->0, tail/head decay, every continuous-test integral limit, actual finite-density-measure Dirac convergence, and endpoint population value->infinity. Endpoint values are the genuine maxima by monotonicity, so the frozen max->infinity conclusion follows. The right endpoint is proved directly using the positive-gradient ODE and a right interior interval, then the exact right-endpoint measure consumer; no reflected solution or reflection-PDE premise is assumed. Strict orientation is NOT inferred from membership in C1+/- by these four modules; full Theorem1.3(3), branch membership/orientation, noncompactness and alternatives(ii)/(iii) remain outside this scoped row. Thus do not promote the whole global-extension parent solely from this review.
+
+## 1.1 — verified-conditional
+
+Reference: p. 6; `paper3/T:local-bifurcation/branch-curves`.
+
+Scalar level of the claim that the nontrivial equilibria form two continuous curves through the bifurcation point: under the MixedRemainder interface (alpha>0, beta!=0, value and derivative remainder bounds, HasDerivAt) each signed small nontrivial root is unique, these are the only small nontrivial equilibria, and (with the extra hypothesis that eta -> R(eta,s) is continuous for each small s) the branch functions are continuous with branch(0)=0 and branch -> 0. Not claimed: center-manifold reduction and the lift to the PDE curves in function space. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.
+
+Supplied inputs:
+
+- identification of the scalar reduced field and its coefficients
+- α>0 and β≠0
+- a common box with C≥0 and 0<r≤1
+- the stated value remainder bound
+- HasDerivAt identifying Rs
+- the stated derivative remainder bound
+- continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/T:local-bifurcation/branch-curves/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually"
+    ],
+    "conditional_inputs": [
+      "identification of the scalar reduced field and its coefficients",
+      "α>0 and β≠0",
+      "a common box with C≥0 and 0<r≤1",
+      "the stated value remainder bound",
+      "HasDerivAt identifying Rs",
+      "the stated derivative remainder bound",
+      "continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded"
+    ]
+  },
+  {
+    "id": "paper3/T:local-bifurcation/branch-curves/derivative-comparator-support",
+    "status": "verified-conditional",
+    "scope": "Two scalar equilibrium derivative-error bounds used to obtain the amplitude derivative of the reduced field evaluated on the actual branch. The mixed value/derivative bounds and equilibrium equation are explicit; the square-amplitude window feeds the majorant, and is derived by the separate branch localization theorem. No parameter derivative of branch functions or PDE lift is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BranchDerivativeAsymptotic.equilibrium_derivative_error",
+      "ChemotaxisBifurcation.BranchDerivativeAsymptotic.equilibrium_derivative_error_window"
+    ],
+    "conditional_inputs": [
+      "identification of the scalar reduced field and its coefficients",
+      "α>0 and β≠0",
+      "a common box with C≥0 and 0<r≤1",
+      "the stated value remainder bound",
+      "HasDerivAt identifying Rs",
+      "the stated derivative remainder bound",
+      "continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded"
+    ]
+  }
+]
+```
+
+</details>
+
+## Lemma 2.1 and Equation 2.17 — verified
+
+Reference: p. 13; `paper3/L:trig-integrals/phase-space-bridge`.
+
+Genuine weak-H2 functions and their Neumann trace data produce the absolutely continuous NeumannW21 representatives; all actual normalized cosine coefficients are unchanged by a.e. equality. The four exact function/integral identities are proved for the original representatives with original coefficients. Absolute summability and reconstruction are derived. Pointwise reconstruction of the original function on the closed interval is proved when it is continuous, exactly as in the old classical-function scope; for arbitrary raw H2 representatives reconstruction correctly targets the constructed continuous representative. The prior external one-dimensional Sobolev/trace identification is discharged, without asserting any Banach-space topology or phase-E map.
+
+## Proof of Lemma 4.2(2), Equations 4.7-4.8 — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds/part-3-signal`.
+
+Actual second PDE and both Neumann conditions supply the exact signal sup-plus-L1 component bound and displayed constant; no separately assumed signal estimate.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:minimal-spike-bounds/part-3-signal/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.LocalizedMassBounds.signal_parameter_factors"
+    ],
+    "conditional_inputs": [
+      "L>0 and μ>0 with ν,γ nonnegative",
+      "continuity and nonnegativity of u and v",
+      "continuity of v_x",
+      "interior derivative identifications for v and v_x",
+      "the signal equation",
+      "both Neumann conditions",
+      "interpretation of the component bounds as classical Sobolev norms"
+    ]
+  }
+]
+```
+
+</details>
+
+## Proof of Lemma 4.2(2): the uniform bounds on u and u_x from the flux identity (4.14), before the elliptic step to (4.13) (alternative estimate for 1<=m<2) — verified
+
+Reference: p. 30; `paper3/L:minimal-spike-bounds/part-4-sup`.
+
+Literal minimal PDE derives flux; actual signal PDE derives gradient; M is the actual gamma moment. The complete original sharp power envelope and derivative estimate hold for0<m<2.
+
+## Proof of Lemma 4.2(2), m=1 case — verified
+
+Reference: p. 29; `paper3/L:minimal-spike-bounds/part-5-sup-bound`.
+
+Actual PDEs and prescribed mass derive flux, signal-gradient and integrating-factor regularity; the exact historical exponential supremum envelope follows for m=1.
+
+## Lemma 4.1(2), Equation 4.11 (alternative route for 1<=m<(alpha+2)/2) — verified
+
+Reference: p. 29; `paper3/L:spiky-solu-lm1/part-2-C1-chain`.
+
+actual given classical stationary-system C1 consumers. c1_bound discharges mass/moment inputs over the old energy range0<m<(alpha+2)/2; c1_gronwall_bound independently covers the current full range1<=m<=alpha+2, including both endpoints. Supremum and Gronwall conclusions are derived from actual equations and moments, not assumptions. The higher Holder/Schauder C^(2+theta) conclusion remains excluded.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:spiky-solu-lm1/part-2-C1-chain/campaign-comparator-support/actual_gronwall",
+    "status": "verified-conditional",
+    "scope": "Gronwall supremum envelope from a given derivative-power inequality, mean and moment bounds; these remain helper premises, not independently claimed PDE-derived here.",
+    "declarations": [
+      "ChemotaxisBifurcation.SpikeEstimates.sup_le_of_derivative_power_bound"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "0 ≤ A",
+      "0 ≤ H",
+      "1 ≤ m",
+      "ContinuousOn u (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 < u x",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt u (du x) x",
+      "∀ x ∈ Set.Ioo 0 L, |du x| ≤ A * u x ^ m + H",
+      "∫ (x : ℝ) in 0..L, u x ≤ L * uStar",
+      "∫ (x : ℝ) in 0..L, u x ^ (m - 1) ≤ M"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SpikeEstimates.sup_le_of_derivative_power_bound": {
+          "hypotheses": [
+            "0 < L",
+            "0 ≤ A",
+            "0 ≤ H",
+            "1 ≤ m",
+            "ContinuousOn u (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 < u x",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt u (du x) x",
+            "∀ x ∈ Set.Ioo 0 L, |du x| ≤ A * u x ^ m + H",
+            "∫ (x : ℝ) in 0..L, u x ≤ L * uStar",
+            "∫ (x : ℝ) in 0..L, u x ^ (m - 1) ≤ M"
+          ],
+          "conclusion": "∀ x ∈ Set.Icc 0 L, u x ≤ (uStar + 1) * Real.exp (A * M + H * L)"
+        }
+      }
+    }
+  }
+]
+```
+
+</details>
+
+## Proof of Lemma 5.1, W^{2,q} step with r=1+alpha — verified
+
+Reference: p. 34; `paper3/L:spiky-solu-lm1/part-3-W2q`.
+
+retained auxiliary quantitative W2q deduction for actual given classical profiles: actual testing, Holder, Minkowski and population moment premises are all discharged in ClassicalLogisticEstimates.w2q_bound. The old part3 name is historical; frozen v2 Lemma4.1(p28) has no part3. Do not present this auxiliary as a current numbered part3 theorem.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:spiky-solu-lm1/part-3-W2q/campaign-comparator-support/actual_signal_testing",
+    "status": "verified-conditional",
+    "scope": "Power-testing inequality for a strictly positive classical signal solving the specified elliptic equation with Neumann data; testing component only, not full W2q bound alone.",
+    "declarations": [
+      "ChemotaxisBifurcation.SpikeEstimates.signal_testing_rpow_pos"
+    ],
+    "conditional_inputs": [
+      "0 ≤ L",
+      "1 < q",
+      "0 ≤ gamma",
+      "ContinuousOn u (Set.Icc 0 L)",
+      "ContinuousOn v (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 < v x",
+      "ContinuousOn dv (Set.Icc 0 L)",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt v (dv x) x",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt dv (ddv x) x",
+      "∀ x ∈ Set.Ioo 0 L, ddv x - mu * v x + nu * u x ^ gamma = 0",
+      "dv 0 = 0",
+      "dv L = 0"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SpikeEstimates.signal_testing_rpow_pos": {
+          "hypotheses": [
+            "0 ≤ L",
+            "1 < q",
+            "0 ≤ gamma",
+            "ContinuousOn u (Set.Icc 0 L)",
+            "ContinuousOn v (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 < v x",
+            "ContinuousOn dv (Set.Icc 0 L)",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt v (dv x) x",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt dv (ddv x) x",
+            "∀ x ∈ Set.Ioo 0 L, ddv x - mu * v x + nu * u x ^ gamma = 0",
+            "dv 0 = 0",
+            "dv L = 0"
+          ],
+          "conclusion": "mu * ∫ (x : ℝ) in 0..L, v x ^ q ≤ nu * ∫ (x : ℝ) in 0..L, u x ^ gamma * v x ^ (q - 1)"
+        }
+      }
+    }
+  }
+]
+```
+
+</details>
+
+## Remark 1.3(2) — verified
+
+Reference: p. 11; `paper3/R:no-delta-concentration/no-atom-limit`.
+
+Every given weak finite-measure limit of an arbitrary family of actual positive nonconstant classical stationary profiles is atomless on the closed interval, including endpoints. The explicit weak convergence premise is the ordinary quantifier of an all-weak-limits claim, not an unproved compactness theorem. The subsequence wrapper also directly rules out any positive multiple of a Dirac measure.
+
+## Lemma 5.1 — verified
+
+Reference: p. 34; `paper3/L:minimal-spike-limit/deductions`.
+
+actual positive classical stationary solution families and the manuscript uniform Lr bound yield one strict subsequence with constant source c>=0, uniform C1 signal limit, and EVERY conjugate-Lq test for the source and signal derivatives of orders zero, one and two. Population first integral, mass/source bounds and denominator bound are derived from actual PDE/Neumann data; no weak or extraction premises remain. Weak Lq/W2q is represented explicitly by all conjugate integral tests of classical derivative representatives, not a claimed Mathlib WeakSpace/bundled Sobolev equivalence. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/actual_C1_extraction",
+    "status": "verified-conditional",
+    "scope": "Strict-subsequence uniform C1 extraction from supplied classical W2q bounds; no nonlinear-source limit or PDE family existence claimed by this helper.",
+    "declarations": [
+      "ChemotaxisBifurcation.SignalCompactness.exists_C1_subsequence_of_W2q_bound"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "1 < q",
+      "0 ≤ W",
+      "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (ddv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (v n) (dv n x) x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+      "∀ (n : ℕ), (∫ (x : ℝ) in 0..L, |v n x| ^ q) ^ (1 / q) + (∫ (x : ℝ) in 0..L, |dv n x| ^ q) ^ (1 / q) + (∫ (x : ℝ) in 0..L, |ddv n x| ^ q) ^ (1 / q) ≤ W"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SignalCompactness.exists_C1_subsequence_of_W2q_bound": {
+          "hypotheses": [
+            "0 < L",
+            "1 < q",
+            "0 ≤ W",
+            "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (ddv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (v n) (dv n x) x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+            "∀ (n : ℕ), (∫ (x : ℝ) in 0..L, |v n x| ^ q) ^ (1 / q) + (∫ (x : ℝ) in 0..L, |dv n x| ^ q) ^ (1 / q) + (∫ (x : ℝ) in 0..L, |ddv n x| ^ q) ^ (1 / q) ≤ W"
+          ],
+          "conclusion": "∃ V DV phi, StrictMono phi ∧ ContinuousOn V (Set.Icc 0 L) ∧ ContinuousOn DV (Set.Icc 0 L) ∧ TendstoUniformlyOn (fun n => v (phi n)) V Filter.atTop (Set.Icc 0 L) ∧ TendstoUniformlyOn (fun n => dv (phi n)) DV Filter.atTop (Set.Icc 0 L) ∧ ∀ x ∈ Set.Ioo 0 L, HasDerivAt V (DV x) x"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/gradient_zero",
+    "status": "verified-conditional",
+    "scope": "Zero gradient from nonnegative continuous signal, derivative compatibility, endpoint data and the local signal ODE where its gradient is nonzero; those local-limit premises remain explicit.",
+    "declarations": [
+      "ChemotaxisBifurcation.SignalDirectLimit.gradient_eq_zero_of_local_signal_ode"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "0 < mu",
+      "ContinuousOn V (Set.Icc 0 L)",
+      "ContinuousOn dV (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 ≤ V x",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt V (dV x) x",
+      "∀ x ∈ Set.Ioo 0 L, dV x ≠ 0 → HasDerivAt dV (mu * V x) x",
+      "dV 0 = 0",
+      "dV L = 0"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SignalDirectLimit.gradient_eq_zero_of_local_signal_ode": {
+          "hypotheses": [
+            "0 < L",
+            "0 < mu",
+            "ContinuousOn V (Set.Icc 0 L)",
+            "ContinuousOn dV (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 ≤ V x",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt V (dV x) x",
+            "∀ x ∈ Set.Ioo 0 L, dV x ≠ 0 → HasDerivAt dV (mu * V x) x",
+            "dV 0 = 0",
+            "dV L = 0"
+          ],
+          "conclusion": "∀ x ∈ Set.Icc 0 L, dV x = 0"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/constant_signal_limit",
+    "status": "verified-conditional",
+    "scope": "Constant signal and interval source-test limits from supplied flux, mass/moment/denominator bounds and uniform C1 convergence plus actual signal equation; does not itself extract that convergence or derive the flux/bounds.",
+    "declarations": [
+      "ChemotaxisBifurcation.SignalDirectLimit.constant_limit_without_weak_source"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "0 < gamma",
+      "gamma < r",
+      "0 < m",
+      "0 < kappa",
+      "0 < mu",
+      "0 < nu",
+      "Filter.Tendsto chi Filter.atTop Filter.atTop",
+      "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (u n) (du n x) x",
+      "∀ (n : ℕ), ContinuousOn (du n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ v n x",
+      "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (F n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, du n x = chi n * (u n x ^ m / (1 + v n x) ^ beta * dv n x) - F n x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, |F n x| ≤ Fb",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, kappa ≤ 1 / (1 + v n x) ^ beta",
+      "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ≤ M",
+      "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R",
+      "ContinuousOn V (Set.Icc 0 L)",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt V (dV x) x",
+      "ContinuousOn dV (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 ≤ V x",
+      "TendstoUniformlyOn dv dV Filter.atTop (Set.Icc 0 L)",
+      "TendstoUniformlyOn v V Filter.atTop (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, ddv n x - mu * v n x + nu * u n x ^ gamma = 0",
+      "dV 0 = 0",
+      "dV L = 0"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SignalDirectLimit.constant_limit_without_weak_source": {
+          "hypotheses": [
+            "0 < L",
+            "0 < gamma",
+            "gamma < r",
+            "0 < m",
+            "0 < kappa",
+            "0 < mu",
+            "0 < nu",
+            "Filter.Tendsto chi Filter.atTop Filter.atTop",
+            "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (u n) (du n x) x",
+            "∀ (n : ℕ), ContinuousOn (du n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ v n x",
+            "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (F n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, du n x = chi n * (u n x ^ m / (1 + v n x) ^ beta * dv n x) - F n x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, |F n x| ≤ Fb",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, kappa ≤ 1 / (1 + v n x) ^ beta",
+            "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ≤ M",
+            "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R",
+            "ContinuousOn V (Set.Icc 0 L)",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt V (dV x) x",
+            "ContinuousOn dV (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 ≤ V x",
+            "TendstoUniformlyOn dv dV Filter.atTop (Set.Icc 0 L)",
+            "TendstoUniformlyOn v V Filter.atTop (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, ddv n x - mu * v n x + nu * u n x ^ gamma = 0",
+            "dV 0 = 0",
+            "dV L = 0"
+          ],
+          "conclusion": "∃ c, 0 ≤ c ∧ (∀ x ∈ Set.Icc 0 L, V x = nu / mu * c) ∧ (∀ x ∈ Set.Icc 0 L, dV x = 0) ∧ ∀ (p q : ℝ), 0 ≤ p → p ≤ q → q ≤ L → Filter.Tendsto (fun n => ∫ (x : ℝ) in p..q, u n x ^ gamma) Filter.atTop (nhds (c * (q - p)))"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/actual_arbitrary_r_W2q",
+    "status": "verified-conditional",
+    "scope": "Signal W2q bound with q=r/gamma from a supplied population r-moment and actual classical signal equation/Neumann data; no population moment bound is derived by this helper.",
+    "declarations": [
+      "ChemotaxisBifurcation.SignalPowerMoment.W2q_bound_of_power_moment"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "0 < mu",
+      "0 ≤ nu",
+      "0 < gamma",
+      "1 < r",
+      "gamma < r",
+      "0 ≤ R",
+      "ContinuousOn u (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 ≤ u x",
+      "ContinuousOn v (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc 0 L, 0 < v x",
+      "ContinuousOn dv (Set.Icc 0 L)",
+      "ContinuousOn ddv (Set.Icc 0 L)",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt v (dv x) x",
+      "∀ x ∈ Set.Ioo 0 L, HasDerivAt dv (ddv x) x",
+      "∀ x ∈ Set.Ioo 0 L, ddv x - mu * v x + nu * u x ^ gamma = 0",
+      "dv 0 = 0",
+      "dv L = 0",
+      "∫ (x : ℝ) in 0..L, u x ^ r ≤ R"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SignalPowerMoment.W2q_bound_of_power_moment": {
+          "hypotheses": [
+            "0 < L",
+            "0 < mu",
+            "0 ≤ nu",
+            "0 < gamma",
+            "1 < r",
+            "gamma < r",
+            "0 ≤ R",
+            "ContinuousOn u (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 ≤ u x",
+            "ContinuousOn v (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc 0 L, 0 < v x",
+            "ContinuousOn dv (Set.Icc 0 L)",
+            "ContinuousOn ddv (Set.Icc 0 L)",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt v (dv x) x",
+            "∀ x ∈ Set.Ioo 0 L, HasDerivAt dv (ddv x) x",
+            "∀ x ∈ Set.Ioo 0 L, ddv x - mu * v x + nu * u x ^ gamma = 0",
+            "dv 0 = 0",
+            "dv L = 0",
+            "∫ (x : ℝ) in 0..L, u x ^ r ≤ R"
+          ],
+          "conclusion": "(∫ (x : ℝ) in 0..L, |v x| ^ (r / gamma)) ^ (1 / (r / gamma)) + (∫ (x : ℝ) in 0..L, |dv x| ^ (r / gamma)) ^ (1 / (r / gamma)) + (∫ (x : ℝ) in 0..L, |ddv x| ^ (r / gamma)) ^ (1 / (r / gamma)) ≤ L ^ (1 / (r / gamma)) * ChemotaxisBifurcation.SignalPowerMoment.momentScale L R r ^ gamma * (nu / mu + 2 * nu + 2 * nu * L)"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/actual_arbitrary_r_C1_extraction",
+    "status": "verified-conditional",
+    "scope": "Signal C1 subsequence extraction from a supplied uniform population r-moment and actual signal equations; retains the population moment premise and makes no nonlinear-source constant-limit claim alone.",
+    "declarations": [
+      "ChemotaxisBifurcation.SignalPowerMoment.exists_C1_subsequence_of_power_moment"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "0 < mu",
+      "0 ≤ nu",
+      "0 < gamma",
+      "1 < r",
+      "gamma < r",
+      "0 ≤ R",
+      "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+      "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 < v n x",
+      "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (ddv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (v n) (dv n x) x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, ddv n x - mu * v n x + nu * u n x ^ gamma = 0",
+      "∀ (n : ℕ), dv n 0 = 0",
+      "∀ (n : ℕ), dv n L = 0",
+      "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SignalPowerMoment.exists_C1_subsequence_of_power_moment": {
+          "hypotheses": [
+            "0 < L",
+            "0 < mu",
+            "0 ≤ nu",
+            "0 < gamma",
+            "1 < r",
+            "gamma < r",
+            "0 ≤ R",
+            "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+            "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 < v n x",
+            "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (ddv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (v n) (dv n x) x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (dv n) (ddv n x) x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, ddv n x - mu * v n x + nu * u n x ^ gamma = 0",
+            "∀ (n : ℕ), dv n 0 = 0",
+            "∀ (n : ℕ), dv n L = 0",
+            "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R"
+          ],
+          "conclusion": "∃ V DV phi, StrictMono phi ∧ ContinuousOn V (Set.Icc 0 L) ∧ ContinuousOn DV (Set.Icc 0 L) ∧ TendstoUniformlyOn (fun n => v (phi n)) V Filter.atTop (Set.Icc 0 L) ∧ TendstoUniformlyOn (fun n => dv (phi n)) DV Filter.atTop (Set.Icc 0 L) ∧ DV 0 = 0 ∧ DV L = 0 ∧ (∀ x ∈ Set.Icc 0 L, 0 ≤ V x) ∧ ∀ x ∈ Set.Ioo 0 L, HasDerivAt V (DV x) x"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:minimal-spike-limit/deductions/campaign-comparator-support/actual_source_vanishing",
+    "status": "verified-conditional",
+    "scope": "Interior source-integral vanishing where the supplied uniform signal-gradient limit is nonzero, under flux, moment, mass and denominator bounds; no independent production of those premises.",
+    "declarations": [
+      "ChemotaxisBifurcation.SpikeLimit.source_integral_tendsto_zero_of_nonzero_limit_gradient"
+    ],
+    "conditional_inputs": [
+      "0 < p",
+      "p < p'",
+      "p' < q'",
+      "q' < q",
+      "q < L",
+      "0 < gamma",
+      "gamma < r",
+      "0 < m",
+      "0 < kappa",
+      "Filter.Tendsto chi Filter.atTop Filter.atTop",
+      "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (u n) (du n x) x",
+      "∀ (n : ℕ), ContinuousOn (du n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ v n x",
+      "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ContinuousOn (F n) (Set.Icc 0 L)",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, du n x = chi n * (u n x ^ m / (1 + v n x) ^ beta * dv n x) - F n x",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, |F n x| ≤ Fb",
+      "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, kappa ≤ 1 / (1 + v n x) ^ beta",
+      "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ≤ M",
+      "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R",
+      "TendstoUniformlyOn dv dV Filter.atTop (Set.Icc 0 L)",
+      "ContinuousOn dV (Set.Icc 0 L)",
+      "∀ x ∈ Set.Icc p q, dV x ≠ 0"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.SpikeLimit.source_integral_tendsto_zero_of_nonzero_limit_gradient": {
+          "hypotheses": [
+            "0 < p",
+            "p < p'",
+            "p' < q'",
+            "q' < q",
+            "q < L",
+            "0 < gamma",
+            "gamma < r",
+            "0 < m",
+            "0 < kappa",
+            "Filter.Tendsto chi Filter.atTop Filter.atTop",
+            "∀ (n : ℕ), ContinuousOn (u n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ u n x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Ioo 0 L, HasDerivAt (u n) (du n x) x",
+            "∀ (n : ℕ), ContinuousOn (du n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (v n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, 0 ≤ v n x",
+            "∀ (n : ℕ), ContinuousOn (dv n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ContinuousOn (F n) (Set.Icc 0 L)",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, du n x = chi n * (u n x ^ m / (1 + v n x) ^ beta * dv n x) - F n x",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, |F n x| ≤ Fb",
+            "∀ (n : ℕ), ∀ x ∈ Set.Icc 0 L, kappa ≤ 1 / (1 + v n x) ^ beta",
+            "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ≤ M",
+            "∀ (n : ℕ), ∫ (x : ℝ) in 0..L, u n x ^ r ≤ R",
+            "TendstoUniformlyOn dv dV Filter.atTop (Set.Icc 0 L)",
+            "ContinuousOn dV (Set.Icc 0 L)",
+            "∀ x ∈ Set.Icc p q, dV x ≠ 0"
+          ],
+          "conclusion": "Filter.Tendsto (fun n => ∫ (x : ℝ) in p'..q', u n x ^ gamma) Filter.atTop (nhds 0)"
+        }
+      }
+    }
+  }
+]
+```
+
+</details>
+
+## 1.4 — verified
+
+Reference: p. 11; `paper3/T:spiky-solu-thm/deductions`.
+
+the whole frozen Theorem 1.4 is proved for given actual positive nonconstant classical stationary families: gradient blowup for every gamma>0 in both models, with prescribed mass only in the minimal model and actual PDE-derived mass in the logistic model; for logistic gamma<1+alpha the same subsequence has constant C1 signal limit, every conjugate-Lq source and signal derivative test, and 0<=c<=uStar^gamma. Actual maxima and all analytic compactness/extraction inputs are constructed, not assumed. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.
+
+## Theorem 1.3(1)-(3) — verified-conditional
+
+Reference: p. 10; `paper3/T:global-extension/parts-1-3-logic`.
+
+All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier actual PDE closure/compactness and selected-component consequences retain all physical ranges and classical-solution hypotheses. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.
+
+Supplied inputs:
+
+- Shi–Wang unilateral alternatives for the actual selected branches
+- identification of the ambient space, solution set S and admissible set V
+- relative closedness and containment in V and closure S
+- ambient admissibility closure S contained in V
+- precompactness of every bounded-sensitivity slice from the applicable parameter-dependent PDE estimates and compact embedding
+- connectedness and base membership of the selected component
+- relative clopenness of the correctly oriented monotone locus
+- the continuous additive profile representation and constant equilibrium
+- orthogonality of W to the first cosine mode
+- local simple-eigenvalue expansions when applying the higher-mode perturbation lemma
+
+Further accepted input reductions:
+
+```json
+{
+  "date": "2026-10-22",
+  "date_basis": "UTC",
+  "source_gate": "d0a898282bdb2e08b283eda564439fe36e1cb08e",
+  "boundary": "Scoped actual complement, elliptic-family and conservation ingredients are supplied by the new exact types. Population family/jet construction, critical sensitivity/mode, actual operator/branch identification, global bifurcation and PDE stability remain. No parent status change."
+}
+```
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/selected-round-support/logistic_component_unbounded",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.logistic_component_unbounded"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "IsClosed C",
+      "C ⊆ closure S",
+      "¬IsCompact C"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/selected-round-support/minimal_component_unbounded",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.minimal_component_unbounded"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "IsClosed C",
+      "C ⊆ closure S",
+      "¬IsCompact C"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/selected-round-support/logistic_selected_unbounded",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed. The removed arc is relatively open in the parent-component subtype; the exact dependent type below is authoritative.",
+    "declarations": [
+      "ChemotaxisBifurcation.SelectedSolutionComponents.logistic_selected_unbounded"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "base ∈ closure (Subtype.val ⁻¹' S)",
+      "IsOpen (Subtype.val ⁻¹' removedArc)",
+      "selector ∈ ChemotaxisBifurcation.unilateralRemainder (closure (Subtype.val ⁻¹' S)) removedArc base",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) Set.univ) removedArc base selector)"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/selected-round-support/minimal_selected_unbounded",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed. The removed arc is relatively open in the parent-component subtype; the exact dependent type below is authoritative.",
+    "declarations": [
+      "ChemotaxisBifurcation.SelectedSolutionComponents.minimal_selected_unbounded"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "base ∈ closure (Subtype.val ⁻¹' S)",
+      "IsOpen (Subtype.val ⁻¹' removedArc)",
+      "selector ∈ ChemotaxisBifurcation.unilateralRemainder (closure (Subtype.val ⁻¹' S)) removedArc base",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) (ChemotaxisBifurcation.WeakH2AmbientClosure.fixedMeanSet hL p.uStar)) removedArc base selector)"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/local-arc-support/logistic_unbounded_of_local_curve",
+    "status": "verified-conditional",
+    "scope": "Compact slices of this exact logistic selected image imply sensitivity unboundedness and extended-real supremum top under explicit hNC. Noncompactness/global alternatives are not proved. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.logistic_unbounded_of_local_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) Set.univ) (c '' Set.Ioo (-eps) 0) (c 0) (c delta))"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/local-arc-support/minimal_unbounded_of_local_curve",
+    "status": "verified-conditional",
+    "scope": "Compact slices of this exact minimal selected image give unbounded sensitivity and supremum top under explicit hNC. No noncompactness, monotonicity or global alternative construction. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.minimal_unbounded_of_local_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) (ChemotaxisBifurcation.WeakH2AmbientClosure.fixedMeanSet hL p.uStar)) (c '' Set.Ioo (-eps) 0) (c 0) (c delta))"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/fourier-coordinate-support/logistic_unbounded_of_fourier_curve",
+    "status": "verified-conditional",
+    "scope": "Same physical-coordinate substitution into actual logistic unbounded consumer. Explicit hNC remains; conclusion is sensitivity unboundedness and EReal supremum top. hZero is absent and no base population identity is claimed by this theorem. The curve, pointwise population expansion, literal remainder orthogonality and local chart exhaustion are supplied. Critical sensitivity/mode and manuscript operator/branch identification remain external; global alternatives/noncompactness are not constructed.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.logistic_unbounded_of_fourier_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "0 < n",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = p.uStar + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∫ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x * ChemotaxisBifurcation.neumannMode L n ↑x ∂ChemotaxisBifurcation.SignalWeakSource.intervalVolume L = 0",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) Set.univ) (c '' Set.Ioo (-eps) 0) (c 0) (c delta))"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/fourier-coordinate-support/minimal_unbounded_of_fourier_curve",
+    "status": "verified-conditional",
+    "scope": "Uses proved physical amplitude within the actual fixed-mass minimal unbounded consumer; all model/curve/chart inputs and hNC explicit. Does not require hZero and does not conclude base identity or prove global alternatives. The curve, pointwise population expansion, literal remainder orthogonality and local chart exhaustion are supplied. Critical sensitivity/mode and manuscript operator/branch identification remain external; global alternatives/noncompactness are not constructed.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.minimal_unbounded_of_fourier_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "0 < n",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = p.uStar + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∫ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x * ChemotaxisBifurcation.neumannMode L n ↑x ∂ChemotaxisBifurcation.SignalWeakSource.intervalVolume L = 0",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x",
+      "¬IsCompact (ChemotaxisBifurcation.GlobalBranch.selectedImage S (ChemotaxisBifurcation.AmbientClosure.admissibleSet (⇑(ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL)) (ChemotaxisBifurcation.WeakH2AmbientClosure.fixedMeanSet hL p.uStar)) (c '' Set.Ioo (-eps) 0) (c 0) (c delta))"
+    ]
+  },
+  {
+    "id": "paper3/T:global-extension/parts-1-3-logic/cosine-complement-support/canonical-orthogonal-remainder",
+    "status": "verified-conditional",
+    "scope": "Canonical remainder is constructed continuously from each actual phase point; its profile has the exact constant-plus-cosine-plus-orthogonal-remainder expansion. A curve with supplied actual coefficient=t inherits this expansion. Three theorems and one definition; amplitude parameterization and curve existence are not proved.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierComplement.canonicalRemainder",
+      "ChemotaxisBifurcation.FourierComplement.continuous_canonicalRemainder",
+      "ChemotaxisBifurcation.FourierComplement.canonical_profile_expansion",
+      "ChemotaxisBifurcation.FourierComplement.curve_canonical_expansion"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL).",
+      "Positive modes n>0 for coordinate normalization, direct sum, mass and canonical remainder; k>0 as well for Kronecker coefficient.",
+      "Typed actual weak-H2 populations and real constants. Membership, supplied reconstruction and coefficient=t appear only in the exact declarations that consume them. Full independently printed types control every quantifier."
+    ]
+  }
+]
+```
+
+</details>
+
+## 2.43 — verified-conditional
+
+Reference: p. 20; `paper3/E:center-ODE-final/remainder-from-jet`.
+
+The remainder interface used by the scalar core (value bound C(|s|eta^2+|s|^3|eta|+s^4), derivative bound C(eta^2+s^2|eta|+|s|^3), differentiability in s, continuity in eta) follows from C^4 smoothness of the remainder R(eta,s) on a neighbourhood of the origin plus R(eta,0)=0 and five point jet conditions at (0,0); hence the branch existence, amplitude, stability sign and branch-curve theorems hold with smoothness and the jet conditions as the only analytic input. The Eq. 2.43 (s^2 eta^2) value bound holds on the box iff d_s R(eta,0)=0 for all small eta. Not claimed: center-manifold existence, C^4 regularity of the reduced field, and the derivation of the jet values from the Fourier computation.
+
+Supplied inputs:
+
+- C⁴ regularity of the actual reduced remainder on an open neighborhood
+- R(η,0)=0 on a small parameter interval
+- the five specified point-jet cancellations from the Fourier computation
+- identification of the reduced field with αηs−βs³+R and α>0, β≠0
+- axis cancellation R_s(η,0)=0 additionally for the Eq. 2.43 bound
+- center-manifold existence and transfer of scalar conclusions to the PDE are outside this row
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/E:center-ODE-final/remainder-from-jet/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.RemainderFromJet.abs_sub_le_of_deriv_bound"
+    ],
+    "conditional_inputs": [
+      "C⁴ regularity of the actual reduced remainder on an open neighborhood",
+      "R(η,0)=0 on a small parameter interval",
+      "the five specified point-jet cancellations from the Fourier computation",
+      "identification of the reduced field with αηs−βs³+R and α>0, β≠0",
+      "axis cancellation R_s(η,0)=0 additionally for the Eq. 2.43 bound",
+      "center-manifold existence and transfer of scalar conclusions to the PDE are outside this row"
+    ]
+  }
+]
+```
+
+</details>
+
+## Theorem 1.3(2)-(3), ambient-limit proof paragraphs — verified-conditional
+
+Reference: p. 10; `paper3/L:ambient-closure/deductions`.
+
+All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier actual PDE closure/compactness and selected-component consequences retain all physical ranges and classical-solution hypotheses. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.
+
+Supplied inputs:
+
+- identification of the manuscript F=0 weak-H2 stationary solution sets and actual branch points with the classical solution sets used by the closure wrappers, at the correct constrained parameters
+- actual component relative closedness, inclusion in the admissible set and in closure S, and set-level compactness of bounded-sensitivity slices required by the retained global consumers
+- the part (2) noncompactness hypothesis; the part (3) global alternatives, distinguished constant/complement and orthogonality, and strict orientation/local branch foundations; these are not constructed by the analytic closure proof
+
+Further accepted input reductions:
+
+```json
+{
+  "date": "2026-10-22",
+  "date_basis": "UTC",
+  "source_gate": "d0a898282bdb2e08b283eda564439fe36e1cb08e",
+  "boundary": "Scoped actual complement, elliptic-family and conservation ingredients are supplied by the new exact types. Population family/jet construction, critical sensitivity/mode, actual operator/branch identification, global bifurcation and PDE stability remain. No parent status change."
+}
+```
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/L:ambient-closure/deductions/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.AmbientClosure.isClosed_setOf_forall_nonneg",
+      "ChemotaxisBifurcation.AmbientClosure.isClosed_setOf_exists_ge"
+    ],
+    "conditional_inputs": [
+      "continuous profile realization in C([0,L]) and a closed affine constraint",
+      "initial admissibility and nontriviality of S",
+      "prescribed mass or the logistic mass identity",
+      "limits belonging to the stationary solution set",
+      "the Neumann strong maximum principle for nonnegative nonzero limits",
+      "regularity and zero-sensitivity stationary equations",
+      "identification of constant profiles with uStar",
+      "local IFT uniqueness in the appropriate constrained solution class",
+      "continuous limit-signal derivatives and positive 1+v for coefficient bounds",
+      "relative closedness, inclusion in closure S, and compactness of bounded-χ slices for the consumers",
+      "noncompactness for the part (2) consumer",
+      "global alternatives, constant base profile, complement orthogonality and strict monotonicity for the part (3) consumer"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/campaign-comparator-support/positive_profile",
+    "status": "verified-conditional",
+    "scope": "Strong positivity for a nonnegative solution of a specified continuous-coefficient linear second-order ODE with Neumann data and a positive point. It supplies a positivity ingredient only; no ambient closure or component/global conclusion.",
+    "declarations": [
+      "ChemotaxisBifurcation.IntervalStrongPositivity.positive_of_nonnegative"
+    ],
+    "conditional_inputs": [
+      "0 < L",
+      "∀ x ∈ Set.Icc 0 L, HasDerivWithinAt u (du x) (Set.Icc 0 L) x",
+      "∀ x ∈ Set.Icc 0 L, HasDerivWithinAt du (a x * u x + b x * du x) (Set.Icc 0 L) x",
+      "ContinuousOn a (Set.Icc 0 L)",
+      "ContinuousOn b (Set.Icc 0 L)",
+      "du 0 = 0",
+      "du L = 0",
+      "∀ x ∈ Set.Icc 0 L, 0 ≤ u x",
+      "∃ x ∈ Set.Icc 0 L, 0 < u x"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.IntervalStrongPositivity.positive_of_nonnegative": {
+          "hypotheses": [
+            "0 < L",
+            "∀ x ∈ Set.Icc 0 L, HasDerivWithinAt u (du x) (Set.Icc 0 L) x",
+            "∀ x ∈ Set.Icc 0 L, HasDerivWithinAt du (a x * u x + b x * du x) (Set.Icc 0 L) x",
+            "ContinuousOn a (Set.Icc 0 L)",
+            "ContinuousOn b (Set.Icc 0 L)",
+            "du 0 = 0",
+            "du L = 0",
+            "∀ x ∈ Set.Icc 0 L, 0 ≤ u x",
+            "∃ x ∈ Set.Icc 0 L, 0 < u x"
+          ],
+          "conclusion": "∀ x ∈ Set.Icc 0 L, 0 < u x"
+        }
+      }
+    }
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/selected-round-support/isCompact_closure_of_subsequence",
+    "status": "verified-conditional",
+    "scope": "Generic metric/topological ingredient; its analytic extraction/admissibility inputs are supplied by the actual-model wrappers.",
+    "declarations": [
+      "ChemotaxisBifurcation.RelativeCompactness.isCompact_closure_of_subsequence"
+    ],
+    "conditional_inputs": [
+      "[MetricSpace E] (typed metric-space context)",
+      "∀ (u : ℕ → E), (∀ (n : ℕ), u n ∈ S) → ∃ x phi, StrictMono phi ∧ Filter.Tendsto (u ∘ phi) Filter.atTop (nhds x)"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/selected-round-support/logistic_slice_subsequence",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.logistic_slice_subsequence"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "∀ (n : ℕ), z n ∈ S ∩ {z | z.1 ≤ X}"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/selected-round-support/minimal_slice_subsequence",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.minimal_slice_subsequence"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "∀ (n : ℕ), z n ∈ S ∩ {z | z.1 ≤ X}"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/selected-round-support/logistic_isCompact_closure_slice",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.logistic_isCompact_closure_slice"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/selected-round-support/minimal_isCompact_closure_slice",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic/minimal solution-set deduction in the genuine weak-H2 phase. Local component geometry and noncompactness remain explicit where present; no branch existence or manuscript component identification is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.BoundedSolutionSlices.minimal_isCompact_closure_slice"
+    ],
+    "conditional_inputs": [
+      "0 < L (hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/local-arc-support/logistic_of_local_curve",
+    "status": "verified-conditional",
+    "scope": "Actual classical logistic set supplies admissibility and compact closure slices using certified PDE results. Retains positive length, LogisticAdmissible,1<=m<=alpha+2,gamma<=1+alpha,beta>=0 and given local-curve data. No free compactness premise remains. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.logistic_of_local_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/local-arc-support/minimal_of_local_curve",
+    "status": "verified-conditional",
+    "scope": "Actual fixed-mass minimal set supplies admissibility and compact slices. Retains positive length,alpha>=0,1<=m<=2,beta>=0,uStar>0,mu>0,nu>=0,0<=gamma<=1,SignalEquilibrium and given local-curve data. The subtype includes fixedMeanSet. For manuscript use, identifying c0 with the critical constant equilibrium and A with the physical signed amplitude, and identifying this curve/solution subset with the paper branch remain external; no curve existence or weak-to-classical theorem is claimed.",
+    "declarations": [
+      "ChemotaxisBifurcation.ParametrizedSolutionComponents.minimal_of_local_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "Continuous A",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, A (c t) = t",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/fourier-coordinate-support/logistic_of_fourier_curve",
+    "status": "verified-conditional",
+    "scope": "Uses the physical coefficient for A, proved amplitude continuity and curve amplitude equality, and the certified actual-model local-curve consumer. Derives selected-image closedness, connectedness, base/whole-positive-half inclusion, admissible/closure containment, compact slices, and base population=uStar using hZero. Retains positive L/n,LogisticAdmissible,1<=m<=alpha+2,gamma<=1+alpha,beta>=0, actual S membership and all expansion/orthogonality/curve/open-chart exhaustion inputs. The curve, pointwise population expansion, literal remainder orthogonality and local chart exhaustion are supplied. Critical sensitivity/mode and manuscript operator/branch identification remain external; global alternatives/noncompactness are not constructed.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.logistic_of_fourier_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "p.LogisticAdmissible",
+      "1 ≤ p.m",
+      "p.m ≤ p.alpha + 2",
+      "p.gamma ≤ 1 + p.alpha",
+      "0 ≤ beta",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.logisticSolutionSet p hL beta",
+      "0 < n",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = p.uStar + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∫ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x * ChemotaxisBifurcation.neumannMode L n ↑x ∂ChemotaxisBifurcation.SignalWeakSource.intervalVolume L = 0",
+      "r 0 = 0",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/fourier-coordinate-support/minimal_of_fourier_curve",
+    "status": "verified-conditional",
+    "scope": "Actual fixed-mass admissible subtype and minimal solution set, with positive L/n,alpha>=0,1<=m<=2,beta>=0,uStar>0,mu>0,nu>=0,0<=gamma<=1,SignalEquilibrium. Derives selected-image properties and constant base population from hZero while retaining expansion/orthogonality/curve/local chart data. The curve, pointwise population expansion, literal remainder orthogonality and local chart exhaustion are supplied. Critical sensitivity/mode and manuscript operator/branch identification remain external; global alternatives/noncompactness are not constructed.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierAmplitude.minimal_of_fourier_curve"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL, positive interval length)",
+      "0 ≤ p.alpha",
+      "1 ≤ p.m",
+      "p.m ≤ 2",
+      "0 ≤ beta",
+      "0 < p.uStar",
+      "0 < p.mu",
+      "0 ≤ p.nu",
+      "0 ≤ p.gamma",
+      "p.gamma ≤ 1",
+      "p.SignalEquilibrium",
+      "S ⊆ ChemotaxisBifurcation.WeakH2AmbientClosure.minimalSolutionSet p hL beta",
+      "0 < n",
+      "0 < eps",
+      "delta ∈ Set.Ioo 0 eps",
+      "ContinuousOn c (Set.Ico 0 eps)",
+      "∀ t ∈ Set.Ioo (-eps) eps, t ≠ 0 → ↑(c t) ∈ S",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∀ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (↑(c t)).2) x = p.uStar + t * ChemotaxisBifurcation.neumannMode L n ↑x + ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x",
+      "∀ t ∈ Set.Ioo (-eps) eps, ∫ (x : ↑(Set.Icc 0 L)), ((ChemotaxisBifurcation.WeakH2PhaseSpace.profileCLM hL) (r t)) x * ChemotaxisBifurcation.neumannMode L n ↑x ∂ChemotaxisBifurcation.SignalWeakSource.intervalVolume L = 0",
+      "r 0 = 0",
+      "IsOpen U",
+      "∀ t ∈ Set.Ioo (-eps) 0, c t ∈ U",
+      "∀ x ∈ ChemotaxisBifurcation.parentComponent (closure (Subtype.val ⁻¹' S)) (c 0), x ∈ U → ∃ t ∈ Set.Ioo (-eps) eps, c t = x"
+    ]
+  },
+  {
+    "id": "paper3/L:ambient-closure/deductions/cosine-complement-support/minimal-fixed-mean-decomposition",
+    "status": "verified-conditional",
+    "scope": "Removing a positive cosine mode preserves actual population mass. Every actual fixed-mean population admits a unique decomposition around its homogeneous population into a cosine amplitude and mean-zero Fourier-orthogonal remainder. Three theorems; no weak-to-classical or PDE branch identification.",
+    "declarations": [
+      "ChemotaxisBifurcation.FourierComplement.remainder_mass",
+      "ChemotaxisBifurcation.FourierComplement.remainder_mem_fixedMean_iff",
+      "ChemotaxisBifurcation.FourierComplement.existsUnique_fixedMean_decomposition"
+    ],
+    "conditional_inputs": [
+      "0 < L (dependent binder hL).",
+      "Positive modes n>0 for coordinate normalization, direct sum, mass and canonical remainder; k>0 as well for Kronecker coefficient.",
+      "Typed actual weak-H2 populations and real constants. Membership, supplied reconstruction and coefficient=t appear only in the exact declarations that consume them. Full independently printed types control every quantifier."
+    ]
+  }
+]
+```
+
+</details>
+
+## Theorem 1.3(3), Equation 4.18, full range 1 <= m <= 2 — verified-conditional
+
+Reference: p. 32; `paper3/T:global-extension/monotone-locus`.
+
+Actual weak-H2 phase, canonical continuous profile map and the physical signal-continuity/ODE machinery are now constructed internally, so the former generic phase-realization assumptions are removed. The clopen/strict-orientation consumers still require hConst (local constant-limit bifurcation representation) and hStar (local half-branch parametrization), together with component/branch foundations. These are genuine missing local/global bifurcation inputs, not mere constant-state identification. Keep this row conditional.
+
+Supplied inputs:
+
+- ordinary given-component membership and actual classical-PDE profile correspondence; global branch existence/continuation and connected-component foundations remain outside this consumer
+- hConst: local constant-limit bifurcation representation; hStar: local half-branch parametrization at the distinguished point; the full weak-H2 population embedding, actual ODE identification, signal C2 topology and pointwise continuity are derived
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/T:global-extension/monotone-locus/comparator-support",
+    "status": "verified-conditional",
+    "scope": "Existing comparator helpers supporting the unchanged conditional parent scope; no parent PDE result is promoted.",
+    "declarations": [
+      "ChemotaxisBifurcation.MonotoneLocus.linear_eq_zero",
+      "ChemotaxisBifurcation.MonotoneLocus.abs_le_mul_min",
+      "ChemotaxisBifurcation.MonotoneLocus.exists_margin",
+      "ChemotaxisBifurcation.MonotoneLocus.neg_of_perturb",
+      "ChemotaxisBifurcation.MonotoneLocus.two_div_mul_min_le_sin",
+      "ChemotaxisBifurcation.MonotoneLocus.exists_margin_pos"
+    ],
+    "conditional_inputs": [
+      "Positive stationary profiles obeying the classical power-flux and elliptic signal equations and Neumann data.",
+      "Preconnected oriented component with positive sensitivity; pointwise profile continuity and signal C2 continuity.",
+      "Constant-limit local mode representation and an oriented local first-mode half-branch."
+    ]
+  }
+]
+```
+
+</details>
+
+## Lemma 2.1 and Equation 2.17 — verified
+
+Reference: p. 13; `paper3/L:trig-integrals/phase-space-H2`.
+
+Every w in X = {w in H^2(0,L) : w_x(0)=w_x(L)=0}, with H^2 defined by L^2 weak derivatives on (0,L) and the Neumann condition on the continuous representative of w_x, has a representative satisfying NeumannW21; consequently its Neumann cosine coefficients are absolutely summable and its cosine series converges to that representative on [0,L], so Lemma 2.1 applies to elements of X. Includes the 1-D du Bois-Reymond lemma and the W^{1,1} absolutely continuous representative.
+
+## 2.43 — verified-conditional
+
+Reference: p. 20; `paper3/E:center-ODE-final/axis-condition`.
+
+(a) The five point jet conditions plus C^4 smoothness and R(eta,0)=0 do NOT imply the Eq. 2.43 value bound: R(eta,s)=eta^2 s satisfies all of them but violates the bound on every box. (b) For the model, with the named reduction hypothesis TrivialBranchLinearization (d_s f(eta,0) = sigma_{n0}(chi*+eta) for the reduced field f, which is what the Fourier-diagonal linearization at u=u* and h~(0,chi~)=0 give), the affine form of sigma_{n0} (slope alpha_{n0}, zero at chi*) yields the axis condition d_s R(eta,0)=0 for R = f - alpha_{n0} eta s + beta_{n0} s^3, hence both Eq. 2.43 bounds (value C(s^2 eta^2+|s|^3|eta|+s^4), derivative C(|s|eta^2+s^2|eta|+|s|^3)) and the full branch-curve package (continuous curves, local uniqueness, amplitude sqrt(alpha eta/beta)+O(|eta|), derivative sign). Non-vacuity: the exact normal form satisfies the hypotheses. Not claimed: center-manifold existence, C^4 regularity of f, the jet values, or TrivialBranchLinearization itself.
+
+Supplied inputs:
+
+- identification of p with a positive physical equilibrium in the logistic or fixed-mass minimal model
+- identification x=λ_n₀>0 and of the modal threshold with χ* at the selected critical mode
+- existence of the reduced field in the manuscript's Fourier amplitude and original time coordinate
+- C⁴ regularity on an open neighborhood containing a closed box with 0<r≤1
+- R(η,0)=0 throughout that box
+- the five origin jets R_s=R_ηs=R_ss=R_ηss=R_sss=0, including identification of β_n₀ with the cubic coefficient
+- TrivialBranchLinearization throughout |η|≤r
+- β_n₀≠0 for the branch conclusions
+
+## Equation 2.22 — verified
+
+Reference: p. 17; `paper3/E:ode-eq0/projected-remainder`.
+
+The actual physical logistic source residual and signed chemotactic flux residual are identified with the nonlinear-operator difference. Taylor bounds, actual signal C1 size, zero endpoint flux, flux derivative integrability and normalized all-mode projections are derived. The final actual_population_projection_cosine_l1_uniform theorem uses the actual Neumann cosine coefficients of U, with summability/reconstruction proved from NeumannW21, and yields C_k*||u||_l1^4 uniformly for |chi|<=X. Remaining premises are ordinary given-classical-profile regularity, positivity near the interval, Neumann data and the actual shifted signal equation; no Taylor, projected-balance, Fourier-reconstruction or signal-size estimate is assumed. This supports verified status within that classical coefficient-l1 residual scope, not the whole infinite modal dynamics or a generic X_theta embedding theorem.
+
+Supporting ingredients and their precise inputs:
+
+<details>
+<summary>Expand supporting scopes and input lists</summary>
+
+```json
+[
+  {
+    "id": "paper3/E:ode-eq0/projected-remainder/campaign-comparator-support/actual_rpow_Taylor",
+    "status": "verified-conditional",
+    "scope": "Quadratic real-power Taylor remainder with cubic scalar error near a positive base; mobility/source Taylor ingredient only, not the complete projected quartic residual.",
+    "declarations": [
+      "ChemotaxisBifurcation.rpow_quadratic_remainder"
+    ],
+    "conditional_inputs": [
+      "0 < u"
+    ],
+    "lean_hypotheses": {
+      "declarations": {
+        "ChemotaxisBifurcation.rpow_quadratic_remainder": {
+          "hypotheses": [
+            "0 < u"
+          ],
+          "conclusion": "∃ C, 0 ≤ C ∧ ∀ (s : ℝ), |s| ≤ u / 2 → |(u + s) ^ q - u ^ q - q * u ^ (q - 1) * s - q * (q - 1) * u ^ (q - 2) / 2 * s ^ 2| ≤ C * |s| ^ 3"
+        }
+      }
+    }
+  }
+]
+```
+
+</details>
+
+## Equations 2.18-2.19 — verified
+
+Reference: p. 16; `paper3/E:vk-eq/modal-remainders`.
+
+actual nonlinear signal-profile modal residual: exact zero/positive normalization, actual source Taylor estimate, original elliptic projected balance, summability, and full physical-signal equilibrium wrapper are derived. Ordinary given-profile regularity/PDE/small-amplitude inputs remain; no center-manifold or full Fourier-convolution existence is claimed.

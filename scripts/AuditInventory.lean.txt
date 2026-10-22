@@ -1,0 +1,44 @@
+/-
+SPDX-License-Identifier: Apache-2.0
+Module enumeration is adapted from leanprover-community/axiom-audit at
+46024e005996495c65ef609368e11ab39c4222e3. See LICENSE.axiom-audit.
+-/
+import AxiomAudit
+
+/-!
+The publication audit uses the pinned upstream axiom collector and records
+every declaration and source module selected from the compiled environment.
+This is audit tooling, outside the mathematical library's import closure.
+-/
+
+open Lean AxiomAudit
+
+def main (args : List String) : IO UInt32 := do
+  let root := `ChemotaxisBifurcation
+  let modules ← match args with
+    | [] => pure #[root]
+    | [m] => pure #[m.toName]
+    | _ =>
+      IO.eprintln "usage: axiom-audit [scratch-module]"
+      return 2
+  let (output, ok) ← withImportedEnv modules do
+    let report ← audit root [``propext, ``Classical.choice, ``Quot.sound]
+    let env ← getEnv
+    let moduleNames := env.allImportedModuleNames
+    let declarations : Array Name := env.constants.fold (init := #[]) fun acc n _ =>
+      match env.getModuleIdxFor? n with
+      | some idx =>
+        match moduleNames[idx.toNat]? with
+        | some m => if inAuditedLib root m then acc.push n else acc
+        | none => acc
+      | none => acc
+    let names := (declarations.qsort Name.lt).map freshStr
+    let sourceModules := ((moduleNames.filter (inAuditedLib root)).qsort Name.lt).map freshStr
+    pure (Json.mkObj [
+      ("schema", Json.str "chemotaxis-bifurcation-axiom-inventory-v1"),
+      ("report", report.toJson),
+      ("declarations", toJson names),
+      ("modules", toJson sourceModules)
+    ], report.ok && report.audited == declarations.size)
+  IO.println output.compress
+  return if ok then 0 else 1

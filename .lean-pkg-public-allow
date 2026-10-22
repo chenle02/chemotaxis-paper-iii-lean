@@ -1,0 +1,3 @@
+allow: (?i)arXiv:\d{4}\.\d{4,5}(v\d+)?
+allow: (?:\\(?:eqref|label|ref|cite)\{|prop-2|thm-eq[23])
+allow: [a-z]+@example\.invalid

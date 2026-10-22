@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: If you use this Lean companion, please cite the software below and the paper
+  it formalizes (listed under references). The Lean formalization was carried out
+  by Le Chen (with AI assistance as disclosed in the README); Ian Ruau and Wenxian
+  Shen are coauthors of the paper.
+type: software
+title: 'Lean companion to "Chemotaxis models with signal-dependent sensitivity and
+  a logistic-type source, III: Bifurcation and spike-like solutions"'
+authors:
+- family-names: Chen
+  given-names: Le
+license: Apache-2.0
+repository-code: https://github.com/chenle02/chemotaxis-paper-iii-lean
+url: https://github.com/chenle02/chemotaxis-paper-iii-lean
+abstract: 'Partial Lean formalization of Chemotaxis III: finite coefficient/modal
+  results, actual stationary estimates and limits, weak-H2 coordinates and complements,
+  and conditional bifurcation deductions. Full PDE bifurcation, center manifolds,
+  global alternatives and stability are not certified.'
+keywords:
+- Lean 4
+- Mathlib
+- formalization
+- chemotaxis
+- bifurcation
+references:
+- type: article
+  title: 'Chemotaxis models with signal-dependent sensitivity and a logistic-type
+    source, III: Bifurcation and spike-like solutions'
+  authors:
+  - family-names: Chen
+    given-names: Le
+  - family-names: Ruau
+    given-names: Ian
+  - family-names: Shen
+    given-names: Wenxian
+  year: 2026
+  url: https://arxiv.org/abs/2610.20976v1
+  identifiers:
+  - type: other
+    value: arXiv:2610.20976v1
+    description: Published preprint predecessor; the public scope ledger targets the October 20, 2026 v2 candidate

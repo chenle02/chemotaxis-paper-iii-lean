@@ -1,0 +1,2098 @@
+schema: coverage/1
+package: chemotaxis-bifurcation-lean
+manuscript:
+  title: 'Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like
+    solutions'
+  version:
+    repo: https://github.com/chenle02/chemotaxis-paper-iii
+    commit: c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4
+    sha256: 545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae
+summary: 47 verified scopes, 23 conditional scopes, and 3 exclusions across 73 overlapping scopes. This is partial
+  formalization, not whole-paper certification. See data/public-scope-ledger.json for exact boundaries.
+rows:
+- paper:
+    number: Proposition 1.1
+    title: Linear stability/instability
+    label: P:review-prop-2
+    statement: "\\begin{proposition}[Linear stability/instability]\\label{P:review-prop-2}\n  Let $(u^*,v^*)$ be\
+      \ a positive constant solution of~\\eqref{E:main-PE}. If\n  $\\chi_0 < \\chi^*(u^*)$, then $(u^*, v^*)$ is\
+      \ linearly exponentially stable in\n  the case $a, b > 0$, and is linearly exponentially stable with respect\
+      \ to\n  perturbations with spatial average $u^*$ in the case $a = b = 0$. If $\\chi_0 >\n  \\chi^*(u^*)$,\
+      \ then $(u^*,v^*)$ is linearly unstable.\n\\end{proposition}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-criticalsensitivity-eq-chistar
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-minimizingmode-beta-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-physicalgrowth-eq-coupled
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-physicalgrowth-neg-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-physicalgrowth-pos-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-physicalgrowth-zero-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-strictcriticalmode-other-growth-neg
+  note: 'V2 scope: The semigroup and nonlinear PDE stability conclusions in the proposition are excluded; this row
+    covers only modewise ordered-field algebra. Source locator: p. 5, TeX line 501.'
+  inputs: []
+- paper:
+    number: Theorem 1.1 (PDE branches and stability)
+    title: 'Local pitchfork bifurcation: curves, expansions and PDE stability'
+    label: T:local-bifurcation
+  class: outside
+  note: 'V2 scope: Requires center-manifold construction, finite-regularity remainder control, implicit bifurcation,
+    and PDE spectral stability. Source locator: p. 6, TeX line 581.'
+  claims: []
+- paper:
+    number: Theorem 1.1 (reduced scalar equation)
+    title: 'Local pitchfork bifurcation: equilibria of the reduced scalar equation'
+    label: T:local-bifurcation
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-reducedfield
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-parameter-le-amp-sq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-value-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-deriv-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-side-condition-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-exists-pos-equilibrium
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-ampconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-absorbedconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-value-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-deriv-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalform-paper-equilibrium-core
+  inputs:
+  - identification of η=χ₀−χ* and s=u_n₀ with the reduced scalar equation
+  - α>0 and β≠0
+  - fixed C≥0 and 0<r≤1
+  - uniform bound |R(η,s)|≤C(|s|η²+|s|³|η|+s⁴) on |η|,|s|≤r, or its stronger Eq. 2.43 version
+  - HasDerivAt (R η) (Rs η s) s throughout that box
+  - uniform derivative bound |Rs(η,s)|≤C(η²+s²|η|+|s|³), or the stronger matching version
+  note: 'V2 scope: The finite scalar side, derivative-sign, and amplitude conclusions are proved from the explicit
+    reduced equation and separate remainder interfaces. Center-manifold reduction, branch existence, and PDE stability
+    lifting remain outside this row. Source locator: p. 6, TeX line 581.'
+- paper:
+    number: Theorem 1.2(1)
+    title: beta_n0 is a quadratic in beta with negative leading coefficient
+    label: T:direction-change
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaassemblydata-coeff-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaassemblydata-constant
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaassemblydata-leading
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaassemblydata-linear
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betacoefficientata0-eq-assembly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betacoefficientata0-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadouble-data
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-eq-manuscript
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-eq-manuscript-pi
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaminus-is-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaminus-lt-betaplus
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaplus-is-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaquadratic-double-root-factor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaquadratic-factor-of-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaquadratic-factor-two-roots
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaregime-conditions-exhaustive
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaregime-conditions-pairwise-disjoint
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaroots-nonnegative-of-c-nonpos-b-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaroots-sign-of-c-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cofactor-neg-of-pos-constant
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubice-eq-at-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicgslope-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicg-eq-affine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubich-eq-affine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fixedmassbetacoefficient-physical-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fixedmassbetacoefficient-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logisticbetacoefficient-physical-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logisticbetacoefficient-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalbetaa-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalbetacoefficientata0-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-i
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-ii
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-iii-double
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-iii-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-iv-b-nonpos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-regime-case-iv-discriminant-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-case-i
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-case-ii
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-case-iii-double
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-double-nonnegative-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-everywhere-neg-of-b-nonpos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-everywhere-neg-of-discriminant-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-one-positive-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-two-nonnegative-roots
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-regime-zero-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-secondmodea2slope-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-secondmodea2-eq-affine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-upow-mul-piscaled
+  inputs:
+  - identification of the reduced cubic coefficient with E:beta-n0
+  - quadratic graph coefficients E:a_0,i and E:a_k,i>0 and cubic assembly E:Gamma-n0-explicit
+  - fixed-mass coefficient identification E:beta-n0-minimal with a=b=a₀=0
+  note: 'Case (iii) is covered for the corrected statement (negativity for beta >= 0, beta != beta_0); see finding
+    v1-misprint-thm12-iii-beta-range. Source locator: p. 8, TeX line 700.'
+- paper:
+    number: Theorem 1.2(2)
+    title: beta_n0 as a rational function of lambda_n0; sign changes and domain-size limits
+    label: T:direction-change
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-denominator-ne-zero-at-balancing
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-eventually-neg-at-critical-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-eventually-neg-of-large-domain-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-eventually-pos-at-critical-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-eventually-pos-of-large-domain-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-sub-first-mode-tendsto-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-atbot-of-scriptp-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-atbot-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-attop-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-large-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-small-domain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientlimits-physical-critical-coefficient-tendsto-small-domain-of-d-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-domainlimits-physical-critical-eigenvalue-tendsto-balancing
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-nineteen-tenths-higher-modes-negative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-higher-modes-negative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-moderootcounts-actual-balanced-zero-lengths-card-le-four
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-moderootcounts-actual-zero-lengths-card-le-five
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-moderootcrossing-physical-coefficient-zero-of-zero-numerator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-moderootcrossing-physical-mode-local-same-sign-of-even-rootmultiplicity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-moderootcrossing-physical-mode-local-sign-change-of-odd-rootmultiplicity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-oddrootcrossing-physical-coefficient-local-same-sign-of-even-rootmultiplicity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-oddrootcrossing-physical-coefficient-local-sign-change-of-odd-rootmultiplicity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-logisticbetacoefficient-eq-paperratio
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-natdegree-paperbalancednumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-natdegree-papernumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-paperdenominatorpoly-eval-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-logisticbetacoefficient-eq-numerator-div-denominator
+  inputs:
+  - identification of the non-minimal reduced cubic coefficient with E:beta-n0
+  - its quadratic graph and cubic assembly formulas E:a_0,i, E:a_k,i>0, and E:Gamma-n0-explicit
+  note: 'V2 scope: The all-parameter physical rational formula, degree/cancellation bounds, admissible mode corridors,
+    roots, limits, and finite sign consequences are proved. Excluded tie bifurcations and PDE branch/stability conclusions
+    are not classified. Source locator: p. 8, TeX line 700.'
+- paper:
+    number: Remark 1.1(1)
+    title: Reduction to the scalar ODE for u_n0
+    label: R:local-bifurcation-minimal
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-reducedfield
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-parameter-le-amp-sq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-value-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-deriv-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-side-condition-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-exists-pos-equilibrium
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-ampconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-absorbedconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-value-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-deriv-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalform-paper-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-model-final-interface
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-model-branch-curves
+  inputs:
+  - identification of the minimal-model scalar equation and its coefficients, including the fixed-mass reduction
+  - α>0 and β≠0
+  - fixed C≥0 and 0<r≤1
+  - uniform weak mixed value bound on |η|,|s|≤r
+  - differentiability in s and the uniform weak derivative bound for the full mapped scalar interface
+  - 'For the stronger v2 value and derivative bounds: C4 reduced-field JetHyp and exact TrivialBranchLinearization
+    in the physical Fourier amplitude and original time coordinate.'
+  note: 'V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates
+    from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE
+    reduction and PDE spectral stability remain inputs. Source locator: p. 7, TeX line 639.'
+- paper:
+    number: Theorem 1.3
+    title: Extension of the local bifurcation branches
+    label: T:global-extension
+  class: outside
+  note: 'V2 scope: Requires unilateral global bifurcation, compactness, and PDE a priori theory. Source locator:
+    p. 10, TeX line 932.'
+  claims: []
+- paper:
+    number: Theorem 1.4
+    title: Spike-like stationary solutions
+    label: T:spiky-solu-thm
+    statement: "\\begin{theorem}[Spike-like stationary solutions]\\label{T:spiky-solu-thm}\n  Let $(u^*,v^*)$ be\
+      \ a positive constant solution of~\\eqref{E:main-PE} and\n  $(u_n,v_n)$ be positive nonconstant classical\
+      \ stationary solutions\n  of~\\eqref{E:main-PE} with $\\chi_0 = \\chi_n \\to \\infty$ and $\\int_0^L u_n\\\
+      ,dx =\n  Lu^*$ for every $n$ in the case that $a = b = 0$. If\n  \\[\n    \\liminf_{n\\to\\infty}\\max_{[0,L]}u_n>u^*,\n\
+      \  \\]\n  then there is a subsequence $\\{u_{n_k}\\}$ and a point $x^* \\in [0, L]$ such\n  that, for every\
+      \ $\\delta > 0$,\n  \\begin{equation}\\label{E:spiky-thm-eq2}\n    \\max_{[x^*-\\delta,x^*+\\delta]\\cap[0,L]}|(u_{n_k})_x|\n\
+      \    \\longrightarrow\\infty\\quad {\\rm as}\\quad n_k\\to\\infty.\n  \\end{equation}\n  Moreover, in the\
+      \ non-minimal model, if $0 < \\gamma < 1 + \\alpha$, then\n  \\begin{equation}\\label{E:spiky-thm-eq3}\n \
+      \   u_{n_k}^\\gamma\\rightharpoonup c\\,\\,\\text{ in }\\,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\\
+      ,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\,\
+      \ W^{2,q}\n  \\end{equation}\n  for $q = \\frac{1+\\alpha}{\\gamma}$ and some constant $0 \\le c \\le\n  (u^*)^\\\
+      gamma$.\n\\end{theorem}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:spiky-solu-thm.
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-minimal-gradient-blowup
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-gradient-blowup-of-eventual-peak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-spike-all-tests-of-eventual-peak
+  inputs: []
+- paper:
+    number: Remark 1.3(2)
+    title: No Dirac mass in the non-minimal model
+    label: R:spike-solution-rk
+    statement: "\\begin{remark}\\label{R:spike-solution-rk}\n\n  \\begin{itemize}\n    \\item[(1)] Theorem~\\ref{T:spiky-solu-thm}\
+      \ applies to a branch from\n      Theorem~\\ref{T:global-extension}(1) if it extends to arbitrarily large\n\
+      \      $\\chi_0$ and $\\liminf_{\\chi_0\\to\\infty}\\max_{[0,L]}u(\\cdot;\\chi_0) > u^*$.\n      In the non-minimal\
+      \ model, whether there are positive non-constant\n      stationary solutions satisfying the conditions in\n\
+      \      Theorem~\\ref{T:spiky-solu-thm} remains open. Our numerical experiments\n      presented in Section~\\\
+      ref{SS:bifurcation-numerics} provide numerical\n      evidence consistent with such behavior.\n\n\n    \\\
+      item[(2)] For the non-minimal model, the spikes in\n      Theorem~\\ref{T:spiky-solu-thm} cannot carry a Dirac\
+      \ mass for any $\\alpha,\n      \\gamma > 0$. Indeed, the stationary logistic identity $ a\\int_0^L u_n\\\
+      ,dx\n      = b\\int_0^L u_n^{1+\\alpha}\\,dx$ gives $\\int_0^L u_n^{1+\\alpha}\\,dx <\n      L\\left(u^*\\\
+      right)^{1+\\alpha}$ by Lemma~\\ref{L:spiky-solu-lm1}(1).\n      H\\\"older's inequality therefore yields\n\
+      \      \\begin{equation*}%\\label{E:no-delta-concentration}\n        \\int_{(x^*-\\delta,x^*+\\delta)\\cap(0,L)}u_n\\\
+      ,dx\n        \\le(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}\\|u_n\\|_{L^{1+\\alpha}}\n        <u^* L^{\\frac{1}{1+\\\
+      alpha}}(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}.\n      \\end{equation*}\n      Thus, the mass in shrinking\
+      \ neighborhoods tends to zero uniformly in $n$,\n      even though the gradients diverge.\n\n    \\item[(3)]\
+      \   For nonconstant solutions $(\\chi_n,u_n) \\in\n      \\mathcal{C}_1^{\\pm}$ under the assumptions of\n\
+      \      Theorem~\\ref{T:global-extension}(3), $\\chi_n \\to \\infty$ implies $\n      \\max_{[0,L]}u_n \\longrightarrow\
+      \ \\infty$. Thus, the liminf condition in\n      Theorem~\\ref{T:spiky-solu-thm} is automatic for these sequences.\n\
+      \  \\end{itemize}\n\\end{remark}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/R:no-delta-concentration.
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-window-mass-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-window-mass-decay-of-classical-profiles
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-atoms-of-classical-profiles
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-dirac-subsequence-of-classical-profiles
+  inputs: []
+- paper:
+    number: Proposition 1.2
+    title: Consistency of thresholds
+    label: P:semidiscrete-threshold
+    statement: "\\begin{proposition}[Consistency of thresholds]\\label{P:semidiscrete-threshold} Fix $m, \\alpha,\
+      \ \\mu, \\nu, \\gamma > 0$ and\n  $\\beta \\ge 0$, and assume either $a, b > 0$ or $a = b = 0$. Then\n  \\\
+      begin{equation}\\label{E:disctere-limit-eq}\n    \\lim_{N\\to\\infty}\n    \\chi_N^{*,{\\rm disc}}(u^*,\\\
+      beta)\n    =\n    \\chi_{a,b,\\beta}^*(u^*).\n  \\end{equation}\n\\end{proposition}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-chistar-eq-physical-modethreshold
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-continuumcritical-eq-finite
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-critical-threshold-tendsto-of-finite-cutoff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-discarg-mem-icc
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-discarg-one-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-discarg-tendsto-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-disclam-eq-continuum-mul-sinc-sq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-disclam-lower-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-disclam-one-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-disclam-tendsto-continuum
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-discretecritical-tendsto-continuumcritical
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-exists-quadratic-tail
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-exists-uniform-continuum-tail
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-exists-uniform-discrete-tail
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-finite-infimum-eq-of-tail
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-finite-mode-minimum-tendsto
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-fixedmass-discretecritical-tendsto
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-logistic-discretecritical-tendsto
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-minimaldiscthreshold-isleast
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-minimaldiscthreshold-one-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-minimaldiscthreshold-tendsto
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-modethreshold-disc-tendsto
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-physicalprefactor-eq-inv-thresholdk
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-physicalprefactor-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-positivemodes-nonempty
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-threshold-lower-bound
+  note: 'V2 scope: The discrete eigenvalue/threshold functions, changing-mode minima, physical identification, and
+    convergence are proved together with the concrete scheme-to-modal bridge. No semidiscrete trajectory existence
+    or nonlinear stability theorem is asserted. Source locator: p. 12, TeX line 1109.'
+  inputs: []
+- paper:
+    number: Equation (1.24)
+    title: 'Eigenvalues of the discrete Neumann Laplacian (corrected: of -Delta_h)'
+    label: E:disc-eigenvalues
+    statement: "\\begin{equation}\\label{E:disc-eigenvalues}\n  \\lambda_{0,N}^{\\rm disc}=0,\n  \\qquad\n  \\lambda_{n,N}^{\\\
+      rm disc}\n  =\\frac{4}{h^2}\\sin^2\\left(\\frac{n\\pi}{2N}\\right),\n  \\qquad 1\\le n\\le N.\n\\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-cos-step-identity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-cos-reflected-right-identity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-reflectedneglaplacian-cosine-eigenpair
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemode-ne-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-disclam-strictmono-on-represented
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-disclam-injective-on-grid
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemode-haseigenvector
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemodes-linearindependent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemode-exhaustion
+  note: 'Verified for the corrected statement: Equation 1.24 read with -Delta_h (eigenvalues 4 h^-2 sin^2(n pi/(2N)),
+    n=0..N, of the reflected Neumann stencil). Source locator: p. 12, TeX line 1074.'
+  inputs: []
+- paper:
+    number: Equation (6.1)
+    title: Semidiscrete scheme for the non-minimal model
+    label: E:main-DIS
+    statement: "\\begin{align}\\label{E:main-DIS}\n  \\begin{dcases}\n    u_i'\n    = (\\Delta_h u)_i\n    + \\\
+      beta\\chi_0\\,\\dfrac{u_i^m}{(1+v_i)^{\\beta+1}} (D_h v_i)^2\n    - m\\chi_0\\,\\dfrac{u_i^{m-1}}{(1+v_i)^\\\
+      beta} (D_h u_i)(D_h v_i)\\cr\n    \\hphantom{\\dot{u}_i = {}}\n    - \\chi_0\\,\\dfrac{u_i^m}{(1+v_i)^\\beta}\n\
+      \    \\left(\\mu v_i-\\nu u_i^\\gamma\\right)\n    + au_i - b u_i^{1+\\alpha},\n    \\quad i=0,1,\\ldots,N,\\\
+      cr\n    0 = (\\Delta_h v)_i - \\mu v_i + \\nu u_i^\\gamma,\n    \\quad i=0,1,\\ldots,N,\\cr\n    u_{-1}=u_1,\\\
+      \ u_{N+1}=u_{N-1},\\\n    v_{-1}=v_1,\\ v_{N+1}=v_{N-1}.\n  \\end{dcases}\n\\end{align}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativefaceflux-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativenoderate-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativenoderate-directionalderivative-eq-populationresidual-fixedmass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservative-coupled-mode-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-discretecritical-eq-physical-threshold-min
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-discrete-coupled-mode-residuals
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-discrete-growth-eq-physical-modalgrowth
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-discrete-growth-eq-zero-iff-threshold
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-expandedellipticnode-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-expandedpopulationnode-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-expandedpopulationnode-directionalderivative-eq-populationresidual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-fixedmass-logisticslope-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-linearizedconservativenoderate-eq-populationresidual-fixedmass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-linearizedconservativenoderate-eq-populationresidual-of-slope-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-linearizedconservativenoderate-eq-reflected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-represented-disclam-pos
+  note: 'V2 scope: Directional derivatives of both literal schemes, the conservative all-node identity, fixed-mass
+    composition, elliptic elimination, modal growth, and threshold minimum are proved. No ODE trajectory existence,
+    nonlinear stability, or PDE semigroup conclusion is asserted. Source locator: p. 36, TeX line 3316.'
+  inputs: []
+- paper:
+    number: Lemma 2.1, Equations 2.1-2.4
+    title: Integrals of products of cosine series
+    label: L:trig-integrals
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cosine-sine-sine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-two-cosines-two-sines
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cosine-sine-sine-lp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-two-cosines-two-sines-lp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos-lp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos-cos-lp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-kernel-cos-sin-sin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-kernel-cos-cos-sin-sin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-kernel-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-kernel-cos-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-sin-sin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-sin-sin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-sin-sin-signed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-cos-signed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-sin-sin-signed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-cos-cos-cos-cos-signed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-cos-sin-sin-zero-mode-control
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-cos-cos-cos-zero-mode-control
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-cos-cos-cos-cos-zero-mode-control
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-sinephase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-intcosphase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-ind
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierkernels-integral-intcosphase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-tsum-mul-tsum-bounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-summable-norm-mul-bounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosineseries-mul-cosineseries
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosineseries-mul-cosineseries-mul-cosineseries
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-integral-tsum-mul
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-integral-tsum-mul-tsum
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-mul-ite
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-mul-ite-int-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-pair-ite-add-eq-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-pair-ite-add-eq-of-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-triple-ite-add-add-eq-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosine-sine-sine-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-two-cosines-two-sines-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cos-cos-cos-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cos-cos-cos-cos-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-summable-norm-of-lp-one
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-hassum-intervalintegral-boundedphase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-cosinephase
+  note: 'V2 scope: Current scope is finite identities only; the former ell-one infinite-series lemma is a different
+    statement. Source locator: p. 13, TeX line 1152.'
+  inputs: []
+- paper:
+    number: Equation (2.16)
+    title: Centre manifold as a graph over the critical mode
+    label: E:center-manifold-eq
+    statement: "\\begin{align}\\label{E:center-manifold-eq}\n    \\mathcal{M}=\\{\\big(\\tilde{h}(u_{n_0},\\tilde{\\\
+      chi})+u_{n_0}\\phi_{n_0},\\tilde{\\chi}\\big)\\,|\\, |u_{n_0}|\\ll\n    1,\\,\\, |\\tilde{\\chi}|\\ll 1\\\
+      }\n  \\end{align}"
+  class: outside
+  note: 'V2 scope: The center graph is an analytic input to conditional finite-jet theorems. Source locator: p.
+    15, TeX line 1378.'
+  claims: []
+- paper:
+    number: Equation (2.8)
+    title: Mobility coefficients B_0, B_u, B_v
+    label: E:B0-Bu-Bv-eq
+    statement: "\\begin{alignat}{3}\n    B_0 & \\coloneqq \\frac{(u^*)^m}{(1+v^*)^\\beta}, & \\qquad B_u & \\coloneqq\n\
+      \    \\frac{m(u^*)^{m-1}}{(1+v^*)^\\beta}, & \\qquad B_v & \\coloneqq\n    -\\frac{\\beta(u^*)^m}{(1+v^*)^{\\\
+      beta+1}}, \\label{E:B0-Bu-Bv-eq} \\\\[6pt]\n    B_{uu} & \\coloneqq \\frac{m(m-1)(u^*)^{m-2}}{2(1+v^*)^\\\
+      beta}, & \\qquad\n    B_{uv} & \\coloneqq -\\frac{m\\beta(u^*)^{m-1}}{(1+v^*)^{\\beta+1}}, & \\qquad\n   \
+      \ B_{vv} & \\coloneqq \\frac{\\beta(\\beta+1)(u^*)^m}{2(1+v^*)^{\\beta+2}},\n    \\label{E:Buu-Buv-Bvv-eq}\n\
+      \  \\end{alignat}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-derivative-value
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-hasderivat-normalized
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinv-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-derivative-value
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-hasderivat-normalized
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubicprojectiondata-taylor-fields
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-b0-bu-bv-eq
+  note: 'V2 scope: The retained declarations are the derivative formulas of the mobility from which B0, Bu and Bv
+    follow at (u*, 1+v*); the formulas are identical with the same positive-base domain. Their later infinite-mode
+    use does not change the primitive derivative types. Source locator: p. 14, TeX line 1284.'
+  inputs: []
+- paper:
+    number: Equation (2.9)
+    title: Mobility coefficients B_uu, B_uv, B_vv
+    label: E:Buu-Buv-Bvv-eq
+    statement: "\\begin{alignat}{3}\n    B_0 & \\coloneqq \\frac{(u^*)^m}{(1+v^*)^\\beta}, & \\qquad B_u & \\coloneqq\n\
+      \    \\frac{m(u^*)^{m-1}}{(1+v^*)^\\beta}, & \\qquad B_v & \\coloneqq\n    -\\frac{\\beta(u^*)^m}{(1+v^*)^{\\\
+      beta+1}}, \\label{E:B0-Bu-Bv-eq} \\\\[6pt]\n    B_{uu} & \\coloneqq \\frac{m(m-1)(u^*)^{m-2}}{2(1+v^*)^\\\
+      beta}, & \\qquad\n    B_{uv} & \\coloneqq -\\frac{m\\beta(u^*)^{m-1}}{(1+v^*)^{\\beta+1}}, & \\qquad\n   \
+      \ B_{vv} & \\coloneqq \\frac{\\beta(\\beta+1)(u^*)^m}{2(1+v^*)^{\\beta+2}},\n    \\label{E:Buu-Buv-Bvv-eq}\n\
+      \  \\end{alignat}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-deriv-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-second-derivative-value
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinu-second-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-deriv-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-second-derivative-value
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobilityinw-second-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobility-mixed-deriv-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobility-mixed-derivative-value
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobility-mixed-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubicprojectiondata-taylor-fields
+  note: 'V2 scope: The factorial-normalized Buu, Buv and Bvv formulas and positive-base hypotheses are unchanged.
+    Source locator: p. 14, TeX line 1288.'
+  inputs: []
+- paper:
+    number: Equation (2.10)
+    title: Logistic coefficients A', A'', A'''
+    label: E:L1-L2-eq
+    statement: "\\begin{align}\\label{E:L1-L2-eq}\n    A' & \\coloneqq \\alpha(u^*)^\\alpha,\n    & A''  & \\coloneqq\
+      \ \\tfrac{1}{2}(1+\\alpha)\\alpha(u^*)^{\\alpha-1},\n    & A''' & \\coloneqq\n    \\tfrac{1}{6}(1+\\alpha)\\\
+      alpha(\\alpha-1)(u^*)^{\\alpha-2},\n  \\end{align}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-baprime-eq-logisticslope
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedlogisticfirst-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedlogisticsecond-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedlogistic-deriv-eq-first
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedlogistic-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawtaylor-logistic-coefficients
+  note: 'V2 scope: A-prime, A-second and A-third retain the same factorial convention (Taylor coefficients of the
+    logistic source at u*). Source locator: p. 14, TeX line 1290.'
+  inputs: []
+- paper:
+    number: Equation (2.11)
+    title: Signal-source coefficients C', C'', C'''
+    label: E:C-const
+    statement: "\\begin{equation}\\label{E:C-const}\n    C' \\coloneqq \\nu\\gamma(u^*)^{\\gamma-1}, \\qquad\n \
+      \   C'' \\coloneqq \\frac{\\nu\\gamma(\\gamma-1)(u^*)^{\\gamma-2}}{2}, \\qquad\n    C''' \\coloneqq \\frac{\\\
+      nu\\gamma(\\gamma-1)(\\gamma-2)(u^*)^{\\gamma-3}}{6}.\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawtaylor-signal-coefficients
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalsourcefirst-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalsourcesecond-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalsource-deriv-eq-first
+  note: 'V2 scope: The three signal-source Taylor coefficients are formula-identical and retain the same factorial
+    normalization. Source locator: p. 14, TeX line 1297.'
+  inputs: []
+- paper:
+    number: Equation (2.20)
+    title: Signal coefficients C_k^(1), C_k^(2), C_k^(3)
+    label: E:Ck-restated
+    statement: "\\begin{equation}\\label{E:Ck-restated}\n    C_k^{(1)} \\coloneqq \\frac{C'}{\\mu+\\lambda_k}, \\\
+      qquad\n    C_k^{(2)} \\coloneqq \\frac{C''}{2\\bigl(\\mu+\\lambda_k\\bigr)}, \\qquad\n    C_k^{(3)} \\coloneqq\
+      \ \\frac{C'''}{4\\bigl(\\mu+\\lambda_k\\bigr)},\\quad\n    k\\ge0.\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmode1-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmode2-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmode3-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejet-actual-response-quartic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejet-actual-response-hasderivat
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejet-actual-response-cubic-jet
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejetinterface-actual-modal-derivative
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:Ck-restated.
+    This display summary does not extend that scope. Source locator: p. 16, TeX line 1471.'
+- paper:
+    number: Equation (2.32)
+    title: Quadratic coefficient Gamma_{2 n0}
+    label: E:Gamma2n0-explicit
+    statement: "\\begin{equation}\\label{E:Gamma2n0-explicit}\n    \\Gamma_{2n_0}\n    = \\Big(\\frac{n_0\\pi}{L}\\\
+      Big)^2\n    \\Big[\n    4B_0\\,C_{2n_0}^{(2)}\n    + B_u\\,C_{n_0}^{(1)}\n    + B_v\\,\\bigl(C_{n_0}^{(1)}\\\
+      bigr)^2\n    \\Big].\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-quadraticprojectiondata-flux-decomposition
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-quadraticprojectiondata-neg-deriv-flux
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-chigamma2-eq-projected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalized-quadratic-density-projection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-quadraticprojection-bracket-eq-scaled
+  inputs:
+  - audited primitive Taylor coefficients and quadratic elliptic signal jet
+  - positive equilibrium with signal equilibrium relation and nu,gamma>0
+  - L>0 and n0>0 with x=lambda_n0
+  note: 'V2 scope: The displayed second-harmonic coefficient is identical. Current infinite convolution formulas
+    reduce at quadratic center order to the same constant/second-mode support; no infinite-series theorem is claimed
+    by this row. Source locator: p. 19, TeX line 1808.'
+- paper:
+    number: Equation (2.33)
+    title: Constant-mode coefficients a_{0,1}, a_{0,2}
+    label: E:a_0,i
+    statement: "\\begin{equation}\\label{E:a_0,i}\n    {a_{0,1} = -\\frac{bA''}{2a\\alpha}=-\\frac{1+\\alpha}{4u^*}},\n\
+      \    \\qquad\n    a_{0,2}  = 0.\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-constantmodejet-a-0-display
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-constantmodejet-constantmode-coefficients
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-constantmodejet-logistica0-eq-explicit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-a0-eq-zero-of-mean-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-average-quadraticjetprofile
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficients-of-quadratic-jet-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fixedmassa0-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logistica0
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logistica0-physical-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logistica0-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-quadraticjetresidual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2meanjet-quadratic-constant-zero
+  inputs:
+  - degree-two constant-mode invariance residual obtained from the center-graph equations
+  - zero mean of the quadratic graph profile for the separate fixed-mass consumer
+  - positive domain length and positive mode index when applying that consumer
+  note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
+    coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
+    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/E:a_0,i'
+- paper:
+    number: Equation (2.36b)
+    title: Higher-mode coefficients a_{k,1}
+    label: E:a_k,i>0
+    statement: "\\begin{equation}\\label{E:a_k,i>0}\n      a_{k,1}\n      = \\begin{cases}\n        \\displaystyle\n\
+      \        \\frac{\\frac{bA''}{2} - \\chi^*\\Gamma_{2n_0}}\n        {\\sigma_{2n_0}(\\chi^*)},\n        & k\
+      \ = 2 n_0, \\\\\n        0, & k \\ne n_0,\\, 2 n_0 \\text{ with } k \\ge 1.\n      \\end{cases}\n    \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficients-of-quadratic-jet-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-integral-neumannmode-positive-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-other-mode-quadratic-coefficient-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physical-other-quadratic-mode-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-quadraticforcing-other-mode-projection-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-secondmodea2-physical-residual
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-secondmodea2-residual
+  inputs:
+  - vanishing degree-two center-graph invariance polynomial and projected stable-mode balances
+  - audited quadratic forcing and physical coefficient identification
+  - positive physical parameters and equilibrium relations
+  - unique strict critical mode, supplying nonzero stable growth rates, particularly sigma_(2n0)
+  note: 'V2 scope: The bA''''/2 term is mandatory. Any legacy wrapper omitting it is rejected. Source locator: p.
+    20, TeX line 1873.'
+- paper:
+    number: Equation (2.42)
+    title: Auxiliary quantities F, G, H
+    label: E:E-F-G-H
+    statement: "\\begin{alignat}{2}\\label{E:E-F-G-H}\n    {  F\\coloneqq C_{n_0}^{(1)}, } \\quad\n    G  \\coloneqq\
+      \ C_{2n_0}^{(1)}a_{2n_0,1}+C_{2n_0}^{(2)},   \\quad\n    & H \\coloneqq 2C_{n_0}^{(2)}\\Big(2a_{0,1}+a_{2n_0,1}\\\
+      Big) +3C_{n_0}^{(3)},\n  \\end{alignat}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h-eq-of-projected-signal-balance
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-e
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-f
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-g
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-h
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-q
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-r
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-s
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicdata
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubice
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicf
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubich
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubich-eq-of-projected-signal-balance
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicqoverb0
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicroverb0
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicsoverb0
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-actual-residual-cubic-negligible
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-profile-power-jets
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-profileprojection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-projected-source-jet
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-profileprojection-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-family-isbigo-linear
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-profileprojection-eq-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-actual-profile-response-jet
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-profile-cosine-square-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-curvedsignalresponse-actual-phase-cubic-response
+  inputs:
+  - projected cubic elliptic signal balance
+  - weighted interval integrability of h3φₙ, (φh2)φₙ, and φ³φₙ
+  - zero critical projection of h3
+  - identification of φ and h2 with the critical cosine and quadratic graph profile giving Π(φh2)=a0+a2/2 and Π(φ³)=3/4
+  - physical signal-equilibrium relation and positive parameters for the scaled-to-physical identification
+  note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
+    coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
+    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/E:E-F-G-H'
+- paper:
+    number: Equation (2.41)
+    title: Cubic coefficient Gamma_{n0}^(3)
+    label: E:Gamma-n0-explicit
+    statement: "\\begin{equation}\\label{E:Gamma-n0-explicit}\n    \\Gamma_{n_0}^{(3)} =\\Big(\\frac{n_0\\pi}{L}\\\
+      Big)^2\\Big[\n    B_0H+\\Big(B_u+B_vF\\Big)G +F\\Big(R-\\frac{S}{2}\\Big) \\Big],\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubicprojectiondata-flux-decomposition
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubicprojectiondata-neg-deriv-flux
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-actualcriticalprojection-add-of-intervalintegrable
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-actual-phi-cube-projection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-actual-phi-quadraticjet-projection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-chigamma3-eq-projected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cubicfluxcoefficient-eq-rawflux
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalized-cubic-density-projection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubic-criticalbracket-eq-scaled
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalcubicsource-actual-projection-of-intervalintegrable
+  inputs:
+  - audited primitive and quadratic-jet coefficients and elliptic signal aggregates
+  - projected cubic elliptic balance with nonzero denominator
+  - weighted interval integrability of h3, phi*h2 and phi^3 against the critical mode
+  - zero critical projection of h3
+  - identification phi=cos(n0*pi*x/L) and h2=a0+a2*cos(2*n0*pi*x/L)
+  - positive physical equilibrium and L>0,n0>0
+  note: 'V2 scope: Conditional on weighted interval integrability and the analytic center-graph condition that the
+    critical projection of h3 is zero; all remaining cubic extraction/projection algebra is proved. Source locator:
+    p. 20, TeX line 1918.'
+- paper:
+    number: Equation (2.44)
+    title: Crossing coefficient alpha_n0
+    label: E:alpha_n0
+    statement: "\\begin{align}\\label{E:alpha_n0}\n    \\alpha_{n_0}  & = \\partial_{\\chi_0}\\sigma_{n_0}(\\chi^*)\n\
+      \    = \\nu\\gamma\\,\\frac{(u^*)^{m+\\gamma-1}}{(1+v^*)^\\beta}\\,\n    \\frac{\\lambda_{n_0}}{\\mu+\\lambda_{n_0}}\n\
+      \    > 0, \\\\\n    \\beta_{n_0}\n    & = \\frac{(1+\\alpha)\\alpha\\,b\\,(u^*)^{\\alpha-1}}{4}\n    \\bigl(4a_{0,1}\
+      \ + 2a_{2n_0,1}\\bigr)\n    - \\chi^*\\,\\Gamma_{n_0}^{(3)}\n    + \\frac{(1+\\alpha)\\alpha(\\alpha-1)b\\\
+      ,(u^*)^{\\alpha-2}}{8}.\n    \\label{E:beta-n0}\n  \\end{align}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-crossingcoefficient-alphan0-eq-explicit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-crossingcoefficient-alpha-n0-display
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-crossingcoefficient-deriv-modalgrowth-at-chistar
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-crossingcoefficient-hasderivat-modalgrowth-chi
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-crossingcoefficient-modalgrowth-eq-affine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-alphan0-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-chistartimesb0-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-signalmode1-pos
+  note: 'V2 scope: The linear crossing coefficient and positivity hypotheses are unchanged. Source locator: p. 21,
+    TeX line 1949.'
+  inputs: []
+- paper:
+    number: Equation (2.45)
+    title: Cubic coefficient beta_n0
+    label: E:beta-n0
+    statement: "\\begin{align}\\label{E:alpha_n0}\n    \\alpha_{n_0}  & = \\partial_{\\chi_0}\\sigma_{n_0}(\\chi^*)\n\
+      \    = \\nu\\gamma\\,\\frac{(u^*)^{m+\\gamma-1}}{(1+v^*)^\\beta}\\,\n    \\frac{\\lambda_{n_0}}{\\mu+\\lambda_{n_0}}\n\
+      \    > 0, \\\\\n    \\beta_{n_0}\n    & = \\frac{(1+\\alpha)\\alpha\\,b\\,(u^*)^{\\alpha-1}}{4}\n    \\bigl(4a_{0,1}\
+      \ + 2a_{2n_0,1}\\bigr)\n    - \\chi^*\\,\\Gamma_{n_0}^{(3)}\n    + \\frac{(1+\\alpha)\\alpha(\\alpha-1)b\\\
+      ,(u^*)^{\\alpha-2}}{8}.\n    \\label{E:beta-n0}\n  \\end{align}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betacoefficient-eq-physical-projected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betacoefficient-eq-projected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-logisticbetacoefficient-eq-physical-projected
+  inputs:
+  - accepted quadratic center jet and cubic critical projection, including their analytic application inputs
+  - positive physical equilibrium satisfying logistic and signal equilibrium relations
+  - nonzero critical eigenvalue and valid stable-mode denominators when identifying the jet with the center graph
+  note: 'V2 scope: The corrected finite cubic assembly is derived from the accepted quadratic and cubic projection
+    components. It proves the coefficient identity, not center-manifold or PDE branch existence. Source locator:
+    p. 21, TeX line 1959.'
+- paper:
+    number: Equation (2.43)
+    title: Reduced equation on the centre manifold
+    label: E:center-ODE-final
+    statement: "\\begin{equation}\\label{E:center-ODE-final}\n    \\frac{d u_{n_0}}{dt}\n    = \\alpha_{n_0}\\,\\\
+      tilde{\\chi}\\,u_{n_0}\n    - \\beta_{n_0}\\,u_{n_0}^3\n    + { \\mathcal{O}\\Big( |u_{n_0}|^{{2}} |\\tilde{\\\
+      chi}|^2+ {|u_{n_0}|^3}\n    |\\tilde{\\chi}|+ |u_{n_0}|^4\\Big),}\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-value-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-deriv-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-reducedfield
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-parameter-le-amp-sq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-value-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-deriv-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-side-condition-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-exists-pos-equilibrium
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-ampconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-absorbedconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalform-paper-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-error-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-islittleo
+  inputs:
+  - identification of the reduced field with Eq. 2.43
+  - α>0 and β≠0
+  - fixed C≥0 and 0<r≤1
+  - uniform bound |R(η,s)|≤C(s²η²+|s|³|η|+s⁴) on the local box
+  - HasDerivAt (R η) (Rs η s) s there
+  - separate uniform bound |Rs(η,s)|≤C(|s|η²+s²|η|+|s|³)
+  note: 'V2 scope: Only the exact cubic polynomial and deductions from an explicit remainder interface are formalized.
+    The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct
+    branch-side filter, derived from the remainder estimates and amplitude localization. Source locator: p. 20,
+    TeX line 1941.'
+- paper:
+    number: Equation (2.49)
+    title: beta_n0 in the minimal model
+    label: E:beta-n0-minimal
+    statement: "\\begin{equation}\\label{E:beta-n0-minimal}\n    \\beta_{n_0}=-\\chi^*\\Gamma_{n_0}^{(3)},\n  \\\
+      end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fixedmassa0-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fixedmassbetacoefficient-eq-neg-chigamma3
+  inputs:
+  - fixed-mass phase-space identification of the population constant correction with zero
+  - a=b=0 and positive signal equilibrium
+  - audited fixed-mass quadratic jet and cubic projection, including their analytic application inputs and nonzero
+    modal denominators
+  note: 'V2 scope: The fixed-mass coefficient remains -chi-star Gamma3 with a0=0 and no logistic channels. The constant
+    signal correction is still retained. Source locator: p. 22, TeX line 2133.'
+- paper:
+    number: Equation (3.1)
+    title: beta_n0 in terms of p(beta) and q(beta)
+    label: E:beta-n0-pq
+    statement: "\\begin{equation}\\label{E:beta-n0-pq}\n    \\beta_{n_0}(\\beta)\n    =\n    \\frac{bA''}{2}\n \
+      \   \\left(\n    4a_{0,1}+2p(\\beta)\n    \\right)\n    -q(\\beta)\n    +\\frac{3bA'''}{4}.\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-betacoefficientata0-eq-pq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-pterm-eq-affine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-qterm-eq-quadratic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-physical-pi-eq-scaled
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-eq-manuscript-pi
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-upow-mul-piscaled
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-beta-n0-pq-logistic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-logistica0-eq-233
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-beta-n0-pq-fixedmass
+  inputs:
+  - audited identification of the assembled cubic coefficient with the reduced-equation coefficient
+  - quadratic graph coefficient formulas and the model-appropriate constant mode
+  - positive equilibrium relations and strict critical-mode guards supplied in the surrounding manuscript
+  note: 'V2 scope: The p(beta), q(beta), beta-independent Pi and coefficient decomposition are unchanged after movement
+    to Section 3. Source locator: p. 23, TeX line 2186.'
+- paper:
+    number: Equation (3.3)
+    title: Coefficients A, B, C of the quadratic in beta
+    label: E:A-B-C-simple
+    statement: "\\begin{align}\\label{E:A-B-C-simple}\n    A\n    =-\\frac12q''(0),\n    \\quad\n    B\n    =bA''p'(0)-q'(0),\n\
+      \    \\quad\n    C\n    =\n    \\frac{bA''}{2}\n    \\left(\n    4a_{0,1}+2p(0)\n    \\right)\n    -q(0)\n\
+      \    +\\frac{3bA'''}{4}.\n  \\end{align}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-betaconstant-eq-pq-at-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-betaleading-eq-neg-half-q-second
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-betalinear-eq-ba2-mul-p-deriv-sub-q-deriv
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-deriv-pterm-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-deriv-qterm-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-iterderiv-two-qterm-zero
+  note: 'V2 scope: The exact derivative formulas A=-q''''(0)/2, B=bA''''p''(0)-q''(0), and C at beta=0 are unchanged.
+    Source locator: p. 23, TeX line 2234.'
+  inputs: []
+- paper:
+    number: Equation (3.4)
+    title: Closed form of the leading coefficient A
+    label: E:A-closed-form
+    statement: "\\begin{equation}\\label{E:A-closed-form}\n    A\n    =\n    \\frac{\n    \\bigl(C_{n_0}^{(1)}\\\
+      bigr)^3\n    (u^*)^m\\Pi\n    \\left(\n    4C_{2n_0}^{(1)}(u^*)^m\\Pi\n    -\\sigma_{2n_0}(\\chi^*)\n    \\\
+      right)\n    }{\n    8\\sigma_{2n_0}(\\chi^*)(1+v^*)^2\n    }.\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-eq-manuscript
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-eq-manuscript-pi
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betaleading-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalbetaa-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-upow-mul-piscaled
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-physicalbetaa-neg-fixedmass
+  note: 'V2 scope: The closed form and strict negative sign under a strict critical mode are unchanged for both
+    model classes. Source locator: p. 24, TeX line 2253.'
+  inputs: []
+- paper:
+    number: Equation (1.15)
+    title: beta_n0 = P(lambda_n0)/Q(lambda_n0)
+    label: E:beta-n0-eq1
+    statement: "\\begin{equation}\\label{E:beta-n0-eq1}\n        \\beta_{n_0}\n        =\\frac{P(\\lambda_{n_0})}{Q(\\\
+      lambda_{n_0})},\\quad\n        \\lambda_{n_0}=\\frac{\\pi^2 n_0^2}{L^2}.\n      \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-fixedmassbetacoefficient-eq-cubic-ratio
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-fixedmass-eq-logistic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-minimalnumeratorpoly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-natdegree-minimalnumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-logisticbetacoefficient-eq-paperratio
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-natdegree-paperbalancednumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-natdegree-papernumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalpolynomial-paperdenominatorpoly-eval-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-balanced-ratio-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-denominatorpoly-eq-ppoly-mul-balanced
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-eval-denominatorpoly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-eval-numeratorpoly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-natdegree-balanceddenominatorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-natdegree-balancednumeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-natdegree-denominatorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-natdegree-numeratorpoly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-polynomialdegree-rationaldata-numeratorpoly-eq-ppoly-mul-balanced
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-rationaldata-coefficient-eq-numerator-div-denominator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-rationaldata-denominator-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-logisticbetacoefficient-eq-numerator-div-denominator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-logisticbetacoefficient-eq-symbolic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-g
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-h
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-q
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-r
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-s
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-a2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-chigamma2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-chigamma3
+  note: 'V2 scope: The general physical numerator/denominator construction, positive denominator, degree-five bound,
+    and balanced degree-four cancellation are proved; the normalized example is only a downstream specialization.
+    Source locator: p. 8, TeX line 732.'
+  inputs: []
+- paper:
+    number: Equation (3.6)
+    title: Unique minimizing mode on each admissible interval
+    label: E:n0-branch
+    statement: "\\begin{equation}\\label{E:n0-branch}\n    n_0= k\\ \\text{is the unique minimizing mode exactly\
+      \ for}\\quad\n    L\\in\\left(L_{k-1},L_k\\right),\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-criticallength-tie-identity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-modecell-iff-length-interval
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-critical-length-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tie-at-criticallength
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tied-adjacent-values
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tied-minimizers-exact
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tied-modes-strictly-below-others
+  note: 'V2 scope: The unique minimizing mode cells and exactly two adjacent modes at tie lengths are unchanged.
+    Source locator: p. 26, TeX line 2458.'
+  inputs: []
+- paper:
+    number: Theorem 1.2(2), eigenvalue intervals
+    title: Interval of lambda_n0 for an admissible length
+    label: T:direction-change
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-domainlimits-eigenvalue-tendsto-of-domain-corridor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-domainlimits-physical-critical-eigenvalue-tendsto-balancing
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-modecell-iff-corridor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-critical-eigenvalue-corridor-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-critical-lower-corridor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-critical-upper-corridor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-realization-iff
+  note: 'V2 scope: The exact lambda corridor is unchanged but no longer has its own label; it appears in Theorem
+    1.2(2) and again in the proof near line 2564. Large-length convergence to sqrt(a alpha mu) is unchanged along
+    admissible lengths. Source locator: p. 8, TeX line 700.'
+  inputs: []
+- paper:
+    number: Equation (3.7)
+    title: Large-lambda asymptotics of beta_n0 in Example 3.1
+    label: E:new-beta-eq1
+    statement: "\\begin{equation}\\label{E:new-beta-eq1}\n  \\beta_{n_0} =\\Big(\\frac{7}{12}-\\frac{\\beta}{4}\\\
+      Big)\\lambda +\\mathcal{O}(1)\n  \\qquad(\\lambda\\to\\infty).\n\\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-abs-coefficient-sub-linear-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-coefficient-sub-linear
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-coefficient-sub-linear-isbigo
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-logisticbetacoefficient-allones-isbigo
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-numerator-eq-slope-mul-add
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-remaindernumerator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedasymptotic-slope
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-allones-critical-small-domain-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-allones-critical-small-domain-rate
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-betasd-allones
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-csd-allones
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-dbeta-allones
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-dstar-allones
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-logisticbetacoefficient-allones
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-physical-ratio-allones-of-half-lt
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-ratio-allones-of-half-lt
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-coefficient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-coefficient-neg-of-beta-ge-seven-thirds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-coefficient-pos-of-beta-mem-icc
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-denominator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-denominator-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator-neg-of-beta-ge-seven-thirds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator-pos-of-beta-mem-icc
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator-shift
+  note: 'V2 scope: This is a downstream specialization and regression test, never a replacement for the all-parameter
+    M4 theorem. Source locator: p. 27, TeX line 2529.'
+  inputs: []
+- paper:
+    number: Equation (3.8)
+    title: Large-domain limit beta_infinity in Example 3.1
+    label: E:new-beta-eq2
+    statement: "\\begin{equation}\\label{E:new-beta-eq2}\n  \\beta_\\infty\n  =1-\\frac{41}{64}\\beta-\\frac{25}{576}\\\
+      beta^2.\n\\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-allones-large-domain-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedspecialization-betalargedomain-rounding-cell
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betainfinity-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betainfinity-factor
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betainfinity-neg-of-gt
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betainfinity-pos-of-nonneg-of-lt
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betalargedomainneg-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-betalargedomain-mem-ioo
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-sqrt-21529-sq
+  inputs:
+  - the all-ones physical coefficient identification
+  - mode data with lengths tending to infinity and eventually strict critical modes
+  - β≥0 for the stated nonnegative-parameter sign classification
+  - the local bifurcation theorem converting a nonzero cubic-coefficient sign into bifurcation direction
+  note: 'V2 scope: The normalized large-domain quadratic, positive root beta_ld and sign split are unchanged. Source
+    locator: p. 27, TeX line 2536.'
+- paper:
+    number: Table 3.2
+    title: Real roots of P(lambda, beta) for selected beta
+    label: Tb:polynomial-roots
+    statement: "\\begin{table}[htbp]\n  \\centering\n  \\small\n  \\renewcommand{\\arraystretch}{1.12}\n  \\setlength{\\\
+      tabcolsep}{8pt}\n  \\begin{tabular}{@{}cl@{\\hspace{2em}}cl@{}}\n    \\hline\n    $\\beta$ & Roots & $\\beta$\
+      \ & Roots \\\\ \\hline\n    $1$   & None                   & $2.1$      & $7.370444$ \\\\\n    $1.5$ & $0.773411,\\\
+      ;1.518665$ & $7/3$      & None       \\\\\n    $1.9$ & $0.530181,\\;3.826548$ & $2.4$      & None       \\\
+      \\\n    $2$   & $5.092791$            & $3$        & None       \\\\ \\hline\n  \\end{tabular}\n  \\caption{Roots\
+      \ of $P(\\lambda,\\beta)$ with $\\lambda>1/2$ for selected values of $\\beta$, rounded to six decimal places.}\n\
+      \  \\label{Tb:polynomial-roots}\n\\end{table}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-certifiedroots-beta-nineteen-tenths-first-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-certifiedroots-beta-nineteen-tenths-second-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-certifiedroots-beta-three-halves-first-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-certifiedroots-beta-three-halves-second-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-nineteen-tenths-higher-modes-negative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-nineteen-tenths-lower-root-modes
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-nineteen-tenths-mode-one-signs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-nineteen-tenths-upper-root-modes
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-higher-modes-negative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-lower-root-modes
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-mode-three-signs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-modes-one-two-signs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeexamples-beta-three-halves-upper-root-modes
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottable-beta-nineteen-tenths-physical-signs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottable-beta-nineteen-tenths-rounding-cells
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottable-beta-three-halves-physical-signs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottable-beta-three-halves-rounding-cells
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-one-no-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-seven-thirds-no-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-three-no-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-twelve-fifths-no-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-twenty-one-tenths-unique-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableadmissible-beta-two-unique-admissible-root
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableremaining-beta-seven-thirds-roots-exhaust
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableremaining-beta-twelve-fifths-roots-exhaust
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableremaining-beta-twenty-one-tenths-roots-exhaust
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableremaining-beta-two-roots-exhaust
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-tworootexhaustion-f1-zero-eq-certified-roots
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-tworootexhaustion-f3-zero-eq-certified-roots
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-example-3-1-display
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableaggregate-table-3-2-real-roots
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-roottableaggregate-table-3-2-admissible-roots
+  inputs:
+  - identification of the normalized rational expression with the reduced cubic coefficient on λ>1/2
+  - interpretation through untied critical-mode intervals
+  - the local bifurcation theorem converting coefficient signs into super-critical or sub-critical bifurcation
+  note: 'V2 scope: Exact rational isolating intervals, exhaustive admissible-root counts, rounding cells, physical
+    signs, and finite mode comparisons are proved. Decimal displays are presentation corollaries. Source locator:
+    p. 27, TeX line 2559.'
+- paper:
+    number: Lemma 4.1
+    title: Bounds for stationary solutions of the non-minimal model
+    label: L:spiky-solu-lm1
+    statement: "\\begin{lemma}\\label{L:spiky-solu-lm1}\n  Assume $a, b > 0$. Let $u^* = \\big(\\frac{a}{b}\\big)^{\\\
+      frac{1}{\\alpha}}$. Then\n  the following hold.\n  \\begin{enumerate}[(1)]\n    \\item For every $\\alpha,\
+      \ \\gamma, m > 0$, and every nonconstant positive\n      stationary solution $(u,v)$ of~\\eqref{E:main-PE},\n\
+      \      \\begin{equation}\\label{E:bound-u-eq1-2}\n        0<\\min_{[0,L]}u<u^*<\\max_{[0,L]}u,\n        \\\
+      quad {\\rm and}\\quad\n        \\int_0^L u\\,dx<Lu^*,\\quad\n        \\int_0^L u^{1+\\alpha}\\,dx<L\\left(u^*\\\
+      right)^{1+\\alpha}.\n      \\end{equation}\n\n    \\item Assume $0 < \\gamma \\le 1 + \\alpha$ and ${1\\le\
+      \ m\\le \\alpha+2}$. For\n      every $\\overline{X} > 0$, there exist $\\theta \\in (0, 1)$ and $ C =\n \
+      \     C(\\overline{X}, a, b, \\alpha, \\gamma, \\mu, \\nu, L, m, \\beta) > 0 $ such\n      that every positive\
+      \ nonconstant stationary solution with $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq3}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:spiky-solu-lm1.
+    This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-logistic-uniform-norm-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholderinterface-logistic-uniform-norm-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-interval-bounds
+  inputs: []
+- paper:
+    number: Lemma 4.2
+    title: Bounds for stationary solutions of the minimal model
+    label: L:minimal-spike-bounds
+    statement: "\\begin{lemma}\\label{L:minimal-spike-bounds}\n  Assume that $a = b = 0$,  and $1 \\le m \\le 2$,\
+      \ $0 < \\gamma \\le 1$. Let\n  $(u^*,v^*)$ be a positive constant stationary solution of~\\eqref{E:main-PE}.\n\
+      \  Then the following hold.\n  \\begin{enumerate}[label=(\\arabic*)]\n    \\item    Let $(u,v)$ be a positive\
+      \ nonconstant  stationary  solution\n      of~\\eqref{E:main-PE} with $\\int_0^L u(x)dx = L u^*$. It holds\
+      \ that $0 <\n      \\min_{[0,L]}u < u^* < \\max_{[0,L]}u$ and $\\int_0^L u^2\\,dx > L(u^*)^2$.\n\n    \\item\
+      \ For every $\\bar{X} > 0$, there are $\\theta \\in (0, 1)$ and $C =\n      C(\\overline{X}, u^*, \\mu, \\\
+      nu, \\beta, \\gamma, L, m) > 0$ such that every\n      positive nonconstant stationary solution with $\\int_0^L\
+      \ u(x)\\,dx = Lu^*$\n      and $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-bounds.
+    This display summary does not extend that scope. Source locator: p. 29, TeX line 2752.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-minimal-uniform-norm-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholderinterface-minimal-uniform-norm-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-interval-bounds
+  inputs: []
+- paper:
+    number: Lemma 4.1 and Lemma 4.2, bounded-sensitivity proof context
+    title: Compactness at bounded sensitivity (dissolved into Lemmas 4.1-4.2 in v1)
+    label: L:spiky-solu-lm1
+    statement: "\\begin{lemma}\\label{L:spiky-solu-lm1}\n  Assume $a, b > 0$. Let $u^* = \\big(\\frac{a}{b}\\big)^{\\\
+      frac{1}{\\alpha}}$. Then\n  the following hold.\n  \\begin{enumerate}[(1)]\n    \\item For every $\\alpha,\
+      \ \\gamma, m > 0$, and every nonconstant positive\n      stationary solution $(u,v)$ of~\\eqref{E:main-PE},\n\
+      \      \\begin{equation}\\label{E:bound-u-eq1-2}\n        0<\\min_{[0,L]}u<u^*<\\max_{[0,L]}u,\n        \\\
+      quad {\\rm and}\\quad\n        \\int_0^L u\\,dx<Lu^*,\\quad\n        \\int_0^L u^{1+\\alpha}\\,dx<L\\left(u^*\\\
+      right)^{1+\\alpha}.\n      \\end{equation}\n\n    \\item Assume $0 < \\gamma \\le 1 + \\alpha$ and ${1\\le\
+      \ m\\le \\alpha+2}$. For\n      every $\\overline{X} > 0$, there exist $\\theta \\in (0, 1)$ and $ C =\n \
+      \     C(\\overline{X}, a, b, \\alpha, \\gamma, \\mu, \\nu, L, m, \\beta) > 0 $ such\n      that every positive\
+      \ nonconstant stationary solution with $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq3}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:bounded-sensitivity-compactness.
+    This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalboundedcompactness-logistic-stationary-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalboundedcompactness-minimal-stationary-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-allpositivelogisticcompactness-logistic-all-positive-norm-subsequence
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2compactness-minimal-physical-norm-subsequence
+  inputs: []
+- paper:
+    number: Lemma 5.1
+    title: Constant limits at large sensitivity
+    label: L:minimal-spike-limit
+    statement: "\\begin{lemma}\\label{L:minimal-spike-limit}\n  Fix all model parameters except $\\chi_0$. Let $(u_n,v_n)$\
+      \ be positive\n  stationary solutions of~\\eqref{E:main-PE} with $\\chi_0 = \\chi_n \\to \\infty$.\n  Assume\
+      \ either $a, b > 0$, with $u^* = (a/b)^{1/\\alpha}$, or $a = b = 0$ and\n  $\\int_0^L u_n\\,dx = Lu^* > 0$.\
+      \ Suppose $\\sup_n\\|u_n\\|_{L^r(0,L)} < \\infty$ for\n  some finite $r > \\max\\{1, \\gamma\\}$, and put\
+      \ $q = r/\\gamma > 1$. There exist a\n  subsequence $\\{n_k\\}$ and a constant $c \\ge 0$ such that\n  \\\
+      begin{equation}\\label{E:minimal-spike-limit-1}\n    u_{n_k}^\\gamma\\rightharpoonup c\\,\\,\\text{ in }\\\
+      ,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\\
+      frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, W^{2,q}.\n  \\end{equation}\n\\end{lemma}"
+  class: same-assumptions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-limit.
+    This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikesubsequence-exists-constant-signal-and-weak-tests
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeinterface-classical-all-test-subsequence
+  inputs: []
+- paper:
+    number: Equation (6.2)
+    title: Conservative semidiscrete scheme for the minimal model
+    label: E:main-DIS-conservative
+    statement: "\\begin{equation}\\label{E:main-DIS-conservative}\n  u_i'=\n  \\begin{cases}\n    2\\mathcal{F}_{\\\
+      frac12}/h,                                       & i=0,           \\\\\n    \\left(\\mathcal{F}_{i+\\frac12}-\\\
+      mathcal{F}_{i-\\frac12}\\right)/h, & 1\\le i\\le N-1, \\\\\n    -2\\mathcal{F}_{N-\\frac12}/h,           \
+      \                         & i=N.\n  \\end{cases}\n\\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-conservativemass-conservative-flux-mass-rate-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-conservativemass-conservative-scheme-preserves-trapezoidal-mass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-conservativemass-flux-difference-telescope
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativefaceflux-directionalderivative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativenoderate-directionalderivative
+  note: 'V2 scope: The literal finite face-flux divergence telescopes under trapezoidal weights, and its directional
+    derivative is connected to the reflected fixed-mass modal system. Numerical trajectory existence and differentiability
+    are not asserted. Source locator: p. 36, TeX line 3370.'
+  inputs: []
+- paper:
+    number: Theorem 1.2
+    title: Degree-three numerator and denominator of beta_n0 in the minimal model
+    label: T:direction-change
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-x-mul-m3poly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-coefficient-eq-m3
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-fixedmassbetacoefficient-eq-cubic-ratio
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-fixedmass-eq-logistic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-m3poly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-minimalnumeratorpoly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-n4-eval-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-natdegree-m3poly-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-natdegree-minimalnumeratorpoly-le
+  note: 'Minimal-model degree-three numerator/denominator clause; existing non-minimal bindings do not certify it.
+    Source locator: p. 8, TeX line 700.'
+  inputs: []
+- paper:
+    number: Lemma 2.1, Equations 2.1-2.4 (infinite-fourier-convolution)
+    title: 'Infinite Fourier series: summability, exchange of sums and integrals, convolution'
+    label: L:trig-integrals
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-tsum-mul-tsum-bounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-summable-norm-mul-bounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosineseries-mul-cosineseries
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosineseries-mul-cosineseries-mul-cosineseries
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-integral-tsum-mul
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-integral-tsum-mul-tsum
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-mul-ite
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-mul-ite-int-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-pair-ite-add-eq-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-pair-ite-add-eq-of-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-hassum-triple-ite-add-add-eq-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cosine-sine-sine-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-two-cosines-two-sines-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cos-cos-cos-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-cos-cos-cos-cos-of-kernel
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourierseriesproducts-summable-norm-of-lp-one
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-hassum-intervalintegral-boundedphase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-cosinephase
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cosine-sine-sine
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-two-cosines-two-sines
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos-cos
+  note: 'ell1 summability, exchange of sums/integrals, and convolution multiplicities; finite identities are ingredients
+    only. Source locator: p. 13, TeX line 1152.'
+  inputs: []
+- paper:
+    number: Equation (2.43) (current-remainder-consumer)
+    title: Mixed remainder and derivative interface of the reduced equation
+    label: E:center-ODE-final
+    statement: "\\begin{equation}\\label{E:center-ODE-final}\n    \\frac{d u_{n_0}}{dt}\n    = \\alpha_{n_0}\\,\\\
+      tilde{\\chi}\\,u_{n_0}\n    - \\beta_{n_0}\\,u_{n_0}^3\n    + { \\mathcal{O}\\Big( |u_{n_0}|^{{2}} |\\tilde{\\\
+      chi}|^2+ {|u_{n_0}|^3}\n    |\\tilde{\\chi}|+ |u_{n_0}|^4\\Big),}\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-value-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-deriv-bound-weak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-center-ode-final-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-reducedfield
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-parameter-le-amp-sq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-value-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-deriv-bound-absorbed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-mixed-side-condition-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-exists-pos-equilibrium
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-branchsmall
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-ampconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mixedremainder-absorbedconst
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalform-paper-equilibrium-core
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-error-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-islittleo
+  inputs:
+  - identification of the application remainder and scalar coefficients
+  - α>0 and β≠0
+  - fixed C≥0 and 0<r≤1
+  - either stated uniform value-bound interface on the local box
+  - actual differentiability in s
+  - the corresponding independently supplied uniform derivative bound
+  note: 'Current mixed remainder and derivative interface; retain analytic hypotheses. The actual scalar BranchCurves
+    branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from
+    the remainder estimates and amplitude localization. Source locator: p. 20, TeX line 1941.'
+- paper:
+    number: Theorem 1.3(1)
+    title: Relative component construction of the global branch
+    label: T:global-extension
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parentcomponent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-unilateralremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedcomponent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-isclosed-connectedcomponentin-of-isclosed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-isclosed-sdiff-of-isopen-preimage
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parentcomponent-isclosed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-unilateralremainder-isclosed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-retainedwithbase-subset-parentcomponent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-retainedwithbase-subset-unilateralremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-retainedwithbase-subset-selectedcomponent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-base-mem-selectedcomponent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedcomponent-isclosed
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedcomponent-subset-solutionclosure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedsolutioncomponents-selected-properties
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedsolutioncomponents-logistic-selected-properties
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedsolutioncomponents-minimal-selected-properties
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localbranchgeometry-insert-image-ioo
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localbranchgeometry-halfcurve-selected
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localbranchgeometry-halfcurve-selector-independent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localbranchgeometry-negative-arc-relatively-open
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-selectedimage-of-local-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-selectedimage-selector-independent
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-continuous-coefficient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-add
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-smul
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficientclm
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-eq-projection
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-isclosed-zero-coordinate
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-eq-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-sub-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-eq-zero-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-isclosed-orthogonal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-isclosed-minimal-orthogonal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-coefficient-of-decomposition
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-amplitude
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-continuous-amplitude
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-curve-amplitude
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-curve-base-population
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-mode-h2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-mode-neumann
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-mode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-profile-mode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-mass-mode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-mode-mem-fixedmeanset
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-coefficient-mode-kronecker
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2cosinemode-coefficient-mode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-complement
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-mem-complement-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-isclosed-complement
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-modeline
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-coefficient-modeline
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-splitting
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-splitting-amplitude
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-splitting-remainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-splitting-reconstruct
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-decomposition-unique
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-iscompl-span-complement
+  inputs:
+  - the actual admissible subtype V and its topology
+  - the solution closure
+  - base membership from the local branch
+  - relative openness of the removed punctured arc from local uniqueness
+  - connectedness and solution-closure containment of the retained arc with its base
+  - disjointness from the removed arc
+  - a selector on the retained arc
+  - 'not proved here: the unilateral alternatives and their bifurcation foundations'
+  note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
+    coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
+    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/relative-component-topology'
+- paper:
+    number: Theorem 1.3(3)
+    title: Fixed mass and vanishing tails give a Dirac limit
+    label: T:global-extension
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-closedinterval
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-leftendpoint
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-rightendpoint
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-mass-smul-dirac-of-vanishing-tails
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-integral-test-of-vanishing-tails
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-left-endpoint-on-icc
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-right-endpoint-on-icc
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-peak-tendsto-attop-of-mass-tail-window-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-decreasing-actual-concentration
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/tail-mass-dirac-consumer.
+    This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
+- paper:
+    number: Lemma 4.1(1), Equation 4.1
+    title: Mass and moment bounds for stationary solutions of the non-minimal model
+    label: E:bound-u-eq1-2
+    statement: "\\begin{equation}\\label{E:bound-u-eq1-2}\n        0<\\min_{[0,L]}u<u^*<\\max_{[0,L]}u,\n      \
+      \  \\quad {\\rm and}\\quad\n        \\int_0^L u\\,dx<Lu^*,\\quad\n        \\int_0^L u^{1+\\alpha}\\,dx<L\\\
+      left(u^*\\right)^{1+\\alpha}.\n      \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-logistic-interval-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-strict-power-integral
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-not-ae-eq-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-eq-zero-of-integral-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-eqon-of-ae-eq-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-intervalmeasure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-intervalmeasure-real-univ
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-integral-eq-intervalintegral
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassbounds-logistic-moment-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassbounds-strict-power-average
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-interval-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-logistic-mass-identity-of-stationary
+  inputs: []
+  note: 'ClassicalProfile.interval_bounds proves all four strict extremum/moment conclusions for every given positive
+    nonconstant classical stationary profile. The literal flux, equation and both u/v Neumann data derive mass balance;
+    no independent mass identity remains. Verified within this entire classical-solution statement, without asserting
+    existence. Source locator: p. 28, TeX line 2626.'
+- paper:
+    number: Lemma 4.1(2), Equation 4.6
+    title: Moment step for 0 < gamma <= 1 + alpha
+    label: E:M-eta
+    statement: "\\begin{equation}\\label{E:M-eta}\n    M_\\eta:=\\int_0^L u^\\eta\\,dx\\le L\\left(u^*\\right)^\\\
+      eta.\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-logistic-power-integral-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-power-moment
+  inputs: []
+  note: 'The new direct ClassicalProfile.power_moment supplies the exact gamma-moment bound for0<gamma<=1+alpha
+    from the actual stationary equation through interval_bounds; the higher moment is no longer independently assumed.
+    Its current kernel type was printed and read. Source locator: p. 28, TeX line 2686.'
+- paper:
+    number: Equation 4.14 (proof of Lemma 4.2(2))
+    title: Flux identity of the minimal model
+    label: E:minimal-spike-flux
+    statement: "\\begin{equation}\\label{E:minimal-spike-flux}\n    u_x=\\chi_0\\frac{u^m}{(1+v)^\\beta}v_x.\n \
+      \ \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalflux-minimal-flux-identity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalflux-flux
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalflux-eq-left-of-hasderivat-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-flux-identity
+  inputs: []
+  note: 'ClassicalMinimalEstimates.flux_identity derives the literal flux identity from the actual a=b=0 stationary
+    population equation and Neumann data. No first-integral assumption remains; classical derivatives and the original
+    equation are standing solution data. Source locator: p. 30, TeX line 2780.'
+- paper:
+    number: Lemma 4.2(1)
+    title: Mass and moment bounds for stationary solutions of the minimal model
+    label: L:minimal-spike-bounds
+    statement: "\\begin{lemma}\\label{L:minimal-spike-bounds}\n  Assume that $a = b = 0$,  and $1 \\le m \\le 2$,\
+      \ $0 < \\gamma \\le 1$. Let\n  $(u^*,v^*)$ be a positive constant stationary solution of~\\eqref{E:main-PE}.\n\
+      \  Then the following hold.\n  \\begin{enumerate}[label=(\\arabic*)]\n    \\item    Let $(u,v)$ be a positive\
+      \ nonconstant  stationary  solution\n      of~\\eqref{E:main-PE} with $\\int_0^L u(x)dx = L u^*$. It holds\
+      \ that $0 <\n      \\min_{[0,L]}u < u^* < \\max_{[0,L]}u$ and $\\int_0^L u^2\\,dx > L(u^*)^2$.\n\n    \\item\
+      \ For every $\\bar{X} > 0$, there are $\\theta \\in (0, 1)$ and $C =\n      C(\\overline{X}, u^*, \\mu, \\\
+      nu, \\beta, \\gamma, L, m) > 0$ such that every\n      positive nonconstant stationary solution with $\\int_0^L\
+      \ u(x)\\,dx = Lu^*$\n      and $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-minimal-interval-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-eqon-const-of-le-of-integral-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-eqon-const-of-ge-of-integral-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-strict-power-integral
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-interval-bounds
+  inputs: []
+  note: 'Actual prescribed-mass positive nonconstant classical solution supplies both strict extrema and strict
+    second moment; prescribed mass is the ordinary model hypothesis. Source locator: p. 29, TeX line 2752.'
+- paper:
+    number: Proof of Lemma 4.2(2) (applies Equation 4.6, p. 28, TeX line 2687)
+    title: Fixed-mass Jensen step
+    label: L:minimal-spike-bounds
+    statement: "\\begin{lemma}\\label{L:minimal-spike-bounds}\n  Assume that $a = b = 0$,  and $1 \\le m \\le 2$,\
+      \ $0 < \\gamma \\le 1$. Let\n  $(u^*,v^*)$ be a positive constant stationary solution of~\\eqref{E:main-PE}.\n\
+      \  Then the following hold.\n  \\begin{enumerate}[label=(\\arabic*)]\n    \\item    Let $(u,v)$ be a positive\
+      \ nonconstant  stationary  solution\n      of~\\eqref{E:main-PE} with $\\int_0^L u(x)dx = L u^*$. It holds\
+      \ that $0 <\n      \\min_{[0,L]}u < u^* < \\max_{[0,L]}u$ and $\\int_0^L u^2\\,dx > L(u^*)^2$.\n\n    \\item\
+      \ For every $\\bar{X} > 0$, there are $\\theta \\in (0, 1)$ and $C =\n      C(\\overline{X}, u^*, \\mu, \\\
+      nu, \\beta, \\gamma, L, m) > 0$ such that every\n      positive nonconstant stationary solution with $\\int_0^L\
+      \ u(x)\\,dx = Lu^*$\n      and $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-minimal-power-integral-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassbounds-fixed-mass-power-integral
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassbounds-fixed-mean-power-average
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-power-moment
+  inputs: []
+  note: 'ClassicalMinimalEstimates.power_moment proves the exact prescribed-mass concave moment estimate for all0<=r<=1.
+    Prescribed mass is an explicit model hypothesis of the manuscript, not an unresolved analytic inference. In
+    particular r=m-1 covers both endpoints m=1 and m=2. Source locator: p. 29, TeX line 2752.'
+- paper:
+    number: Proof of Lemma 4.2(2), m=1 case of the variation-of-constants display
+    title: Exponential representation for m = 1
+    label: L:minimal-spike-bounds
+    statement: "\\begin{lemma}\\label{L:minimal-spike-bounds}\n  Assume that $a = b = 0$,  and $1 \\le m \\le 2$,\
+      \ $0 < \\gamma \\le 1$. Let\n  $(u^*,v^*)$ be a positive constant stationary solution of~\\eqref{E:main-PE}.\n\
+      \  Then the following hold.\n  \\begin{enumerate}[label=(\\arabic*)]\n    \\item    Let $(u,v)$ be a positive\
+      \ nonconstant  stationary  solution\n      of~\\eqref{E:main-PE} with $\\int_0^L u(x)dx = L u^*$. It holds\
+      \ that $0 <\n      \\min_{[0,L]}u < u^* < \\max_{[0,L]}u$ and $\\int_0^L u^2\\,dx > L(u^*)^2$.\n\n    \\item\
+      \ For every $\\bar{X} > 0$, there are $\\theta \\in (0, 1)$ and $C =\n      C(\\overline{X}, u^*, \\mu, \\\
+      nu, \\beta, \\gamma, L, m) > 0$ such that every\n      positive nonconstant stationary solution with $\\int_0^L\
+      \ u(x)\\,dx = Lu^*$\n      and $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalflux-minimal-exp-representation
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalflux-eq-left-of-hasderivat-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-exp-representation
+  inputs: []
+  note: 'Literal minimal PDE derives flux at m=1; integrating-factor continuity follows from actual signal regularity
+    and1+v>0. The exact exponential representation is concluded. Source locator: p. 29, TeX line 2752.'
+- paper:
+    number: Remark 1.3(2) (local-mass)
+    title: Uniformly small local mass
+    label: R:spike-solution-rk
+    statement: "\\begin{remark}\\label{R:spike-solution-rk}\n\n  \\begin{itemize}\n    \\item[(1)] Theorem~\\ref{T:spiky-solu-thm}\
+      \ applies to a branch from\n      Theorem~\\ref{T:global-extension}(1) if it extends to arbitrarily large\n\
+      \      $\\chi_0$ and $\\liminf_{\\chi_0\\to\\infty}\\max_{[0,L]}u(\\cdot;\\chi_0) > u^*$.\n      In the non-minimal\
+      \ model, whether there are positive non-constant\n      stationary solutions satisfying the conditions in\n\
+      \      Theorem~\\ref{T:spiky-solu-thm} remains open. Our numerical experiments\n      presented in Section~\\\
+      ref{SS:bifurcation-numerics} provide numerical\n      evidence consistent with such behavior.\n\n\n    \\\
+      item[(2)] For the non-minimal model, the spikes in\n      Theorem~\\ref{T:spiky-solu-thm} cannot carry a Dirac\
+      \ mass for any $\\alpha,\n      \\gamma > 0$. Indeed, the stationary logistic identity $ a\\int_0^L u_n\\\
+      ,dx\n      = b\\int_0^L u_n^{1+\\alpha}\\,dx$ gives $\\int_0^L u_n^{1+\\alpha}\\,dx <\n      L\\left(u^*\\\
+      right)^{1+\\alpha}$ by Lemma~\\ref{L:spiky-solu-lm1}(1).\n      H\\\"older's inequality therefore yields\n\
+      \      \\begin{equation*}%\\label{E:no-delta-concentration}\n        \\int_{(x^*-\\delta,x^*+\\delta)\\cap(0,L)}u_n\\\
+      ,dx\n        \\le(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}\\|u_n\\|_{L^{1+\\alpha}}\n        <u^* L^{\\frac{1}{1+\\\
+      alpha}}(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}.\n      \\end{equation*}\n      Thus, the mass in shrinking\
+      \ neighborhoods tends to zero uniformly in $n$,\n      even though the gradients diverge.\n\n    \\item[(3)]\
+      \   For nonconstant solutions $(\\chi_n,u_n) \\in\n      \\mathcal{C}_1^{\\pm}$ under the assumptions of\n\
+      \      Theorem~\\ref{T:global-extension}(3), $\\chi_n \\to \\infty$ implies $\n      \\max_{[0,L]}u_n \\longrightarrow\
+      \ \\infty$. Thus, the liminf condition in\n      Theorem~\\ref{T:spiky-solu-thm} is automatic for these sequences.\n\
+      \  \\end{itemize}\n\\end{remark}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-window-mass-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-window-mass-tendstouniformly
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-window
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-window-integral-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-tendstouniformly-zero-of-nonneg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-nodiracmass-uniform-mass-tendsto-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localizedmassbounds-local-mass-le-power-moment
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localizedmassbounds-uniform-small-mass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalmoments-logistic-interval-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localizedmassbounds-local-mass-le-uniform-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-window-mass-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-window-mass-decay-of-classical-profiles
+  inputs: []
+  note: 'ClassicalProfile.window_mass_bounds states both the exact Holder-type displayed inequality and its strict
+    equilibrium envelope; mass balance is derived. window_mass_decay_of_classical_profiles proves uniform decay
+    in the family index and center. This covers the quantitative local-mass row end to end for given profiles. Source
+    locator: p. 11, TeX line 1018.'
+- paper:
+    number: Theorem 1.3(3) (part-3-concentration)
+    title: Concentration at an endpoint along the global branch
+    label: T:global-extension
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-integral-left-of-antitoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-integral-right-of-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-integral-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-integral-right
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-dirac-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-dirac-right
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-peak-tendsto-attop-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-peak-tendsto-attop-right
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-max-tendsto-attop-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-densityfinitemeasure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-densitymeasure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-densityonreal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-densityfinitemeasure-mass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-integral-densitymeasure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-compl-subset-of-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-compl-subset-of-right
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tail-le-of-antitoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-head-le-of-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-tail-of-antitoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-tendsto-head-of-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalconcentration-testfunction
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-mass-smul-dirac-of-vanishing-tails
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-tendsto-integral-test-of-vanishing-tails
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-endpointconcentration-peak-tendsto-attop-of-mass-tail-window-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-decreasing-actual-concentration
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:global-extension/part-3-concentration.
+    This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
+- paper:
+    number: Theorem 1.1
+    title: Two continuous branch curves of the reduced equation
+    label: T:local-bifurcation
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-curves
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-center-ode-final-branch-curves
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branchroot-existsunique
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-small-roots-classification
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-continuouson
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-tendsto-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-spec
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch-eq-zero-of-not-side
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-root-localize
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-scaled-field-strictantion
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branch
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branchroot
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-curvesmall
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branchradius
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-amperr
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-curvesmall-mem-nhds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-error-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-branch-derivative-islittleo
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchcurves-branchroot-existsunique-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-equilibrium-derivative-error
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-branchderivativeasymptotic-equilibrium-derivative-error-window
+  inputs:
+  - identification of the scalar reduced field and its coefficients
+  - α>0 and β≠0
+  - a common box with C≥0 and 0<r≤1
+  - the stated value remainder bound
+  - HasDerivAt identifying Rs
+  - the stated derivative remainder bound
+  - continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:local-bifurcation/branch-curves.
+    This display summary does not extend that scope. Source locator: p. 6, TeX line 581.'
+- paper:
+    number: Lemma 2.1 and Equation 2.17
+    title: Cosine-series bridge for the Neumann phase space
+    label: L:trig-integrals
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-neumannw21
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-summable-norm-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-hassum-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-cosinecoeff-eq-neg-mul-secondderiv
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-abs-cosinecoeff-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-cosine-sine-sine-of-neumann
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-two-cosines-two-sines-of-neumann
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-cos-cos-cos-of-neumann
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-cos-cos-cos-cos-of-neumann
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-fouriercoeff-evenperiodic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-cosinecoefficients-integral-mul-cos-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-representative-with-actual-coefficients
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-hassum-of-h2-continuous
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cosine-sine-sine-of-h2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-two-cosines-two-sines-of-h2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cos-cos-cos-of-h2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cos-cos-cos-cos-of-h2
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:trig-integrals/phase-space-bridge.
+    This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
+- paper:
+    number: Proof of Lemma 4.2(2), Equations 4.7-4.8
+    title: Signal bounds in the minimal model
+    label: E:vx-sup
+    statement: "\\begin{equation}\\label{E:vx-sup}\n    \\|v_x\\|_\\infty\n    \\le\\mu\\int_0^L v\\,dx+\\nu\\int_0^L\
+      \ u^\\gamma\\,dx\n    =2\\nu\\int_0^L u^\\gamma\\,dx\\le2\\nu L\\left(u^*\\right)^\\gamma,\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-flux-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-mass-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-gradient-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-gradient-le-two
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-sup-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-second-l1-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-sobolev-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-localizedmassbounds-signal-parameter-factors
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-signal-sobolev-bound
+  inputs: []
+  note: 'Actual second PDE and both Neumann conditions supply the exact signal sup-plus-L1 component bound and displayed
+    constant; no separately assumed signal estimate. Source locator: p. 29, TeX line 2696.'
+- paper:
+    number: 'Proof of Lemma 4.2(2): the uniform bounds on u and u_x from the flux identity (4.14), before the elliptic
+      step to (4.13) (alternative estimate for 1<=m<2)'
+    title: Sup bound for 0 < m < 2 in the minimal model
+    label: E:minimal-spike-flux
+    statement: "\\begin{equation}\\label{E:minimal-spike-flux}\n    u_x=\\chi_0\\frac{u^m}{(1+v)^\\beta}v_x.\n \
+      \ \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-minimal-sup-bounds
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-sensitivity-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-flux-abs-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-exists-le-mean
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-le-add-integral-of-abs-deriv-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-sup-bounds
+  inputs: []
+  note: 'Literal minimal PDE derives flux; actual signal PDE derives gradient; M is the actual gamma moment. The
+    complete original sharp power envelope and derivative estimate hold for0<m<2. Source locator: p. 30, TeX line
+    2780.'
+- paper:
+    number: Proof of Lemma 4.2(2), m=1 case
+    title: Sup bound for m = 1 in the minimal model
+    label: L:minimal-spike-bounds
+    statement: "\\begin{lemma}\\label{L:minimal-spike-bounds}\n  Assume that $a = b = 0$,  and $1 \\le m \\le 2$,\
+      \ $0 < \\gamma \\le 1$. Let\n  $(u^*,v^*)$ be a positive constant stationary solution of~\\eqref{E:main-PE}.\n\
+      \  Then the following hold.\n  \\begin{enumerate}[label=(\\arabic*)]\n    \\item    Let $(u,v)$ be a positive\
+      \ nonconstant  stationary  solution\n      of~\\eqref{E:main-PE} with $\\int_0^L u(x)dx = L u^*$. It holds\
+      \ that $0 <\n      \\min_{[0,L]}u < u^* < \\max_{[0,L]}u$ and $\\int_0^L u^2\\,dx > L(u^*)^2$.\n\n    \\item\
+      \ For every $\\bar{X} > 0$, there are $\\theta \\in (0, 1)$ and $C =\n      C(\\overline{X}, u^*, \\mu, \\\
+      nu, \\beta, \\gamma, L, m) > 0$ such that every\n      positive nonconstant stationary solution with $\\int_0^L\
+      \ u(x)\\,dx = Lu^*$\n      and $0 \\le \\chi_0 \\le\n      \\overline{X}$ satisfies\n      \\begin{equation}\\\
+      label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
+      \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-minimal-exp-sup-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-exp-sup-bound
+  inputs: []
+  note: 'Actual PDEs and prescribed mass derive flux, signal-gradient and integrating-factor regularity; the exact
+    historical exponential supremum envelope follows for m=1. Source locator: p. 29, TeX line 2752.'
+- paper:
+    number: Lemma 4.1(2), Equation 4.11 (alternative route for 1<=m<(alpha+2)/2)
+    title: Gradient bound chain in the non-minimal model
+    label: E:u-ux-sup
+    statement: "\\begin{equation}\\label{E:u-ux-sup}\n    \\|u\\|_\\infty\\le C\n    \\quad {\\rm and}\\quad\n \
+      \   \\|u_x\\|_\\infty\\le C\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-gradient-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-energy-identity
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-energy-ineq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-energyconstant
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-gradient-l2-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-sup-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-first-integral
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-f-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-c1-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-c1-chain
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-young-rpow
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-integral-abs-sq-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicallogisticestimates-c1-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicallogisticestimates-c1-gronwall-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-sup-le-of-derivative-power-bound
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:spiky-solu-lm1/part-2-C1-chain.
+    This display summary does not extend that scope. Source locator: p. 29, TeX line 2725.'
+- paper:
+    number: Proof of Lemma 5.1, W^{2,q} step with r=1+alpha
+    title: W^{2,q} bound for the signal (step in the proof of Lemma 5.1)
+    label: L:minimal-spike-limit
+    statement: "\\begin{lemma}\\label{L:minimal-spike-limit}\n  Fix all model parameters except $\\chi_0$. Let $(u_n,v_n)$\
+      \ be positive\n  stationary solutions of~\\eqref{E:main-PE} with $\\chi_0 = \\chi_n \\to \\infty$.\n  Assume\
+      \ either $a, b > 0$, with $u^* = (a/b)^{1/\\alpha}$, or $a = b = 0$ and\n  $\\int_0^L u_n\\,dx = Lu^* > 0$.\
+      \ Suppose $\\sup_n\\|u_n\\|_{L^r(0,L)} < \\infty$ for\n  some finite $r > \\max\\{1, \\gamma\\}$, and put\
+      \ $q = r/\\gamma > 1$. There exist a\n  subsequence $\\{n_k\\}$ and a constant $c \\ge 0$ such that\n  \\\
+      begin{equation}\\label{E:minimal-spike-limit-1}\n    u_{n_k}^\\gamma\\rightharpoonup c\\,\\,\\text{ in }\\\
+      ,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\\
+      frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, W^{2,q}.\n  \\end{equation}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-logistic-w2q-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicallogisticestimates-w2q-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-signal-testing-rpow-pos
+  inputs: []
+  note: 'retained auxiliary quantitative W2q deduction for actual given classical profiles: actual testing, Holder,
+    Minkowski and population moment premises are all discharged in ClassicalLogisticEstimates.w2q_bound. The old
+    part3 name is historical; frozen v2 Lemma4.1(p28) has no part3. Do not present this auxiliary as a current numbered
+    part3 theorem. Source locator: p. 34, TeX line 3143.'
+- paper:
+    number: Remark 1.3(2) (no-atom-limit)
+    title: No atom in the limit measure
+    label: R:spike-solution-rk
+    statement: "\\begin{remark}\\label{R:spike-solution-rk}\n\n  \\begin{itemize}\n    \\item[(1)] Theorem~\\ref{T:spiky-solu-thm}\
+      \ applies to a branch from\n      Theorem~\\ref{T:global-extension}(1) if it extends to arbitrarily large\n\
+      \      $\\chi_0$ and $\\liminf_{\\chi_0\\to\\infty}\\max_{[0,L]}u(\\cdot;\\chi_0) > u^*$.\n      In the non-minimal\
+      \ model, whether there are positive non-constant\n      stationary solutions satisfying the conditions in\n\
+      \      Theorem~\\ref{T:spiky-solu-thm} remains open. Our numerical experiments\n      presented in Section~\\\
+      ref{SS:bifurcation-numerics} provide numerical\n      evidence consistent with such behavior.\n\n\n    \\\
+      item[(2)] For the non-minimal model, the spikes in\n      Theorem~\\ref{T:spiky-solu-thm} cannot carry a Dirac\
+      \ mass for any $\\alpha,\n      \\gamma > 0$. Indeed, the stationary logistic identity $ a\\int_0^L u_n\\\
+      ,dx\n      = b\\int_0^L u_n^{1+\\alpha}\\,dx$ gives $\\int_0^L u_n^{1+\\alpha}\\,dx <\n      L\\left(u^*\\\
+      right)^{1+\\alpha}$ by Lemma~\\ref{L:spiky-solu-lm1}(1).\n      H\\\"older's inequality therefore yields\n\
+      \      \\begin{equation*}%\\label{E:no-delta-concentration}\n        \\int_{(x^*-\\delta,x^*+\\delta)\\cap(0,L)}u_n\\\
+      ,dx\n        \\le(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}\\|u_n\\|_{L^{1+\\alpha}}\n        <u^* L^{\\frac{1}{1+\\\
+      alpha}}(2\\delta)^{\\frac{\\alpha}{1+\\alpha}}.\n      \\end{equation*}\n      Thus, the mass in shrinking\
+      \ neighborhoods tends to zero uniformly in $n$,\n      even though the gradients diverge.\n\n    \\item[(3)]\
+      \   For nonconstant solutions $(\\chi_n,u_n) \\in\n      \\mathcal{C}_1^{\\pm}$ under the assumptions of\n\
+      \      Theorem~\\ref{T:global-extension}(3), $\\chi_n \\to \\infty$ implies $\n      \\max_{[0,L]}u_n \\longrightarrow\
+      \ \\infty$. Thus, the liminf condition in\n      Theorem~\\ref{T:spiky-solu-thm} is automatic for these sequences.\n\
+      \  \\end{itemize}\n\\end{remark}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-densityfinitemeasure-singleton-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-not-tendsto-smul-dirac
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-not-subseq-tendsto-smul-dirac
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-measure-singleton-eq-zero-of-small-balls
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-densityfinitemeasure-ball
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-ball-eq-preimage
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-noatomlimit-smul-dirac-singleton
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-atoms-of-classical-profiles
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-dirac-subsequence-of-classical-profiles
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/R:no-delta-concentration/no-atom-limit.
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
+- paper:
+    number: Lemma 5.1 (deductions)
+    title: Deductions of the constant-limit lemma
+    label: L:minimal-spike-limit
+    statement: "\\begin{lemma}\\label{L:minimal-spike-limit}\n  Fix all model parameters except $\\chi_0$. Let $(u_n,v_n)$\
+      \ be positive\n  stationary solutions of~\\eqref{E:main-PE} with $\\chi_0 = \\chi_n \\to \\infty$.\n  Assume\
+      \ either $a, b > 0$, with $u^* = (a/b)^{1/\\alpha}$, or $a = b = 0$ and\n  $\\int_0^L u_n\\,dx = Lu^* > 0$.\
+      \ Suppose $\\sup_n\\|u_n\\|_{L^r(0,L)} < \\infty$ for\n  some finite $r > \\max\\{1, \\gamma\\}$, and put\
+      \ $q = r/\\gamma > 1$. There exist a\n  subsequence $\\{n_k\\}$ and a constant $c \\ge 0$ such that\n  \\\
+      begin{equation}\\label{E:minimal-spike-limit-1}\n    u_{n_k}^\\gamma\\rightharpoonup c\\,\\,\\text{ in }\\\
+      ,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\\
+      frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, W^{2,q}.\n  \\end{equation}\n\\end{lemma}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-minimal-spike-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-limit-eq-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-weaklimit-ae-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-ae-mul-eq-zero-of-intervals
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-energy-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-eq-const-of-energy
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-deriv-eq-zero-of-extremum
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-flux-test-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-tendsto-integral-rpow-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-rpow-le-three-term
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-tendsto-zero-of-mul-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-kappa-le-of-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-exists-sign-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikesubsequence-exists-constant-signal-and-weak-tests
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalcompactness-exists-c1-subsequence-of-w2q-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signaldirectlimit-gradient-eq-zero-of-local-signal-ode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signaldirectlimit-constant-limit-without-weak-source
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalpowermoment-w2q-bound-of-power-moment
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalpowermoment-exists-c1-subsequence-of-power-moment
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-source-integral-tendsto-zero-of-nonzero-limit-gradient
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-limit/deductions.
+    This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
+- paper:
+    number: Theorem 1.4 (deductions)
+    title: Deductions of the spike theorem
+    label: T:spiky-solu-thm
+    statement: "\\begin{theorem}[Spike-like stationary solutions]\\label{T:spiky-solu-thm}\n  Let $(u^*,v^*)$ be\
+      \ a positive constant solution of~\\eqref{E:main-PE} and\n  $(u_n,v_n)$ be positive nonconstant classical\
+      \ stationary solutions\n  of~\\eqref{E:main-PE} with $\\chi_0 = \\chi_n \\to \\infty$ and $\\int_0^L u_n\\\
+      ,dx =\n  Lu^*$ for every $n$ in the case that $a = b = 0$. If\n  \\[\n    \\liminf_{n\\to\\infty}\\max_{[0,L]}u_n>u^*,\n\
+      \  \\]\n  then there is a subsequence $\\{u_{n_k}\\}$ and a point $x^* \\in [0, L]$ such\n  that, for every\
+      \ $\\delta > 0$,\n  \\begin{equation}\\label{E:spiky-thm-eq2}\n    \\max_{[x^*-\\delta,x^*+\\delta]\\cap[0,L]}|(u_{n_k})_x|\n\
+      \    \\longrightarrow\\infty\\quad {\\rm as}\\quad n_k\\to\\infty.\n  \\end{equation}\n  Moreover, in the\
+      \ non-minimal model, if $0 < \\gamma < 1 + \\alpha$, then\n  \\begin{equation}\\label{E:spiky-thm-eq3}\n \
+      \   u_{n_k}^\\gamma\\rightharpoonup c\\,\\,\\text{ in }\\,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\\
+      ,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\,\
+      \ W^{2,q}\n  \\end{equation}\n  for $q = \\frac{1+\\alpha}{\\gamma}$ and some constant $0 \\le c \\le\n  (u^*)^\\\
+      gamma$.\n\\end{theorem}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-spike-gradient-blowup
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-blowup-contradiction
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-le-of-local-gradient-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-spike-limit-constant-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-spike-limit-nonminimal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-gradient-blowup-subseq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-exponent-admissible
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-power-integral-le-of-le-one
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-power-integral-le-of-one-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-eqon-const-of-integral-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-minimal-gradient-blowup
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-gradient-blowup-of-eventual-peak
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-spike-all-tests-of-eventual-peak
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:spiky-solu-thm/deductions.
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
+- paper:
+    number: Theorem 1.3(1)-(3)
+    title: Logical deductions of the global extension theorem
+    label: T:global-extension
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-part3-global
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-part2-ssup-eq-top
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-not-iscompact-of-alternatives
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-iscompact-slice
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-unbounded-of-not-iscompact
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-ssup-eq-top-of-unbounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-selectedimage-properties
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-mode-one-strictantion
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-mode-not-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-mode-eq-one-of-monotone-limit
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-not-monotone-of-higher-mode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-integral-mul-mode-one-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-integral-mul-mode-one-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-part3-strictanti
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-part3-strictmono
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-not-altothertrivial
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-not-altcomplement
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-globalalternatives
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-altnoncompact
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-altothertrivial
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-globalbranch-altcomplement
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-logistic-component-unbounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-minimal-component-unbounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedsolutioncomponents-logistic-selected-unbounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-selectedsolutioncomponents-minimal-selected-unbounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-logistic-unbounded-of-local-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-minimal-unbounded-of-local-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-logistic-unbounded-of-fourier-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-minimal-unbounded-of-fourier-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-canonicalremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-continuous-canonicalremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-canonical-profile-expansion
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-curve-canonical-expansion
+  inputs:
+  - Shi–Wang unilateral alternatives for the actual selected branches
+  - identification of the ambient space, solution set S and admissible set V
+  - relative closedness and containment in V and closure S
+  - ambient admissibility closure S contained in V
+  - precompactness of every bounded-sensitivity slice from the applicable parameter-dependent PDE estimates and
+    compact embedding
+  - connectedness and base membership of the selected component
+  - relative clopenness of the correctly oriented monotone locus
+  - the continuous additive profile representation and constant equilibrium
+  - orthogonality of W to the first cosine mode
+  - local simple-eigenvalue expansions when applying the higher-mode perturbation lemma
+  note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
+    coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
+    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/T:global-extension/parts-1-3-logic'
+- paper:
+    number: Equation (2.43) (remainder-from-jet)
+    title: Remainder bounds from the point jet
+    label: E:center-ODE-final
+    statement: "\\begin{equation}\\label{E:center-ODE-final}\n    \\frac{d u_{n_0}}{dt}\n    = \\alpha_{n_0}\\,\\\
+      tilde{\\chi}\\,u_{n_0}\n    - \\beta_{n_0}\\,u_{n_0}^3\n    + { \\mathcal{O}\\Big( |u_{n_0}|^{{2}} |\\tilde{\\\
+      chi}|^2+ {|u_{n_0}|^3}\n    |\\tilde{\\chi}|+ |u_{n_0}|^4\\Big),}\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-mixed-interface-of-jet
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-final-interface-of-jet
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-final-value-bound-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-jet-branch-eventually
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-jet-branch-curves
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-jethyp-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-jethyp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-jetrs
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-value-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-s-bound-final
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-value-bound-final
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-deriv-zero-of-sq-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderfromjet-abs-sub-le-of-deriv-bound
+  inputs:
+  - C⁴ regularity of the actual reduced remainder on an open neighborhood
+  - R(η,0)=0 on a small parameter interval
+  - the five specified point-jet cancellations from the Fourier computation
+  - identification of the reduced field with αηs−βs³+R and α>0, β≠0
+  - axis cancellation R_s(η,0)=0 additionally for the Eq. 2.43 bound
+  - center-manifold existence and transfer of scalar conclusions to the PDE are outside this row
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:center-ODE-final/remainder-from-jet.
+    This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
+- paper:
+    number: Theorem 1.3(2)-(3), ambient-limit proof paragraphs
+    title: Ambient closure of the admissible set
+    label: T:global-extension
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-closure-subset-admissible
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-closure-subset-admissible-minimal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-closure-subset-admissible-logistic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-closure-subset-limitconditions
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-zero-trivial-not-mem-closure
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-exists-ge-mean
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-logistic-exists-ge-ustar
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-logistic-zero-sensitivity-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-minimal-zero-sensitivity-eq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-limit-coeffs-bounded
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-admissibleset
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-part2-ssup-eq-top-of-ambient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-part3-global-of-ambient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-isclosed-setof-forall-nonneg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-ambientclosure-isclosed-setof-exists-ge
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2ambientclosure-logistic-closure-subset-admissible
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2ambientclosure-minimal-closure-subset-admissible
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2ambientclosure-meanzerotranslation
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2ambientclosure-positivemeanzerotranslation
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-intervalstrongpositivity-positive-of-nonnegative
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-relativecompactness-iscompact-closure-of-subsequence
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-logistic-slice-subsequence
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-minimal-slice-subsequence
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-logistic-iscompact-closure-slice
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-boundedsolutionslices-minimal-iscompact-closure-slice
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-logistic-of-local-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-parametrizedsolutioncomponents-minimal-of-local-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-logistic-of-fourier-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fourieramplitude-minimal-of-fourier-curve
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-remainder-mass
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-remainder-mem-fixedmean-iff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-fouriercomplement-existsunique-fixedmean-decomposition
+  inputs:
+  - identification of the manuscript F=0 weak-H2 stationary solution sets and actual branch points with the classical
+    solution sets used by the closure wrappers, at the correct constrained parameters
+  - actual component relative closedness, inclusion in the admissible set and in closure S, and set-level compactness
+    of bounded-sensitivity slices required by the retained global consumers
+  - the part (2) noncompactness hypothesis; the part (3) global alternatives, distinguished constant/complement
+    and orthogonality, and strict orientation/local branch foundations; these are not constructed by the analytic
+    closure proof
+  note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
+    coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
+    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/L:ambient-closure/deductions'
+- paper:
+    number: Theorem 1.3(3), Equation 4.18, full range 1 <= m <= 2
+    title: ODE content of the monotone-locus argument
+    label: E:y-eq
+    statement: "\\begin{equation}\\label{E:y-eq}\n    u_x=\\frac{\\chi_0u^{m}}{(1+v)^\\beta}y,\n    \\qquad\n  \
+      \  y_{xx}\n    +\\Big(\n    \\frac{\\chi_0\\nu\\gamma u^{m+\\gamma-1}}{(1+v)^\\beta}-\\mu\n    \\Big)y=0,\n\
+      \    \\qquad y=v_x,\\quad y(0)=y(L)=0.\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-isconston
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-coeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-continuouson-u
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-continuouson-v
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-deriv-z
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-continuouson-coeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-eq-const-of-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-factor-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-pos-l-of-not-const
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-z-ne-zero-at
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-z-ne-zero-left
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-z-ne-zero-right
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-sig-neg-of-antitoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-sig-pos-of-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-strictantion-of-sig-neg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-strictmonoon-of-sig-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-strictantion-of-antitoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-stationarysolution-strictmonoon-of-monotoneon
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-isclopen-decreasinglocus
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-isclopen-increasinglocus
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-part3-strictanti-of-ode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocusgeneral-part3-strictmono-of-ode
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-linear-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-abs-le-mul-min
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-exists-margin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-neg-of-perturb
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-two-div-mul-min-le-sin
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-monotonelocus-exists-margin-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2monotonelocus-isclopen-decreasinglocus-of-weakh2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2monotonelocus-isclopen-increasinglocus-of-weakh2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2monotonelocus-part3-strictanti-of-weakh2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakh2monotonelocus-part3-strictmono-of-weakh2
+  inputs:
+  - ordinary given-component membership and actual classical-PDE profile correspondence; global branch existence/continuation
+    and connected-component foundations remain outside this consumer
+  - 'hConst: local constant-limit bifurcation representation; hStar: local half-branch parametrization at the distinguished
+    point; the full weak-H2 population embedding, actual ODE identification, signal C2 topology and pointwise continuity
+    are derived'
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:global-extension/monotone-locus.
+    This display summary does not extend that scope. Source locator: p. 32, TeX line 2968.'
+- paper:
+    number: Lemma 2.1 and Equation 2.17 (phase-space-H2)
+    title: Neumann H^2 phase space as cosine series
+    label: L:trig-integrals
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-istestfunction
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-hasweakderiv
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-h2
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-neumanntrace
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-ae-eq-const-of-integral-mul-deriv-eq-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-hasweakderiv-ae-eq-primitive
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-h2-exists-neumannw21
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-h2-summable-norm-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-h2-hassum-cosinecoeff
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-eqon-of-ae-eq-continuouson
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-intervalintegrable-of-memlp
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:trig-integrals/phase-space-H2.
+    This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
+  inputs: []
+- paper:
+    number: Equation (2.43) (axis-condition)
+    title: Axis condition for the remainder (jet conditions alone do not suffice)
+    label: E:center-ODE-final
+    statement: "\\begin{equation}\\label{E:center-ODE-final}\n    \\frac{d u_{n_0}}{dt}\n    = \\alpha_{n_0}\\,\\\
+      tilde{\\chi}\\,u_{n_0}\n    - \\beta_{n_0}\\,u_{n_0}^3\n    + { \\mathcal{O}\\Big( |u_{n_0}|^{{2}} |\\tilde{\\\
+      chi}|^2+ {|u_{n_0}|^3}\n    |\\tilde{\\chi}|+ |u_{n_0}|^4\\Big),}\n  \\end{equation}"
+  class: inputs-supplied
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-iteratedfderiv-succ-eq-of-line
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cexr
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-uncurry-cexr
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-contdiff-cexr
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-d-s
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-d-eta-s
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-d-ss
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-d3
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-jethyp-cex
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-jetrs-cex
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-not-final
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-jethyp-not-sufficient
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-sigman0
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-sigman0-chistar
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-sigman0-shift
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-remainderof
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-reducedfield-remainderof
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-trivialbranchlinearization
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-axis-of-reduction
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-model-final-interface
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-model-branch-curves
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-normalform-reduction
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-remainderaxis-cex-violates-reduction
+  inputs:
+  - identification of p with a positive physical equilibrium in the logistic or fixed-mass minimal model
+  - identification x=λ_n₀>0 and of the modal threshold with χ* at the selected critical mode
+  - existence of the reduced field in the manuscript's Fourier amplitude and original time coordinate
+  - C⁴ regularity on an open neighborhood containing a closed box with 0<r≤1
+  - R(η,0)=0 throughout that box
+  - the five origin jets R_s=R_ηs=R_ss=R_ηss=R_sss=0, including identification of β_n₀ with the cubic coefficient
+  - TrivialBranchLinearization throughout |η|≤r
+  - β_n₀≠0 for the branch conclusions
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:center-ODE-final/axis-condition.
+    This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
+- paper:
+    number: Equation (2.22) (projected-remainder)
+    title: Projection of the fourth-order remainder onto a cosine mode
+    label: E:ode-eq0
+    statement: "\\begin{equation}\\label{E:ode-eq0}\n    u'_k(t)\\int_0^L \\cos^2\\big(\\tfrac{k\\pi x}{L}\\big)dx=\\\
+      sum_{\\ell=0}^6\n    \\mathcal{F}_k^{(\\ell)} \\textcolor{magenta}{+\\mathcal{O}_{u,k}(\\|u\\|_{\\ell^1}^4)}\\\
+      quad {\\rm for}\\quad k=0,1,2,\\cdots,\n  \\end{equation}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound-of-absolutelycontinuous
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound-quartic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound-norm
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound-deriv
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-bound-of-ibp
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-integral-deriv-mul-cos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-abs-integral-le-of-abs-le
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound-example
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-freq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-freq-nonneg
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-freq-mul-l
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-cos-freq
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-population-normalized-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-population-remainder-quartic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-populationmodalresidual-actual-nonlinear-operator-decomposition
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-populationmodalresidual-actual-population-projection-quartic-uniform
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rpow-quadratic-remainder
+  inputs: []
+  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:ode-eq0/projected-remainder.
+    This display summary does not extend that scope. Source locator: p. 17, TeX line 1566.'
+- paper:
+    number: Equations 2.18-2.19
+    title: Normalized signal Taylor remainder
+    label: E:vk-eq
+    statement: "\\begin{align}\\label{E:vk-eq}\n    v_k(t)\n    = & \\;C_k^{(1)}u_k(t)\n    +C_k^{(2)}\n    \\Big(\n\
+      \    \\sum_{ i-j =  k } u_i u_j\n    + \\sum_{ i-j = -k } u_i u_j\n    + \\sum_{ i+j =  k } u_i u_j\n    \\\
+      Big) \\notag \\\\\n    &\n    +C_k^{(3)}\n    \\Big(\n    \\sum_{ i+j+\\ell =  k } u_i u_j u_\\ell\n    +\
+      \ \\sum_{ i+j-\\ell =  k } u_i u_j u_\\ell\n    + \\sum_{ i+j-\\ell = -k } u_i u_j u_\\ell\n    + \\sum_{\
+      \ i-j+\\ell =  k } u_i u_j u_\\ell\\notag \\\\\n    &\n    + \\sum_{ i-j+\\ell = -k } u_i u_j u_\\ell\n  \
+      \  + \\sum_{ i-j-\\ell =  k } u_i u_j u_\\ell\n    + \\sum_{ i-j-\\ell = -k } u_i u_j u_\\ell\n    \\Big)\n\
+      \    +\\mathcal{O}_{v,k}\\Big(\\|u\\|_{\\ell^1}^4\\Big),\n  \\end{align}"
+  class: same-assumptions
+  claims:
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-zero
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-pos
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-eq-of-balance
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-cosinecoeff-zero-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-cosinecoeff-pos-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-zero-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-pos-bound
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-signalremainder-quartic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modalremainder-summable-norm-signalremainder
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmodalresidual-modalresidual-eq-of-physical-signal
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmodalresidual-modalresidual-quartic
+  - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmodalresidual-summable-modalresidual
+  note: 'actual nonlinear signal-profile modal residual: exact zero/positive normalization, actual source Taylor
+    estimate, original elliptic projected balance, summability, and full physical-signal equilibrium wrapper are
+    derived. Ordinary given-profile regularity/PDE/small-amplitude inputs remain; no center-manifold or full Fourier-convolution
+    existence is claimed. Source locator: p. 16, TeX line 1447.'
+  inputs: []

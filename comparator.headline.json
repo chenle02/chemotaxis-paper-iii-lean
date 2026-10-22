@@ -1,0 +1,25 @@
+{
+  "challenge_module": "HeadlineChallenge",
+  "solution_module": "HeadlineSolution",
+  "theorem_names": [
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.TrigIntegrals.cos_cos_cos_cos_lp",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MixedRemainder.center_ODE_final_branch_eventually",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NormalizedAsymptotic.coefficient_sub_linear_isBigO",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.IntervalMoments.logistic_interval_bounds",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_flux_identity",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_exp_representation",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NoDiracMass.window_mass_tendstoUniformly",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.EndpointConcentration.tendsto_mass_smul_dirac_of_vanishing_tails",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.GlobalBranch.mode_eq_one_of_monotone_limit",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.limit_eq_const",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.spike_limit_constant_le",
+    "ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

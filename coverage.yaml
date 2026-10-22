@@ -229,7 +229,7 @@ rows:
       \ W^{2,q}\n  \\end{equation}\n  for $q = \\frac{1+\\alpha}{\\gamma}$ and some constant $0 \\le c \\le\n  (u^*)^\\\
       gamma$.\n\\end{theorem}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:spiky-solu-thm.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:spiky-solu-thm.
     This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-minimal-gradient-blowup
@@ -259,7 +259,7 @@ rows:
       \ \\infty$. Thus, the liminf condition in\n      Theorem~\\ref{T:spiky-solu-thm} is automatic for these sequences.\n\
       \  \\end{itemize}\n\\end{remark}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/R:no-delta-concentration.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/R:no-delta-concentration.
     This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-window-mass-bounds
@@ -525,7 +525,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejet-actual-response-cubic-jet
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejetinterface-actual-modal-derivative
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:Ck-restated.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:Ck-restated.
     This display summary does not extend that scope. Source locator: p. 16, TeX line 1471.'
 - paper:
     number: Equation (2.32)
@@ -574,7 +574,7 @@ rows:
   - positive domain length and positive mode index when applying that consumer
   note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
     coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
-    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/E:a_0,i'
+    foundations remain explicit. Public scope and supplied inputs: data/public-scope-ledger.json, paper3/E:a_0,i'
 - paper:
     number: Equation (2.36b)
     title: Higher-mode coefficients a_{k,1}
@@ -642,7 +642,7 @@ rows:
   - physical signal-equilibrium relation and positive parameters for the scaled-to-physical identification
   note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
     coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
-    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/E:E-F-G-H'
+    foundations remain explicit. Public scope and supplied inputs: data/public-scope-ledger.json, paper3/E:E-F-G-H'
 - paper:
     number: Equation (2.41)
     title: Cubic coefficient Gamma_{n0}^(3)
@@ -1033,7 +1033,7 @@ rows:
       label{E:bound-u-eq3}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:spiky-solu-lm1.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:spiky-solu-lm1.
     This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-logistic-uniform-norm-bound
@@ -1055,7 +1055,7 @@ rows:
       label{E:bound-u-eq4}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-bounds.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-bounds.
     This display summary does not extend that scope. Source locator: p. 29, TeX line 2752.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-minimal-uniform-norm-bound
@@ -1078,7 +1078,7 @@ rows:
       label{E:bound-u-eq3}\n        \\|u\\|_{C^{2+\\theta}([0,L])},\\,\\, \\|v\\|_{C^{2+\\theta}([0,L])}\\le C.\n\
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:bounded-sensitivity-compactness.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:bounded-sensitivity-compactness.
     This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalboundedcompactness-logistic-stationary-limit
@@ -1099,7 +1099,7 @@ rows:
       ,\\, L^q,\n    \\quad v_{n_k}\\to\\frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, C^1,\n    \\quad v_{n_k}\\rightharpoonup\\\
       frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, W^{2,q}.\n  \\end{equation}\n\\end{lemma}"
   class: same-assumptions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-limit.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-limit.
     This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikesubsequence-exists-constant-signal-and-weak-tests
@@ -1286,7 +1286,7 @@ rows:
   - 'not proved here: the unilateral alternatives and their bifurcation foundations'
   note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
     coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
-    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/relative-component-topology'
+    foundations remain explicit. Public scope and supplied inputs: data/public-scope-ledger.json, paper3/relative-component-topology'
 - paper:
     number: Theorem 1.3(3)
     title: Fixed mass and vanishing tails give a Dirac limit
@@ -1304,7 +1304,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-decreasing-actual-concentration
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/tail-mass-dirac-consumer.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/tail-mass-dirac-consumer.
     This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
 - paper:
     number: Lemma 4.1(1), Equation 4.1
@@ -1506,7 +1506,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-decreasing-actual-concentration
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:global-extension/part-3-concentration.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:global-extension/part-3-concentration.
     This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
 - paper:
     number: Theorem 1.1
@@ -1544,7 +1544,7 @@ rows:
   - HasDerivAt identifying Rs
   - the stated derivative remainder bound
   - continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:local-bifurcation/branch-curves.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:local-bifurcation/branch-curves.
     This display summary does not extend that scope. Source locator: p. 6, TeX line 581.'
 - paper:
     number: Lemma 2.1 and Equation 2.17
@@ -1571,7 +1571,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cos-cos-cos-of-h2
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cos-cos-cos-cos-of-h2
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:trig-integrals/phase-space-bridge.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:trig-integrals/phase-space-bridge.
     This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
 - paper:
     number: Proof of Lemma 4.2(2), Equations 4.7-4.8
@@ -1657,7 +1657,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicallogisticestimates-c1-gronwall-bound
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-sup-le-of-derivative-power-bound
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:spiky-solu-lm1/part-2-C1-chain.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:spiky-solu-lm1/part-2-C1-chain.
     This display summary does not extend that scope. Source locator: p. 29, TeX line 2725.'
 - paper:
     number: Proof of Lemma 5.1, W^{2,q} step with r=1+alpha
@@ -1715,7 +1715,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-atoms-of-classical-profiles
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-dirac-subsequence-of-classical-profiles
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/R:no-delta-concentration/no-atom-limit.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/R:no-delta-concentration/no-atom-limit.
     This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
 - paper:
     number: Lemma 5.1 (deductions)
@@ -1752,7 +1752,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalpowermoment-exists-c1-subsequence-of-power-moment
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-source-integral-tendsto-zero-of-nonzero-limit-gradient
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:minimal-spike-limit/deductions.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-limit/deductions.
     This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
 - paper:
     number: Theorem 1.4 (deductions)
@@ -1786,7 +1786,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-gradient-blowup-of-eventual-peak
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-spike-all-tests-of-eventual-peak
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:spiky-solu-thm/deductions.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:spiky-solu-thm/deductions.
     This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
 - paper:
     number: Theorem 1.3(1)-(3)
@@ -1841,7 +1841,7 @@ rows:
   - local simple-eigenvalue expansions when applying the higher-mode perturbation lemma
   note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
     coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
-    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/T:global-extension/parts-1-3-logic'
+    foundations remain explicit. Public scope and supplied inputs: data/public-scope-ledger.json, paper3/T:global-extension/parts-1-3-logic'
 - paper:
     number: Equation (2.43) (remainder-from-jet)
     title: Remainder bounds from the point jet
@@ -1871,7 +1871,7 @@ rows:
   - identification of the reduced field with αηs−βs³+R and α>0, β≠0
   - axis cancellation R_s(η,0)=0 additionally for the Eq. 2.43 bound
   - center-manifold existence and transfer of scalar conclusions to the PDE are outside this row
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:center-ODE-final/remainder-from-jet.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:center-ODE-final/remainder-from-jet.
     This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
 - paper:
     number: Theorem 1.3(2)-(3), ambient-limit proof paragraphs
@@ -1921,7 +1921,7 @@ rows:
     closure proof
   note: 'Conditional scope retained. Actual cosine complement, curved elliptic cubic response and conserved-mean
     coefficient extraction supply the scoped ingredients. Family/jet construction, operator identity and global
-    foundations remain explicit. Full statement/history: data/claim-ledgers/2026-10-20-paper3-v2.json, paper3/L:ambient-closure/deductions'
+    foundations remain explicit. Public scope and supplied inputs: data/public-scope-ledger.json, paper3/L:ambient-closure/deductions'
 - paper:
     number: Theorem 1.3(3), Equation 4.18, full range 1 <= m <= 2
     title: ODE content of the monotone-locus argument
@@ -1970,7 +1970,7 @@ rows:
   - 'hConst: local constant-limit bifurcation representation; hStar: local half-branch parametrization at the distinguished
     point; the full weak-H2 population embedding, actual ODE identification, signal C2 topology and pointwise continuity
     are derived'
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/T:global-extension/monotone-locus.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:global-extension/monotone-locus.
     This display summary does not extend that scope. Source locator: p. 32, TeX line 2968.'
 - paper:
     number: Lemma 2.1 and Equation 2.17 (phase-space-H2)
@@ -1989,7 +1989,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-h2-hassum-cosinecoeff
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-eqon-of-ae-eq-continuouson
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-intervalintegrable-of-memlp
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/L:trig-integrals/phase-space-H2.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:trig-integrals/phase-space-H2.
     This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
   inputs: []
 - paper:
@@ -2033,7 +2033,7 @@ rows:
   - the five origin jets R_s=R_ηs=R_ss=R_ηss=R_sss=0, including identification of β_n₀ with the cubic coefficient
   - TrivialBranchLinearization throughout |η|≤r
   - β_n₀≠0 for the branch conclusions
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:center-ODE-final/axis-condition.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:center-ODE-final/axis-condition.
     This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
 - paper:
     number: Equation (2.22) (projected-remainder)
@@ -2063,7 +2063,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-populationmodalresidual-actual-population-projection-quartic-uniform
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rpow-quadratic-remainder
   inputs: []
-  note: 'Exact scope, hypotheses, exclusions and evidence: data/claim-ledgers/2026-10-20-paper3-v2.json, row paper3/E:ode-eq0/projected-remainder.
+  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:ode-eq0/projected-remainder.
     This display summary does not extend that scope. Source locator: p. 17, TeX line 1566.'
 - paper:
     number: Equations 2.18-2.19

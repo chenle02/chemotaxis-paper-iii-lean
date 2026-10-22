@@ -1,0 +1,118 @@
+"""Authenticate completed source-gate phases and produce a distinct composite report.
+This collector does not compile or repeat the expensive uncached body walk.
+Original transcripts and the original packaging refusal remain unchanged.
+"""
+from pathlib import Path
+import hashlib,json,re,subprocess,sys,os,datetime,yaml
+S=Path(__file__).parent;R=Path('<PUBLIC_COMPANION_CHECKOUT>');C='c749b53b02211901063228f52af123419b0dbaf5';A=S/'source-replay.VyQDRN';D=S/'native-successor';D.mkdir(exist_ok=True)
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+read=lambda p:json.loads(p.read_text())
+git=lambda *a:subprocess.check_output(['git',*a],cwd=R)
+checks=[]
+def check(ok,label):
+ if not ok:raise RuntimeError(label)
+ checks.append(label)
+check(git('rev-parse','HEAD').decode().strip()==C,'collector checkout is exact source commit')
+check(not git('status','--porcelain').strip(),'collector checkout has no tracked/untracked changes (ignored cache excepted)')
+raw=(S/'native.raw.log').read_text();stdout=(S/'native.stdout').read_text();prior=read(S/'native-result.json');props=dict(l.split('=',1)for l in(S/'native.properties').read_text().splitlines()if'='in l)
+expected_refusals=["source changed during the run: 2 tracked file(s) differ from --commit c749b53b0221"]+["claim axioms: ChemotaxisBifurcation."+n+": the environment gives ['Classical.choice', 'Quot.sound', 'propext'], its `#print axioms` output in the same log none; the two disagree" for n in ['ModeData','CubicData']]
+check(not prior['ok'] and prior['refusals']==expected_refusals,'exact original three producer refusals retained as failed')
+check(sha(S/'native.stdout')==prior['seal']['job_stdout_sha256'],'complete original stdout matches producer seal')
+check(sha(S/'native.raw.log')==prior['raw_log_sha256'],'complete original raw matches producer hash')
+check(props['Result']=='success' and props['SubState']=='exited' and props['ExecMainStatus']=='0','original proof worker terminal exited0')
+check(props['InvocationID']=='8493646d525c441d9e55e1de649b0a1b','exact original proof invocation')
+journal=[json.loads(l) for l in (S/'original-native.journal.jsonl').read_text().splitlines()]
+command_records=[x for x in journal if x.get('USER_INVOCATION_ID')==props['InvocationID'] and x.get('MESSAGE','').startswith('Started chemotaxis-public-native.service - /usr/bin/bash scripts/verify-local.sh ')]
+check(len(command_records)==1 and command_records[0]['MESSAGE'].endswith(str(S/'native.raw.log')+'.'),'original journal command and invocation bound exactly')
+command_record=command_records[0]
+
+check(sha(S/'native.raw.log')=='9b7b21678795a0f47731454778237da30a64118801c9e4d3bee164a17f83388f','original full report matches frozen seal')
+seals=dict(re.findall(r'^(pre-manifest-sha256|post-manifest-sha256|verify-log-sha256) ([0-9a-f]{64})$',stdout,re.M))
+check(seals['verify-log-sha256']==sha(S/'native.raw.log'),'original stdout seals original full raw report')
+check(seals['pre-manifest-sha256']==seals['post-manifest-sha256']==sha(R/'lake-manifest.json'),'exact original/current manifest seals')
+check((S/'native.stderr').read_bytes()==b'','original worker stderr empty')
+check(subprocess.check_output(['git','rev-parse','HEAD'],cwd=A/'src').decode().strip()==C,'original source-only clone exact commit')
+check(not subprocess.check_output(['git','status','--porcelain'],cwd=A/'src').strip(),'original source clone clean')
+before=read(A/'owned-audit/source-before.json');after=read(A/'owned-audit/source-after.json')
+check(before==after and before['candidate_commit']==C and len(before['source_sha256'])==194,'complete194 source/control snapshot unchanged across original audit')
+def live_snapshot(root,label):
+ out=D/('source-snapshot-'+label+'.json')
+ subprocess.run(['python3',str(root/'scripts/verification_receipt.py'),'snapshot','--output',str(out)],check=True,stdout=subprocess.DEVNULL)
+ check(read(out)==before,'full source inventory including additions/removals '+label)
+ return out
+live_snapshot(A/'src','original-pre');live_snapshot(R,'collector-pre')
+for n,h in before['source_sha256'].items():
+ check(sha(A/'src'/n)==h==sha(R/n)==hashlib.sha256(git('show',C+':'+n)).hexdigest(),'source equality '+n)
+positive=read(A/'owned-audit/positive.json');negative=read(A/'owned-audit/negative.json');allow={'propext','Quot.sound','Classical.choice'}
+rawpositive=read(A/'owned-audit/positive.raw.json');rawnegative=read(A/'owned-audit/negative.raw.json')
+check(raw.count((A/'owned-audit/positive.raw.json').read_text())==1,'raw owned audit uniquely embedded byte-exact in sealed transcript')
+check({k:v for k,v in positive.items()if k!='source_snapshot'}==rawpositive,'complete enriched ownership record equals sealed raw record')
+check({k:v for k,v in negative.items()if k!='source_snapshot'}==rawnegative,'complete enriched negative record equals original raw control record')
+modules={n[:-5].replace('/','.')for n in before['source_sha256']if n.endswith('.lean') and (n=='ChemotaxisBifurcation.lean' or n.startswith('ChemotaxisBifurcation/'))}
+check(len(modules)==176 and set(positive['modules'])==modules and len(positive['modules'])==176,'exact canonical176 owned module inventory')
+check(positive['source_snapshot']==before and positive['report']['ok'] and not positive['report']['violations'],'owned audit positive is source-bound and green')
+check(len(positive['declarations'])==len(set(positive['declarations']))==positive['report']['audited']==3985,'complete3985 unique owned declarations')
+check(set(positive['report']['axiomsUsed'])<=allow,'owned axiom union standard only')
+check(negative['source_snapshot']==before and not negative['report']['ok'] and negative['declarations']==['ChemotaxisBifurcation.auditTamper'] and 'sorryAx' in negative['report']['axiomsUsed'],'source-bound compiled admitted negative control rejected')
+check((A/'dependencies-before.json').read_bytes()==(A/'dependencies-after.json').read_bytes(),'original dependency observations unchanged')
+q=subprocess.run(['python3',str(R/'scripts/check_lake_packages.py'),'--root',str(A/'src'),'--manifest',str(A/'src/lake-manifest.json'),'--output',str(D/'dependencies-now.json')],capture_output=True,text=True)
+check(q.returncode==0,'dependency pins/source status rechecked now')
+check(read(D/'dependencies-now.json')==read(A/'dependencies-after.json'),'later dependency observation matches original exact pins')
+for t in prior['run_tools']['resolved']:
+ check(sha(Path(t['realpath']))==t['sha256'],'original runtime tool hash unchanged '+t['name'])
+pkg=Path('<LEAN_PKG_INSTALL>');files={str(x.relative_to(pkg)):sha(x)for x in pkg.rglob('*')if x.is_file() and '__pycache__' not in x.parts and x.suffix not in ['.pyc','.pyo']};listing=''.join(files[n]+'  '+n+'\n'for n in sorted(files,key=lambda n:n.encode()))
+check(hashlib.sha256(listing.encode()).hexdigest()==prior['producer']['sources_sha256'] and len(files)==76,'exact original/current lean-pkg76-source producer')
+check((A/'claim-axioms/ClaimAxioms.lean').read_text().strip() in (R/'scripts/local_receipt_helpers.sh').read_text(),'uncached body-query command source exactly committed template')
+records=re.findall(r'^claim-axioms: (\S+) (\S+)$',raw,re.M);names=[n for n,a in records];claims=yaml.safe_load((R/'claims.yaml').read_text())['claims']
+check(names==[x['decl']for x in claims] and len(names)==len(set(names))==1525,'exact ordered1525 indexed body-query names')
+check(raw.count('claim-axioms-done: 1525')==1 and not re.search(r'^claim-missing:',raw,re.M),'all1525 body queries completed with no missing declaration')
+check(all(set(a.split(','))<=allow or a=='none' for n,a in records),'every actual uncached body-query axiom standard or none')
+check(set(names)<=set(positive['declarations']),'all indexed names owned and audited')
+probe=(A/'printed-types-and-axioms.txt').read_text();offset=raw.find(probe);check(offset>0 and raw.count(probe)==1,'complete original type/cached-summary transcript is exact raw-log segment')
+pattern=r"^@?(?P<name>[A-Za-z_][\w.']*)(?:\.\{[^}]+\})? : (?P<type>.*?)^'(?P=name)' (?:depends on axioms|does not depend)"
+matched=list(re.finditer(pattern,probe,re.M|re.S));check([m.group('name')for m in matched]==names,'all1525 complete kernel type headers including wrapped universes')
+body=dict(records);differences=[]
+printed={}
+pat=r"^'(?P<name>[A-Za-z_][\w.']*)' (?:(?:depends on axioms: \[(?P<axes>[\s\S]*?)\])|(?P<none>does not depend on any axioms))"
+for m in re.finditer(pat,probe,re.M):
+ cleaned=re.sub(r"\.\{[^}]+\}","",m.group('axes') or '')
+ printed[m.group('name')]={x.strip()for x in cleaned.split(',')if x.strip()}
+check(set(printed)==set(names),'all1525 original cached-summary records retained and parsed')
+delta={n for n,a in records if printed[n] != (set()if a=='none'else set(a.split(',')))}
+check(delta=={'ChemotaxisBifurcation.ModeData','ChemotaxisBifurcation.CubicData'},'exactly2 cached/body differences; all other1523 agree')
+
+for n in ['ChemotaxisBifurcation.ModeData','ChemotaxisBifurcation.CubicData']:
+ check("'"+n+"' does not depend on any axioms" in probe,'original cached empty summary retained '+n)
+ check(set(body[n].split(','))==allow,'original uncached standard union retained '+n)
+ differences.append({'declaration':n,'cached_summary':[],'uncached_body_axioms':sorted(allow),'interpretation':'Different cached/type-summary versus uncached body traversal; neither contains a forbidden axiom. Composite uses complete uncached body records, not cached summaries.'})
+# Later object capture is explicitly not claimed as an original pre-build observation.
+objects={str(x.relative_to(A/'src')):{'sha256':sha(x),'mtime_ns':x.stat().st_mtime_ns}for x in sorted((A/'src/.lake/build/lib/lean').rglob('*'))if x.is_file() and x.suffix in ['.olean','.private','.server']}
+expected_objects={'.lake/build/lib/lean/'+n.replace('.','/')+ext for n in modules for ext in ['.olean','.olean.private','.olean.server']}
+check(set(objects)==expected_objects,'exact528 canonical owned compiled outputs across176 modules')
+compiler={}
+for name in ['lean','lake']:
+ effective=Path(subprocess.check_output(['elan','which',name],cwd=R,text=True).strip())
+ compiler[name]={'sha256':sha(effective),'version':subprocess.check_output([str(effective),'--version'],cwd=R,text=True).strip(),'timing':'Later collector observation of effective pinned toolchain; original run records authenticate Elan proxy hashes only, not original compiler bytes'}
+check('4.35.0' in compiler['lean']['version'],'effective current compiler matches pinned4.35.0')
+inputs=[S/'native.raw.log',S/'native.stdout',S/'native.stderr',S/'native.properties',S/'native-result.json',S/'original-native.journal.jsonl',A/'printed-types-and-axioms.txt',A/'owned-audit/source-before.json',A/'owned-audit/source-after.json',A/'owned-audit/positive.json',A/'owned-audit/negative.json',A/'owned-audit/positive.raw.json',A/'owned-audit/negative.raw.json',A/'dependencies-before.json',A/'dependencies-after.json',A/'claim-axioms/ClaimAxioms.lean']
+manifest={'effective_toolchain_observed_later':compiler,'collector_driver_sha256':sha(Path(__file__)),'schema':'chemotaxis-authenticated-phase-composite/1','commit':C,'source_worker':{'invocation_id':props['InvocationID'],'worker_exit':0,'worker_result':'success','receipt_packaging':'REFUSED; original remains refused','original_refusals':prior['refusals'],'command_sha256':hashlib.sha256(command_record['MESSAGE'].encode()).hexdigest(),'producer':prior['producer'],'tools':[{'name':t['name'],'sha256':t['sha256']}for t in prior['run_tools']['resolved']]},'selection_policy':'Reuse only authenticated terminal completed source-build, owned/negative audit, exact kernel types and complete uncached body-query phases at the identical194-file source/control snapshot. This collector does not repeat compilation/body traversal. Original cached summaries remain in the untouched original transcript attachment; canonical axiom authority is all1525 uncached body records. No mathematical result is edited or promoted.','original_inputs':{str(x.relative_to(S)):sha(x)for x in inputs},'bound_source_sha256':before['source_sha256'],'cache_body_summary_differences':differences,'checks':checks,'objects_observed_later':{'capture_policy':'Post-original-job capture during collector; not an original pre-build manifest','files':objects}}
+# Retain original private pending-doc hashes and exact changed paths, not their local locations.
+manifest['documentation_recovery']=read(S/'pending-docs/manifest.json')
+(D/'phase-composite-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+head='\n'.join(['commit: '+C,'lean-toolchain: '+(R/'lean-toolchain').read_text().strip(),'checker: authenticate completed source-only proof phases and full uncached body audit; independently sealed composite collector, no compile/body walk repeated','evidence-mode: authenticated phase reuse; original packaging refusal remains refused','source-worker-invocation: '+props['InvocationID'],'source-worker-exit: 0','source-worker-raw-sha256: '+sha(S/'native.raw.log'),'composite-manifest-sha256: '+sha(D/'phase-composite-manifest.json'),'axiom-summary-difference: ModeData/CubicData cached empty summaries versus uncached standard-three; original full transcript retained as attachment; authoritative records below are the complete uncached body walk','phase-build-provenance: the following build/owned records were executed by the original source worker, not this collector'])+'\n'
+prefix=raw[:offset];prefix='\n'.join(l for l in prefix.splitlines()if not l.startswith(('commit:','lean-toolchain:','checker:')))+'\n'
+types_only='\n'.join(m.group(0).split("\n'"+m.group('name')+"'",1)[0]for m in matched)+'\n'
+# The exact old uncached section/tail includes completion, pins, owned count, zero sorry.
+suffix=raw[offset+len(probe):]
+suffix=re.sub(r'^generated-at: (.*)$',r'source-phase-generated-at: \1',suffix,flags=re.M)
+report=head+prefix+'phase-types-provenance: exact full elaborated kernel types; original cached summaries are an attached separate stream\n'+types_only+'phase-body-provenance: exact complete uncached original body records, not a rerun\n'+suffix+'generated-at: '+datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')+'\n'
+(D/'composite.raw.log').write_text(report)
+check(all(sha(A/'src'/n)==v['sha256'] and (A/'src'/n).stat().st_mtime_ns==v['mtime_ns']for n,v in objects.items()),'later compiled object observation unchanged during collector')
+live_snapshot(A/'src','original-post');live_snapshot(R,'collector-post')
+check(all(sha(R/n)==h==sha(A/'src'/n)for n,h in before['source_sha256'].items()),'complete194 source/control files unchanged during collector')
+check(git('rev-parse','HEAD').decode().strip()==C and not git('status','--porcelain').strip(),'collector source checkout remains exact clean C749')
+check(sha(Path(__file__))==manifest['collector_driver_sha256'],'collector driver unchanged during execution')
+manifest['checks']=checks;manifest['objects_observed_later']['unchanged_during_collector']=True
+# Freeze final manifest first, then bind its final hash into the report.
+(D/'phase-composite-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');report=re.sub(r'^composite-manifest-sha256: [0-9a-f]{64}$','composite-manifest-sha256: '+sha(D/'phase-composite-manifest.json'),report,flags=re.M);(D/'composite.raw.log').write_text(report)
+print('pre-manifest-sha256 '+sha(R/'lake-manifest.json'));print('post-manifest-sha256 '+sha(R/'lake-manifest.json'));print('verify-log-sha256 '+sha(D/'composite.raw.log'))

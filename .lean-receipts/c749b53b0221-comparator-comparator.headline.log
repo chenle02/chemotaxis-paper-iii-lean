@@ -1,0 +1,182 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9031 file(s)
+lean-path-shadow: none (11 entries, roots Challenge,ChemotaxisBifurcation,HeadlineChallenge,HeadlineSolution,Solution)
+== lake comparator (toolchain) comparator.headline.json
+Resolving dependencies
+Building HeadlineChallenge
+⚠ [9047/9048] Replayed HeadlineChallenge
+warning: HeadlineChallenge.lean:23:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:57:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:82:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:103:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:125:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:140:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:159:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:181:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:201:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:220:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:231:8: declaration uses `sorry`
+warning: HeadlineChallenge.lean:250:8: declaration uses `sorry`
+Build completed successfully (9048 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.TrigIntegrals.cos_cos_cos_cos_lp, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MixedRemainder.center_ODE_final_branch_eventually, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NormalizedAsymptotic.coefficient_sub_linear_isBigO, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.IntervalMoments.logistic_interval_bounds, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_flux_identity, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_exp_representation, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NoDiracMass.window_mass_tendstoUniformly, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.EndpointConcentration.tendsto_mass_smul_dirac_of_vanishing_tails, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.GlobalBranch.mode_eq_one_of_monotone_limit, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.limit_eq_const, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.spike_limit_constant_le, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from HeadlineChallenge
+Building HeadlineSolution
+⚠ [9059/9080] Replayed ChemotaxisBifurcation.RemainderBounds
+warning: ChemotaxisBifurcation/RemainderBounds.lean:111:28: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RemainderBounds.lean:111:24: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RemainderBounds.lean:111:28: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9070/9080] Replayed ChemotaxisBifurcation.RationalCoefficient
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:131:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:131:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:131:18: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:131:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:139:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:139:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:161:46: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:166:46: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:161:42: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:161:46: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:166:42: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:166:46: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:172:22: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:172:18: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:172:22: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:183:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:183:30: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:192:38: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:192:34: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:192:38: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:204:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:204:30: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:258:5: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:271:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:271:18: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:299:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:299:19: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:317:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:317:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:317:30: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:338:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:338:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/RationalCoefficient.lean:338:30: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9075/9080] Replayed ChemotaxisBifurcation.NeumannProjection
+warning: ChemotaxisBifurcation/NeumannProjection.lean:46:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ChemotaxisBifurcation/NeumannProjection.lean:158:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: ChemotaxisBifurcation/NeumannProjection.lean:161:13: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_zero, sub_zero, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ChemotaxisBifurcation/NeumannProjection.lean:161:23: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [zero_mul, sub_zero, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ChemotaxisBifurcation/NeumannProjection.lean:159:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/NeumannProjection.lean:159:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ChemotaxisBifurcation/NeumannProjection.lean:159:22: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ChemotaxisBifurcation/NeumannProjection.lean:159:36: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Build completed successfully (9080 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.TrigIntegrals.cos_cos_cos_cos_lp, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MixedRemainder.center_ODE_final_branch_eventually, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NormalizedAsymptotic.coefficient_sub_linear_isBigO, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.IntervalMoments.logistic_interval_bounds, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_flux_identity, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_exp_representation, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NoDiracMass.window_mass_tendstoUniformly, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.EndpointConcentration.tendsto_mass_smul_dirac_of_vanishing_tails, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.GlobalBranch.mode_eq_one_of_monotone_limit, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.limit_eq_const, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.spike_limit_constant_le, ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from HeadlineSolution
+Running con-ron kernel on solution
+con-ron: accepted 44870 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

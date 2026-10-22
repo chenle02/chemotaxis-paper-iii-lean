@@ -1,0 +1,2680 @@
+{
+  "effective_toolchain_observed_later": {
+    "lean": {
+      "sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+      "version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+      "timing": "Later collector observation of effective pinned toolchain; original run records authenticate Elan proxy hashes only, not original compiler bytes"
+    },
+    "lake": {
+      "sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+      "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+      "timing": "Later collector observation of effective pinned toolchain; original run records authenticate Elan proxy hashes only, not original compiler bytes"
+    }
+  },
+  "collector_driver_sha256": "c27b932b4da7dc07efc25084c44ce142256eacba00f75f70b6754a3fdc8e5b0d",
+  "schema": "chemotaxis-authenticated-phase-composite/1",
+  "commit": "c749b53b02211901063228f52af123419b0dbaf5",
+  "source_worker": {
+    "invocation_id": "8493646d525c441d9e55e1de649b0a1b",
+    "worker_exit": 0,
+    "worker_result": "success",
+    "receipt_packaging": "REFUSED; original remains refused",
+    "original_refusals": [
+      "source changed during the run: 2 tracked file(s) differ from --commit c749b53b0221",
+      "claim axioms: ChemotaxisBifurcation.ModeData: the environment gives ['Classical.choice', 'Quot.sound', 'propext'], its `#print axioms` output in the same log none; the two disagree",
+      "claim axioms: ChemotaxisBifurcation.CubicData: the environment gives ['Classical.choice', 'Quot.sound', 'propext'], its `#print axioms` output in the same log none; the two disagree"
+    ],
+    "command_sha256": "d5916273cd3f76c1b93f14888dc8849071ebf2136862cabbd5c0503844a707ce",
+    "producer": {
+      "changed": [],
+      "commit": null,
+      "dirty": null,
+      "install": "installed",
+      "lean_pkg": "0.20.0",
+      "python": "3.12.3",
+      "source_files": 76,
+      "sources_sha256": "558e6675cac80492b5ba57c2b12541b7cc408e6abf01b6cc7dc6b727fab8ea84"
+    },
+    "tools": [
+      {
+        "name": "git",
+        "sha256": "b0b3f67b0af1fbd9c6a2d4c0bc4b2e3c200044d4964d61e77c0b13cc3ddc1971"
+      },
+      {
+        "name": "lake",
+        "sha256": "711bf13e4b9c0993d88f1dcb15e2e90a8d8e00573ac31df273d5a612b6fa38e1"
+      },
+      {
+        "name": "lean",
+        "sha256": "711bf13e4b9c0993d88f1dcb15e2e90a8d8e00573ac31df273d5a612b6fa38e1"
+      },
+      {
+        "name": "python3",
+        "sha256": "878423ee4aa886a6e6b411c08e2ef2b97cb8401c03e6548134dedf0e25389b7a"
+      }
+    ]
+  },
+  "selection_policy": "Reuse only authenticated terminal completed source-build, owned/negative audit, exact kernel types and complete uncached body-query phases at the identical194-file source/control snapshot. This collector does not repeat compilation/body traversal. Original cached summaries remain in the untouched original transcript attachment; canonical axiom authority is all1525 uncached body records. No mathematical result is edited or promoted.",
+  "original_inputs": {
+    "native.raw.log": "9b7b21678795a0f47731454778237da30a64118801c9e4d3bee164a17f83388f",
+    "native.stdout": "003c4c9627e6adf9a74b1ff8a598f14cf87fb5457f16685c993f8e919897efd6",
+    "native.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native.properties": "394699c64e79928368cc63ef37035a2b2b14a13710e92436b2c9a19a38bb6f89",
+    "native-result.json": "598b6b336afa63e78906e99c058f1ab03ecb237b32cbdea75f543d94a8510543",
+    "original-native.journal.jsonl": "733f61a868349b91c97b64a134cd03ed2eebe53ceb880cf729a8945d230d6da7",
+    "source-replay.VyQDRN/printed-types-and-axioms.txt": "c32d995c0cec809fa534706d9e3c5509880f183ed4847a97f87902e48fee8cc3",
+    "source-replay.VyQDRN/owned-audit/source-before.json": "40d7c0db671c7ad120637ebca71428bb3a3df8f8d8e5e6da23fba218d2db9b81",
+    "source-replay.VyQDRN/owned-audit/source-after.json": "40d7c0db671c7ad120637ebca71428bb3a3df8f8d8e5e6da23fba218d2db9b81",
+    "source-replay.VyQDRN/owned-audit/positive.json": "e10f7909d346e6cabc2a38036963bd2fbecff20c5579e59d97b4c30bdef0ef40",
+    "source-replay.VyQDRN/owned-audit/negative.json": "22814f7824c12d5522420c5f677cc09e7e2aa088b0c63cdf2ff18791dbf3f296",
+    "source-replay.VyQDRN/owned-audit/positive.raw.json": "0d03b6e7c405434edd60dd09b05980ec71828b16ea0ce64909c759acad15a682",
+    "source-replay.VyQDRN/owned-audit/negative.raw.json": "5057ed67e9247263c0d0f83724c56fbec3a605cffec33ea8f0692d2369741e41",
+    "source-replay.VyQDRN/dependencies-before.json": "af0b094c2046ef9c2e753e673234f0a89b17f435368053ee3e2af060c6aafaf5",
+    "source-replay.VyQDRN/dependencies-after.json": "af0b094c2046ef9c2e753e673234f0a89b17f435368053ee3e2af060c6aafaf5",
+    "source-replay.VyQDRN/claim-axioms/ClaimAxioms.lean": "cf05deaee19c48b4397c26a263d772d5b3106a63183543fdb826b5951649223f"
+  },
+  "bound_source_sha256": {
+    ".github/workflows/lean.yml": "395cefd58565606c457c6d7d6677b4bd3071ac442ab489d905f5397d6417ce07",
+    "ChemotaxisBifurcation.lean": "1a80233b5fadb288e4e625e3b5a4c1c50e44195d83abf4bdfa9a9df670e881f9",
+    "ChemotaxisBifurcation/ActualSolutionClosure.lean": "05c1cb3987fc75e84ed1b185db7642e7ef9bb62d21c1092e1f6861413f28823f",
+    "ChemotaxisBifurcation/AllPositiveLogisticCompactness.lean": "f763eb0efa4c55776fe23035cb9f9d17c7a89d44d77520ccdbd5dfb20a7c60f5",
+    "ChemotaxisBifurcation/AmbientClosure.lean": "3f300aa89d9c66fcef0bd2872099e53edf9a0046988f3d202c4765261c17f9da",
+    "ChemotaxisBifurcation/BetaDecomposition.lean": "902af4b7830431204e78c195dd08fb8064d6faa77669617acbd4856dd85380b5",
+    "ChemotaxisBifurcation/BetaQuadratic.lean": "3b026362e9524ea097c0251127682cf4f53e0785cabed09ca582585cd570c685",
+    "ChemotaxisBifurcation/BetaRegimes.lean": "47e73a79761e54d176dd2cd8a06b8f511f868068f71f873172b900d95c3e386b",
+    "ChemotaxisBifurcation/BoundedSolutionSlices.lean": "dba8cef43cc5648b0cea02660dd86bbe1a7d4ddc1a20a6ac84a0c8eb04b8c3d0",
+    "ChemotaxisBifurcation/BranchCurves.lean": "35c1fada62e732b4c5f3394802fdf1b68642d9ba8811f5636611f152bd28207d",
+    "ChemotaxisBifurcation/BranchDerivativeAsymptotic.lean": "8a2af49bc3ecb3e0dd05afff01caec7e37936ad0dc27c10e1b8be5b131d678be",
+    "ChemotaxisBifurcation/CenterGraphLinearization.lean": "59a4a7b89d2d35e6b8a34a3e0942c7bb1aa26db47cc377d3c2b06da0c8edb7a7",
+    "ChemotaxisBifurcation/CertifiedRoots.lean": "fb8ca79922eec0263578d57492becf36b6d4e8312754cd05add325c93b1a0c7f",
+    "ChemotaxisBifurcation/ClassicalBoundedCompactness.lean": "113dac0631251c2d243a40ebd3b2a83b86449587481e219eac29bacda0ccaa07",
+    "ChemotaxisBifurcation/ClassicalHolderInterface.lean": "9ca4836face42e49056d07f9809fcaed0fb69e5dd705a52acb0ab79194b7ac0a",
+    "ChemotaxisBifurcation/ClassicalHolderNorm.lean": "bd86a589a001da09b2f299f4adda3d7a520371b2b89f8cd1abe7a380a27b8810",
+    "ChemotaxisBifurcation/ClassicalLogisticEstimates.lean": "f1023f0b1862e3b86d7f22a56361f18574fcc68f90cd2c03f0bba4b470c2f0ea",
+    "ChemotaxisBifurcation/ClassicalMinimalCompactness.lean": "12798d04cc20754229dbe514f96f54dd9e8c368d30b3ca3576069bc942dbf875",
+    "ChemotaxisBifurcation/ClassicalMinimalEstimates.lean": "7caa243cbae701a40cd40c3797928d38bd971bd3bfc9eea2f2618757db832b0d",
+    "ChemotaxisBifurcation/ClassicalODECompactness.lean": "2fc729453901eb9c9137ef1db6c88481efdeea4df5a5235081e0c35435f9ef6c",
+    "ChemotaxisBifurcation/ClassicalSobolevDictionary.lean": "c8aca14b0521a65f3b4cbc40bca78387df9205860fe94ebc8c9af4128f280d22",
+    "ChemotaxisBifurcation/ClassicalSpikeBlowup.lean": "e6724bc49887e6d4da304e9f97c43e0fe36deba707c810de8232c38aaa6a6058",
+    "ChemotaxisBifurcation/ClassicalSpikeInterface.lean": "3639903f34f4b8f5dd64d317c6c1ae4a61cd5fba41cd8806b27e9e71819f202b",
+    "ChemotaxisBifurcation/ClassicalSpikeSubsequence.lean": "da565ddd0bfeabdc4e49b0f155a25c7bdee189cb08354d8f948e4771aff855ee",
+    "ChemotaxisBifurcation/ClassicalStationaryC2Limit.lean": "201765dc673572a35f519fe81416e5a37a98ae70e6d626b12c4636a502f65093",
+    "ChemotaxisBifurcation/ClassicalStationaryHolder.lean": "998043f876eb67686f78a8954e1a377691796ecb2ede44b4421d611adbf435eb",
+    "ChemotaxisBifurcation/ClassicalStationaryLimit.lean": "bc4a76704e58506901faf5dda8b547865388cbea77b345c8f60eba2b602716b2",
+    "ChemotaxisBifurcation/CoefficientDictionary.lean": "6fa1bbfb0c09ace7a26b29d44e9cb39764006d49fb02dcc9760634e6499ddce4",
+    "ChemotaxisBifurcation/CoefficientLimits.lean": "6bb7fa5383e581b1b1639ed097b2d3dfe5ff5f875481007405e88080ac32dbd2",
+    "ChemotaxisBifurcation/ConservativeMass.lean": "3b57e47724edef4d954e4dbe5b7558055d12a82dbf857e95f9fb4e2946763076",
+    "ChemotaxisBifurcation/ConstantModeJet.lean": "ca27ab32ebfd2b9709119045fb60fee35401082d054d02d5187d7762c2fc8810",
+    "ChemotaxisBifurcation/ConstantProfileIdentification.lean": "826fc69084b3dfc93872f999630958bd486ec293955db94ca79e474d31ef1957",
+    "ChemotaxisBifurcation/CosineCoefficients.lean": "aaff071b33acc8bd421e67f87c597c26392d6355d5eea66b3be2533a36c99f35",
+    "ChemotaxisBifurcation/CrossingCoefficient.lean": "16aeae0b151ffadabd84a1fcabd50a2195d6ca3ed4850bb36c83c6f93b7422c4",
+    "ChemotaxisBifurcation/CubicAssembly.lean": "a2b08e3ce9058b51b9b9917f96931922476caa61139227c67f752f21430c8def",
+    "ChemotaxisBifurcation/CubicJetExtraction.lean": "e2e101c6bbb8559a343d1904c70ab4f85d57685fa38537eaac4e0d7e752e86c8",
+    "ChemotaxisBifurcation/CurvedSignalResponse.lean": "c6f1213d39784aaab77465417c861e40ec7060d2d9c971c6b7ca6d78c912eb06",
+    "ChemotaxisBifurcation/DiscreteConservativeClosure.lean": "9a735e39aa502860e57040acd965c110da00b4c1b3f3172afb19ea5504900819",
+    "ChemotaxisBifurcation/DiscreteEigenmodes.lean": "40a19bfce2c05d67a9f9600e4df549c6ce779fc2cb127ddd11d57933a3a2af37",
+    "ChemotaxisBifurcation/DiscreteLinearization.lean": "8e3f152a0a8b54ea1d3b4497e2d5dde3e1f330844c0796d027055d4caaa6e88e",
+    "ChemotaxisBifurcation/DomainLimits.lean": "e1c2e69cf1dbf007777c5f43a151a75976607dd4dd1ae255b6b20037ee279906",
+    "ChemotaxisBifurcation/Eigenmodes.lean": "258d443da7c5f445c3552c536c352705b079c796629726a59909fdee2d004cb2",
+    "ChemotaxisBifurcation/EllipticProjection.lean": "780c1c45828222e7ab2d6828172b61fb7a81303e8ded786d8aa26989149d757f",
+    "ChemotaxisBifurcation/EndpointConcentration.lean": "94d33f9bf70c0b9afb5416ccdd59d074f78ef0dbf20434010133696a966b55fe",
+    "ChemotaxisBifurcation/FiniteProjection.lean": "8720f0d827725d5d09fc0e54b8b688d0603280c390a545bf633497f721daccc2",
+    "ChemotaxisBifurcation/FiniteTrig.lean": "5d743f0ab29beb908a24b6e1353b967b481a2b8840ba51eef1a3e652dcd698f8",
+    "ChemotaxisBifurcation/FourierAmplitude.lean": "6f3ff70111de21297f33b5d73c8e71fa63027a1881c88a16eb3215d55593de1a",
+    "ChemotaxisBifurcation/FourierComplement.lean": "bd5760f9199ffc227c764840ed454012bb79969d09cf7f5dea515da945e7d36f",
+    "ChemotaxisBifurcation/FourierKernels.lean": "24c251a25db0a19be402508549d6f8f73974e1156379efbf36f835d998fd9888",
+    "ChemotaxisBifurcation/FourierSeriesProducts.lean": "cd733109aa32cfd2fc12dc6db5644322f50556d41e1385439fb5c47b0373dcaa",
+    "ChemotaxisBifurcation/GlobalBranch.lean": "05cde8a1b283f3a71b0193cd8ac1521328689c4230bb43f1e7eeb0dd0e2f0a60",
+    "ChemotaxisBifurcation/H2CosineIdentities.lean": "3d12dc2534c3a1bafc92d1ccd1872fa9d86d758da984cfdeaa3d4d2e77bdf7f0",
+    "ChemotaxisBifurcation/InfiniteCosineProjection.lean": "79cb65b700c6304f64415c793d38e707d55dc420484d08b1e2661fae484c2ae8",
+    "ChemotaxisBifurcation/IntervalConcentration.lean": "df0ba2ffdbbe2b4fd643cedad17622085df429405c9ce8657b2c2a4fc76867b2",
+    "ChemotaxisBifurcation/IntervalMoments.lean": "e688edae6471f738862e71d03a25d7dd7dc5a8f40d7772e8d8f737c0b091b12c",
+    "ChemotaxisBifurcation/IntervalStrongPositivity.lean": "c08c25b6c557bfecbf23e885801ea5f69048ff33a86e8f7ff3b453c3093930fe",
+    "ChemotaxisBifurcation/LinearRegime.lean": "f54fda96e5943d946b3edfe8608e4f86b75118e6b465d7df36f2fe5ba4f5db95",
+    "ChemotaxisBifurcation/LocalBranchGeometry.lean": "64fb621371afdeb52f667d4e8104d6910fd485e66d1e57e25e30db5a9a359cc5",
+    "ChemotaxisBifurcation/LocalStationaryEnergy.lean": "54ab732410fd9542d87625fbfc82a6df8294a9e6014388b6f57341d2195ea72c",
+    "ChemotaxisBifurcation/LocalizedMassBounds.lean": "e65b3c53e77f406437770a135feaba129fd4435203eece956842694f1f3e7e86",
+    "ChemotaxisBifurcation/LogisticDerivatives.lean": "3103ba8834aa0682f8c40304128f0af9ac347952071dc956fa12ddfd0269e425",
+    "ChemotaxisBifurcation/LogisticGronwall.lean": "4b471f1a3954cf9169b95b211e7526390899410b540fecc56afde18422de4fab",
+    "ChemotaxisBifurcation/LogisticTaylorRemainder.lean": "09b3cbf46d85d50b32ad8ce69cd11ceac966bf5379034bd4701f3b17e909947d",
+    "ChemotaxisBifurcation/MinimalFlux.lean": "769b71b3981efdcfe68ee186ceeaecdfdfae643168af05473a001208bf0ce786",
+    "ChemotaxisBifurcation/MinimalLocalUniqueness.lean": "e44d42a9b5a3e16fc9382cad3f1dc35bb8bbf491b658f45b1f61400f1f868f62",
+    "ChemotaxisBifurcation/MinimalRational.lean": "f68fb21e504002cc401ff98264b05af428678fe5b968777574f16e70e5dae8a4",
+    "ChemotaxisBifurcation/MixedRemainder.lean": "2c93daa90b967c57eb60cb22bb9a57db595db1bf15dfeecc03177550920c104e",
+    "ChemotaxisBifurcation/MobilityDerivatives.lean": "46f348daba22befcb0f1d12c0257d1723adff6ccd461667a62956884689db6dd",
+    "ChemotaxisBifurcation/MobilityTaylorRemainder.lean": "c362a404dbd1b16d8b55e8d0a1b8f4310d49b1ff08af830f7d653059f2ea250c",
+    "ChemotaxisBifurcation/ModalRemainder.lean": "c0717f7712eb0392172e7ff9f34d628f9568ceff646e55513155a7facccbe4e3",
+    "ChemotaxisBifurcation/ModeExamples.lean": "2ed610087ec6dd0ccc3076872d79336ed2d0489675fe72640ef8515cdce032e0",
+    "ChemotaxisBifurcation/ModeIntervals.lean": "bb052c569582c95c55d791f1c7c8b2b0f6feb3c3f3cafcc917a36f6924d30250",
+    "ChemotaxisBifurcation/ModeLengths.lean": "85f31b46dc12f9330ab37d2fc2aca63aca4d02b3e3c8410ecec31c41c7e9b143",
+    "ChemotaxisBifurcation/ModeRealization.lean": "b7538ef147c333083b77bf62573ce1648c3e3b99e37d29b8f27e0ea74c908dc0",
+    "ChemotaxisBifurcation/ModeRootCounts.lean": "3e6ecb2c53bdd419a69ac121492ac3a483c49680bc1b453a48aca11ece50820a",
+    "ChemotaxisBifurcation/ModeRootCrossing.lean": "63e3babe61f78fd4015fcbed76d840815e7d9012fa4285dd30f46df78ff352d2",
+    "ChemotaxisBifurcation/ModeTies.lean": "aa7a2db8c4a4399c368cdc07ed9b5dd2a9a2c896af82c480c8c31991c5bd9022",
+    "ChemotaxisBifurcation/Model.lean": "c9945ef67246692d99ffb016ca87566f26d093bb4f8a998b46aacafd8509519c",
+    "ChemotaxisBifurcation/MonotoneLocus.lean": "fc6644fa8b430379a89306c10ae21b421393b292d75ab97995f5b0f7f46b0f6a",
+    "ChemotaxisBifurcation/MonotoneLocusGeneral.lean": "416b57e7c064e71cfde1588cdf38ce182e71c03307924a966a16dc11fe5830fc",
+    "ChemotaxisBifurcation/MonotoneSineBound.lean": "3d9c6ab76ec7fd945a13e017ce3be41977f5d600e61b89e2bc1461ec892e4c0c",
+    "ChemotaxisBifurcation/NeumannProjection.lean": "c2748986f34df083bc907cb8dd25014a6b1ba8e828e99e8f721db12f7469cb7e",
+    "ChemotaxisBifurcation/NeumannResolvent.lean": "e7f2755a31c6985a78002d7f1575b45abc1e82be7742da3c98705edff45c1cbe",
+    "ChemotaxisBifurcation/NoAtomLimit.lean": "507b8566df9dfc7f563742e55689239b9f21eeaee4a4ccf1dd0221f317011ce4",
+    "ChemotaxisBifurcation/NoDiracMass.lean": "04d43b09a731d8779208c2b748c1e6068b057d752864172e85c3868a52862ed0",
+    "ChemotaxisBifurcation/NormalForm.lean": "143c62bfafa232c63624e0639792ff7bac0033983e51ea271147803450e5da26",
+    "ChemotaxisBifurcation/NormalizedAsymptotic.lean": "fc0f325a19ea02c52cc43750f11c7858b7c1453140fdb1b9ac9ab6540088e3e5",
+    "ChemotaxisBifurcation/NormalizedLimits.lean": "425977f289b7c4d558d6355da6130244fe0368315238a69c4ea81106b85a21c8",
+    "ChemotaxisBifurcation/NormalizedSpecialization.lean": "865194619601e95316d5f536e8801ae00768be293f7808795ee19c3ac92b752c",
+    "ChemotaxisBifurcation/OddRootCrossing.lean": "494cc6cacb9ce712b5391c1392ddc57dd2a92ecdf25e91602addfc1829cc67e0",
+    "ChemotaxisBifurcation/ParametrizedSolutionComponents.lean": "1b0af9040ed3c4f3c41216e68e7e1272c78438293be22f53aecf876cbcd1d60a",
+    "ChemotaxisBifurcation/PhysicalAmbientClosure.lean": "465dbcdbafc942adea305c6e8965b9c9b6fdbb0f88c1f9c8631a659074ef8e76",
+    "ChemotaxisBifurcation/PhysicalBetaRegimes.lean": "928e1d4d911d0f293aa52db60874ddc7a2cc9081c27351e4df7390faf40d687b",
+    "ChemotaxisBifurcation/PhysicalClassicalAdapter.lean": "07b57a4e26888876231945bf1118897d44f5d7f9723224e9269e37fa8dd75205",
+    "ChemotaxisBifurcation/PhysicalEndpointConcentration.lean": "3526243c15a99c1de4e72f94002e00e02f44e4b77a0f2cf69981e19f1572e5da",
+    "ChemotaxisBifurcation/PhysicalLinearRegime.lean": "8a1ec12dabb823bfccab8b5dfddb5ffde01263eb8ce375151d08ac2de1e10e7f",
+    "ChemotaxisBifurcation/PhysicalLocalUniqueness.lean": "9b3c37a46e5961fd46adee6b04c2687b5960ca867264ef2c459c2deb1b0b93eb",
+    "ChemotaxisBifurcation/PhysicalModeGuards.lean": "2fb362d89c4d8bcac838744b07f168a2bf7a40c592299ae6751d273ed62d9618",
+    "ChemotaxisBifurcation/PhysicalMonotoneLocus.lean": "ea557422f7b2739a852c9b18ae85c2a1fbf08fac4fa0a679ccf0ccb62c8176a1",
+    "ChemotaxisBifurcation/PhysicalPolynomial.lean": "794c902baf88b275493864c73dec8b983f48ae9e35729e2ebf2f2b84b7868d03",
+    "ChemotaxisBifurcation/PhysicalQuadraticModeSupport.lean": "8f58717b42324267507a493b48c629380d576c5e4c26bc12d592650b277d8b5f",
+    "ChemotaxisBifurcation/PhysicalSemidiscrete.lean": "c23246e87783f4bb97c6e7788c5ab09edabfdfa822f2bd81027120ef87ad8e9d",
+    "ChemotaxisBifurcation/PhysicalSignalTopology.lean": "abfdd854fa443da162d2eebbb9bcb10f4a0dd1c2ab718933b07bde804f7e4dda",
+    "ChemotaxisBifurcation/PhysicalSineDecay.lean": "9457a9800aa3d1e71377f5602c65bef8de7b3ed2dfbfbf5a32816bb3c34ca47f",
+    "ChemotaxisBifurcation/PhysicalStrongPositivity.lean": "33d1ab000f6d9c315118b588fab9567ce66a002c0ceb621fdf696b243f572874",
+    "ChemotaxisBifurcation/PolynomialDegree.lean": "736894ef0dd41216840b6b51f0cd4a455e8743e70885d39384867c6bd25ed52a",
+    "ChemotaxisBifurcation/PopulationModalResidual.lean": "699065101df3ccba6cdb737abea7322d4431690de1b5ec6c34309bfa95aaadca",
+    "ChemotaxisBifurcation/PopulationNormBridge.lean": "1442f0ce8dce2bcf83084f8e688dfa35d30449fe58e92ac67eae291437dc0578",
+    "ChemotaxisBifurcation/PrimitiveDerivatives.lean": "b8489a7e520bc7def1e4a7dafd9d011b9a5ca414963a295f301f0647fb253cbc",
+    "ChemotaxisBifurcation/ProjectedRemainder.lean": "b4862dc5e4331e735ae47295d2be9b21f292b72e891cf84738ddcc1e1d7100d0",
+    "ChemotaxisBifurcation/QuadraticJet.lean": "9247df42c679e40b26639e6d22d52759b457da022e89bde62dd8cfd1fa71952b",
+    "ChemotaxisBifurcation/QuadraticModeSupport.lean": "28c6e2dee2166d319f1a133c4d4f95695635cd4a231fb07c5549a6728f450ec7",
+    "ChemotaxisBifurcation/QuarticRoot.lean": "1a3983e3417b2da9e003776b453fc1da33c000464d16844838f52a249e564327",
+    "ChemotaxisBifurcation/RationalCoefficient.lean": "2202f72d2f00a24b56cc31ea2bc94b1199b9b0e7115f8986915aec01bcf6a98c",
+    "ChemotaxisBifurcation/RelativeComponentClosure.lean": "49a5948f6c96bc5fd699e6243bb818db54ecce857daef08aeef28f5d8d1e84c6",
+    "ChemotaxisBifurcation/RemainderAmplitude.lean": "e682be8186b2adffae025bcbb831556b05c8f7a552472c31eb2a7d07f416b8b0",
+    "ChemotaxisBifurcation/RemainderAxis.lean": "c01f7d27439306b2c5da11a72c83b624d6b6a33456f361ec8982406e9c1554bd",
+    "ChemotaxisBifurcation/RemainderBounds.lean": "5c8a1221a59cef329198d5086aba1ce2b5230cfa63f3237f383a5651a97858d5",
+    "ChemotaxisBifurcation/RemainderFromJet.lean": "d3c50054ac0eea7ed3d6502901078dcc849e752df32c6dbf525c86d0419d1790",
+    "ChemotaxisBifurcation/RemarkFindings.lean": "df21acf7eb07f419b5eb18ac390e5cdc780b2e668d7bc850bbd1f66650d34164",
+    "ChemotaxisBifurcation/RootExhaustion.lean": "c433537ee3c973a55ed1ff31f318298dcbe575761622ea3ae01c1c1178bf5f2e",
+    "ChemotaxisBifurcation/RootSigns.lean": "bef3f0bf64e5fb2a92f1558711d7fa7ad4a2dd593b80637a348173445fefcbc4",
+    "ChemotaxisBifurcation/RootTable.lean": "764dbdf8a12182acc6d9e9270343c1c572ea4e7817ffd5bd83c19fcc37676019",
+    "ChemotaxisBifurcation/RootTableAdmissible.lean": "6112d3d32e2fb16f3db47257a6ca5ddf6e8280d44e1c74990e93a02e50a2fbc1",
+    "ChemotaxisBifurcation/RootTableAggregate.lean": "df04c2640bda0fa9b9a0e95b82b65f2efe697c25235d361c02cdceb757e5cd2f",
+    "ChemotaxisBifurcation/RootTableRemaining.lean": "e7125f783398c9c42939e19989122d281bc65b432e5241870fea09820b39acbc",
+    "ChemotaxisBifurcation/SelectedSolutionComponents.lean": "bb6624b3369858c5aa5cfc521f74825fb69b23156907505d4731d1835e7aa489",
+    "ChemotaxisBifurcation/Semidiscrete.lean": "b915cc1c1045772f4b52f795763fccb64c127d83e8666d4c7b8a4239d9c19972",
+    "ChemotaxisBifurcation/SemidiscreteLimit.lean": "06188639ea387715f69ad1ea114a0e61b5b1d4b67fdf6a9baeefa739549c6132",
+    "ChemotaxisBifurcation/SignalCompactness.lean": "a736a8381ea63438e72a12ea8dfbf3d2679b9966ebcd98a5184d33f398b29084",
+    "ChemotaxisBifurcation/SignalDerivatives.lean": "89a61e058e26bfb54b6599e768d6b57904d55b639bdedd6edd9f51aa380f198f",
+    "ChemotaxisBifurcation/SignalDirectLimit.lean": "ef37c1181e3d8b3842d80ba33e805ed5b8bbd4a1d9872b820518185d9b17cb6e",
+    "ChemotaxisBifurcation/SignalLipschitz.lean": "e66c26773b75c882843df729414efd2282b502861baa040f13c65ca90aafc504",
+    "ChemotaxisBifurcation/SignalModalResidual.lean": "adf184fe8acfa04e2218d71c10bf3f47aceda2a4cb79a65a92e83df3dd7593ed",
+    "ChemotaxisBifurcation/SignalPolynomialTesting.lean": "b02b048bd5d457982b8a79b2150aafbe7eafd092af97693a75af53c639f5b78e",
+    "ChemotaxisBifurcation/SignalPowerMoment.lean": "a989263d04154c570feb62572560b252924c3557827a0cf66991c8ee7ffe4602",
+    "ChemotaxisBifurcation/SignalResponseContinuity.lean": "7b15de1ff18df1eb529490562c571a47c9e77a01b67c460ff8e6058f993c0756",
+    "ChemotaxisBifurcation/SignalResponseJet.lean": "80d478bde77a04eabd459773f90b5d7e50b7a9cc5f4ec254896ff363acb79791",
+    "ChemotaxisBifurcation/SignalResponseJetInterface.lean": "8ab44b8ed6ad38a0896810e288ae246d07aaec0b1f57ef5678eb429dfc99c8a1",
+    "ChemotaxisBifurcation/SignalSourceVanishing.lean": "1b757271470732225a8da15ee615ce89090bf97e8edd8b603eab189967ed4987",
+    "ChemotaxisBifurcation/SignalSpikeSubsequence.lean": "ca01bfb558014a6449301e1b68ce3f3d2c86275c82a91eef01e85beef34e16be",
+    "ChemotaxisBifurcation/SignalTaylorRemainder.lean": "a0d41707dc0c677cf7a06f58d58fade9b7a962002fa92a87706945e5d3e06ad0",
+    "ChemotaxisBifurcation/SignalTesting.lean": "e754e4631f6475f6c34d01408187d94aaec1ee1cbb7c8a471e06dda198e87e1b",
+    "ChemotaxisBifurcation/SignalWeakSobolev.lean": "799186730f77e755ece60f7fd1fd8de992545abfadb1ebdb303cebae3912bb64",
+    "ChemotaxisBifurcation/SignalWeakSource.lean": "8a02b6c1cb6f76bf6ac97593c7ee5f11438ae256f7102c9b0d838a3145533de0",
+    "ChemotaxisBifurcation/SignalWeakSubsequence.lean": "04312c7ffade9817721a02657cfe2e9c81df6bbd57fbf7acb53f209e55aa1abe",
+    "ChemotaxisBifurcation/SignalWeakTesting.lean": "d539576c61423fda498fe1e2e3b78f7335cae8f9e92291c8743f367b5728dc3b",
+    "ChemotaxisBifurcation/SignedEllipticEnergy.lean": "e519d748eccbeaabb25b3f1b9589b0acd9e47d6e92706045f6e09b5e7b397a1f",
+    "ChemotaxisBifurcation/SinePotentialBound.lean": "68cb738f3beb7b451c26693763ccac3ca673e7b75a5222112f62d73566fd13ff",
+    "ChemotaxisBifurcation/SmallDomain.lean": "15dac7769ca0b40c2bc730455c1ba7e076e191384323129e749814255a59c69f",
+    "ChemotaxisBifurcation/SmallDomainRate.lean": "9bad3abf5893bcd64c16a25f2f99bbbb4b6cf83206ac0540f46d126e979a7e5a",
+    "ChemotaxisBifurcation/SpecializedPolynomial.lean": "7ebcab141040361d36422122646727613e97fe7433dcd1b9f6600f4659acb374",
+    "ChemotaxisBifurcation/SpikeEstimates.lean": "a3937bd1fdec446f157071d80120d47aaf10d48576e21246d23d82bb4ee40dcc",
+    "ChemotaxisBifurcation/SpikeEstimatesLogistic.lean": "af4a2343295770a6536ecdc1fade6548532351bf7cbf1c8b195104fc4343c930",
+    "ChemotaxisBifurcation/SpikeLimit.lean": "7d37d72f682d9226813a3cdeaabb2b0d32d963ddcfdd0fc6774dd3537f4e196f",
+    "ChemotaxisBifurcation/SpikeLimitBlowup.lean": "2b7460a0caa71b079ef29fb4ede07f5acd7a2fe3b277214d368478104cd99234",
+    "ChemotaxisBifurcation/StationaryCompactness.lean": "1ec9482de75ea428ea488a7115a8d5721eb8df21621d05f6676925790b77f9ad",
+    "ChemotaxisBifurcation/StationaryHolderField.lean": "d86a2a7dd7bdf59cb53755fc144a649cdaff23aa2b6761b99bd8b45846123567",
+    "ChemotaxisBifurcation/StationaryLimitProfile.lean": "2004d4ddcfa6e891a76e6cf5e4cbae8391ed2f208ee1ceb04196765e99498a2d",
+    "ChemotaxisBifurcation/StationaryMassBounds.lean": "b507daed369a5352cbd113437223b9fb942e1aa215593ac4941369ecdaf1185d",
+    "ChemotaxisBifurcation/StationaryMassIdentity.lean": "f11d60df4cee1e93d4549ac33da045515f6f9dce108c9f3203d6042c70ee160b",
+    "ChemotaxisBifurcation/StationaryODEState.lean": "f2600883a22924df245cfd0d0ec8342379f752f2bffa5eacbd3415cbbd8fb202",
+    "ChemotaxisBifurcation/Taylor.lean": "8852adc7e2a0ba4ea80e862c34493a467c64977ffbaa3b76fbd2b661eeddf631",
+    "ChemotaxisBifurcation/ThresholdCutoff.lean": "4cae8958758e63eb85bdeb1e58341071965d3613cee3b2c92a824484aaaff68a",
+    "ChemotaxisBifurcation/Thresholds.lean": "fb337d12886b1a46fbe91cf06ce28494b5a504531565dcade1ab13a8421befc6",
+    "ChemotaxisBifurcation/TrigIntegrals.lean": "5328a1e054ec21240e6d5921d6519d5891cb7adc3c57105c9cf79be6fa800de1",
+    "ChemotaxisBifurcation/TwoRootExhaustion.lean": "ca8cc05a553e27cd233d459aedd166ceab8e74002b1c754f7be5bfd54337d34c",
+    "ChemotaxisBifurcation/UniformComponentH2.lean": "ee7643fd167d672591e364e67424747631546ce6c000460496abc5d723a60a66",
+    "ChemotaxisBifurcation/UniformHolderAlgebra.lean": "6e8d7f12781661c2bf12646c68d3b9fdb7ecf6a7590900dd2fce991a8896cba4",
+    "ChemotaxisBifurcation/WeakDerivative1D.lean": "947b9f1a79634610b1b5b40a9f213b8b8b054468718cf61f60a92607733a4844",
+    "ChemotaxisBifurcation/WeakH2AmbientClosure.lean": "5152f99b3645e71f07fd022f73b902b2f0ea1bd1cbdcfb4152c3ebdf0d104bbe",
+    "ChemotaxisBifurcation/WeakH2Compactness.lean": "ab66634d0a6f7bbe035949126bf8dda52d3e1ada597720f3282c92b13fd8d138",
+    "ChemotaxisBifurcation/WeakH2CosineMode.lean": "7e34453a6166d13c1210597c3b3136cce037f4306f406181a2dbc74de626d1c1",
+    "ChemotaxisBifurcation/WeakH2Embedding.lean": "07d8a8920bff758521b627954ee0df4f058437ddef50c4abf994c4a0011b680a",
+    "ChemotaxisBifurcation/WeakH2MeanJet.lean": "529f3c0af478d5eac05bb63de63c7b458223fd274cb47230c076b659cc298198",
+    "ChemotaxisBifurcation/WeakH2MonotoneLocus.lean": "613a09fed01135017a6f7bba64171c9e7dc9fe43bb0d84e4e2ad21cdfa84dd2a",
+    "ChemotaxisBifurcation/WeakH2PhaseSpace.lean": "3bec06b04733df79a43f15b8ca8fe9cf1257bf98912a5ed9ca2dbe4b5e6f2879",
+    "LICENSE": "ca3947593b335ff63cff6fb4e84ab6cfc4bfe52f8541e40b0b5a94c1fc57b05e",
+    "claims.yaml": "4799a2ed46aa775d7732a2e021bca05e40c0782f0392b1baaf8bc590490e30b4",
+    "data/public-scope-ledger.json": "205c09a137d0699e88f3a8681ae1272700c83951c2018fd4bccaff9733a82b46",
+    "data/source-correspondence.json": "3f790da099b9cc5172020191ea65e2fbb255ae984ea35cb8528dfb9469e3e0d8",
+    "lake-manifest.json": "fa306b6ef8ba01d84a33abc1166e297dafa174dcb1221e862452cc4880473945",
+    "lakefile.toml": "d5688af1169af292801e8b703a53d49b2d25bfba82daecd48dfe365753bd6d97",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "scripts/AuditInventory.lean.txt": "a00a6532483d2ba57f87b40bd330c3c26e5042f91cf2ac92292fca4223900f4d",
+    "scripts/LICENSE.axiom-audit": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+    "scripts/audit_axioms.sh": "eb5f532b61f85f3fc2d460963d4316b9e21fdea87850e223ab4efe5bddef371f",
+    "scripts/check_lake_packages.py": "6881f07fcbd0ebbb8e37ede4a972e1a7dd7007083b8967c15c26b11c0d69418c",
+    "scripts/check_no_proof_escapes.sh": "5746eb4dfb959046665367a50a48219aeac79a5104cfb327b57bbd7787a4ce0a",
+    "scripts/check_umbrella.sh": "c41dbc2adc6994191fc21677209c3b25ecc3abc5cc932d80dcd012f8db3e148e",
+    "scripts/local_receipt_helpers.sh": "591237ff9fbff03a789fd63b2124f02e4743ddcd879a45e411a8fe40702f78a9",
+    "scripts/test_proof_escape_gate.sh": "60591b25ba91f0e9f89ada465df1754b95f6e7471349274e2aacd2c4480218cc",
+    "scripts/verification_receipt.py": "80c8c9f8f36a200c2a8d7e865d252080e1d49568f879691a4c61be0021e5a951",
+    "scripts/verify-local.sh": "0ff6c41d004609953dfe2de296ab9655725362553fa2b2780a9485074f44ff1f"
+  },
+  "cache_body_summary_differences": [
+    {
+      "declaration": "ChemotaxisBifurcation.ModeData",
+      "cached_summary": [],
+      "uncached_body_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "interpretation": "Different cached/type-summary versus uncached body traversal; neither contains a forbidden axiom. Composite uses complete uncached body records, not cached summaries."
+    },
+    {
+      "declaration": "ChemotaxisBifurcation.CubicData",
+      "cached_summary": [],
+      "uncached_body_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "interpretation": "Different cached/type-summary versus uncached body traversal; neither contains a forbidden axiom. Composite uses complete uncached body records, not cached summaries."
+    }
+  ],
+  "checks": [
+    "collector checkout is exact source commit",
+    "collector checkout has no tracked/untracked changes (ignored cache excepted)",
+    "exact original three producer refusals retained as failed",
+    "complete original stdout matches producer seal",
+    "complete original raw matches producer hash",
+    "original proof worker terminal exited0",
+    "exact original proof invocation",
+    "original journal command and invocation bound exactly",
+    "original full report matches frozen seal",
+    "original stdout seals original full raw report",
+    "exact original/current manifest seals",
+    "original worker stderr empty",
+    "original source-only clone exact commit",
+    "original source clone clean",
+    "complete194 source/control snapshot unchanged across original audit",
+    "full source inventory including additions/removals original-pre",
+    "full source inventory including additions/removals collector-pre",
+    "source equality .github/workflows/lean.yml",
+    "source equality ChemotaxisBifurcation.lean",
+    "source equality ChemotaxisBifurcation/ActualSolutionClosure.lean",
+    "source equality ChemotaxisBifurcation/AllPositiveLogisticCompactness.lean",
+    "source equality ChemotaxisBifurcation/AmbientClosure.lean",
+    "source equality ChemotaxisBifurcation/BetaDecomposition.lean",
+    "source equality ChemotaxisBifurcation/BetaQuadratic.lean",
+    "source equality ChemotaxisBifurcation/BetaRegimes.lean",
+    "source equality ChemotaxisBifurcation/BoundedSolutionSlices.lean",
+    "source equality ChemotaxisBifurcation/BranchCurves.lean",
+    "source equality ChemotaxisBifurcation/BranchDerivativeAsymptotic.lean",
+    "source equality ChemotaxisBifurcation/CenterGraphLinearization.lean",
+    "source equality ChemotaxisBifurcation/CertifiedRoots.lean",
+    "source equality ChemotaxisBifurcation/ClassicalBoundedCompactness.lean",
+    "source equality ChemotaxisBifurcation/ClassicalHolderInterface.lean",
+    "source equality ChemotaxisBifurcation/ClassicalHolderNorm.lean",
+    "source equality ChemotaxisBifurcation/ClassicalLogisticEstimates.lean",
+    "source equality ChemotaxisBifurcation/ClassicalMinimalCompactness.lean",
+    "source equality ChemotaxisBifurcation/ClassicalMinimalEstimates.lean",
+    "source equality ChemotaxisBifurcation/ClassicalODECompactness.lean",
+    "source equality ChemotaxisBifurcation/ClassicalSobolevDictionary.lean",
+    "source equality ChemotaxisBifurcation/ClassicalSpikeBlowup.lean",
+    "source equality ChemotaxisBifurcation/ClassicalSpikeInterface.lean",
+    "source equality ChemotaxisBifurcation/ClassicalSpikeSubsequence.lean",
+    "source equality ChemotaxisBifurcation/ClassicalStationaryC2Limit.lean",
+    "source equality ChemotaxisBifurcation/ClassicalStationaryHolder.lean",
+    "source equality ChemotaxisBifurcation/ClassicalStationaryLimit.lean",
+    "source equality ChemotaxisBifurcation/CoefficientDictionary.lean",
+    "source equality ChemotaxisBifurcation/CoefficientLimits.lean",
+    "source equality ChemotaxisBifurcation/ConservativeMass.lean",
+    "source equality ChemotaxisBifurcation/ConstantModeJet.lean",
+    "source equality ChemotaxisBifurcation/ConstantProfileIdentification.lean",
+    "source equality ChemotaxisBifurcation/CosineCoefficients.lean",
+    "source equality ChemotaxisBifurcation/CrossingCoefficient.lean",
+    "source equality ChemotaxisBifurcation/CubicAssembly.lean",
+    "source equality ChemotaxisBifurcation/CubicJetExtraction.lean",
+    "source equality ChemotaxisBifurcation/CurvedSignalResponse.lean",
+    "source equality ChemotaxisBifurcation/DiscreteConservativeClosure.lean",
+    "source equality ChemotaxisBifurcation/DiscreteEigenmodes.lean",
+    "source equality ChemotaxisBifurcation/DiscreteLinearization.lean",
+    "source equality ChemotaxisBifurcation/DomainLimits.lean",
+    "source equality ChemotaxisBifurcation/Eigenmodes.lean",
+    "source equality ChemotaxisBifurcation/EllipticProjection.lean",
+    "source equality ChemotaxisBifurcation/EndpointConcentration.lean",
+    "source equality ChemotaxisBifurcation/FiniteProjection.lean",
+    "source equality ChemotaxisBifurcation/FiniteTrig.lean",
+    "source equality ChemotaxisBifurcation/FourierAmplitude.lean",
+    "source equality ChemotaxisBifurcation/FourierComplement.lean",
+    "source equality ChemotaxisBifurcation/FourierKernels.lean",
+    "source equality ChemotaxisBifurcation/FourierSeriesProducts.lean",
+    "source equality ChemotaxisBifurcation/GlobalBranch.lean",
+    "source equality ChemotaxisBifurcation/H2CosineIdentities.lean",
+    "source equality ChemotaxisBifurcation/InfiniteCosineProjection.lean",
+    "source equality ChemotaxisBifurcation/IntervalConcentration.lean",
+    "source equality ChemotaxisBifurcation/IntervalMoments.lean",
+    "source equality ChemotaxisBifurcation/IntervalStrongPositivity.lean",
+    "source equality ChemotaxisBifurcation/LinearRegime.lean",
+    "source equality ChemotaxisBifurcation/LocalBranchGeometry.lean",
+    "source equality ChemotaxisBifurcation/LocalStationaryEnergy.lean",
+    "source equality ChemotaxisBifurcation/LocalizedMassBounds.lean",
+    "source equality ChemotaxisBifurcation/LogisticDerivatives.lean",
+    "source equality ChemotaxisBifurcation/LogisticGronwall.lean",
+    "source equality ChemotaxisBifurcation/LogisticTaylorRemainder.lean",
+    "source equality ChemotaxisBifurcation/MinimalFlux.lean",
+    "source equality ChemotaxisBifurcation/MinimalLocalUniqueness.lean",
+    "source equality ChemotaxisBifurcation/MinimalRational.lean",
+    "source equality ChemotaxisBifurcation/MixedRemainder.lean",
+    "source equality ChemotaxisBifurcation/MobilityDerivatives.lean",
+    "source equality ChemotaxisBifurcation/MobilityTaylorRemainder.lean",
+    "source equality ChemotaxisBifurcation/ModalRemainder.lean",
+    "source equality ChemotaxisBifurcation/ModeExamples.lean",
+    "source equality ChemotaxisBifurcation/ModeIntervals.lean",
+    "source equality ChemotaxisBifurcation/ModeLengths.lean",
+    "source equality ChemotaxisBifurcation/ModeRealization.lean",
+    "source equality ChemotaxisBifurcation/ModeRootCounts.lean",
+    "source equality ChemotaxisBifurcation/ModeRootCrossing.lean",
+    "source equality ChemotaxisBifurcation/ModeTies.lean",
+    "source equality ChemotaxisBifurcation/Model.lean",
+    "source equality ChemotaxisBifurcation/MonotoneLocus.lean",
+    "source equality ChemotaxisBifurcation/MonotoneLocusGeneral.lean",
+    "source equality ChemotaxisBifurcation/MonotoneSineBound.lean",
+    "source equality ChemotaxisBifurcation/NeumannProjection.lean",
+    "source equality ChemotaxisBifurcation/NeumannResolvent.lean",
+    "source equality ChemotaxisBifurcation/NoAtomLimit.lean",
+    "source equality ChemotaxisBifurcation/NoDiracMass.lean",
+    "source equality ChemotaxisBifurcation/NormalForm.lean",
+    "source equality ChemotaxisBifurcation/NormalizedAsymptotic.lean",
+    "source equality ChemotaxisBifurcation/NormalizedLimits.lean",
+    "source equality ChemotaxisBifurcation/NormalizedSpecialization.lean",
+    "source equality ChemotaxisBifurcation/OddRootCrossing.lean",
+    "source equality ChemotaxisBifurcation/ParametrizedSolutionComponents.lean",
+    "source equality ChemotaxisBifurcation/PhysicalAmbientClosure.lean",
+    "source equality ChemotaxisBifurcation/PhysicalBetaRegimes.lean",
+    "source equality ChemotaxisBifurcation/PhysicalClassicalAdapter.lean",
+    "source equality ChemotaxisBifurcation/PhysicalEndpointConcentration.lean",
+    "source equality ChemotaxisBifurcation/PhysicalLinearRegime.lean",
+    "source equality ChemotaxisBifurcation/PhysicalLocalUniqueness.lean",
+    "source equality ChemotaxisBifurcation/PhysicalModeGuards.lean",
+    "source equality ChemotaxisBifurcation/PhysicalMonotoneLocus.lean",
+    "source equality ChemotaxisBifurcation/PhysicalPolynomial.lean",
+    "source equality ChemotaxisBifurcation/PhysicalQuadraticModeSupport.lean",
+    "source equality ChemotaxisBifurcation/PhysicalSemidiscrete.lean",
+    "source equality ChemotaxisBifurcation/PhysicalSignalTopology.lean",
+    "source equality ChemotaxisBifurcation/PhysicalSineDecay.lean",
+    "source equality ChemotaxisBifurcation/PhysicalStrongPositivity.lean",
+    "source equality ChemotaxisBifurcation/PolynomialDegree.lean",
+    "source equality ChemotaxisBifurcation/PopulationModalResidual.lean",
+    "source equality ChemotaxisBifurcation/PopulationNormBridge.lean",
+    "source equality ChemotaxisBifurcation/PrimitiveDerivatives.lean",
+    "source equality ChemotaxisBifurcation/ProjectedRemainder.lean",
+    "source equality ChemotaxisBifurcation/QuadraticJet.lean",
+    "source equality ChemotaxisBifurcation/QuadraticModeSupport.lean",
+    "source equality ChemotaxisBifurcation/QuarticRoot.lean",
+    "source equality ChemotaxisBifurcation/RationalCoefficient.lean",
+    "source equality ChemotaxisBifurcation/RelativeComponentClosure.lean",
+    "source equality ChemotaxisBifurcation/RemainderAmplitude.lean",
+    "source equality ChemotaxisBifurcation/RemainderAxis.lean",
+    "source equality ChemotaxisBifurcation/RemainderBounds.lean",
+    "source equality ChemotaxisBifurcation/RemainderFromJet.lean",
+    "source equality ChemotaxisBifurcation/RemarkFindings.lean",
+    "source equality ChemotaxisBifurcation/RootExhaustion.lean",
+    "source equality ChemotaxisBifurcation/RootSigns.lean",
+    "source equality ChemotaxisBifurcation/RootTable.lean",
+    "source equality ChemotaxisBifurcation/RootTableAdmissible.lean",
+    "source equality ChemotaxisBifurcation/RootTableAggregate.lean",
+    "source equality ChemotaxisBifurcation/RootTableRemaining.lean",
+    "source equality ChemotaxisBifurcation/SelectedSolutionComponents.lean",
+    "source equality ChemotaxisBifurcation/Semidiscrete.lean",
+    "source equality ChemotaxisBifurcation/SemidiscreteLimit.lean",
+    "source equality ChemotaxisBifurcation/SignalCompactness.lean",
+    "source equality ChemotaxisBifurcation/SignalDerivatives.lean",
+    "source equality ChemotaxisBifurcation/SignalDirectLimit.lean",
+    "source equality ChemotaxisBifurcation/SignalLipschitz.lean",
+    "source equality ChemotaxisBifurcation/SignalModalResidual.lean",
+    "source equality ChemotaxisBifurcation/SignalPolynomialTesting.lean",
+    "source equality ChemotaxisBifurcation/SignalPowerMoment.lean",
+    "source equality ChemotaxisBifurcation/SignalResponseContinuity.lean",
+    "source equality ChemotaxisBifurcation/SignalResponseJet.lean",
+    "source equality ChemotaxisBifurcation/SignalResponseJetInterface.lean",
+    "source equality ChemotaxisBifurcation/SignalSourceVanishing.lean",
+    "source equality ChemotaxisBifurcation/SignalSpikeSubsequence.lean",
+    "source equality ChemotaxisBifurcation/SignalTaylorRemainder.lean",
+    "source equality ChemotaxisBifurcation/SignalTesting.lean",
+    "source equality ChemotaxisBifurcation/SignalWeakSobolev.lean",
+    "source equality ChemotaxisBifurcation/SignalWeakSource.lean",
+    "source equality ChemotaxisBifurcation/SignalWeakSubsequence.lean",
+    "source equality ChemotaxisBifurcation/SignalWeakTesting.lean",
+    "source equality ChemotaxisBifurcation/SignedEllipticEnergy.lean",
+    "source equality ChemotaxisBifurcation/SinePotentialBound.lean",
+    "source equality ChemotaxisBifurcation/SmallDomain.lean",
+    "source equality ChemotaxisBifurcation/SmallDomainRate.lean",
+    "source equality ChemotaxisBifurcation/SpecializedPolynomial.lean",
+    "source equality ChemotaxisBifurcation/SpikeEstimates.lean",
+    "source equality ChemotaxisBifurcation/SpikeEstimatesLogistic.lean",
+    "source equality ChemotaxisBifurcation/SpikeLimit.lean",
+    "source equality ChemotaxisBifurcation/SpikeLimitBlowup.lean",
+    "source equality ChemotaxisBifurcation/StationaryCompactness.lean",
+    "source equality ChemotaxisBifurcation/StationaryHolderField.lean",
+    "source equality ChemotaxisBifurcation/StationaryLimitProfile.lean",
+    "source equality ChemotaxisBifurcation/StationaryMassBounds.lean",
+    "source equality ChemotaxisBifurcation/StationaryMassIdentity.lean",
+    "source equality ChemotaxisBifurcation/StationaryODEState.lean",
+    "source equality ChemotaxisBifurcation/Taylor.lean",
+    "source equality ChemotaxisBifurcation/ThresholdCutoff.lean",
+    "source equality ChemotaxisBifurcation/Thresholds.lean",
+    "source equality ChemotaxisBifurcation/TrigIntegrals.lean",
+    "source equality ChemotaxisBifurcation/TwoRootExhaustion.lean",
+    "source equality ChemotaxisBifurcation/UniformComponentH2.lean",
+    "source equality ChemotaxisBifurcation/UniformHolderAlgebra.lean",
+    "source equality ChemotaxisBifurcation/WeakDerivative1D.lean",
+    "source equality ChemotaxisBifurcation/WeakH2AmbientClosure.lean",
+    "source equality ChemotaxisBifurcation/WeakH2Compactness.lean",
+    "source equality ChemotaxisBifurcation/WeakH2CosineMode.lean",
+    "source equality ChemotaxisBifurcation/WeakH2Embedding.lean",
+    "source equality ChemotaxisBifurcation/WeakH2MeanJet.lean",
+    "source equality ChemotaxisBifurcation/WeakH2MonotoneLocus.lean",
+    "source equality ChemotaxisBifurcation/WeakH2PhaseSpace.lean",
+    "source equality LICENSE",
+    "source equality claims.yaml",
+    "source equality data/public-scope-ledger.json",
+    "source equality data/source-correspondence.json",
+    "source equality lake-manifest.json",
+    "source equality lakefile.toml",
+    "source equality lean-toolchain",
+    "source equality scripts/AuditInventory.lean.txt",
+    "source equality scripts/LICENSE.axiom-audit",
+    "source equality scripts/audit_axioms.sh",
+    "source equality scripts/check_lake_packages.py",
+    "source equality scripts/check_no_proof_escapes.sh",
+    "source equality scripts/check_umbrella.sh",
+    "source equality scripts/local_receipt_helpers.sh",
+    "source equality scripts/test_proof_escape_gate.sh",
+    "source equality scripts/verification_receipt.py",
+    "source equality scripts/verify-local.sh",
+    "raw owned audit uniquely embedded byte-exact in sealed transcript",
+    "complete enriched ownership record equals sealed raw record",
+    "complete enriched negative record equals original raw control record",
+    "exact canonical176 owned module inventory",
+    "owned audit positive is source-bound and green",
+    "complete3985 unique owned declarations",
+    "owned axiom union standard only",
+    "source-bound compiled admitted negative control rejected",
+    "original dependency observations unchanged",
+    "dependency pins/source status rechecked now",
+    "later dependency observation matches original exact pins",
+    "original runtime tool hash unchanged git",
+    "original runtime tool hash unchanged lake",
+    "original runtime tool hash unchanged lean",
+    "original runtime tool hash unchanged python3",
+    "exact original/current lean-pkg76-source producer",
+    "uncached body-query command source exactly committed template",
+    "exact ordered1525 indexed body-query names",
+    "all1525 body queries completed with no missing declaration",
+    "every actual uncached body-query axiom standard or none",
+    "all indexed names owned and audited",
+    "complete original type/cached-summary transcript is exact raw-log segment",
+    "all1525 complete kernel type headers including wrapped universes",
+    "all1525 original cached-summary records retained and parsed",
+    "exactly2 cached/body differences; all other1523 agree",
+    "original cached empty summary retained ChemotaxisBifurcation.ModeData",
+    "original uncached standard union retained ChemotaxisBifurcation.ModeData",
+    "original cached empty summary retained ChemotaxisBifurcation.CubicData",
+    "original uncached standard union retained ChemotaxisBifurcation.CubicData",
+    "exact528 canonical owned compiled outputs across176 modules",
+    "effective current compiler matches pinned4.35.0",
+    "later compiled object observation unchanged during collector",
+    "full source inventory including additions/removals original-post",
+    "full source inventory including additions/removals collector-post",
+    "complete194 source/control files unchanged during collector",
+    "collector source checkout remains exact clean C749",
+    "collector driver unchanged during execution"
+  ],
+  "objects_observed_later": {
+    "capture_policy": "Post-original-job capture during collector; not an original pre-build manifest",
+    "files": {
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ActualSolutionClosure.olean": {
+        "sha256": "82f900698c285dadcd55233f1c37d1ec261c87b84014840616eddaaeea19833d",
+        "mtime_ns": 1792685385486346813
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ActualSolutionClosure.olean.private": {
+        "sha256": "d63ccbef6baddab7fecb3cbecbedc47d093eea994fac371e09aebb41f072292a",
+        "mtime_ns": 1792685385499346874
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ActualSolutionClosure.olean.server": {
+        "sha256": "508c8973280e1b841d57ffb1c19c3a3c116fa5eb46a247ec7b34bc7ccafb9870",
+        "mtime_ns": 1792685385487346818
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AllPositiveLogisticCompactness.olean": {
+        "sha256": "845ff6f6b8052b10ad81d9e6ce160cc7d69477447358006ff090eb216757f4ba",
+        "mtime_ns": 1792685393189383155
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AllPositiveLogisticCompactness.olean.private": {
+        "sha256": "7e17900ca28b939383d4baf377082b4d968ef5e3359aa4e54625e196715537a5",
+        "mtime_ns": 1792685393199383202
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AllPositiveLogisticCompactness.olean.server": {
+        "sha256": "69954e24cfa3d67eccde0f095894b9520735777fa7f4bcd84544ce319ff4836f",
+        "mtime_ns": 1792685393189383155
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AmbientClosure.olean": {
+        "sha256": "32d083127400d4d71122af0ee835831de09f3338884b5b422e5c4345ef4a71f9",
+        "mtime_ns": 1792685178296391121
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AmbientClosure.olean.private": {
+        "sha256": "dcadb0f13451d3b27b799f2b7d148a6c42ca6fc19245ca24393cf8dcf3495064",
+        "mtime_ns": 1792685178309391179
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/AmbientClosure.olean.server": {
+        "sha256": "031296a58aae025704514f345ecf2218625740d27012609cfc672e94c234e9ab",
+        "mtime_ns": 1792685178296391121
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaDecomposition.olean": {
+        "sha256": "7b7d642d5f6933f8af4cbd57edd7efc87e19104a93414ca3ec4686bdea3aa322",
+        "mtime_ns": 1792685267645797673
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaDecomposition.olean.private": {
+        "sha256": "6ad262e5fd70e0b3230c929e4364fbf9a642e63a8c12c3239ccfc3477eaf9e03",
+        "mtime_ns": 1792685267656797723
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaDecomposition.olean.server": {
+        "sha256": "6c06a30bfce98c11df43ab2df594f90883ed29341a3884872cb72189966a7f24",
+        "mtime_ns": 1792685267645797673
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaQuadratic.olean": {
+        "sha256": "c88b978f4bac5bd20dadf9553c70dacbae5a6c8e16f2d20975926147aff5ce1b",
+        "mtime_ns": 1792685225700605652
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaQuadratic.olean.private": {
+        "sha256": "982e90f5887b93a27bacd0017e827f66daa3972bbd1f5d55a1fd22ed3b5c9617",
+        "mtime_ns": 1792685225726605770
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaQuadratic.olean.server": {
+        "sha256": "82185a63e123ee424e281dc78dcc2281795418e6975503f2343e18c505bd7cef",
+        "mtime_ns": 1792685225700605652
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaRegimes.olean": {
+        "sha256": "403278b4b7e1c0afef59329af6a166eebe6ff88409ef934587ebfdf3ce3cdaf2",
+        "mtime_ns": 1792685267128795294
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaRegimes.olean.private": {
+        "sha256": "b41ea4797ede201aa1195662eabdbdbf280c3f270079b2a65fd88bef8f65ee9d",
+        "mtime_ns": 1792685267175795510
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BetaRegimes.olean.server": {
+        "sha256": "ca627b2e3cc33517f0b8bd0b607ef818b9f076565ef9037b15dd72cf3e017c31",
+        "mtime_ns": 1792685267128795294
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BoundedSolutionSlices.olean": {
+        "sha256": "2f0861b26995b7e30ddb3917fcb96836295956cdde378dcc16226015cbd2f55b",
+        "mtime_ns": 1792685400087415741
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BoundedSolutionSlices.olean.private": {
+        "sha256": "f643b482cd8b52f62768bf29e37a376e776f949692553c26ee5466167bf83ea5",
+        "mtime_ns": 1792685400094415774
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BoundedSolutionSlices.olean.server": {
+        "sha256": "accfb8e4710d57130dbd14dece46e4f6a3dca8ce00ae04612dc58e83c31dafef",
+        "mtime_ns": 1792685400087415741
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchCurves.olean": {
+        "sha256": "4d492b0c90aef7b13e708ed09c70159c4adfce94ddb0b9aca06e55c9192495b6",
+        "mtime_ns": 1792685221086584651
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchCurves.olean.private": {
+        "sha256": "8ef205643b1c8022889b335d50bb0bb740e45d37442fae96c50124a7f414eb03",
+        "mtime_ns": 1792685221111584765
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchCurves.olean.server": {
+        "sha256": "4824492080831caaa940e4fe69e622956a54a319ed4f97dc358829ec7c8c42c2",
+        "mtime_ns": 1792685221086584651
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchDerivativeAsymptotic.olean": {
+        "sha256": "81ce6b653bcd6b0fad95e4ffdcb31da2d2bd2c18fb6b414a59d0f3f5e0085da1",
+        "mtime_ns": 1792685259588760637
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchDerivativeAsymptotic.olean.private": {
+        "sha256": "e73ceee151d7988c0db21fdb9c19bda0f83a87b799870f8e12bd9a4149d1abac",
+        "mtime_ns": 1792685259598760682
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/BranchDerivativeAsymptotic.olean.server": {
+        "sha256": "489e2fc18e54b215a67ff4423859d3a641c7c5dd48d70cd41e778b4f8790eda6",
+        "mtime_ns": 1792685259589760641
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CenterGraphLinearization.olean": {
+        "sha256": "52bf6ec779e351ccf0662dbc61604f7a1c5ea2db3bdcafa1f727b1bcd4314e2f",
+        "mtime_ns": 1792685342931146981
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CenterGraphLinearization.olean.private": {
+        "sha256": "ac8fa8538108ae8a681d52105d5aec6c1f137212b9a203fc9eb30856bc803926",
+        "mtime_ns": 1792685342936147004
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CenterGraphLinearization.olean.server": {
+        "sha256": "dbf51653afd188f8d6f910ac4786e45bbe306d76c9f5fc8988edd49841980b1a",
+        "mtime_ns": 1792685342931146981
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CertifiedRoots.olean": {
+        "sha256": "274c6e815a286ccd6204b469025a358ffd51cdc5fa64c5e15726b4f6c2e2f064",
+        "mtime_ns": 1792685150585267033
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CertifiedRoots.olean.private": {
+        "sha256": "56b93eb18f08e4b106a388a3cb7915c4c8d9da6b4453c094228702cd041c091d",
+        "mtime_ns": 1792685150607267131
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CertifiedRoots.olean.server": {
+        "sha256": "93c32969e027d267058bea03facda36ca471c179a62a1c2c86323608d2e1a25b",
+        "mtime_ns": 1792685150585267033
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalBoundedCompactness.olean": {
+        "sha256": "54c6d66ba08d868acf0477a0e5bcfde427aa431f8c06e2c2ffe0ebf3ed09f39c",
+        "mtime_ns": 1792685377389308667
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalBoundedCompactness.olean.private": {
+        "sha256": "944914ce73abc5032f7acc072cb9e0c3707500b8641e393dc2ba75d4b1cff694",
+        "mtime_ns": 1792685377401308724
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalBoundedCompactness.olean.server": {
+        "sha256": "4138c2f9a68a40490fa129f33613473e6ec508e3c7a02ee2d1737a985edb989f",
+        "mtime_ns": 1792685377390308672
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderInterface.olean": {
+        "sha256": "53257da6af3ab8cd84dcf9af4b1337f16ad80cac8d353bf6edd0eba2ca28f639",
+        "mtime_ns": 1792685399536413137
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderInterface.olean.private": {
+        "sha256": "50374bc8db4b21cc2b61362119a5a7eeb3a55677871c1361b01996db731aaccb",
+        "mtime_ns": 1792685399540413156
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderInterface.olean.server": {
+        "sha256": "4ca90bf13765a3fd694c5de734cf6052dcca643f2ca89fff278143adb9ba3407",
+        "mtime_ns": 1792685399536413137
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderNorm.olean": {
+        "sha256": "f560ba615822d25cc0f8bf12df338b25d05384bcb1d039bcee53d165536e1176",
+        "mtime_ns": 1792685396041396623
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderNorm.olean.private": {
+        "sha256": "275954e91fe099cfab708ba3cc17b53fb67949fe72c281030aa1662471c88759",
+        "mtime_ns": 1792685396044396637
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalHolderNorm.olean.server": {
+        "sha256": "9dccd7cc08503d0eafd56768d246a47614b246388bbb9ba477f1293b7dae3501",
+        "mtime_ns": 1792685396041396623
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalLogisticEstimates.olean": {
+        "sha256": "10c476ab279e184527ccc92f9cb48426364577610dd3407e6324ab970c6b6d51",
+        "mtime_ns": 1792685139817219093
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalLogisticEstimates.olean.private": {
+        "sha256": "e4a9b4dd6fd03728ca1141fd15a32bc535193442bd4f305709741cbba67fbe94",
+        "mtime_ns": 1792685139820219106
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalLogisticEstimates.olean.server": {
+        "sha256": "ab08a6a0bc25bfb7b8549851f83e98c3fcc30eb55455a8c1b2b618f0d93fbdf0",
+        "mtime_ns": 1792685139819219101
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalCompactness.olean": {
+        "sha256": "9c5c95c25aac277d56da13644b83827f35890c86c4626875e60b78e44d4fb9c2",
+        "mtime_ns": 1792685372347284943
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalCompactness.olean.private": {
+        "sha256": "1675a4a1983106aa03f7cef39424e998a8ec71886c498ee402b1096c009fe7ea",
+        "mtime_ns": 1792685372359284999
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalCompactness.olean.server": {
+        "sha256": "94d23e85b79700a0d9cc8b8dc632b2a8d08f289c52ce70251ffbd68fbb017e10",
+        "mtime_ns": 1792685372347284943
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalEstimates.olean": {
+        "sha256": "3f68f5c1c02e6a6581f4f689d22809dc1e6ce425e47eeabfa6837a9a799792b0",
+        "mtime_ns": 1792685160225310085
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalEstimates.olean.private": {
+        "sha256": "63994ad0f39ff2e33870e7ee8fc8b2df1373ec3f5c1b42226bbf87c7551a266b",
+        "mtime_ns": 1792685160230310108
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalMinimalEstimates.olean.server": {
+        "sha256": "75a0da3637b85296032510f2449b6f6bb26be4787b08a2b0834f6bc004cf93e4",
+        "mtime_ns": 1792685160226310090
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalODECompactness.olean": {
+        "sha256": "84c53faffa72581c10befe332169b983d52fb7a6837ea303323c32354dd9c037",
+        "mtime_ns": 1792685163956326781
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalODECompactness.olean.private": {
+        "sha256": "0fb959a5ed9e1fff09138120299692e31d09d52f76591bbd8ef2bf48588d9afa",
+        "mtime_ns": 1792685163961326803
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalODECompactness.olean.server": {
+        "sha256": "6c57b5e562b934f49ac1a171940b5f27cf6a59ecb45e46ba3027b2f5c22dff82",
+        "mtime_ns": 1792685163956326781
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSobolevDictionary.olean": {
+        "sha256": "4121a81eac22b9a796d46fed4f9ae35c15e54829d6aa9d033b3b6684c0c64061",
+        "mtime_ns": 1792685310720996840
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSobolevDictionary.olean.private": {
+        "sha256": "f32f186055992c7894307e3699559851c9d076a3e6e55b3ca26fb278653a2c8c",
+        "mtime_ns": 1792685310728996877
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSobolevDictionary.olean.server": {
+        "sha256": "73c9b2a6d647cd3c98d343231c67307e2c289714d94525a06f72a07d5ff6148b",
+        "mtime_ns": 1792685310721996845
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeBlowup.olean": {
+        "sha256": "7c5791217bcab86bf78c8184c9cb96defb0955ff3fbb7e5311c8328697f9ac0c",
+        "mtime_ns": 1792685356620211085
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeBlowup.olean.private": {
+        "sha256": "f9368079f4d33afdbf02c9501411ae8d126f9838a32cb069c625e8fed8b4d176",
+        "mtime_ns": 1792685356635211156
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeBlowup.olean.server": {
+        "sha256": "9edc2ec73131073819fb4cb477bb7713cadd236ed3bee55f8fedde71862706f1",
+        "mtime_ns": 1792685356620211085
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeInterface.olean": {
+        "sha256": "8129efd10c5361d3e8c90b80062ab105821bf305d90f697ea27fad7e42a2bdb1",
+        "mtime_ns": 1792685355478205731
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeInterface.olean.private": {
+        "sha256": "973c0d8ba8ddb0b785b7bafbbacd7c5d3892c628ca4e3cc666e9eaade79e3d90",
+        "mtime_ns": 1792685355480205740
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeInterface.olean.server": {
+        "sha256": "8db2c15512d5416c1145ab20955dc05a735b3f6bab2b35d198035d4b184f940d",
+        "mtime_ns": 1792685355479205736
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeSubsequence.olean": {
+        "sha256": "40323abdaa86dd41e31cab682ce1ba1b4662ae4ee8f7e205606d1ebfe9608212",
+        "mtime_ns": 1792685344359153660
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeSubsequence.olean.private": {
+        "sha256": "3b95cc5029a5f78784fb3e03b0a6a675423420f22c8fd90c18a4c55884e45639",
+        "mtime_ns": 1792685344363153679
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalSpikeSubsequence.olean.server": {
+        "sha256": "8de5a051c86cfd897ce82820811cbac622b8f9e6fca2d50dae61d614b3e4d152",
+        "mtime_ns": 1792685344359153660
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryC2Limit.olean": {
+        "sha256": "d57b36a0d2cb07c4a665e1fcd07de55110af3920e03ea72cb3cf85e3d539f9a9",
+        "mtime_ns": 1792685358448219659
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryC2Limit.olean.private": {
+        "sha256": "8f98639064af6296821ca1b1836be30f54f4e1ac0de050179c45a4f334355a88",
+        "mtime_ns": 1792685358453219682
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryC2Limit.olean.server": {
+        "sha256": "30b254cc687724e22b85e134b8399a7096b8729f472aa36fe8ede6aea5baa829",
+        "mtime_ns": 1792685358448219659
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryHolder.olean": {
+        "sha256": "e9fd22876d69853d8e61ebbd6de1374e09ec112492f89b172e0f65b8f8b89b6b",
+        "mtime_ns": 1792685389731366834
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryHolder.olean.private": {
+        "sha256": "771a0706224a601dc5ef2123aa96bfa20efde133b4e6f140be25d680792d6dbb",
+        "mtime_ns": 1792685389745366900
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryHolder.olean.server": {
+        "sha256": "e42dcfc6727b0215fa49ff192e9392e72e8eb9dfa766d9ea466323dfda3053ad",
+        "mtime_ns": 1792685389732366839
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryLimit.olean": {
+        "sha256": "13aa3667ee5ac768f16e1f8370c593139979342215cf64fb115f75d0a8c7a931",
+        "mtime_ns": 1792685347971170563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryLimit.olean.private": {
+        "sha256": "6c96d04fffd4fbda490a09cefa77ff9d34a6be56a12c9205855ef86f184424ef",
+        "mtime_ns": 1792685347977170591
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ClassicalStationaryLimit.olean.server": {
+        "sha256": "722f39fa5dcd4de82c9fc8453c060d29da9aac56c69d6709c06d68ee6c6aff6a",
+        "mtime_ns": 1792685347971170563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientDictionary.olean": {
+        "sha256": "90c1d30eaaa904e3f66e9e87f3726bc24454ce2309dd3882f06cfbf6eb5935e3",
+        "mtime_ns": 1792685327009072639
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientDictionary.olean.private": {
+        "sha256": "9b95bc5874b989dfb497bf3a8ae72f3410cb8496333250e3650a531a0a7e1431",
+        "mtime_ns": 1792685327010072644
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientDictionary.olean.server": {
+        "sha256": "8c88e720afc427d0c0a53937d7b13996cec4619216e5edb6d25e760a030c87ea",
+        "mtime_ns": 1792685327009072639
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientLimits.olean": {
+        "sha256": "6100c995435e287735c821baf0d7db832855fdfbf60df69ae7146324c1a0d949",
+        "mtime_ns": 1792685352719192800
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientLimits.olean.private": {
+        "sha256": "952e530e79571451efe582932fbfe9139cf968c86566e35db0b259fe08573432",
+        "mtime_ns": 1792685352729192847
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CoefficientLimits.olean.server": {
+        "sha256": "39326efd1fe4a6641e5fad0ce944629c62bb51885d231c3f6bed06ff05845506",
+        "mtime_ns": 1792685352719192800
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConservativeMass.olean": {
+        "sha256": "279390de67e18e126b7ed2e73b7f4622bbb112e61ab17b00c781a086577feec7",
+        "mtime_ns": 1792685124205149873
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConservativeMass.olean.private": {
+        "sha256": "fc6c0df94c9cf6c85b49b9967be8891215f54c66b2be9a5212a7bdc76063031b",
+        "mtime_ns": 1792685124212149904
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConservativeMass.olean.server": {
+        "sha256": "3372018ee5863c2aa214d7adb12bb2f260849a4d41bff6210e5dc9d78e79e7cf",
+        "mtime_ns": 1792685124205149873
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantModeJet.olean": {
+        "sha256": "ecd4c61917376cb5d3d69a9d29feb956a71827631b2a6de7f2e8e579a126b805",
+        "mtime_ns": 1792685200423490914
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantModeJet.olean.private": {
+        "sha256": "a459c202391ee61986b9f9c9e9264b5e2637fa69d13876d55daf5acc61e0f66e",
+        "mtime_ns": 1792685200428490936
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantModeJet.olean.server": {
+        "sha256": "6a545483ab916ca5277cdb52a183c61b98d708ed8f54fba7bbc9d6da966ad2da",
+        "mtime_ns": 1792685200424490918
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantProfileIdentification.olean": {
+        "sha256": "be8b0a00525a7e38427a404834650d946d66cdce71e40b8e00618ed080650591",
+        "mtime_ns": 1792685389587366155
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantProfileIdentification.olean.private": {
+        "sha256": "03420a4b91b2ac51fcff914c4956773790036d185d94d732ec43dd436b3a0a21",
+        "mtime_ns": 1792685389590366169
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ConstantProfileIdentification.olean.server": {
+        "sha256": "8722a07afc663117b0ccb9e4dc3a8b58aa2ba1dbb2a14c0902937bd5de007fb7",
+        "mtime_ns": 1792685389587366155
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CosineCoefficients.olean": {
+        "sha256": "7d92f80b2a8dd2cee23a8109ab881829a332a06b1b903b733a22104bc8718a1d",
+        "mtime_ns": 1792685235537650506
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CosineCoefficients.olean.private": {
+        "sha256": "568072c179f014232f2b6d66e4d35aa56035ccca2ba3251eeacb7460e1637e0f",
+        "mtime_ns": 1792685235563650624
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CosineCoefficients.olean.server": {
+        "sha256": "3effcb4f65f6af9433efd959d8f3c22ea3375810cb3cfefe411b06cf2b8481c0",
+        "mtime_ns": 1792685235537650506
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CrossingCoefficient.olean": {
+        "sha256": "2645289060fb87f0d48fe4168711aa8f506e353b1c9addc08276f8782a1f309b",
+        "mtime_ns": 1792685290610903619
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CrossingCoefficient.olean.private": {
+        "sha256": "80bb6a602deed93ad259267257a77270be95678154213ac01daad15becf2aa62",
+        "mtime_ns": 1792685290612903628
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CrossingCoefficient.olean.server": {
+        "sha256": "f507e2b286fad4c4a43ce51a25bce47726511d37a05f0254af6aec1af171876b",
+        "mtime_ns": 1792685290610903619
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicAssembly.olean": {
+        "sha256": "768898628fcb68deb289f9f02daa44c7f2eee98166b3dda93f61c30e6c71b1bc",
+        "mtime_ns": 1792685198736483283
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicAssembly.olean.private": {
+        "sha256": "08c80c487c7b04bde551fc485ea406f21992988fbae9f768ee67522471a9803b",
+        "mtime_ns": 1792685198743483315
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicAssembly.olean.server": {
+        "sha256": "eb27859e8445b7aa8457e16e86d88ce5845f0454d3ca7519efb85c7d25c8035b",
+        "mtime_ns": 1792685198736483283
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicJetExtraction.olean": {
+        "sha256": "c1692ae5507d884eb8941789af908958866e2cb9593f5c373cb1a1f89897a8b8",
+        "mtime_ns": 1792685237016657259
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicJetExtraction.olean.private": {
+        "sha256": "c155a1587fb132c2945d5548449dbb4d265b6797f686c6c4dff20780fb58c4ea",
+        "mtime_ns": 1792685237046657396
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CubicJetExtraction.olean.server": {
+        "sha256": "87215c99599d3a791efb7a8e92beb51f4857b39d311da9508949ff3c833b0535",
+        "mtime_ns": 1792685237016657259
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CurvedSignalResponse.olean": {
+        "sha256": "01a26cdbecc13b5de06fc532753657291650e427d774facf461afd9f200f4efb",
+        "mtime_ns": 1792685428052548247
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CurvedSignalResponse.olean.private": {
+        "sha256": "e0f4b5c14a29300616dc2bc73cbebbd88d14f38011ee7d1289a86bd105589903",
+        "mtime_ns": 1792685428076548361
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/CurvedSignalResponse.olean.server": {
+        "sha256": "0d8ebbbaa34c6d2f2fb9bd5b4f963375dddf288cf0658c140fa05cd161f930a6",
+        "mtime_ns": 1792685428052548247
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteConservativeClosure.olean": {
+        "sha256": "755c1472d58f24de650d3e12922d804a38610be022ee0a77ccebfe16ae395808",
+        "mtime_ns": 1792685344036152149
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteConservativeClosure.olean.private": {
+        "sha256": "0b98c96a39fcca4f505f484b58b27a3a2c095026e848ed3944b43e1e360a6a36",
+        "mtime_ns": 1792685344044152187
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteConservativeClosure.olean.server": {
+        "sha256": "3650e8d9c5976f6eb81ae66a8f0f50c245bb9c58cca250277aa584a85c011318",
+        "mtime_ns": 1792685344036152149
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteEigenmodes.olean": {
+        "sha256": "429b9ab2c58cddbcf994d3b5bf268317d42781ec9892bf4e10138e7b3ac4c540",
+        "mtime_ns": 1792685145471244245
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteEigenmodes.olean.private": {
+        "sha256": "573ab5d732596d1d87cddb9149497c48fb90a19decd454870e38522698171072",
+        "mtime_ns": 1792685145499244370
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteEigenmodes.olean.server": {
+        "sha256": "fb3c26513b8d6b58346ece0153b70739d6ce6b8d13ccda0723227ddda78f9abe",
+        "mtime_ns": 1792685145471244245
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteLinearization.olean": {
+        "sha256": "e1b141c8a03f419620f1cb02291084eae68624aa9886d425ce12c118ed514463",
+        "mtime_ns": 1792685317250027193
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteLinearization.olean.private": {
+        "sha256": "73c0a71b1ac3dd3bc5eda433e6d7c324663161356e928c950dc34858bdd22d3d",
+        "mtime_ns": 1792685317277027319
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DiscreteLinearization.olean.server": {
+        "sha256": "09734ca580a45d44e710d095e70d31991751a73e48e4834d513d05264258f236",
+        "mtime_ns": 1792685317250027193
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DomainLimits.olean": {
+        "sha256": "8107678d06c12b24a74c8fe4ea774e082b57993d174766ef920a12cb4a4b98d2",
+        "mtime_ns": 1792685331157091984
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DomainLimits.olean.private": {
+        "sha256": "5b4e310774598e7f95c3e277f8bf938bf80d4b41a20e80d30f2c89165457946d",
+        "mtime_ns": 1792685331167092030
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/DomainLimits.olean.server": {
+        "sha256": "9c4ebfc9f94f104be1352c6d936a5cf71967d73e860c15b32dbb298ce8389d3b",
+        "mtime_ns": 1792685331157091984
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Eigenmodes.olean": {
+        "sha256": "009af4f29a99da89e8b9ec10385b48cf282d24fad49c17c216333c7487dd5b79",
+        "mtime_ns": 1792685137409208394
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Eigenmodes.olean.private": {
+        "sha256": "9237e1258962e045ea3faf61ffc4f880cfd079fcfbe750f8ab9ffbee2f01b1c6",
+        "mtime_ns": 1792685137415208421
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Eigenmodes.olean.server": {
+        "sha256": "9622e1262fc95adb1a1b661f7d23b13fa6a0b1c1d04caf90f52b9885dbd92ba0",
+        "mtime_ns": 1792685137410208398
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EllipticProjection.olean": {
+        "sha256": "561baa15e45a0cdad84c1197eec2ca9bdeaf641e091bec3b4ad3ba812026c565",
+        "mtime_ns": 1792685306199975847
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EllipticProjection.olean.private": {
+        "sha256": "64a5efa7d8e7e629c7f0c679a853ab1bda8c63088cfa036e16af33c913c511b9",
+        "mtime_ns": 1792685306204975870
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EllipticProjection.olean.server": {
+        "sha256": "005f3f8f5f7b5509b38c50cd78abded54f8b3a7a6b6922cedbcc3488ce415aaf",
+        "mtime_ns": 1792685306199975847
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EndpointConcentration.olean": {
+        "sha256": "39ade6c8039520e394b6c1da418e0a044bfb6e3866753d2bf21c1c7279f8729b",
+        "mtime_ns": 1792685088894994613
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EndpointConcentration.olean.private": {
+        "sha256": "c5a3eb04217d2131a31b55482576d4b5d76b4a12c88bfdc7b6f2e48124ca85c9",
+        "mtime_ns": 1792685088896994622
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/EndpointConcentration.olean.server": {
+        "sha256": "6954dd3d8204a93b3627601abc0c261eb1d601464c1481c25d81072a6b5fd07f",
+        "mtime_ns": 1792685088894994613
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteProjection.olean": {
+        "sha256": "8f2661129375644464048d68ebeba9bff823e9134104b0e5a6a8974cc342ed13",
+        "mtime_ns": 1792685152421275223
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteProjection.olean.private": {
+        "sha256": "b48acb638163aaf07670c125a11af4d8fb42a46891e8e32066ccf11066f713c3",
+        "mtime_ns": 1792685152428275254
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteProjection.olean.server": {
+        "sha256": "873aada52ddee0a1ad87ab88aacfc0b2ef964963d408d7556345f368e43b2663",
+        "mtime_ns": 1792685152421275223
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteTrig.olean": {
+        "sha256": "ab853539f494c4c7b47acf8869b0827f3cb6be2ce489ccaeb5c2e6112cb44321",
+        "mtime_ns": 1792685132220185366
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteTrig.olean.private": {
+        "sha256": "552b7edbd4ba32b070565b3ccf79a1d10409bba9d1b39c17b7436bfac9a7dc23",
+        "mtime_ns": 1792685132228185401
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FiniteTrig.olean.server": {
+        "sha256": "9854e0ca5a314e71c59178bb57425f0e137e2c853be8d57080f35bc9356e4054",
+        "mtime_ns": 1792685132220185366
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierAmplitude.olean": {
+        "sha256": "5357666deba7cc7b523fe265df4f3ca887cfcd5570f56094189188df8a180aeb",
+        "mtime_ns": 1792685413151477563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierAmplitude.olean.private": {
+        "sha256": "75a1e3b69821918669acf06a7fbc5150cffe5c9d231c0eded7ff99ba15cf044e",
+        "mtime_ns": 1792685413159477601
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierAmplitude.olean.server": {
+        "sha256": "4b7c97024ab7cf108e3a6878fe947127ddeae6a65ba364b5ebb64b0c38cd1ad4",
+        "mtime_ns": 1792685413151477563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierComplement.olean": {
+        "sha256": "a3a41297a989b3b6301be2145ae5705c13f73d5148c972a9f6f9d42ef692752d",
+        "mtime_ns": 1792685422151520235
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierComplement.olean.private": {
+        "sha256": "a24b4c0c6420f752e27194ffd46628063bee932bd39dce05b213663af6829394",
+        "mtime_ns": 1792685422157520264
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierComplement.olean.server": {
+        "sha256": "014907ef97a00de345d2fbd935a541377d47fc50293629082aad64bf2d8b22c5",
+        "mtime_ns": 1792685422151520235
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierKernels.olean": {
+        "sha256": "4b609ddd6a090d0e265c9b7fd87151bbc96301c96e20e2c0552a6726c2179f7d",
+        "mtime_ns": 1792685194976466290
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierKernels.olean.private": {
+        "sha256": "a2f82081bf43b1b6ccd19f4bd9237b7d254fb6810a202969532c603478abe4f7",
+        "mtime_ns": 1792685195021466494
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierKernels.olean.server": {
+        "sha256": "ec19792607d34bfc3e129e4f0ccc651081a34a3f18b43c78b8f6bd5a294fca2e",
+        "mtime_ns": 1792685194976466290
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierSeriesProducts.olean": {
+        "sha256": "079f354768fa92331a4f09f88df8b10788ccbac898792c79cbe21740e21650b5",
+        "mtime_ns": 1792685157126296231
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierSeriesProducts.olean.private": {
+        "sha256": "4cefb5cce46435ea36f09bfc30a87ff62fd485ebb2dde8bc4697696cf82f755f",
+        "mtime_ns": 1792685157155296361
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/FourierSeriesProducts.olean.server": {
+        "sha256": "9f203d7ee8c4c027454a57a4aed53f4b6afde9fbc50d3491326637e7bb37d4ae",
+        "mtime_ns": 1792685157126296231
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/GlobalBranch.olean": {
+        "sha256": "62b6eff325a8013ae4a35497dc9df8d630b277b035c7ab3ac9ddd6f0ebb060eb",
+        "mtime_ns": 1792685161008313587
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/GlobalBranch.olean.private": {
+        "sha256": "34cad5ca76880f9a442f04688925a839a25becf90c52f38eaac1da5bb9f5ed84",
+        "mtime_ns": 1792685161019313637
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/GlobalBranch.olean.server": {
+        "sha256": "3f48563b249ecdfff4bc5c0e27889c5da6df1c4fff4ae0e21e524705914e4609",
+        "mtime_ns": 1792685161008313587
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/H2CosineIdentities.olean": {
+        "sha256": "8a84eac413f456173832fe614200436c2538ebecc3ca8f04e7270c1cca7b44b2",
+        "mtime_ns": 1792685308932988535
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/H2CosineIdentities.olean.private": {
+        "sha256": "5ee625a95ae00033fd3530247bdc6fc1277f4e76635d8137a272463a9edea3c3",
+        "mtime_ns": 1792685308941988577
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/H2CosineIdentities.olean.server": {
+        "sha256": "39c49bbf0850caf215744e312fe2b6b9e05a0b1045528a5a8982d585a34d8b90",
+        "mtime_ns": 1792685308932988535
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/InfiniteCosineProjection.olean": {
+        "sha256": "9cc46c842947a63368c843129944d45fabf8b26989605c67892bed821efd5026",
+        "mtime_ns": 1792685132805187960
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/InfiniteCosineProjection.olean.private": {
+        "sha256": "db16f429ae5bde391f08603e1ded12e002692beb3f490f862569dca601773d49",
+        "mtime_ns": 1792685132808187973
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/InfiniteCosineProjection.olean.server": {
+        "sha256": "0f4e54cc3b1e9f2d5d0a2ff7ebe9fa98948282c3ab16625b760d6f1fe3064c35",
+        "mtime_ns": 1792685132805187960
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalConcentration.olean": {
+        "sha256": "51480e578302e272a29768cf24a653667d30759e6de681961ed9bef0b18923b7",
+        "mtime_ns": 1792685094113017440
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalConcentration.olean.private": {
+        "sha256": "f7ccae5df1b5e46ec02071b0d77fedfe147166882599499d80410962c5f5a696",
+        "mtime_ns": 1792685094123017484
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalConcentration.olean.server": {
+        "sha256": "fbb6e62d1f9f61a127c1e5fcc465754943deea97e1c4f6ccb8e7a4369de3a609",
+        "mtime_ns": 1792685094113017440
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalMoments.olean": {
+        "sha256": "3cc41c7bf8e7d9b4496dc8af74ad4b0c2efe21efc52eaadf2d8e7ae591ec377f",
+        "mtime_ns": 1792685089105995536
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalMoments.olean.private": {
+        "sha256": "f0df68fde2f320d54436014255b1123e368eadb4eda49a5a2e920c4c0f1096e9",
+        "mtime_ns": 1792685089111995562
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalMoments.olean.server": {
+        "sha256": "40bcc964ecb1c0cbac1ecdef20598900d4ae51409ad14af6920b2888d0b7d0b7",
+        "mtime_ns": 1792685089105995536
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalStrongPositivity.olean": {
+        "sha256": "b7527d51bd9d5295760ae4ed10a728222b3a3a41bcfe2ba43edd47b8ac3c0f39",
+        "mtime_ns": 1792685208809528894
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalStrongPositivity.olean.private": {
+        "sha256": "9644ee3d1cba214e42914e0011f880506070768fbfe8bffe7fb25d12fc943110",
+        "mtime_ns": 1792685208816528926
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/IntervalStrongPositivity.olean.server": {
+        "sha256": "b6b86a4a73345b51b8b8c9409bfd130f5bb8064eadaf72b67ec7cdf0a1b09fed",
+        "mtime_ns": 1792685208810528899
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LinearRegime.olean": {
+        "sha256": "5cb46dc3467cdee535297b4f003196a2caa6bf031eb0dda338c6326a385d28f5",
+        "mtime_ns": 1792685166317337356
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LinearRegime.olean.private": {
+        "sha256": "26c3b14abd6c6d4652014b205e672fa87c7d985641268804e7b39075e39fc516",
+        "mtime_ns": 1792685166321337374
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LinearRegime.olean.server": {
+        "sha256": "94e2aa20c06a92d90fb3ab7504b2fc0d3d0c1f66187b7f0778f27bbf4de89ad1",
+        "mtime_ns": 1792685166317337356
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalBranchGeometry.olean": {
+        "sha256": "be6397ef9c160f974e15dbf15983389daea84150a538025d36faf03d36c87791",
+        "mtime_ns": 1792685113706103517
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalBranchGeometry.olean.private": {
+        "sha256": "e1e5506200b2a7f033d9e98e0570cc9561dbd7969b31c83f2bbbab35728bfb33",
+        "mtime_ns": 1792685113707103521
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalBranchGeometry.olean.server": {
+        "sha256": "be621ea0f1514076b227a9529380f51e07e09c148b1281613ac09a60056d05dd",
+        "mtime_ns": 1792685113706103517
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalStationaryEnergy.olean": {
+        "sha256": "b2185a2bd4f613c3f5afcfbe5c914fc249e569a0c4ba4598705cebb90bf2d6cc",
+        "mtime_ns": 1792685286442884349
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalStationaryEnergy.olean.private": {
+        "sha256": "d1a64948e01b21c902c3354152ba719570724bc030c7cc501b50875fa4c78120",
+        "mtime_ns": 1792685286465884455
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalStationaryEnergy.olean.server": {
+        "sha256": "44a8cc412b6cbf19d5c34030fa89aea12232daf537000b4b395d90f8f34cf0b0",
+        "mtime_ns": 1792685286442884349
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalizedMassBounds.olean": {
+        "sha256": "bea8104404ad954c4340f6e3ba55e0cb6d7043fc3e0537244608e62a7e16df77",
+        "mtime_ns": 1792685085514979850
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalizedMassBounds.olean.private": {
+        "sha256": "1684b8a1cfdd8117e4c6dda2334923a5359e087c49ea9a2471316cffec4e0ef4",
+        "mtime_ns": 1792685085516979858
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LocalizedMassBounds.olean.server": {
+        "sha256": "ccd6160c1a36dee401a4306dcb4b8a25c2186941e94f8ff06337c153af4e69da",
+        "mtime_ns": 1792685085514979850
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticDerivatives.olean": {
+        "sha256": "a911fc09dd77ae0f1f238af48a81c008fd549d7da83edc27f56ca20213607ea9",
+        "mtime_ns": 1792685201247494642
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticDerivatives.olean.private": {
+        "sha256": "3d05faa2d86b5ea136d76bc6dbccd38d7302f6aa8e6a5ebc03c5ec391bedc42c",
+        "mtime_ns": 1792685201252494664
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticDerivatives.olean.server": {
+        "sha256": "c31a88bcfdbbb9165c61c4a3b3cb1bc5e0b1bded6a4868c7686528647bd1ea7c",
+        "mtime_ns": 1792685201248494646
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticGronwall.olean": {
+        "sha256": "935b2bf8b5465b6a23806f219770c514042a1a1d34d57fb370a6de1c496db95f",
+        "mtime_ns": 1792685118767125842
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticGronwall.olean.private": {
+        "sha256": "899f5344155c61aa09d14fd882c658ba1c6529180957bc5e56976440d37d445c",
+        "mtime_ns": 1792685118775125878
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticGronwall.olean.server": {
+        "sha256": "54f259d3810534d08302874fb43526c9dfcfc7032b15b6bc1055b5e2afe180ac",
+        "mtime_ns": 1792685118767125842
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticTaylorRemainder.olean": {
+        "sha256": "0a5666c773e7a39956f18dedcd2fdb726109f6ea1f90ddaf920a4573c64cf0e5",
+        "mtime_ns": 1792685271723816446
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticTaylorRemainder.olean.private": {
+        "sha256": "1ed7d82ad74557efea356ca0f5d254a77c5ba351d22bed320c3e2b8623b68199",
+        "mtime_ns": 1792685271731816482
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/LogisticTaylorRemainder.olean.server": {
+        "sha256": "d97b6dcefc3d28427c39de1e151d5997f5ec6b2793418e5c204b2401b13687e6",
+        "mtime_ns": 1792685271723816446
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalFlux.olean": {
+        "sha256": "bb40026d26ba936e10e009af3eb1fa6afdfb1f204798fb241c546f15aa1260a4",
+        "mtime_ns": 1792685085421979443
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalFlux.olean.private": {
+        "sha256": "8fc2f36d5ea20e19104c5db0807e229447c4a214bccfbe85d140504e7b30687f",
+        "mtime_ns": 1792685085459979609
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalFlux.olean.server": {
+        "sha256": "5617e1d13e785245826550f78587be16f30b143943a8033fb35237f10d03b9f5",
+        "mtime_ns": 1792685085421979443
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalLocalUniqueness.olean": {
+        "sha256": "d32a2e00ddf84c2849ae67725da51151981d7d7b41ecf9e233b0101ed1dd49d4",
+        "mtime_ns": 1792685337992123895
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalLocalUniqueness.olean.private": {
+        "sha256": "099f236fc51e7dde4f472c377bd5eb9821c0eab57946325d9687ee10c66f8b4f",
+        "mtime_ns": 1792685338002123941
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalLocalUniqueness.olean.server": {
+        "sha256": "a71b4275a46818e995adb0259f1293f9c5a8c7102b04fa98a065fb822b74f47a",
+        "mtime_ns": 1792685337992123895
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalRational.olean": {
+        "sha256": "53d41be4c74135a95b129cc5d2b27fdae7d4178cf75d82b75c55b90e11091440",
+        "mtime_ns": 1792685300343948686
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalRational.olean.private": {
+        "sha256": "a0dee22357839699c7748a85b68ea10e1add38b407b4b1f72bc7c9357ad7c1b3",
+        "mtime_ns": 1792685300348948709
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MinimalRational.olean.server": {
+        "sha256": "d9c6f802fcc47620088a7e831e6bdffe8617cdef3852d6c213a4be6673b44992",
+        "mtime_ns": 1792685300343948686
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MixedRemainder.olean": {
+        "sha256": "288d182595c83c1fcb9183bc8d27471620b318288d132830ab88107fa9c7e1f5",
+        "mtime_ns": 1792685196594473601
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MixedRemainder.olean.private": {
+        "sha256": "db546534524b28c79134bc84f2689378359774164917c11cd8eed7e6351ea2bf",
+        "mtime_ns": 1792685196618473709
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MixedRemainder.olean.server": {
+        "sha256": "d8ca7f0123e4901afcd66c4d727b8693b011b5d49815d9303ae636b48683bfdd",
+        "mtime_ns": 1792685196594473601
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityDerivatives.olean": {
+        "sha256": "da400cc5daa8bc1c6d521c590eaf8e657768ba2ccfd6d8790da7b5c1371a7cf1",
+        "mtime_ns": 1792685202784501598
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityDerivatives.olean.private": {
+        "sha256": "c5e6697a50ea6b26f608b4055c10a4d9b8d15a20c1c010c2aacb119ba8ba51cd",
+        "mtime_ns": 1792685202789501620
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityDerivatives.olean.server": {
+        "sha256": "bf6c7fe6f3dbf32398bb7d787115a39a6ac92567eea9e9efd04653e995e127fe",
+        "mtime_ns": 1792685202785501602
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityTaylorRemainder.olean": {
+        "sha256": "ead47b9b6a5a260a1baa927277d3a7cb9c2f0bdda29d86959b22c221ae926fa5",
+        "mtime_ns": 1792685272873821743
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityTaylorRemainder.olean.private": {
+        "sha256": "3f57bd28d2ef47e2dfaf5815d72552efd9ad9f9fa41230a355f4205b16b5533c",
+        "mtime_ns": 1792685272894821839
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MobilityTaylorRemainder.olean.server": {
+        "sha256": "17ab5aa0557994e982722efc03fe55884eb35b60e28cd6671a4c8cc6d585f5b4",
+        "mtime_ns": 1792685272873821743
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModalRemainder.olean": {
+        "sha256": "59f044ad74b487928dcead5fc9ad783c3ebcb3b99e6b598731468c4d76c8b6c6",
+        "mtime_ns": 1792685284572875709
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModalRemainder.olean.private": {
+        "sha256": "efd355db21c4895f91930b8bf40b6bdda63afd182e8d2f33d5abc90e80f5823b",
+        "mtime_ns": 1792685284581875751
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModalRemainder.olean.server": {
+        "sha256": "5db05fdba27ad3f08c66f0bbb242b7128138dac1a9133f3c97fb72f2b74b1b81",
+        "mtime_ns": 1792685284573875714
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeExamples.olean": {
+        "sha256": "1fbf7aed0288ad2b96866030c316195e89f0d61c7fd33d5604a8b5a2f96cdcbe",
+        "mtime_ns": 1792685376603304967
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeExamples.olean.private": {
+        "sha256": "44ad45c37bcb0be279e20c6fe57bdaf362b2589603688626ce593553a934f260",
+        "mtime_ns": 1792685376625305071
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeExamples.olean.server": {
+        "sha256": "b68da7daf9b636b263ab749cc4fd83f28e12145c3517d759cdf8873888cffb0d",
+        "mtime_ns": 1792685376603304967
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeIntervals.olean": {
+        "sha256": "c3fc108ca393dd2bcf658046d1caacda15c4fc000e248ffe72464a62bd8c362b",
+        "mtime_ns": 1792685290402902657
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeIntervals.olean.private": {
+        "sha256": "fa652018efeb5e81e0037a404c9f82e9c7c65aee0655eb8677da5d888a46893c",
+        "mtime_ns": 1792685290417902726
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeIntervals.olean.server": {
+        "sha256": "dc07ce01913f5ca0de112e88cd4d243e45edc3dbdbfe8a98e2a194f63c5d9d20",
+        "mtime_ns": 1792685290402902657
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeLengths.olean": {
+        "sha256": "4c3f23f82e0caa50873c3e6be0d5cc9cf3a64a993ad4ad9f75dc57243086a20d",
+        "mtime_ns": 1792685319942039720
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeLengths.olean.private": {
+        "sha256": "3f780fa18e6199e4b1dfaf47ba254c18ce257c2f453b92b5e75f3205677dd51a",
+        "mtime_ns": 1792685319951039762
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeLengths.olean.server": {
+        "sha256": "94885abb0a5d45af714e7eed3dbe3f06a7a62c453a0e2017cce262f19ada5f34",
+        "mtime_ns": 1792685319943039725
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRealization.olean": {
+        "sha256": "220b32d10008ade9ccd494a5328b83ab3f81ecf2785d54551ab0b7c5f6013c05",
+        "mtime_ns": 1792685367293261184
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRealization.olean.private": {
+        "sha256": "6c3f6d3fdf5d598476a33fc8039e4dcbc813a665f7d5fea5e9f4922296587dc5",
+        "mtime_ns": 1792685367298261207
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRealization.olean.server": {
+        "sha256": "18ef2a33b84b846bdd81e41882371b1a3a5afdda6a7a06bda4e989797a8d19b4",
+        "mtime_ns": 1792685367294261189
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCounts.olean": {
+        "sha256": "2af935fc9c2f0d60b93fdcb260ed23c1ae20847e05526c1a012c83d07a01f501",
+        "mtime_ns": 1792685360513229347
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCounts.olean.private": {
+        "sha256": "44236eada4e913003561111dfb49d1c8c65fd1942e87d931535fa4f9e2b60c18",
+        "mtime_ns": 1792685360516229361
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCounts.olean.server": {
+        "sha256": "c2d243474b8dce97699fe663888310a3903e73517ed7937470d106d1b33f4777",
+        "mtime_ns": 1792685360513229347
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCrossing.olean": {
+        "sha256": "13fa22978bd5e1a867fc399a276ebd454d52f777772a490b59dc84df5de5013e",
+        "mtime_ns": 1792685372549285893
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCrossing.olean.private": {
+        "sha256": "8e5e1352ad5afac65d9108d4d28832c94d6207c74900bc349c241a8379750b8f",
+        "mtime_ns": 1792685372553285911
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeRootCrossing.olean.server": {
+        "sha256": "065ff5cd447f9062595a901dc9af79633db0edd0f2b64e74549fb180d9fb4c42",
+        "mtime_ns": 1792685372550285898
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeTies.olean": {
+        "sha256": "80275227a89b95009ac4158744a76d771de7989a792cd5f05afeaa681cae395a",
+        "mtime_ns": 1792685346932165699
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeTies.olean.private": {
+        "sha256": "78c2d65fe74201f60e9b3f1e5c34a395d6183811d38edccac10a3db488c49232",
+        "mtime_ns": 1792685346938165727
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ModeTies.olean.server": {
+        "sha256": "facf320715550689827bd7cf5ac46634c4973a422cfd1bf2aeac70b79a2f5fed",
+        "mtime_ns": 1792685346932165699
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Model.olean": {
+        "sha256": "73423a69fe5914ce82db3aaaa7c7eef8f812ca72763225c9ab8e7dc49697a3f8",
+        "mtime_ns": 1792685135529200046
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Model.olean.private": {
+        "sha256": "75ef6ebf4312ebf85a917c8da0a9a88aa3faca7aba830a5aee7fb89e7d7513d5",
+        "mtime_ns": 1792685135531200055
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Model.olean.server": {
+        "sha256": "7d323220fe97911d2ef254236837bb9c6d5279ca28debf9d32029a4ea33aa524",
+        "mtime_ns": 1792685135529200046
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocus.olean": {
+        "sha256": "e66cc1925ff89c0673dc03a274a5e41333d4487f0a759701c37ca9d65dea7e73",
+        "mtime_ns": 1792685184425418701
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocus.olean.private": {
+        "sha256": "0bae53bc6c80adb7a8d447c468b173602b4cb4f3f7887d2c6b76cde7e08e22c3",
+        "mtime_ns": 1792685184458418850
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocus.olean.server": {
+        "sha256": "5512246971714b71736770f4cd0f42f7313fd326ac6e0ceb7a8b37cca0c051a1",
+        "mtime_ns": 1792685184425418701
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocusGeneral.olean": {
+        "sha256": "73f12c65aafec6f0012bbccacb249a2a33cd5b490bfd1ae7cf729fe24cdd4cfd",
+        "mtime_ns": 1792685207640523594
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocusGeneral.olean.private": {
+        "sha256": "6e75603045dee64d90d708799769b48c1617329933726811163eb5c1810fa423",
+        "mtime_ns": 1792685207658523676
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneLocusGeneral.olean.server": {
+        "sha256": "89891e59d6d6bd92bb10dca5c6a23110a3b09b11ca05865cf881afeab200bf91",
+        "mtime_ns": 1792685207640523594
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneSineBound.olean": {
+        "sha256": "c49480f49cb86100804ec248d9f8cc1636348d96a187b695913332dff81380a1",
+        "mtime_ns": 1792685277002840773
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneSineBound.olean.private": {
+        "sha256": "1fbca377d1cfc586cc436e0d2b4b793fa9a0fb47d9fe5bde5d3c19b01055c09e",
+        "mtime_ns": 1792685277013840824
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/MonotoneSineBound.olean.server": {
+        "sha256": "cade4c0acf7fafdb969b3ba21eb7a70d1df3bb54e05cdf83c576c908b5c59f53",
+        "mtime_ns": 1792685277003840778
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannProjection.olean": {
+        "sha256": "aaaabf5d16d4ed756f7733eced0368ecadd119ab61de188bbd24b04ddf80c0ef",
+        "mtime_ns": 1792685173076367669
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannProjection.olean.private": {
+        "sha256": "01e8e6c1277aeea83a440a8c7a60667c48df7eed14a8bef1ad274ea9ed3e45fd",
+        "mtime_ns": 1792685173092367741
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannProjection.olean.server": {
+        "sha256": "fc529f5fe55b3019bc4f41aa4c48dbbc2d52de7181ff6cba5d20da64c818ecea",
+        "mtime_ns": 1792685173077367674
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannResolvent.olean": {
+        "sha256": "a508d818ed9c8e98097b29ecf46237057c5ec44fd8a2c9d82ecd38072d30d67f",
+        "mtime_ns": 1792685181620406073
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannResolvent.olean.private": {
+        "sha256": "b0ddc4757786c81fe7089dcbf6b4f1555dedd3f70b4e23c1026176c7540af391",
+        "mtime_ns": 1792685181638406154
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NeumannResolvent.olean.server": {
+        "sha256": "50e3cc0fabbc4735520230a0439660cfa9f5686c71e88d998647008975bd50ee",
+        "mtime_ns": 1792685181620406073
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoAtomLimit.olean": {
+        "sha256": "37f6911daa3de19687d955e0b759022c3916aeb2c4b4ac02987eeffb9561bae8",
+        "mtime_ns": 1792685097128030649
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoAtomLimit.olean.private": {
+        "sha256": "ca5497a42d020b63695e34b89257fabc935bb261cf26f2f055f70761e3c65146",
+        "mtime_ns": 1792685097132030666
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoAtomLimit.olean.server": {
+        "sha256": "9410f199146b7750d72fee85feba7b9c095b313100b6d907f67fb318d3d6074c",
+        "mtime_ns": 1792685097129030653
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoDiracMass.olean": {
+        "sha256": "0aadc76e7734e6130acc3c6361b9761855c2eadd1e6438b6d86daf0abcbdf55c",
+        "mtime_ns": 1792685093469014621
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoDiracMass.olean.private": {
+        "sha256": "f4a0278e9786d225736097a4030401553705526b2f7004171fe82083448138aa",
+        "mtime_ns": 1792685093473014638
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NoDiracMass.olean.server": {
+        "sha256": "92385aabc01f41f85dede612f7ce8cb2863fb523ff5eb3d60ad8d56ffc8e0ab0",
+        "mtime_ns": 1792685093470014625
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalForm.olean": {
+        "sha256": "765ef51018ed312010c7eefe490972188de00387b9053673a985b92b49b44a9a",
+        "mtime_ns": 1792685131190180799
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalForm.olean.private": {
+        "sha256": "e1750cd6b52e943eced43e5db966dd9ffae72f39b848b767680c6ebdb9a086bc",
+        "mtime_ns": 1792685131272181163
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalForm.olean.server": {
+        "sha256": "992930bda366208a9ab1bb4f63c9bc106f63d9d1af2ce0b90490657f4fd24139",
+        "mtime_ns": 1792685131190180799
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedAsymptotic.olean": {
+        "sha256": "7d6c1e50fdf039763bc13961f057deb2ebf5e91f5442d6b7f59d7c9644fab414",
+        "mtime_ns": 1792685295411925837
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedAsymptotic.olean.private": {
+        "sha256": "f8de217a6fe424042a86dbe48be05fdfde2f311d345845511b453bb2734d110f",
+        "mtime_ns": 1792685295421925883
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedAsymptotic.olean.server": {
+        "sha256": "0df6e8f1209ea94aa6f6b354e6b8d6b655da5ccfa3ae5f0a84db99b667f38e94",
+        "mtime_ns": 1792685295411925837
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedLimits.olean": {
+        "sha256": "fefd3ceb7eec4487c4cdf1c62069ea951892e60a8e9cb2eb6ddb75b1d47aa682",
+        "mtime_ns": 1792685371115279149
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedLimits.olean.private": {
+        "sha256": "b047101143906ffb27a3de45e2cbcc9d6e5925698565059fdfa3180491464b87",
+        "mtime_ns": 1792685371126279201
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedLimits.olean.server": {
+        "sha256": "0413054f14c69825c663e97cdce5c7ea5838329d1323d67696bb961e39bc907a",
+        "mtime_ns": 1792685371116279154
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedSpecialization.olean": {
+        "sha256": "8c50ecf2ced7644ab3131fb78aa157f634ecdfc247aaeacff2c73582e7ff72bf",
+        "mtime_ns": 1792685250478718845
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedSpecialization.olean.private": {
+        "sha256": "7844f8c38bf660cda2c468936706383f28da0174a6215ba77f097745bbd88069",
+        "mtime_ns": 1792685250494718918
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/NormalizedSpecialization.olean.server": {
+        "sha256": "941c7363fbadec1f7c29445f15abcff68cb4ac0e53955734998e62df28c13dd2",
+        "mtime_ns": 1792685250478718845
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/OddRootCrossing.olean": {
+        "sha256": "30e90df22f8b528b39554f57385e72128a66700822766ec329f4f5f52ce02cbe",
+        "mtime_ns": 1792685368382266302
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/OddRootCrossing.olean.private": {
+        "sha256": "f1f419d426c5eeb26123ba201444529f52d633b5886f7beaf85ad1928d7d48d9",
+        "mtime_ns": 1792685368384266311
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/OddRootCrossing.olean.server": {
+        "sha256": "fa78bfa79d91c250a822a391e32781407c1db8c479eeae1009ef4b0963930d0c",
+        "mtime_ns": 1792685368382266302
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ParametrizedSolutionComponents.olean": {
+        "sha256": "77128dd6379605a8c7e56c2470ce6d4964f34f5e86649598e717dea2e6daf34c",
+        "mtime_ns": 1792685408218454203
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ParametrizedSolutionComponents.olean.private": {
+        "sha256": "694f8197de5105909fe8caf723eeb9a1a4b76e47d411de1239255d2941f46e8d",
+        "mtime_ns": 1792685408227454245
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ParametrizedSolutionComponents.olean.server": {
+        "sha256": "a9905942c941c3330da34ba2d74f65980514e35e636b60dd1951666d0cdd0cd6",
+        "mtime_ns": 1792685408218454203
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalAmbientClosure.olean": {
+        "sha256": "db71f8d75a333de85f56ff72034abaaf815c4be8e5077bdcb89527eb00092ec7",
+        "mtime_ns": 1792685340080133652
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalAmbientClosure.olean.private": {
+        "sha256": "8a4e205279a92229be69c9aba1f38120605bd5b8c4999ee0f664352988b66465",
+        "mtime_ns": 1792685340088133689
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalAmbientClosure.olean.server": {
+        "sha256": "a6b9e4e9b39e27fd4efab90a6d125b8b56cc1f7fc94cf0e9385aded2d959d044",
+        "mtime_ns": 1792685340080133652
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalBetaRegimes.olean": {
+        "sha256": "fc16ea7f8618468b9f1e0da9885a2d9cfe23ba08862d8a660d840c40c31512ad",
+        "mtime_ns": 1792685296431930560
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalBetaRegimes.olean.private": {
+        "sha256": "6ef96e28afed38bd2442da5942e2334e792678516adf65cacd4acfb5648d01a3",
+        "mtime_ns": 1792685296432930565
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalBetaRegimes.olean.server": {
+        "sha256": "6ab4a13baf0ff7bcd1728e1528418ee887286e6d6dd0c6a9f11167805590778f",
+        "mtime_ns": 1792685296431930560
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalClassicalAdapter.olean": {
+        "sha256": "47f3105740b10ebc2096dbdec0324098b17ac9edf660af64b06a875b15a273f3",
+        "mtime_ns": 1792685377089307255
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalClassicalAdapter.olean.private": {
+        "sha256": "eb1719a7b3dd79503a7eabb0d7046d8ab26268e8ca2078979a14bbf356272089",
+        "mtime_ns": 1792685377091307265
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalClassicalAdapter.olean.server": {
+        "sha256": "34638dafecb4db98b27af1d2675ffecd73afe4aad1415530cf107c835a98c250",
+        "mtime_ns": 1792685377089307255
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalEndpointConcentration.olean": {
+        "sha256": "b46d3d07f7124c8075854a5bb82879d07d272cf933b739c96da5174b0f2fc823",
+        "mtime_ns": 1792685385443346610
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalEndpointConcentration.olean.private": {
+        "sha256": "66dd88396d39accf070d4468993c4202afb6c850706757ad79a688ac6676e6c5",
+        "mtime_ns": 1792685385444346615
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalEndpointConcentration.olean.server": {
+        "sha256": "07933ae3c20d5a14d0097232d41a2540e994aaef0074734e93f79631b2ecc4d9",
+        "mtime_ns": 1792685385443346610
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLinearRegime.olean": {
+        "sha256": "1723a49afb98cd2fce7def54db9e58a7b9ec6b5e47c7d34f10e2c75589a9c563",
+        "mtime_ns": 1792685288228892604
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLinearRegime.olean.private": {
+        "sha256": "4a8ebbaf3943841396eae25f9e3a7317b65aef46e1e23a5508fbec5e8ce3a7fb",
+        "mtime_ns": 1792685288230892613
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLinearRegime.olean.server": {
+        "sha256": "994e528e790a3fd1f92fe12697d3e12e013924514c292d79ef7aaacf366b4738",
+        "mtime_ns": 1792685288228892604
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLocalUniqueness.olean": {
+        "sha256": "5429f947ea7b1d7dcefc9b5ce16c94f23d9f8382a639f731ce631335e3ad4fcf",
+        "mtime_ns": 1792685310496995800
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLocalUniqueness.olean.private": {
+        "sha256": "1ca1eccaa3a1fe79fb6e1d22cb91e9b9eb7e1a1183b68d7b86fc26390fb3f386",
+        "mtime_ns": 1792685310501995823
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalLocalUniqueness.olean.server": {
+        "sha256": "bbd77fc1f60d19821737acdf48fe78ba70210ad854b3e341b4e77b2ef7c790d0",
+        "mtime_ns": 1792685310496995800
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalModeGuards.olean": {
+        "sha256": "bae0497305a7ecd05354b6d14348e584f49498c55f91b9f13bd441a1c7d68ba9",
+        "mtime_ns": 1792685237895661274
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalModeGuards.olean.private": {
+        "sha256": "d5c3d419eba30ecfa5fcc821010c1cd817515a10712263e68897b07183bac15f",
+        "mtime_ns": 1792685237906661325
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalModeGuards.olean.server": {
+        "sha256": "a5143d9d143673d9f5beaab765ade2a1f2368006e99d30f956bc7fada9ce647e",
+        "mtime_ns": 1792685237896661279
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalMonotoneLocus.olean": {
+        "sha256": "98e55a12a5f784e3dca415425dc856357129b7113a0c669061efe1048a65a917",
+        "mtime_ns": 1792685397149401857
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalMonotoneLocus.olean.private": {
+        "sha256": "f67ea9a708658972ac01ee9a675015a00ea9df80ebf141d36e93532f57e61fd1",
+        "mtime_ns": 1792685397151401867
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalMonotoneLocus.olean.server": {
+        "sha256": "a6095e8dde8fce046b0d691cff496356961f9daf36e20271e2a27bc8b17137d6",
+        "mtime_ns": 1792685397150401862
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalPolynomial.olean": {
+        "sha256": "a373a558eaace0cbecfec7a4c3d31973c014400c6a602f177edfac033f504307",
+        "mtime_ns": 1792685299679945608
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalPolynomial.olean.private": {
+        "sha256": "4db5fd37b66fb67861a217718fdfcca223a126cf956ff954ec71e00b4256e494",
+        "mtime_ns": 1792685299689945654
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalPolynomial.olean.server": {
+        "sha256": "5282048effbb47a1773a99c8b6894e5ad4d1f41c85f75c14a8039c9c10f8f0a4",
+        "mtime_ns": 1792685299679945608
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalQuadraticModeSupport.olean": {
+        "sha256": "dfb98fb913b3c75e0f1a377ef3fb9d7ec96eb535d32e6f3ea2bc7b89cef89062",
+        "mtime_ns": 1792685315087017133
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalQuadraticModeSupport.olean.private": {
+        "sha256": "70ef96ac255cb60405812814b82a18c5ccce719be6dba6b40fca26098cf0445a",
+        "mtime_ns": 1792685315088017137
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalQuadraticModeSupport.olean.server": {
+        "sha256": "0ee3a6f6cc6a6d3c8964f2722023c2fb01bf83f8824310287116b75497ef573e",
+        "mtime_ns": 1792685315088017137
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSemidiscrete.olean": {
+        "sha256": "1696e942ca1b88e5f73f1c38f98476e75714fdb7e1c4b0a06776bf9437ea97c0",
+        "mtime_ns": 1792685185112421795
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSemidiscrete.olean.private": {
+        "sha256": "216bc657c181d58e906458ebd59c1fe64d10a931a04c92b73eafa0150e9a843e",
+        "mtime_ns": 1792685185123421845
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSemidiscrete.olean.server": {
+        "sha256": "e837db4dc7265bc41f2cfe21d38f901b2ade2a36d2a088f25f6b0218a155b1c8",
+        "mtime_ns": 1792685185112421795
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSignalTopology.olean": {
+        "sha256": "bffdce114e824c45c000e7bab35e38b7e900b279d3dbbe6d0ee42213dd0a9096",
+        "mtime_ns": 1792685392314379024
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSignalTopology.olean.private": {
+        "sha256": "2df132af07bee3620306e4f06a9e2ac63b195f4d462c079cbfd56085a69f6c3c",
+        "mtime_ns": 1792685392317379038
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSignalTopology.olean.server": {
+        "sha256": "8a05113c179690144e955040d7a9adf7a4e1446c5871366cd4061e5874032edc",
+        "mtime_ns": 1792685392314379024
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSineDecay.olean": {
+        "sha256": "0f3c2f4d4890a97aa5b3b9425fec7d32df47a284548d23822c65127f841581a2",
+        "mtime_ns": 1792685381513328089
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSineDecay.olean.private": {
+        "sha256": "6cfa339babd9a764ddd66d97503d74c12020f757195b1367c63e76821970085a",
+        "mtime_ns": 1792685381522328131
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalSineDecay.olean.server": {
+        "sha256": "02defe4e88d6648288fb636f3406384493aa7b204e54fa865938c6fabb4be887",
+        "mtime_ns": 1792685381514328094
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalStrongPositivity.olean": {
+        "sha256": "0608f37d0fbfa7c87326586279f6aa7efaf5ee242380e6d849750c4c41eb1059",
+        "mtime_ns": 1792685233126639502
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalStrongPositivity.olean.private": {
+        "sha256": "e520768587abf461f97b7660c3d57387f954621f2838ca250a2f3666f4c11890",
+        "mtime_ns": 1792685233143639579
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PhysicalStrongPositivity.olean.server": {
+        "sha256": "1a9097460cd773f9e635826688aea7b4767ca0e4b545801117085eb69bf7ca18",
+        "mtime_ns": 1792685233126639502
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PolynomialDegree.olean": {
+        "sha256": "2e7f5ecbcfafac3817947ca1a63cdf9bcf61d9603de4379d4992d5b2b5bff7ee",
+        "mtime_ns": 1792685278814849130
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PolynomialDegree.olean.private": {
+        "sha256": "0422d89ad744af0b1f44fa9c4cc2aa4a941381c9caff57cc9acde2fd1a6ea1a3",
+        "mtime_ns": 1792685279001849993
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PolynomialDegree.olean.server": {
+        "sha256": "f53d5f4b4766bbffeabd033d431b7177f667f99711830e8ade8cb52411ec0ec9",
+        "mtime_ns": 1792685278815849135
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationModalResidual.olean": {
+        "sha256": "25452e40bb3e774d581da0561e6dc2a09cc3c5321ac7e130f36f656ea0bbf6f2",
+        "mtime_ns": 1792685306160975666
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationModalResidual.olean.private": {
+        "sha256": "e54f668a22b55af70640e0d5dd80a6596928ece8ed8d6691eb496f0ea4a27b3f",
+        "mtime_ns": 1792685306167975699
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationModalResidual.olean.server": {
+        "sha256": "c3164b4a20edf268285ce47aba999e2ee1bb779d7058629c68b10005d7b16502",
+        "mtime_ns": 1792685306161975671
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationNormBridge.olean": {
+        "sha256": "9e533b28bfa76c461fca5c221f4e87fdc204dffacde5dadf44b4c6638493de2a",
+        "mtime_ns": 1792685336324116103
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationNormBridge.olean.private": {
+        "sha256": "627891f473e66c0cbae77413a43ecc092ff757352eeefa08b01df171d6d1d929",
+        "mtime_ns": 1792685336333116145
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PopulationNormBridge.olean.server": {
+        "sha256": "f1e7f13b6664a9fce487705823c46b96688532854b1560536d55ba2be2760903",
+        "mtime_ns": 1792685336324116103
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PrimitiveDerivatives.olean": {
+        "sha256": "3fafe4fce6d6438494e9f45e9842de25d1abbd37f71e842f6ee401efafbe646b",
+        "mtime_ns": 1792685174548374279
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PrimitiveDerivatives.olean.private": {
+        "sha256": "ce0ac5fc503e6ee2023063220c13e65a0590bbd76ac0dcb8113d8b2bf1e8151b",
+        "mtime_ns": 1792685174549374283
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/PrimitiveDerivatives.olean.server": {
+        "sha256": "5fc8ca9c1f00b40f1badfed4f723b25fed9c4c8399e6cff87a46f20c1bc9fc5e",
+        "mtime_ns": 1792685174548374279
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ProjectedRemainder.olean": {
+        "sha256": "8fc8ebe77b700dea53db40993ff33614124d5063a47fc5232f2c2fbef19f6011",
+        "mtime_ns": 1792685114722107996
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ProjectedRemainder.olean.private": {
+        "sha256": "f04c06c15b4f25c8916f5b7e412fb98b92517443e7abb03fd6887e20b4dd508a",
+        "mtime_ns": 1792685114727108018
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ProjectedRemainder.olean.server": {
+        "sha256": "0fbb6aa29616bf2bd1f3e560a6d112542cd03f2544c2ff8ab4499262797f5829",
+        "mtime_ns": 1792685114722107996
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticJet.olean": {
+        "sha256": "46acfe7dbd47ea8d063de5c7a7fe39d65e1cd1520f28ee9d5a1521b5043af6bf",
+        "mtime_ns": 1792685174428373740
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticJet.olean.private": {
+        "sha256": "6105cd2a31394b4d100bf809e2314f482b822ba6b406950b97b9eb13dff409b3",
+        "mtime_ns": 1792685174433373762
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticJet.olean.server": {
+        "sha256": "e570bc8e33ff8fdc6bde8217f30574ecb95ddef6bb345fcbc7e7d5e2aa12df09",
+        "mtime_ns": 1792685174429373744
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticModeSupport.olean": {
+        "sha256": "2adeb80d5f2b311a9543b8fc589b36d2e66ed010e215a93f49dc2cf97ee5c6cc",
+        "mtime_ns": 1792685197599478143
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticModeSupport.olean.private": {
+        "sha256": "1402deaaae6ed4303a19f3be24034948b0fd0ee4d35fc0cb1cb98834b9ffda23",
+        "mtime_ns": 1792685197601478152
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuadraticModeSupport.olean.server": {
+        "sha256": "0ace79e256904856a1300d6ea8e447cfe7c2783b40afdbea7bf107025d1ab2e3",
+        "mtime_ns": 1792685197599478143
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuarticRoot.olean": {
+        "sha256": "dcfd0198fdbb8e9a00c2eea0a5f4679a81770ff63346f2c8cb818f0b84195eb2",
+        "mtime_ns": 1792685111334093066
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuarticRoot.olean.private": {
+        "sha256": "5a2bf9453ab1762ca5ee3ceafaab443b5a5ea34fab527930edd1482cf3567196",
+        "mtime_ns": 1792685111359093176
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/QuarticRoot.olean.server": {
+        "sha256": "447223131ebb70fc99dc8b6f1f60c7de6a234859db22c9d41c05b7c7e833dad5",
+        "mtime_ns": 1792685111334093066
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RationalCoefficient.olean": {
+        "sha256": "5a1b27aec56c8be4995eb206be9246af22d3df5984b5043d6303b95ccdd703c6",
+        "mtime_ns": 1792685220325581190
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RationalCoefficient.olean.private": {
+        "sha256": "41d109af778cd19fa3fd52862062846fcd1021fa73db7aecc30a6534f4ffd887",
+        "mtime_ns": 1792685220356581331
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RationalCoefficient.olean.server": {
+        "sha256": "8e02d7f55ac77fdae84f0ef4ec57b5bb958ae5ef628b30cedb61b813f4ed5128",
+        "mtime_ns": 1792685220326581195
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RelativeComponentClosure.olean": {
+        "sha256": "ccc6b1544c3aa2a7f5b9cb59b8eba605361363f70cb5c4b1d9282e0804448b1d",
+        "mtime_ns": 1792685104008060840
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RelativeComponentClosure.olean.private": {
+        "sha256": "bef7a23f7f321227eb5f15bfa83e035a32d0c786ae2a5da1d765fcca2e7fa8fb",
+        "mtime_ns": 1792685104009060844
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RelativeComponentClosure.olean.server": {
+        "sha256": "6d2f031f13ed874fda94cc7615bbe6a5646ef97bc955aa90f3fa0252b9aa1a25",
+        "mtime_ns": 1792685104008060840
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAmplitude.olean": {
+        "sha256": "29212733c747b9fec4d9c74567659ae414f6c147d85e7e36aaad8d2b88e196f1",
+        "mtime_ns": 1792685150560266922
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAmplitude.olean.private": {
+        "sha256": "575baca3dec39d6337a621b9599c92ca6be06d9f2f814805020990fa8e180b62",
+        "mtime_ns": 1792685150562266931
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAmplitude.olean.server": {
+        "sha256": "d6046fbb585103ee6dfb7a60c864aa25d273398ac58b87b5ab22304b81cb57fd",
+        "mtime_ns": 1792685150560266922
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAxis.olean": {
+        "sha256": "23848366d464c88588955471b02da29f2d88d758d04cb07600f92732653334a0",
+        "mtime_ns": 1792685317373027765
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAxis.olean.private": {
+        "sha256": "3749a8d5c428c91baddcc2f2e06480649c576a560f6140ca331ecea7a04be273",
+        "mtime_ns": 1792685317381027802
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderAxis.olean.server": {
+        "sha256": "55064ae4473194e323d2232d4c961a5228f608c8ca903c9c84fc0946ece37f7d",
+        "mtime_ns": 1792685317374027770
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderBounds.olean": {
+        "sha256": "bf076e3c7f30342e0558fff577dba89587e302cda89b90493e45cb33b30d95da",
+        "mtime_ns": 1792685170092354279
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderBounds.olean.private": {
+        "sha256": "1e77e3eb18706b1be068e2733d6169302b1ce379c2816c317e180ee203852e17",
+        "mtime_ns": 1792685170106354342
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderBounds.olean.server": {
+        "sha256": "d2d58c80234cd6ab3da765a5f713bfa629eb68485b80ae8e3c17d8da951899d4",
+        "mtime_ns": 1792685170093354283
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderFromJet.olean": {
+        "sha256": "c32eb39eaa2d96b67115779795effa9b716291e9e2ba8521c6c3d06417e2d625",
+        "mtime_ns": 1792685256592746882
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderFromJet.olean.private": {
+        "sha256": "e0d4b8bb39c26b6565c94efbcaacf3fda461929250c311345134d56fdb42a51d",
+        "mtime_ns": 1792685256610746965
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemainderFromJet.olean.server": {
+        "sha256": "2c4c403050eafeb518a7cb6af47e445bd51ec7c78e6ca027c0a1ecfb7523245d",
+        "mtime_ns": 1792685256592746882
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemarkFindings.olean": {
+        "sha256": "036afbb4a3a3eee98b6a9c60f96629d7bf0f335da44a1f5aa036d2c3eb0a8618",
+        "mtime_ns": 1792685338232125016
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemarkFindings.olean.private": {
+        "sha256": "2832dcef7e9d5d8fdebe4b8aba6c7cf3b3732abd5d787fbfe83aa5492d5f8238",
+        "mtime_ns": 1792685338286125268
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RemarkFindings.olean.server": {
+        "sha256": "26ac4ec43b00ac9204fc15d4994b9fa2e8daa7e42a0589b7c39fe37b26ca7a63",
+        "mtime_ns": 1792685338233125021
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootExhaustion.olean": {
+        "sha256": "70fd97c4bc28a59bd9c0d98cd8ef3f949a3c7be2a350fe42ec6bc5d4a690bd1c",
+        "mtime_ns": 1792685170366355508
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootExhaustion.olean.private": {
+        "sha256": "a31697fd5762487388a4f5694bf0a1f299f9020cd31dfc8c820c74dafa9d763a",
+        "mtime_ns": 1792685170379355566
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootExhaustion.olean.server": {
+        "sha256": "4a10e1212094d2ad3c880c53cdbff857c38de9ca962db0a294eff472b0c9b714",
+        "mtime_ns": 1792685170366355508
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootSigns.olean": {
+        "sha256": "ac927d011194b534fca904225a351a31ca910f4421dc8992bc7672248288d11c",
+        "mtime_ns": 1792685193881461345
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootSigns.olean.private": {
+        "sha256": "0e7a8ffd1fd245342fde12f63a9a0e3d6c496573a39f368afeeaadde97d39fb5",
+        "mtime_ns": 1792685193961461706
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootSigns.olean.server": {
+        "sha256": "027963d646c02673168d89cbd6439f1eca5863994959f372d310633b1a49442c",
+        "mtime_ns": 1792685193881461345
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTable.olean": {
+        "sha256": "01f6391967b54dee8ae1c305ac52aba47d7a31558cf88c38b9cf9d1a5ef55c97",
+        "mtime_ns": 1792685292893914181
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTable.olean.private": {
+        "sha256": "b988414c5aba76123393d056b55a668b23c94752b97050d8ac62c0e4f7574218",
+        "mtime_ns": 1792685292909914255
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTable.olean.server": {
+        "sha256": "ca4b141bb0f93360b54f0a3022bb0620369789ebd10bc0b5e9541d301f31da47",
+        "mtime_ns": 1792685292893914181
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAdmissible.olean": {
+        "sha256": "225c50ba4390dd3a8172fe758773a7c87bb5ef2d631da4eb2973e5537ad1ded0",
+        "mtime_ns": 1792685359963226766
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAdmissible.olean.private": {
+        "sha256": "1bf0e90d58e7deccda97ccdf46096687b78b6b03e661535fb8ce0404d3ab528b",
+        "mtime_ns": 1792685359979226841
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAdmissible.olean.server": {
+        "sha256": "2ebcf2f2947ee74715f7d13bccfb90f514166dd8b3ad52782fe1da2f4fc2bd02",
+        "mtime_ns": 1792685359964226771
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAggregate.olean": {
+        "sha256": "d5142b68f08a3420077d7900a89f82507b36613bb6aa74f71ce9b5b156cdfa00",
+        "mtime_ns": 1792685368663267622
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAggregate.olean.private": {
+        "sha256": "94a6b7c00fbd507ff8b89da27149e4e00f2bf6cdf1eb952468bb316dd0cb0a1f",
+        "mtime_ns": 1792685368682267711
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableAggregate.olean.server": {
+        "sha256": "93b72f582bca7cb0ed86401efe6dfd535863bf75dd8822a70a35239e6a287476",
+        "mtime_ns": 1792685368663267622
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableRemaining.olean": {
+        "sha256": "ffaff047b4c800e23b7b762237f54f3cb80a788ad4b664e4845671a0b2d88863",
+        "mtime_ns": 1792685326030068076
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableRemaining.olean.private": {
+        "sha256": "21225bad0a857c7bb67fc142563a2b3378543d9fc026e4f009a6f718f0cd254c",
+        "mtime_ns": 1792685326095068379
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/RootTableRemaining.olean.server": {
+        "sha256": "90d53b2a3f24b910742f71bc3dd9764a15620714e2decd53f65145b46d02d4aa",
+        "mtime_ns": 1792685326030068076
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SelectedSolutionComponents.olean": {
+        "sha256": "91379094e7c59f29e0ab04232250d799a492bf86e70d835e9abaeb10c0228f12",
+        "mtime_ns": 1792685404119434807
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SelectedSolutionComponents.olean.private": {
+        "sha256": "21755a5c098fa0976cfb826e53d49f94fa1f5841148a4d0f60f95dfd3a2cfea1",
+        "mtime_ns": 1792685404123434826
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SelectedSolutionComponents.olean.server": {
+        "sha256": "91468079863f1bb3dfcead7a8c78bf403405dc680fa189dcbfe56442e0f28da8",
+        "mtime_ns": 1792685404119434807
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Semidiscrete.olean": {
+        "sha256": "493487a997af858726fea2b2b0e8b466d14192ca3a0a4ad4e2a75690b3aa58b0",
+        "mtime_ns": 1792685126172158574
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Semidiscrete.olean.private": {
+        "sha256": "9ec621effeb611cfadd869accebb9fbbbc5dc788c836809b0a24fcf5cee44fa3",
+        "mtime_ns": 1792685126183158623
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Semidiscrete.olean.server": {
+        "sha256": "c22f09cef828db8ee04e95e277ca5c7e5d64a04d5f506ddc9bc3424957b94d9b",
+        "mtime_ns": 1792685126173158578
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SemidiscreteLimit.olean": {
+        "sha256": "848a231a4c0d71cf124c6c1dac5bd793e7abb9389bf07bd30857dcb6f4e01935",
+        "mtime_ns": 1792685164944331205
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SemidiscreteLimit.olean.private": {
+        "sha256": "a56c7dd5ae5a302f164b8b0a2a0dd8f4a49af5205bc244b137da792a419706dc",
+        "mtime_ns": 1792685164945331210
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SemidiscreteLimit.olean.server": {
+        "sha256": "c6d3c4327eac5d4d684a63f29570ba3ab95c0c4f430a5e1353ec2384ee3b8233",
+        "mtime_ns": 1792685164944331205
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalCompactness.olean": {
+        "sha256": "7e3c920fa11bb2982badbb6cbda47807b992908eb1c01972e800d82ef96f58e8",
+        "mtime_ns": 1792685141514226637
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalCompactness.olean.private": {
+        "sha256": "ba06943b79004b2e94345ab07c96263095c5cf845bc5b8830a159eeb491e7af7",
+        "mtime_ns": 1792685141523226677
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalCompactness.olean.server": {
+        "sha256": "7bfaf60feda3c65c9307b04670648a2373884a2cc858fea6a78bc3bcabae014c",
+        "mtime_ns": 1792685141514226637
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDerivatives.olean": {
+        "sha256": "c31cae947d2e0f4dab9a625cf65be36e0e44feed536558aa3cdaef43123d1dba",
+        "mtime_ns": 1792685204438509087
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDerivatives.olean.private": {
+        "sha256": "fb7355747425c936717dc57f7303bcd202c6f4d02559bdcf0290be7e5724dc08",
+        "mtime_ns": 1792685204447509127
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDerivatives.olean.server": {
+        "sha256": "1df3e2476ac7b63ebc212cde757f63178c6eb296edc07c5fef6db376f49f251e",
+        "mtime_ns": 1792685204439509091
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDirectLimit.olean": {
+        "sha256": "c221e7615682e50c10a4444543c6d6bffc6d5bff8e8e9e6a230de3c4ba9d00a1",
+        "mtime_ns": 1792685161485315722
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDirectLimit.olean.private": {
+        "sha256": "cfecd5d84493f665038540ed01125f00d269d6ef549235bcb7b34afb6cde061d",
+        "mtime_ns": 1792685161495315766
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalDirectLimit.olean.server": {
+        "sha256": "24116785a74b4ecd1902e0d0c746908033142515662452e962b2de08184b58fb",
+        "mtime_ns": 1792685161485315722
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalLipschitz.olean": {
+        "sha256": "a856256df9565ecefcc20db1157f2973be695b2d08d1dd9edcea14999ab4d346",
+        "mtime_ns": 1792685275213832525
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalLipschitz.olean.private": {
+        "sha256": "5bbcc10e6f1c6734c149aa34c8702a9ff34d6ad3db7ce7db68c10b36583edfc4",
+        "mtime_ns": 1792685275214832530
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalLipschitz.olean.server": {
+        "sha256": "14e396963d5accd95ada5f8bd706e66d5992212cecc0a6cd60e663a6051d6bfb",
+        "mtime_ns": 1792685275213832525
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalModalResidual.olean": {
+        "sha256": "c6335bd486d5343f0e3ab05b784f7de9fa0c275567c6d354a31e881bc72f4361",
+        "mtime_ns": 1792685332293097284
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalModalResidual.olean.private": {
+        "sha256": "9a356a2a2eb304d205666417e7a4bbd7c8ce3af6b16e03485e828f4097229e10",
+        "mtime_ns": 1792685332303097331
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalModalResidual.olean.server": {
+        "sha256": "46ceac4285b943fef4bb938de1454a5a3c0a18482dfc4597d83658909fb3087c",
+        "mtime_ns": 1792685332294097289
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPolynomialTesting.olean": {
+        "sha256": "f75ccca72a47adbe8840684a1d44f9a900f4cc962202e2aa794d2087999ec7ac",
+        "mtime_ns": 1792685224599600638
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPolynomialTesting.olean.private": {
+        "sha256": "100dcc863cda115541e489183af4711c1f5badec1eff2da80401b3f979c71c0f",
+        "mtime_ns": 1792685224607600674
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPolynomialTesting.olean.server": {
+        "sha256": "956e1e23a38826e4188bd27765b1c09cd100b6a31f68c6ee231c00d054a972a4",
+        "mtime_ns": 1792685224599600638
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPowerMoment.olean": {
+        "sha256": "f9d50474e6dd0098280ea04d75de2ff982f456856178dbff78eb40eb68339651",
+        "mtime_ns": 1792685162760321427
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPowerMoment.olean.private": {
+        "sha256": "c71c090c2a76605ebb4b2da561ebfcf0761f2fe2b104f5cbb2f4802d1f939ce7",
+        "mtime_ns": 1792685162766321454
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalPowerMoment.olean.server": {
+        "sha256": "d4cf72e23ac8050fd4bbd84e141262250e96d397a3149f67ba9a92f4bf49a9a0",
+        "mtime_ns": 1792685162760321427
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseContinuity.olean": {
+        "sha256": "e434701cca967cbb67ded76c1045ffd0c814b326ad5ea3c677e14729901df446",
+        "mtime_ns": 1792685388270359942
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseContinuity.olean.private": {
+        "sha256": "9e45b8500cf4e656cb0ff79676da00817c192509717325efcf64476c5be21f42",
+        "mtime_ns": 1792685388284360008
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseContinuity.olean.server": {
+        "sha256": "51abaa9103a0c251bd0c542e17da7964d037870305da8cf61ef0b704005b2f62",
+        "mtime_ns": 1792685388271359947
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJet.olean": {
+        "sha256": "e4cf0723c5cab603fe0f42ee7203fd132abb8ad32facdecadc33f0440d7e1f1c",
+        "mtime_ns": 1792685353620197022
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJet.olean.private": {
+        "sha256": "0d3275374bc13285cec7863f325f61f933c8619b95bdabf9279d9d03ef787d78",
+        "mtime_ns": 1792685353630197069
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJet.olean.server": {
+        "sha256": "2a8e84939dd0d1d5194158765795f24f7212198b89365e935ce6a48a9989e08c",
+        "mtime_ns": 1792685353620197022
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJetInterface.olean": {
+        "sha256": "be99868576feb323442afc29c6a33f7ba1d21d9d1302ff4e1a636a974a0f26d2",
+        "mtime_ns": 1792685363374242776
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJetInterface.olean.private": {
+        "sha256": "d8fcde05da5e27782d5a169645bfe4d88799d9d2e5287cd0f328ef1453af3aeb",
+        "mtime_ns": 1792685363376242786
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalResponseJetInterface.olean.server": {
+        "sha256": "29db491fe9a0232b540a50fed77be4bf11ba8128bc6a619663f97a162256288e",
+        "mtime_ns": 1792685363375242781
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSourceVanishing.olean": {
+        "sha256": "bbca611654001423ba3dfb06b3ffc469a37e077c29006f58ab55a71a29e46944",
+        "mtime_ns": 1792685140590222529
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSourceVanishing.olean.private": {
+        "sha256": "e2b57ae77d51c34e60b70cd8ffb20aab039a5f18a2153d35b1256124edb90ceb",
+        "mtime_ns": 1792685140600222573
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSourceVanishing.olean.server": {
+        "sha256": "8357c39eb0e9eff4aa5cbbaf8591c88676980e6f8ac64625851be5e524493e71",
+        "mtime_ns": 1792685140591222533
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSpikeSubsequence.olean": {
+        "sha256": "16d38b40a2225b22297f7d6eb96781e76f4923885504f7d832f2de15e7601be9",
+        "mtime_ns": 1792685176577383394
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSpikeSubsequence.olean.private": {
+        "sha256": "3eccc37c071cc14a1b15d3f2a6b5c4f5eb84867eac78a2c37b72c54cd6b5237a",
+        "mtime_ns": 1792685176579383403
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalSpikeSubsequence.olean.server": {
+        "sha256": "82da98e4dbad6e0da513e45897f5a1b3b3cae7d474dd605767eb8f6f66e9b081",
+        "mtime_ns": 1792685176577383394
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTaylorRemainder.olean": {
+        "sha256": "0f83ddea6cca8dc670ca4ea448ba4ae27f17dea79d53f5b1d504ad8ca3d4a75f",
+        "mtime_ns": 1792685229223621702
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTaylorRemainder.olean.private": {
+        "sha256": "518a1b903d3d83f8c890f114fec34a574176be78990bef3686ca32a84488ac78",
+        "mtime_ns": 1792685229238621771
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTaylorRemainder.olean.server": {
+        "sha256": "defe8859efc5216afca50f0b4fb754555a2a77d7c0d310de3a8f75b00e01dc64",
+        "mtime_ns": 1792685229224621707
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTesting.olean": {
+        "sha256": "08e0b87d8ade9f489dfb8b04be9bc7ffe0b108dc0f7d9eaf429676b90237f90c",
+        "mtime_ns": 1792685119717130037
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTesting.olean.private": {
+        "sha256": "db28caa0c09bbce60aae812678cc91936a1f06aabe99685f2be4b401fc3b990b",
+        "mtime_ns": 1792685119729130090
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalTesting.olean.server": {
+        "sha256": "031333802b317a64e1474550811ab47cb3d18f34ad258a56dd8f25856132a0a5",
+        "mtime_ns": 1792685119717130037
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSobolev.olean": {
+        "sha256": "2f8b659fbd4c221589849d93e866048589a6e85a7f016cba8041fe70e65360e8",
+        "mtime_ns": 1792685293527917115
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSobolev.olean.private": {
+        "sha256": "26cb00aead3b3802b11310021695ceb2062e5e5e980a33fa6bb76f5ffa96937b",
+        "mtime_ns": 1792685293530917129
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSobolev.olean.server": {
+        "sha256": "5c9e81abeb8d845f4328f6862e5763ddfdb746321577d9797498ac10826530ed",
+        "mtime_ns": 1792685293527917115
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSource.olean": {
+        "sha256": "385a5a137f1fc7591103a9325fe835cb89c6509cb4ae593f365ab90f1a243f36",
+        "mtime_ns": 1792685260610765331
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSource.olean.private": {
+        "sha256": "c39d3bd00543594b75e3d0d118160d2bdd57f1b1f809b9195c0652a34a63b952",
+        "mtime_ns": 1792685260617765363
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSource.olean.server": {
+        "sha256": "e5ab68a0b1640adf3ff70d92e0b357610263265554eae5d6762afea74127b586",
+        "mtime_ns": 1792685260611765335
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSubsequence.olean": {
+        "sha256": "a5d0ce905a0b660487a6f085c932438aa3707943fd61b6019490774bdd108245",
+        "mtime_ns": 1792685319993039957
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSubsequence.olean.private": {
+        "sha256": "8ea4094a8ae24e23251f3f3a67e78f6d045136131344fdc382ba6be878766114",
+        "mtime_ns": 1792685319995039967
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakSubsequence.olean.server": {
+        "sha256": "107bf8d277acb014c6b35b136d362d581551f68d62954db9890ad07be1c04523",
+        "mtime_ns": 1792685319993039957
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakTesting.olean": {
+        "sha256": "b6f6a03b61db77e825597043795f21ab101cefc51be771fbef216027e332377f",
+        "mtime_ns": 1792685203993507071
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakTesting.olean.private": {
+        "sha256": "86421dec704bb8921119f0cb5209267c01e4b03e213c07cf4fbe5a29ff9d7a8e",
+        "mtime_ns": 1792685203998507094
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignalWeakTesting.olean.server": {
+        "sha256": "ac8b9e135fcaebb95f1757d4bbceb692b78c17c317a4fca0f7fe356e32fddb3e",
+        "mtime_ns": 1792685203993507071
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignedEllipticEnergy.olean": {
+        "sha256": "fb2a213dfbb0cc3d73912cab4fbcf62acb7c43e7232bb77a1b79a6194d822511",
+        "mtime_ns": 1792685118664125388
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignedEllipticEnergy.olean.private": {
+        "sha256": "48b59229bfc98221d871f2c9e39f603e00cc39bd5f140b6d01f05ba9a004851a",
+        "mtime_ns": 1792685118688125494
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SignedEllipticEnergy.olean.server": {
+        "sha256": "fa8058c81133e7129daf16a496b0f7e929d9bf8c3410c8c8e94d0a747c7e458f",
+        "mtime_ns": 1792685118665125392
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SinePotentialBound.olean": {
+        "sha256": "2398381f33a6c3ef1badfd7b213c6f12b2cf29550f2e8ed8028953ed8cb9dd7b",
+        "mtime_ns": 1792685230106625728
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SinePotentialBound.olean.private": {
+        "sha256": "227d87ec84edf9f46f230ce476dee9e2a2e23950f52550312c6130440cffe678",
+        "mtime_ns": 1792685230114625764
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SinePotentialBound.olean.server": {
+        "sha256": "f417eec67c4c124a1573c66c8b8b8d0a1037399be3ba7733ef967e0c08676fdb",
+        "mtime_ns": 1792685230106625728
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomain.olean": {
+        "sha256": "2e4fe144b59fb543486d76982c67dae83c5b1e7f4d6a1f483f1d8eeb2f7046a6",
+        "mtime_ns": 1792685304711968942
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomain.olean.private": {
+        "sha256": "2d3eba28a30be5e339a5a38e368c161cc0251cb088f8b8868880d434b656cf73",
+        "mtime_ns": 1792685304778969253
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomain.olean.server": {
+        "sha256": "296c20d43499ceb692d90a433988f7e590ab35cda2ba9dd63b5ffbaeccbdbf44",
+        "mtime_ns": 1792685304711968942
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomainRate.olean": {
+        "sha256": "a29ef4276b831e9e35c8b9bf86ff490ad8843f99349b731257969e714c9e9b04",
+        "mtime_ns": 1792685362559238950
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomainRate.olean.private": {
+        "sha256": "5ddea420e841e6fd8238d4e946b217776208964fc5b4e44073724d04c9d3dca7",
+        "mtime_ns": 1792685362567238988
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SmallDomainRate.olean.server": {
+        "sha256": "0a84fb8e2008cb65564f5f15f0df5eda15d3f25009145e10d1fbba944b66ac01",
+        "mtime_ns": 1792685362559238950
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpecializedPolynomial.olean": {
+        "sha256": "8a27f96b2eaa2e404b279fe3028c458623617ebc0e6d0bc00c6f1645af99f591",
+        "mtime_ns": 1792685127191163084
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpecializedPolynomial.olean.private": {
+        "sha256": "aebde77b9de6a4bbc7d99e2260f78ca57396f9046c5424c0a0e380fe8da1db25",
+        "mtime_ns": 1792685127225163235
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpecializedPolynomial.olean.server": {
+        "sha256": "4c8e54fcdb9d27ee815fb1817267b9e4b9b698cd5772d33af0ccaecbb34d992b",
+        "mtime_ns": 1792685127191163084
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimates.olean": {
+        "sha256": "3954d01ba2b972411914c9fcabafd9116b2ee30783f7a66af346d65975476dac",
+        "mtime_ns": 1792685097064030368
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimates.olean.private": {
+        "sha256": "33821d16054576c82c5d5edb32a6f0d40f2606815557726a2c07030a034ec9a4",
+        "mtime_ns": 1792685097181030881
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimates.olean.server": {
+        "sha256": "475c52bf62abb6a620c6702afd4f16a88a935828b909c3b68b8f77d9bb645cfe",
+        "mtime_ns": 1792685097064030368
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimatesLogistic.olean": {
+        "sha256": "a69b19205d9ecfa49ef9a4492eff80b02a66197cdaf188084f689646dfe85126",
+        "mtime_ns": 1792685109566085281
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimatesLogistic.olean.private": {
+        "sha256": "debf8fb362d26447b4d30322279dd76f19c008841f60a4ef1001c6da7b177976",
+        "mtime_ns": 1792685109669085735
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeEstimatesLogistic.olean.server": {
+        "sha256": "7810c3c7dd8acdf979f93e63628573f758849552c512657109fddb1a9de909c5",
+        "mtime_ns": 1792685109567085286
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimit.olean": {
+        "sha256": "ddae3e67004cc456acf3bcb3eead6c100e0f665b63c819a05908e2aea2140f65",
+        "mtime_ns": 1792685112926100079
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimit.olean.private": {
+        "sha256": "6986fb64832cb61ad3e69665223c1672d4fa45fede386907804c525d818f50bf",
+        "mtime_ns": 1792685112971100277
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimit.olean.server": {
+        "sha256": "4da48b0f8322b85a858bf447e5c18e3df412fce73294f0512cd8e313a665c106",
+        "mtime_ns": 1792685112926100079
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimitBlowup.olean": {
+        "sha256": "2b86bc184c826ff1ec6b9b0c9d4e6647adb86fb5b4b6a9968089eb5adea9e914",
+        "mtime_ns": 1792685137780210042
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimitBlowup.olean.private": {
+        "sha256": "9e4074a3d020e7177af083eb1320fa7c9deb786c63c79aa12e0e337b757a3c5b",
+        "mtime_ns": 1792685137794210104
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/SpikeLimitBlowup.olean.server": {
+        "sha256": "e371afc4494f5c9fa27c17c51dad1981139adebb3b6c4a8f5e3f12200dc9fbdd",
+        "mtime_ns": 1792685137780210042
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryCompactness.olean": {
+        "sha256": "3094b44be6c96aef2c52e81a42441258f8c151d6b05ce4fb5454305551e13d1f",
+        "mtime_ns": 1792685297024933307
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryCompactness.olean.private": {
+        "sha256": "5f42ac218904753b6c56f2f18b3634a379dccad1ba1ac85f2b9ffd1be2d71299",
+        "mtime_ns": 1792685297027933321
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryCompactness.olean.server": {
+        "sha256": "c832fc2b5d3841b2127d3006dce07f80b4fc2a971167d586a0bea090e421bb78",
+        "mtime_ns": 1792685297024933307
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryHolderField.olean": {
+        "sha256": "e22b4e1ab35ea2d7216c1288c874308f35baf8418db6d54647e130c0211f4d9c",
+        "mtime_ns": 1792685381684328895
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryHolderField.olean.private": {
+        "sha256": "eaf5de6c804ffcd8a49e519bd003290f2acb121a8dc386c88e2b137f9295f3b4",
+        "mtime_ns": 1792685381690328923
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryHolderField.olean.server": {
+        "sha256": "2a603c599634ca08fd3f7236440df002dcc50921f8d04a7783c87f6bc1184ea4",
+        "mtime_ns": 1792685381684328895
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryLimitProfile.olean": {
+        "sha256": "518948274060059e5d0deb5dea12409cce9ea8017cfedffdc3f2d43a23e31f58",
+        "mtime_ns": 1792685327232073679
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryLimitProfile.olean.private": {
+        "sha256": "78565b240f010f5e468646f3c75cf44331f976c46cb9db6715b5c89fe1476552",
+        "mtime_ns": 1792685327237073702
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryLimitProfile.olean.server": {
+        "sha256": "eb1150428843bea91b7402640302caf0231fda31d4b314112241ccbcdf2669e0",
+        "mtime_ns": 1792685327232073679
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassBounds.olean": {
+        "sha256": "638c6fa572f1a87510ac77d4565541162f49bee05808d3a32ff316b792409400",
+        "mtime_ns": 1792685085411979400
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassBounds.olean.private": {
+        "sha256": "fb0e2e63785540fc55d3e57aaa46cc08193ab211f1cbea88688c5d45324eaa83",
+        "mtime_ns": 1792685085415979417
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassBounds.olean.server": {
+        "sha256": "69c41f5f65deb863c648047dd96d29d7c616694d8e570eb93182965a8f207d43",
+        "mtime_ns": 1792685085411979400
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassIdentity.olean": {
+        "sha256": "680c25a46422a3648269ba58378a474c57a8cb96ded532d2aea7691e6964e983",
+        "mtime_ns": 1792685101784051073
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassIdentity.olean.private": {
+        "sha256": "c77d8e98aabdfc3dbb5a104959657adc578f4818f7bc7fad10822daf32e665f5",
+        "mtime_ns": 1792685101790051099
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryMassIdentity.olean.server": {
+        "sha256": "6883ac5454584f8f0c82b2ef705103cb0a9284472d49c77f5eac6df016cc766e",
+        "mtime_ns": 1792685101785051077
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryODEState.olean": {
+        "sha256": "ed44d01413847b48478505680ab77553fb8414ac30da6665f213b3a2f62685bf",
+        "mtime_ns": 1792685279345851580
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryODEState.olean.private": {
+        "sha256": "eff88daee853f25b746b54dc34e1b9854f3cfa3ebfa1dc4b9cdb8ae0cd2f4a96",
+        "mtime_ns": 1792685279353851617
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/StationaryODEState.olean.server": {
+        "sha256": "4c61afafae766340fbfe84e867f10d679bfa206b817e3705b84c86ee2eb09242",
+        "mtime_ns": 1792685279346851585
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Taylor.olean": {
+        "sha256": "4d2c0b979a3b6b83c63ed19b3b91cc73ec50cba7de3feb5d314daa704376ff47",
+        "mtime_ns": 1792685156589293832
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Taylor.olean.private": {
+        "sha256": "37ec59179aff4b242718b76cf9581162549971cf45bc5fa35bc7ca4aff4322b3",
+        "mtime_ns": 1792685156617293957
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Taylor.olean.server": {
+        "sha256": "d9d9b26000a9cb7f3ae4317acd1581a376253b58eaa1bb3a63c855dee0a3f744",
+        "mtime_ns": 1792685156589293832
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ThresholdCutoff.olean": {
+        "sha256": "972e3c6251fd254addf1bc7bd585a3bd30f32e881816397d6b1b47db1367b771",
+        "mtime_ns": 1792685145701245269
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ThresholdCutoff.olean.private": {
+        "sha256": "9486ff430e576d94aa6d8c91ad0e829bb24c3c705f2a07ed376efdf786a0ad3b",
+        "mtime_ns": 1792685145745245465
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/ThresholdCutoff.olean.server": {
+        "sha256": "1e255f80a4de1f59da39de80005c26c4e5f3aa20a717c00cf348e880dd0fe06c",
+        "mtime_ns": 1792685145701245269
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Thresholds.olean": {
+        "sha256": "e407ac29093ec23f4a444aebb5e289ea20c9a122a1ca497e6004ebb523f8cf64",
+        "mtime_ns": 1792685147126251616
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Thresholds.olean.private": {
+        "sha256": "fa3af14c8e8287dcf62b62f5dad8eb91e992fd58fc7929c8a2288fe2bc91bdf6",
+        "mtime_ns": 1792685147144251696
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/Thresholds.olean.server": {
+        "sha256": "e8734f61c8b6fde1c54e1f6768405fcd7028966c1fd07e662125af91254b2665",
+        "mtime_ns": 1792685147127251620
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TrigIntegrals.olean": {
+        "sha256": "16c8b3b551b0e52f72b22ef6348d268511740ad503cc48fb8431a2e9ad3dfa03",
+        "mtime_ns": 1792685209429531705
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TrigIntegrals.olean.private": {
+        "sha256": "ebed78843cb23a27051c9b3ccca8e90a3db70972ab25094db16a63c3aabaad5e",
+        "mtime_ns": 1792685209447531787
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TrigIntegrals.olean.server": {
+        "sha256": "d8962b234075dbd2a66a98094b2989295c5d0246039f2e82555e893407f6d094",
+        "mtime_ns": 1792685209429531705
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TwoRootExhaustion.olean": {
+        "sha256": "6a36d74e43bb0a7e0ab7eec85a83df15e4f0b8fc819536c06a90ef197415c90c",
+        "mtime_ns": 1792685349432177403
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TwoRootExhaustion.olean.private": {
+        "sha256": "9ffb9ab47cf2330c07f9ad3c31e827fcc86624c5c50f7fcb3321d756e11334ec",
+        "mtime_ns": 1792685349455177511
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/TwoRootExhaustion.olean.server": {
+        "sha256": "6d20a84c81e205b93b85f7a11cf103e8999166498043b6745525073a6df4689e",
+        "mtime_ns": 1792685349433177408
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformComponentH2.olean": {
+        "sha256": "3b6dbd231ff9121988734583574396ffad4b3a41070ea5125e5dbfad29a60178",
+        "mtime_ns": 1792685364168246504
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformComponentH2.olean.private": {
+        "sha256": "768833f537c010f7af7feb3b8f03698ee5e26d64052473596181187d2632ec85",
+        "mtime_ns": 1792685364172246523
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformComponentH2.olean.server": {
+        "sha256": "ae63f94303f91b2c8ec0f5df26626981980b376a626f2c3dd826bc327965d4aa",
+        "mtime_ns": 1792685364168246504
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformHolderAlgebra.olean": {
+        "sha256": "117d0d813f5607901bd9cd63f6f12a5c277c705f7133a914390986690d5d231c",
+        "mtime_ns": 1792685182973412163
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformHolderAlgebra.olean.private": {
+        "sha256": "1967d07e6a17ebf86017634db59705e7b05a43f7fb279b721182442bf6d76fa9",
+        "mtime_ns": 1792685182987412226
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/UniformHolderAlgebra.olean.server": {
+        "sha256": "2272ebd8fdf5713fae034ea5866315c45c0487260ece40f54317cc03616f0812",
+        "mtime_ns": 1792685182974412167
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakDerivative1D.olean": {
+        "sha256": "e38be3859e644011411d45a6cfd93e432c910583e69e0ebc6b61ac9e4d958c07",
+        "mtime_ns": 1792685285839881563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakDerivative1D.olean.private": {
+        "sha256": "04b9763a565016c42946caef43b35f71c55584556858ffed1201046febc3ccf9",
+        "mtime_ns": 1792685285849881609
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakDerivative1D.olean.server": {
+        "sha256": "dec93a245cacd175f492297e0e70f45bdb2f528a31ac686fa1101f97318fa75e",
+        "mtime_ns": 1792685285839881563
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2AmbientClosure.olean": {
+        "sha256": "3645a303c105a14faec5af3a5a0ab3c5b0a60d74e59b8c0f18903422097dbfe5",
+        "mtime_ns": 1792685396108396939
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2AmbientClosure.olean.private": {
+        "sha256": "ccbdc4d4ad598fd2d4d5fa216704afa06b7a646995c9b9966333d3f8db84f969",
+        "mtime_ns": 1792685396118396987
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2AmbientClosure.olean.server": {
+        "sha256": "5603c78fb79956103813158046ca5e4b3e2ef12b959603b56222b1f246250710",
+        "mtime_ns": 1792685396108396939
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Compactness.olean": {
+        "sha256": "88f4760796dadd637b609aeaaaf953206d3b890c7533920e835d62becf5a686b",
+        "mtime_ns": 1792685381411327608
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Compactness.olean.private": {
+        "sha256": "c4435b35455dd919f72acc2a3bb74dd6c402d59e4f5460ea522656e8291734c8",
+        "mtime_ns": 1792685381424327670
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Compactness.olean.server": {
+        "sha256": "cf25a4fa086a9101a63343343fcc4b697b0b69cfcf5b68240483b8a18cd6818f",
+        "mtime_ns": 1792685381411327608
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2CosineMode.olean": {
+        "sha256": "c510f346c9af7b3bf61706ddf940f6d4a38213cc0bfd43389d2aa0458c4a139e",
+        "mtime_ns": 1792685416910495378
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2CosineMode.olean.private": {
+        "sha256": "2f920074074d42c276f3c1380ce90a628ba0e7909f43f4f7df8b1a9f818a6569",
+        "mtime_ns": 1792685416915495401
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2CosineMode.olean.server": {
+        "sha256": "bdb949f3526773ce9867af498a7bef9177b2b14b70852bbae10ca457588e85fa",
+        "mtime_ns": 1792685416910495378
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Embedding.olean": {
+        "sha256": "664abf069b0ea9b080ebc30e7b38e455b630696eb08a6b29d503d5bcafca2c09",
+        "mtime_ns": 1792685341539140472
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Embedding.olean.private": {
+        "sha256": "1186358359dfad9fef460eb67d2f6658bba845caa2c602e52dd69a567ee20c3c",
+        "mtime_ns": 1792685341544140495
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2Embedding.olean.server": {
+        "sha256": "e7bc5908492e08d26785c00a12c92f8b35986a5123125eed74a39edab3357374",
+        "mtime_ns": 1792685341539140472
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MeanJet.olean": {
+        "sha256": "39fef0b23def126a12b44f0713cf1dea960c93c438b506ee513951c325b04e2a",
+        "mtime_ns": 1792685432228568089
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MeanJet.olean.private": {
+        "sha256": "438e2df588c55c9a5174d6f71f97de4e2fc52130211ccfac61ef7a11b0a115c5",
+        "mtime_ns": 1792685432230568098
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MeanJet.olean.server": {
+        "sha256": "b959554e99c5c062ba1a58c991304106d2b191b4cd451c4019af9655cdf9a956",
+        "mtime_ns": 1792685432228568089
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MonotoneLocus.olean": {
+        "sha256": "49ae4508ad6765f1a13b0ff9b26238afe674aa7735891259971526bb497195ce",
+        "mtime_ns": 1792685401979424686
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MonotoneLocus.olean.private": {
+        "sha256": "b90ea9ad73f5edff7a70b277447ca398daaf5aa887a1b8ef373cc655e7cb3a11",
+        "mtime_ns": 1792685401983424705
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2MonotoneLocus.olean.server": {
+        "sha256": "5ac0128c0d5bcec150d7e9635da1a89210a4f7feceb878cd0551eeabbeb3327f",
+        "mtime_ns": 1792685401979424686
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2PhaseSpace.olean": {
+        "sha256": "f0d11dbb76e353e302b924acd0eea8150e7aa52ba6079a7a54158c09245b590e",
+        "mtime_ns": 1792685354461200963
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2PhaseSpace.olean.private": {
+        "sha256": "6fa7c8fab7bdec5116b8b0f61c4624f65246fa7e5438b0006e2766bc5adb908d",
+        "mtime_ns": 1792685354470201006
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation/WeakH2PhaseSpace.olean.server": {
+        "sha256": "ebed54100b356ff5097f23c337e1e7414e6a3a70cdc1f27a52eea856e65f5674",
+        "mtime_ns": 1792685354461200963
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation.olean": {
+        "sha256": "7a4dbf0dda41ae86196d6b07e63bb3403d9d16a28d0ef346d61d777b6a0623fc",
+        "mtime_ns": 1792685435471583506
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation.olean.private": {
+        "sha256": "abf598a37524f264030ececad62b4fa8ed43a0baca632c05a322361de3960450",
+        "mtime_ns": 1792685435471583506
+      },
+      ".lake/build/lib/lean/ChemotaxisBifurcation.olean.server": {
+        "sha256": "af622d5e0726479c1e3c0870ac53ed1badde7865eb29033c39862e30a8bf4f72",
+        "mtime_ns": 1792685435471583506
+      }
+    },
+    "unchanged_during_collector": true
+  },
+  "documentation_recovery": {
+    "tracked": {
+      "coverage.yaml": {
+        "old_sha256": "b72c0e6d986c509c40fa45cb9de278abadb51b9f21d0945ca675b57d60de461d",
+        "new_sha256": "71b2c54acebd743c855b5901d3d3514459eb23797b67cf4925326fae04948463"
+      },
+      "docs/what-is-proved.md": {
+        "old_sha256": "ed99f8141da6fc2187d65640850f07b938ea9808cd4b5175d2e11494a8839a32",
+        "new_sha256": "3f7c769bd4fa3f5874b13b07d0863005ed1af2d544386bdd7c9f5a458aa80b5b"
+      }
+    },
+    "untracked": {
+      "docs/public-release-review.md": "c0abf7173f0f8645590172d77bdf6cb7bfa3f85e717f043d940e91e49769758d",
+      ".lean-receipts/c749b53b0221-comparator.json": "fcabef0488dd0fd48341378a39b595ac26f7ec789b99f0ebdbf5a8e35dfd4da5",
+      ".lean-receipts/c749b53b0221-comparator-comparator.headline.log": "bbff72d108e530774a7bfe8e3cfb29aad05d1d03668f8800fd18f1f5a50ab7dc",
+      ".lean-receipts/c749b53b0221-comparator-comparator.log": "91bf5d53a1aafcc131998231bc2ff591c53221da86efa4918a890cb19184a582"
+    }
+  }
+}

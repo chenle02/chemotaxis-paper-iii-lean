@@ -1,0 +1,38 @@
+{
+  "commit": "c749b53b02211901063228f52af123419b0dbaf5",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "sorry_count": 0,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "report_sha256": "b8b85f6c7c65ea419169f1c03edea2ed777b64f893f4a72676af773dc9937b2b",
+  "job_id": "systemd-user:chemotaxis-public-evidence.service:4aa33770c3694c2795ff01001fe5756a@h-24e00fc5da6c",
+  "checker": "authenticate completed source-only proof phases and full uncached body audit; independently sealed composite collector, no compile/body walk repeated",
+  "generated_at": "2026-10-22T16:52:51Z",
+  "job_stdout_sha256": "b50539b51a168b285e8eae3af52a41da3fd4ba302e0936d7f4402e85e750dc49",
+  "manifest_sha256": "fa306b6ef8ba01d84a33abc1166e297dafa174dcb1221e862452cc4880473945",
+  "log_commit_bound": true,
+  "claim_axioms": {
+    "checked": 1525,
+    "nonstandard": [],
+    "missing": []
+  },
+  "producer": {
+    "lean_pkg": "0.20.0",
+    "install": "installed",
+    "commit": null,
+    "dirty": null,
+    "sources_sha256": "558e6675cac80492b5ba57c2b12541b7cc408e6abf01b6cc7dc6b727fab8ea84",
+    "source_files": 76,
+    "python": "3.12.3"
+  },
+  "unit_properties_sha256": "3fc987cbca8975b8295884e2d588850ea1cac278944c8c1808ecff3da8608d15",
+  "report_compressed": {
+    "format": "gzip",
+    "sha256": "0cad4954e3e97ec762a66c22ed39ced34f3d3f84809be4078805545b948c4a13",
+    "bytes": 2011412
+  }
+}

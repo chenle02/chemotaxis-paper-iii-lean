@@ -2,7 +2,7 @@
 
 A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary estimates, compactness and conditional bifurcation deductions for Chemotaxis III.
 
-![Lean](https://img.shields.io/badge/Lean-4.35.0-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![Lean](https://img.shields.io/badge/Lean-4.35.0-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green) ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 
 ## What is proved
 
@@ -52,7 +52,7 @@ To use the library from another Lake project:
 [[require]]
 name = "chemotaxis-bifurcation-lean"
 git = "https://github.com/chenle02/chemotaxis-paper-iii-lean"
-rev = "main" # use an immutable release commit for reproducible work
+rev = "v0.1.0"
 ```
 
 ## Trust and axioms
@@ -76,5 +76,5 @@ Paper authors: Le Chen, Ian Ruau and Wenxian Shen. Lean formalization and mainte
 
 These standalone packages have their own APIs, receipts and releases. The companion currently retains its existing checked source rather than changing dependency identities during publication.
 
-<!-- lean-pkg:begin -->
-<!-- lean-pkg:end -->
+<!-- lean-pkg:page:begin -->
+<!-- lean-pkg:page:end -->

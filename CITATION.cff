@@ -38,4 +38,7 @@ references:
   identifiers:
   - type: other
     value: arXiv:2610.20976v1
-    description: Published preprint predecessor; the public scope ledger targets the October 20, 2026 v2 candidate
+    description: Published preprint predecessor; the public scope ledger targets the
+      October 20, 2026 v2 candidate
+version: 0.1.0
+date-released: '2026-10-22'

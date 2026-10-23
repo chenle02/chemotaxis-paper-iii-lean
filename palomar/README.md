@@ -68,3 +68,19 @@ Full PDE local bifurcation and branch exhaustion, center-manifold construction,
 operator/Fredholm identification, global continuation and PDE stability remain
 outside this submission. The conditional analytic inputs are not custom axioms
 and must not be described as already established for every PDE solution.
+
+## Mechanical preflight before intake
+
+The preparation branch's manual `lean.yml` workflow calls Palomar's complete
+reusable verifier at immutable revision
+`ad5db9e7ff8b17523d73aeb244aaeabcde810c64`, with `mode: full`,
+`execution_profile: palomar-standard-v1`, and the same revision as
+`pipeline_commit`. It checks this branch's exact commit, the headline Comparator
+configuration and this directory's metadata. It has read-only repository
+permissions and no automatic push or pull-request trigger. The released main
+branch's workflow is unchanged.
+
+A passing local Comparator replay or metadata check is not equivalent to that
+complete preflight. Before actual intake, retain a `status: pass` mechanical
+report for the exact selected source commit. Intake and permanent registration
+remain separate actions; no registration is authorized by preparing this packet.

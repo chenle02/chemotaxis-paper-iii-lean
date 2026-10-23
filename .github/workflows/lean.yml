@@ -13,4 +13,4 @@ jobs:
       request_id: chemotaxis-headline-20261022
       mode: full
       execution_profile: palomar-standard-v1
-      options: '{"comparator_config_path":"comparator.headline.json","formalization_metadata_path":"palomar/formalization.yaml"}'
+      options: '{"comparator_config_path":"comparator.headline.json","formalization_metadata_path":"palomar/formalization.yaml","authorization_relationship":"maintainer"}'

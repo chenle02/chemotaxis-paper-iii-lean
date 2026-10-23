@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/mark.svg' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <script src="{{ '/assets/math.js' | relative_url }}"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" integrity="sha384-AHAnt9ZhGeHIrydA1Kp1L7FN+2UosbF7RQg6C+9Is/a7kDpQ1684C2iH2VWil6r4" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header>
+    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/mark.svg' | relative_url }}" alt=""><span>Chemotaxis III in Lean</span></a>
+    <nav aria-label="Main">
+      {% assign nav = "/|Overview,/what-is-proved.html|What is proved,/verification.html|Verification,/scope-ledger.html|Scope ledger,/coverage.html|Coverage,/reproducing.html|Reproduce,/evidence/|Evidence" | split: "," %}
+      {% for item in nav %}{% assign parts = item | split: "|" %}<a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>{% endfor %}
+    </nav>
+  </header>
+  <main id="content">
+{{ content }}
+  </main>
+  <footer>
+    chemotaxis-bifurcation-lean 0.1.0 ·
+    <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean">Source on GitHub</a> ·
+    <a href="https://github.com/chenle02/chemotaxis-paper-iii">Paper</a> ·
+    <a href="https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/llms.txt">llms.txt</a> ·
+    <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/CITATION.cff">CITATION.cff</a> ·
+    <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/LICENSE">Apache-2.0</a>
+  </footer>
+</body>
+</html>

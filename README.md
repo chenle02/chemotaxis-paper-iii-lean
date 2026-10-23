@@ -1,8 +1,24 @@
+<p align="center">
+  <img src="docs/assets/chemotaxis-banner.svg" width="560" alt="Cells drifting up a signal gradient toward a spike-like stationary profile">
+</p>
+
 # Chemotaxis III in Lean
 
 A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary estimates, compactness and conditional bifurcation deductions for Chemotaxis III.
 
 ![Lean](https://img.shields.io/badge/Lean-4.35.0-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green) ![Version](https://img.shields.io/badge/version-0.1.0-blue)
+[![Release](https://img.shields.io/github/v/release/chenle02/chemotaxis-paper-iii-lean)](https://github.com/chenle02/chemotaxis-paper-iii-lean/releases/tag/v0.1.0)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.20976-b31b1b)](https://arxiv.org/abs/2610.20976v1)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-1d4a52)](https://chenle02.github.io/chemotaxis-paper-iii-lean/)
+
+**Start here:** [documentation site](https://chenle02.github.io/chemotaxis-paper-iii-lean/) ·
+[what is proved](docs/what-is-proved.md) ·
+[exact Lean statements](docs/verification.md) ·
+[scope ledger](docs/scope-ledger.md) ·
+[reproduce](docs/reproducing.md) ·
+[evidence](docs/evidence/README.md) ·
+[paper](https://github.com/chenle02/chemotaxis-paper-iii) ·
+for coding agents: [`llms.txt`](llms.txt)
 
 ## What is proved
 

@@ -1,0 +1,12 @@
+title: Chemotaxis III in Lean
+description: Partial Lean 4 formalization of Chemotaxis III, with an explicit verified, conditional and excluded scope ledger.
+url: https://chenle02.github.io
+baseurl: /chemotaxis-paper-iii-lean
+markdown: kramdown
+theme: null
+plugins: []
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

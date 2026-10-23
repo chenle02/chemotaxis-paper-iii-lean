@@ -1,0 +1,62 @@
+---
+title: Chemotaxis III in Lean
+description: Partial Lean 4 formalization of Chemotaxis III, with an explicit verified, conditional and excluded scope ledger.
+permalink: /
+---
+
+<section class="hero">
+<p class="eyebrow">Lean 4 / Mathlib companion · release v0.1.0</p>
+<h1>Chemotaxis III in Lean</h1>
+<img class="banner" src="{{ '/assets/chemotaxis-banner.svg' | relative_url }}" alt="Cells drifting up a signal gradient toward a spike-like stationary profile">
+<p class="lead">A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary estimates, compactness and conditional bifurcation deductions for Chemotaxis III.</p>
+<p class="actions"><a class="button" href="{{ '/what-is-proved.html' | relative_url }}">What is proved</a> <a class="button secondary" href="{{ '/verification.html' | relative_url }}">Exact Lean statements</a> <a class="button secondary" href="{{ '/reproducing.html' | relative_url }}">Reproduce</a></p>
+</section>
+
+## What is proved
+
+The library supplies finite coefficient and modal identities, classical stationary mass and regularity estimates, weak limits and spike subsequences under stated inputs, bounded-sensitivity compactness, actual weak-H2 cosine coordinates and complement splitting, and conditional local/global branch deductions. The latest additions also derive the critical modal signal response from an actual elliptic solution family and a supplied population jet, and a quadratic coefficient from conserved mass.
+
+The [scope ledger](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/data/public-scope-ledger.json) retains **47 verified scopes, 23 conditional scopes, and 3 exclusions** across **73 overlapping manuscript-facing scopes**. These counts are not a percentage of whole-paper correctness. The library has 1,525 indexed declarations, including definitions; compiler-generated auxiliaries are not counted as new mathematical theorems.
+
+<div class="boundary" markdown="1">
+**Not proved here:** whole-paper correctness, actual stationary operator/Fredholm identification, construction/exhaustion of the local PDE branch, a center manifold with dynamical invariance, global bifurcation alternatives and correspondence, or PDE stability. Supplied families, phase-norm jets, chart/exhaustion data, critical-parameter identifications and other named inputs remain explicit where used. A geometric Fourier complement is not identification with an operator's range or stable spectrum.
+</div>
+
+## Find your way
+
+<div class="cards">
+<div class="card"><h3><a href="{{ '/what-is-proved.html' | relative_url }}">What is proved</a></h3><p>Result families, the sign-off boundary and selected statement cards.</p></div>
+<div class="card"><h3><a href="{{ '/verification.html' | relative_url }}">Verification</a></h3><p>Generated page: every result with its Lean statement, coverage class and supplied assumptions.</p></div>
+<div class="card"><h3><a href="{{ '/scope-ledger.html' | relative_url }}">Scope ledger</a></h3><p>All 73 primary scopes with manuscript numbering and pages.</p></div>
+<div class="card"><h3><a href="{{ '/coverage.html' | relative_url }}">Coverage</a></h3><p>Every coverage row, its claims, inputs and notes.</p></div>
+<div class="card"><h3><a href="{{ '/reproducing.html' | relative_url }}">Reproduce</a></h3><p>Beginner guide to <code>./verify.sh</code>, the pinned toolchain and troubleshooting.</p></div>
+<div class="card"><h3><a href="{{ '/evidence/' | relative_url }}">Evidence</a></h3><p>Release evidence: phase-composite manifest, recovery summary and logs.</p></div>
+</div>
+
+## Trust and axioms
+
+Allowed foundational axioms: `propext`, `Quot.sound`, and `Classical.choice`. No `sorryAx`, custom axiom, `unsafe`, or `native_decide` is allowed in the scientific modules. Challenge files contain intentionally admitted comparison statements and are not scientific proof targets. The two comparator configurations cover 108 full-tier and 12 headline slots; they do not compare every library declaration. Exact source receipts and statement comparison are distinct from manuscript-fidelity review.
+
+## Paper
+
+Le Chen, Ian Ruau and Wenxian Shen, *Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions*.
+[Public manuscript and source](https://github.com/chenle02/chemotaxis-paper-iii) ·
+[arXiv:2610.20976v1](https://arxiv.org/abs/2610.20976v1), the published preprint.
+
+## Use it
+
+```sh
+git clone https://github.com/chenle02/chemotaxis-paper-iii-lean.git
+cd chemotaxis-paper-iii-lean
+./verify.sh
+```
+
+```toml
+[[require]]
+name = "chemotaxis-bifurcation-lean"
+git = "https://github.com/chenle02/chemotaxis-paper-iii-lean"
+rev = "v0.1.0"
+```
+
+Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).
+Coding agents: start from [llms.txt](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/llms.txt).

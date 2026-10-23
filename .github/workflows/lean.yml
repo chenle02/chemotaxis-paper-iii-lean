@@ -1,19 +1,16 @@
-name: Verify Lean source
+name: Palomar mechanical preflight
 on:
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  verify:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    env:
-      LEAN_NUM_THREADS: 3
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6
-        with:
-          build: 'true'
-          test: 'false'
-          lint: 'false'
-      - run: ./verify.sh
+  palomar:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@ad5db9e7ff8b17523d73aeb244aaeabcde810c64
+    with:
+      repository: chenle02/chemotaxis-paper-iii-lean
+      commit: ${{ github.sha }}
+      pipeline_commit: ad5db9e7ff8b17523d73aeb244aaeabcde810c64
+      request_id: chemotaxis-headline-20261022
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"comparator_config_path":"comparator.headline.json","formalization_metadata_path":"palomar/formalization.yaml"}'

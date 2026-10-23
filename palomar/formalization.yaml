@@ -1,0 +1,166 @@
+# Submission-specific metadata; the repository-wide index remains in ../formalization.yaml.
+version: v0.4
+project:
+  name: Analytic estimates and scalar bifurcation results for one-dimensional chemotaxis
+  description: 'Twelve Lean-verified results supporting one-dimensional chemotaxis analysis: an absolutely
+    summable cosine product integral; existence, localization and local uniqueness of scalar pitchfork
+    roots under explicit remainder bounds; a rational cubic-coefficient asymptotic; strict logistic moment
+    bounds and uniform nonconcentration; stationary minimal-model flux and exponential identities; endpoint
+    measure concentration under a tail hypothesis; first-mode selection under a monotone small-amplitude
+    expansion; and rigidity and moment bounds for supplied spike-limit data. This is a selection of analytic
+    and conditional scalar results, not a formalization of full PDE bifurcation, center manifolds, global
+    continuation or PDE stability.'
+  authors:
+  - Le Chen
+  responsible_maintainers:
+  - Le Chen
+  license: Apache-2.0
+sources:
+- title: 'Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation
+    and spike-like solutions'
+  authors:
+  - Le Chen
+  - Ian Ruau
+  - Wenxian Shen
+  id: arXiv:2610.20976v1
+  type: paper
+  relationship: formalizes
+  note: 'The paper authors are Le Chen, Ian Ruau and Wenxian Shen. Published preprint: arXiv:2610.20976v1.
+    Formalization input: October 20, 2026 v2 candidate in https://github.com/chenle02/chemotaxis-paper-iii.
+    No arXiv v2 upload or journal submission asserted.'
+related_formalizations:
+- id: https://github.com/leanprover-community/mathlib4
+  relationship: builds-on
+  note: pinned in lake-manifest.json
+classification:
+  arxiv:
+  - math.AP
+  msc2020:
+  - 35B32
+  - 35K45
+  - 35M31
+  - 35Q92
+  - 92C17
+  - 92D25
+automation:
+  methods:
+  - method: agent
+    framework: Codex CLI
+    prompting_notes: Lean proof drafting and documentation; read-only fidelity reviews of promoted ledger
+      rows.
+  - method: agent
+    framework: Claude Code
+    prompting_notes: Lean proof drafting, integration and documentation under Le Chen's direction.
+  notes: AI coding assistants were used for drafting Lean proofs, documentation and the fidelity reviews
+    under Le Chen's direction; every status claim rests on the recorded Lean builds, axiom audits and
+    receipts.
+review:
+  status: agent-reviewed
+  notes: The public scope summary preserves the accepted independent AI-assisted correspondence judgments
+    and explicit supplied-input boundaries from the frozen manuscript mapping. Private review histories
+    are not included. A separate public-export review checks preservation and privacy. No human line-by-line
+    review of all Lean statements or whole-paper certification is claimed. Palomar preparation adds a
+    scoped mathematical account and metadata checks; no Palomar review, registration or whole-paper Gold
+    status is claimed. Historical numerical locators in HeadlineChallenge refer to arXiv v1 and are not
+    newly verified against the October 20 candidate.
+acknowledgements: 'Developed and verified with lean-pkg (https://github.com/lean-pkg/lean-pkg; doi:10.5281/zenodo.23272098).
+  Lean formalization by Le Chen, with AI assistance in proof drafting, tooling, documentation and fidelity
+  review. Paper authors: Le Chen, Ian Ruau and Wenxian Shen. The fresh public release is verified locally;
+  no cluster evidence is claimed for this release.
+
+  Formalizes results of Chemotaxis models with signal-dependent sensitivity and a logistic-type source,
+  III: Bifurcation and spike-like solutions by Le Chen, Ian Ruau and Wenxian Shen (arXiv:2610.20976v1).
+
+  AI assistance: Codex CLI (OpenAI models) and Claude Code (Anthropic models) for Lean proof drafting,
+  documentation and fidelity review.'
+status:
+  scope: Only the twelve declarations named by comparator.headline.json are selected for this submission.
+    The larger repository contains additional proved and conditional results, which are not registered
+    by this configuration.
+  sorry_count: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  evidence:
+    commit: c749b53b02211901063228f52af123419b0dbaf5
+    gate_receipt: .lean-receipts/c749b53b0221-systemd-user-chemotaxis-public-evidence.service-4aa33770c3694c2795ff01001fe5756a-h-24e00fc5da6c.json
+    comparator_receipt: .lean-receipts/c749b53b0221-comparator.json
+  main_results:
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.TrigIntegrals.cos_cos_cos_cos_lp
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MixedRemainder.center_ODE_final_branch_eventually
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NormalizedAsymptotic.coefficient_sub_linear_isBigO
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.IntervalMoments.logistic_interval_bounds
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_flux_identity
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_exp_representation
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NoDiracMass.window_mass_tendstoUniformly
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.EndpointConcentration.tendsto_mass_smul_dirac_of_vanishing_tails
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.GlobalBranch.mode_eq_one_of_monotone_limit
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.limit_eq_const
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.spike_limit_constant_le
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+  - comparator_config: comparator.headline.json
+    declaration: ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually
+    file: HeadlineSolution.lean
+    challenge_file: HeadlineChallenge.lean
+fidelity:
+  notes: Every hypothesis in HeadlineChallenge.lean is part of the formal statement. In particular scalar
+    remainder and derivative estimates, logistic mass identities, stationary flux identities, monotone
+    expansion bounds, concentration tails and spike-limit equations/moment convergence are supplied where
+    present. Constructing these inputs from the chemotaxis PDE is not asserted by this submission. See
+    the per-result account in palomar/README.md.
+submission:
+  comparator_config: comparator.headline.json
+  challenge_module: HeadlineChallenge
+  solution_module: HeadlineSolution
+  mathematical_account: palomar/README.md
+  declarations:
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.TrigIntegrals.cos_cos_cos_cos_lp
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MixedRemainder.center_ODE_final_branch_eventually
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NormalizedAsymptotic.coefficient_sub_linear_isBigO
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.IntervalMoments.logistic_interval_bounds
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_flux_identity
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.MinimalFlux.minimal_exp_representation
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.NoDiracMass.window_mass_tendstoUniformly
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.EndpointConcentration.tendsto_mass_smul_dirac_of_vanishing_tails
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.GlobalBranch.mode_eq_one_of_monotone_limit
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.limit_eq_const
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.SpikeLimit.spike_limit_constant_le
+  - ChemotaxisBifurcationHeadline.ChemotaxisBifurcation.BranchCurves.branchRoot_existsUnique_eventually
+  limitations:
+  - Partial formalization; no whole-paper certification.
+  - Conditional statements retain their explicit analytic hypotheses.
+  - Challenge sorry holes are intentional and are not Solution proof holes.
+  - No Palomar submission, review or registration has yet occurred.

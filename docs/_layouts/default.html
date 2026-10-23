@@ -15,18 +15,34 @@
   <a class="skip" href="#content">Skip to content</a>
   <header>
     <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/mark.svg' | relative_url }}" alt=""><span>Chemotaxis III in Lean</span></a>
-    <nav aria-label="Main">
-      {% assign nav = "/|Overview,/what-is-proved.html|What is proved,/verification.html|Verification,/scope-ledger.html|Scope ledger,/coverage.html|Coverage,/reproducing.html|Reproduce,/evidence/|Evidence" | split: "," %}
-      {% for item in nav %}{% assign parts = item | split: "|" %}<a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>{% endfor %}
-    </nav>
+    <span class="tagline">Partial Lean 4 formalization · release v0.1.0</span>
   </header>
-  <main id="content">
+  {% capture menu %}
+  {% assign groups = "Start::/|Overview;/reproducing.html|Reproduce##Results::/what-is-proved.html|What is proved;/results.html|Results by paper section;/verification.html|All Lean statements;/scope-ledger.html|Scope ledger;/coverage.html|Coverage table##Trust::/trust.html|Trust and axioms;/evidence/|Release evidence;/public-release-review.html|Release review##About::/acknowledgments.html|Acknowledgments and citation" | split: "##" %}
+  {% for group in groups %}{% assign g = group | split: "::" %}
+    <p class="group">{{ g[0] }}</p>
+    <ul>{% assign items = g[1] | split: ";" %}{% for item in items %}{% assign it = item | split: "|" %}
+      <li><a href="{{ it[0] | relative_url }}"{% if page.url == it[0] %} aria-current="page"{% endif %}>{{ it[1] }}</a></li>{% endfor %}
+    </ul>
+  {% endfor %}
+    <p class="group">Elsewhere</p>
+    <ul>
+      <li><a href="https://github.com/chenle02/chemotaxis-paper-iii-lean">Source on GitHub</a></li>
+      <li><a href="https://github.com/chenle02/chemotaxis-paper-iii">Paper repository</a></li>
+      <li><a href="https://arxiv.org/abs/2610.20976v1">arXiv:2610.20976v1</a></li>
+    </ul>
+  {% endcapture %}
+  <div class="shell">
+    <nav class="side" aria-label="Site">{{ menu }}</nav>
+    <details class="side-mobile"><summary>Menu</summary><nav aria-label="Site (compact)">{{ menu }}</nav></details>
+    <main id="content">
 {{ content }}
-  </main>
+    </main>
+  </div>
   <footer>
-    chemotaxis-bifurcation-lean 0.1.0 ·
-    <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean">Source on GitHub</a> ·
-    <a href="https://github.com/chenle02/chemotaxis-paper-iii">Paper</a> ·
+    chemotaxis-bifurcation-lean 0.1.0 · Le Chen ·
+    developed with <a href="https://github.com/lean-pkg/lean-pkg">lean-pkg</a> ·
+    <a href="{{ '/acknowledgments.html' | relative_url }}">acknowledgments</a> ·
     <a href="https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/llms.txt">llms.txt</a> ·
     <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/CITATION.cff">CITATION.cff</a> ·
     <a href="https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/LICENSE">Apache-2.0</a>

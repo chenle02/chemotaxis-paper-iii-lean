@@ -30,7 +30,7 @@ The primary scientific objects are positive parameters, classical stationary pop
 
 ## Reading exact statements
 
-Use [the generated verification page](verification.md) for the exact Lean statements, source links, coverage classes and supplied assumptions, and the [JSON ledger](../data/public-scope-ledger.json) for the preserved scope text. Each theorem's Lean source is authoritative for its formal hypotheses. The whole paper is not Lean-certified.
+Use [the generated verification page](verification.md) for the exact Lean statements, source links, coverage classes and supplied assumptions, and the [JSON ledger](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/data/public-scope-ledger.json) for the preserved scope text. Each theorem's Lean source is authoritative for its formal hypotheses. The whole paper is not Lean-certified.
 
 ## Selected statement cards
 

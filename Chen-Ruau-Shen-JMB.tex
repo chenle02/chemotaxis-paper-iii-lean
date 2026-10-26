@@ -3,14 +3,13 @@
 \usepackage{graphicx}
 \usepackage{xurl}
 \usepackage{multirow}
-\graphicspath{ {paper_iii_numerical_experiments/} }
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage[colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=blue,
-citecolor=magenta,
+linkcolor=black,
+filecolor=black,
+urlcolor=black,
+citecolor=black,
 pdftitle={Chemotaxis models with signal-dependent sensitivity and a logistic-type
 source, III: Bifurcation and spike-like solutions},
 pdfauthor={Le Chen, Ian Ruau, Wenxian Shen},
@@ -237,8 +236,8 @@ Auburn University, Auburn, AL 36849, USA}
   larger and larger when the domain size increases and hence a large domain
   creates more complicated bifurcation patterns. In addition, under suitable
   conditions we prove unbounded continuation of the local bifurcation branches
-  and prove that large-sensitivity stationary sequences satisfying a peak-gap
-  hypothesis develop spike-like solutions. We give some numerical analysis of
+  and prove that  sequences of stationary solutions with large sensitivity
+  develop spike-like solutions. We give some numerical analysis of
   the continuation of local bifurcation and spike-like solutions. Our numerical
   time-evolution experiments suggest unbounded continuation of local bifurcation
   branches and increasingly sharp stationary profiles.
@@ -810,7 +809,9 @@ $\beta$ and $L$ on the bifurcation of constant solutions.
     \item[-] {Type:} $\beta_{n_0}(\beta) = A\beta^2 + B\beta + C$ determines
       whether the bifurcation is super-critical (positive) or sub-critical
       (negative). Since $A < 0$, sufficiently large $\beta$ gives sub-critical
-      bifurcation. \textcolor{magenta}{These local nonconstant branches lie below the bifurcation threshold and are unstable near the constant state.}
+      bifurcation, which indicates that large $\beta$ makes stable non-constant
+      states more likely to appear abruptly rather than to grow continuously
+      from the constant state.
 
 
     \item[(2)] Fix all parameters except for $L$. In the non-minimal model, when
@@ -1299,7 +1300,17 @@ non-minimal model.
     C'' \coloneqq \frac{\nu\gamma(\gamma-1)(u^*)^{\gamma-2}}{2}, \qquad
     C''' \coloneqq \frac{\nu\gamma(\gamma-1)(\gamma-2)(u^*)^{\gamma-3}}{6}.
   \end{equation}
-  For undifferentiated Taylor terms, $\mathcal{O}(|\tilde{u}|^4)$ denotes a
+  % \textcolor{magenta}{
+  %   In both proofs below, undifferentiated Taylor remainders $\mathcal{O}(|\tilde{u}|^4)$, $\mathcal{O}(|\tilde{v}|^4)$ and $\mathcal{O}(|\tilde{u}|^j+|\tilde{v}|^j)$, $j=3,4$, satisfy the indicated pointwise bounds before multiplication by $\tilde{v}_x$ and flux differentiation.
+  %   In~\eqref{E:u_n-eq}, however, $\mathcal{O}(|\tilde{u}|^4)$ denotes $R_4=R_4^{(0)}+\partial_xR_4^{(1)}$, where the source and flux remainders satisfy
+  %   \[
+  %     |R_4^{(0)}|\le C|\tilde{u}|^4,\qquad
+  %     |R_4^{(1)}|\le C\left(|\tilde{u}|+|\tilde{v}|\right)^3|\tilde{v}_x|.
+  %   \]
+  %   Thus each is bounded by $C\left(|\tilde{u}|+|\tilde{v}|+|\tilde{v}_x|\right)^4$, and $R_4^{(1)}=0$ at $x=0,L$ since $\tilde{v}_x=0$ there.
+  %   Smallness is measured in $X_\theta$ defined below: $X_\theta\hookrightarrow H^{2\theta}(0,L)\hookrightarrow C^1([0,L])$ for $3/4<\theta<1$, and~\eqref{E:K-operator-eq} gives $\|\tilde{v}\|_{C^1}\le C\|\tilde{u}\|_{L^\infty}\le C\|\tilde{u}\|_{X_\theta}$, uniformly for $\chi_0$ near $\chi^*$.
+  % }
+  Here and throughout this proof, $\mathcal{O}(|\tilde{u}|^4)$ denotes a
   function-valued remainder $R_4(\tilde{u})(t,x)$ satisfying
   $|R_4(\tilde{u})(t,x)| \le C |\tilde{u}(t,x)|^4$ for all $x \in (0, L)$
   whenever $\|{\tilde{u}(t,\cdot)}\|_{L^\infty(0,L)}$ is sufficiently small; the
@@ -1441,7 +1452,7 @@ non-minimal model.
     \sum_{i,j\ge1}u_i u_j u_{i+j} \Big)
     +\mathcal{O}_{v,0}\left(\norm{u}_{\ell^1}^4\right),}
   \end{align}
-  \textcolor{magenta}{Here, writing $R_v$ for the Taylor remainder in~\eqref{E:local-bifurcation-eq3}, the scalar remainder is $(\mu L)^{-1}\int_0^L R_v\,dx$.}
+  { where $\mathcal{O}_{v.0}(\|u\|_{l^1}^4)=\int_0^L \mathcal{O}(|u|^4)dx$.}
   For $k \ge 1$, we multiply by $\cos\left(k\pi x/L\right)$ and integrate over
   $(0, L)$. By Lemma~\ref{L:trig-integrals},
   \begin{align}\label{E:vk-eq}
@@ -1472,12 +1483,19 @@ non-minimal model.
     C_k^{(1)} \coloneqq \frac{C'}{\mu+\lambda_k}, \qquad
     C_k^{(2)} \coloneqq \frac{C''}{2\bigl(\mu+\lambda_k\bigr)}, \qquad
     C_k^{(3)} \coloneqq \frac{C'''}{4\bigl(\mu+\lambda_k\bigr)},\quad
-    k\ge0.
+    k\ge0,
   \end{equation}
-  \textcolor{magenta}{For $k\ge1$, the scalar remainder in~\eqref{E:vk-eq} is $2\left[L(\mu+\lambda_k)\right]^{-1}\int_0^L R_v\cos(k\pi x/L)\,dx$.}
-  In the above, we write $u = (u_n)_{n\ge0}$ and set $\|u\|_{\ell^1}=\sum_{n\ge0}|u_n|$ and $\|u\|_{\ell^2}=\left(\sum_{n\ge0}|u_n|^2\right)^{1/2}$.
-  \textcolor{magenta}{The notation $\mathcal{O}_{v,k}(\|u\|_{\ell^1}^j)$ and $\mathcal{O}_{u,k}(\|u\|_{\ell^1}^j)$ denotes scalar remainders in the respective mode equations, bounded by $C_k\|u\|_{\ell^1}^j$ for $\chi_0$ in a fixed neighborhood of $\chi^*$.
-  Constants may depend on $k$; the signal remainder sequence is summable because of the factor $(\mu+\lambda_k)^{-1}$.}
+  { (and $\mathcal{O}_{v,k}(\|u\|_{l^1}^4)=\int_0^L \mathcal{O}(|u|^4)\cos(\frac{k\pi x}{L})dx$.}
+  In the above, we write $u = (u_n)_{n\ge 0}$ and set $\|u\|_{\ell^2} \coloneqq
+  \Big(\sum_{n=0}^\infty |u_n|^2\Big)^{1/2}$ and $\|u\|_{\ell^1} \coloneqq
+  \sum_{n=0}^\infty |u_n|$. Whenever a scalar remainder in the mode equations is
+  written as ${ \mathcal{O}_{k,v}}(\|u\|_{\ell^1}^j)$, it is bounded by $C_k(1 +
+  |\chi_0|)\|u\|_{\ell^1(\mathbb{N}_0)}^j$ with a constant $C_k$ that may depend
+  on the order $j$ and on the mode index. Note that the remainder sequences are
+  summable in the mode index, $\sum_k|\mathcal{O}_k(\cdot)| < \infty$. We
+  use a subscript to distinguish termwise remiders, that is, for $k\ge0$ the
+  reminders $\mathcal{O}_{u,k}(\cdot)$ (resp. $\mathcal{O}_{v,k}$) corresponds to
+  the $k$-th mode from the $u$-equation (resp. from the $v$-equation).
 
 
   \smallskip
@@ -1492,10 +1510,9 @@ non-minimal model.
   \begin{align}\label{E:u_n-eq}
     \Big(\sum_{n=0}^\infty u_n(t)\cos(\tfrac{n\pi x}{L})\Big)_t =I_0 + I_1 + I_2
     + I_3 + I_4 + I_5 + I_6
-    + \textcolor{magenta}{R_u},
+    { + \mathcal{O}(|\tilde{u}|^4)},
   \end{align}
-  \textcolor{magenta}{Here $R_u=R_u^{(0)}+\partial_xR_u^{(1)}$, where $|R_u^{(0)}|\le C|\tilde{u}|^4$ and $|R_u^{(1)}|\le C\left(|\tilde{u}|+|\tilde{v}|\right)^3|\tilde{v}_x|$, with $R_u^{(1)}=0$ at the endpoints.}
-  The retained terms are
+  where
   \begin{align*}
     I_0
     &\coloneqq -\sum_{n=0}^\infty \lambda_n\,u_n(t)\cos(\tfrac{n\pi x}{L}) - {
@@ -1562,19 +1579,22 @@ non-minimal model.
       \tfrac{L}{2} u_k'(t) & {\rm if}\quad k\ge 1.
     \end{cases}
   \end{gather*}
+  % \textcolor{magenta}{
+  %   Projecting $R_4=\mathcal{O}(t,x)$ against $\cos(k\pi x/L)$ and integrating its flux part by parts, with no boundary term by the Neumann conditions, gives $\left|\int_0^L R_4\cos(k\pi x/L)\,dx\right|\le C_k\|u\|_{\ell^1}^4\le C_k'\|\tilde{u}\|_{X_\theta}^4$, using $\|\tilde{v}\|_{C^1}\le C\|\tilde{u}\|_{L^\infty}\le C\|u\|_{\ell^1}$ and $X_\theta\hookrightarrow\ell^1$ for cosine coefficients, which justifies the fourth-order remainder in~\eqref{E:ode-eq0} and below.
+  % }
   Hence,
   \begin{equation}\label{E:ode-eq0}
     u'_k(t)\int_0^L \cos^2\big(\tfrac{k\pi x}{L}\big)dx=\sum_{\ell=0}^6
-    \mathcal{F}_k^{(\ell)} \textcolor{magenta}{+\mathcal{O}_{u,k}(\|u\|_{\ell^1}^4)}\quad {\rm for}\quad k=0,1,2,\cdots,
+    \mathcal{F}_k^{(\ell)} {+\mathcal{O}_{k,u}(\|u\|_{l^1}^4)}\quad {\rm for}\quad k=0,1,2,\cdots,
   \end{equation}
   where
   \begin{equation}\label{E:Fk-projection}
     \mathcal{F}_k^{(\ell)} = \mathcal{F}_k^{(\ell)}(u,v) \coloneqq \int_0^L
     I_{\ell}(t,x) \cos\big(\tfrac{k\pi x}{L}\big) dx, \quad \ell =
-    0,1,\ldots,6,\; k = 0,1,2,\dots.
+    0,1,\ldots,6,\; k = 0,1,2,\dots,
   \end{equation}
-  \textcolor{magenta}{The scalar remainder in~\eqref{E:ode-eq0} is $\int_0^L R_u\cos(k\pi x/L)\,dx$.
-  Integrating its flux part by parts and using $\|\tilde{v}\|_{C^1}\le C\|\tilde{u}\|_\infty\le C\|u\|_{\ell^1}$ gives the stated fourth-order bound for each fixed $k$; division by $L$ for $k=0$ and by $L/2$ for $k\ge1$ is absorbed in the mode-ODE remainders below.}
+  { and  $\int_0^L\mathcal{O}(|\tilde{u}|^4)\cos\left(\tfrac{k\pi
+  x}{L}\right)\,dx$.}
 
   For $k = 0$, Neumann boundary conditions imply $\int_0^L I_\ell(t, x)\,dx =
   0$, $\ell = 1, 2, 3, 4$, and using the cosine orthogonality and
@@ -1724,7 +1744,7 @@ non-minimal model.
     \mathcal{G}_k(u,v)
     \coloneqq \frac{2}{L\, \chi_0}\,\sum_{\ell=1}^{4}
     \mathcal{F}_k^{(\ell)}\big(u,v\big)
-    -\lambda_kB_0C_k^{(1)}u_k{= \mathcal{O}_{u,k}(\|u\|_{\ell^1}^2)}.
+    -\lambda_kB_0C_k^{(1)}u_k{= {\mathcal{O}_{k,u}}(\|u\|_{l^1}^2)}.
   \end{equation}
 
 
@@ -1961,11 +1981,6 @@ non-minimal model.
 
 
   \noindent\textbf{Step 5:~} In this step, we conclude the bifurcation analysis.
-  \textcolor{magenta}{Writing $z=u_{n_0}$, $\tau=\widetilde{\chi}$, and $R$ for the remainder in~\eqref{E:center-ODE-final}, Taylor expansion of the $C^4$ reduced vector field, with its exact linear term and the cancellations in Step 4, gives
-  \[
-    |R_z(\tau,z)|\le C\left(|z||\tau|^2+|z|^2|\tau|+|z|^3\right).
-  \]
-  This estimate justifies local uniqueness of each nonzero branch and the stability conclusion below.}
 
   \smallskip
 
@@ -1979,7 +1994,7 @@ non-minimal model.
   \end{align}
   which gives two branches $u^\pm$ of equilibrium solutions of~\eqref{E:main-PE}
   on the side $\beta_{n_0} (\chi_0 - \chi^*) > 0$ given in
-  Theorem~\ref{T:local-bifurcation}. Moreover, \textcolor{magenta}{the derivative of the reduced field on either branch is $-2\alpha_{n_0}\widetilde{\chi}+o(|\widetilde{\chi}|)$; together with the stable complementary spectrum, this implies that}
+  Theorem~\ref{T:local-bifurcation}. Moreover,
   when $\beta_{n_0} > 0$, the bifurcation occurs when $\chi_0 > \chi^*$ and the
   bifurcation solutions $u^\pm$ are linearly asymptotically stable, which is
   referred to as super-critical pitchfork bifurcation, and when $\beta_{n_0} <
@@ -2076,7 +2091,7 @@ model.
     ={}&C_0^{(2)}\sum_{j=1}^\infty u_j^2
     +\frac{\nu\gamma(\gamma-1)(\gamma-2)(u^*)^{\gamma-3}}{8\mu}
     \sum_{i,j\ge1}u_i u_j u_{i+j}
-    +\mathcal{O}_{v,0}\left(\|u\|_{\ell^1}^4\right).
+    +\mathcal{O}_0\left(\|u\|_{\ell^1}^4\right).
   \end{align*}
   For $k \ge 1$, the coefficients $v_k$ are given by~\eqref{E:vk-eq} with $u_0 =
   0$.
@@ -2087,7 +2102,7 @@ model.
     \frac{du_k}{dt}
     =\sigma_k(\chi_0)u_k
     +\chi_0\mathcal{G}_k(u,v)
-    +\mathcal{O}_{u,k}\left(\|u\|_{\ell^1}^4\right),\qquad k\ge1.
+    +\mathcal{O}_k\left(\|u\|_{\ell^1}^4\right),\qquad k\ge1.
   \]
   Therefore, near $\chi_0 = \chi^*$,
   \begin{equation}\label{E:ode-chi*-minimal}
@@ -2097,14 +2112,14 @@ model.
       =\left(\partial_{\chi_0}\sigma_{n_0}(\chi^*)\right)
       \widetilde{\chi} u_{n_0}
       +(\chi^*+\widetilde{\chi})\mathcal{G}_{n_0}(u,v)
-      +\mathcal{O}_{u,n_0}\left(\|u\|_{\ell^1}^4\right),
+      +\mathcal{O}_{n_0}\left(\|u\|_{\ell^1}^4\right),
       \\[3mm]
       \displaystyle
       \frac{du_k}{dt}
       =\left(\sigma_k(\chi^*)
       +(\partial_{\chi_0}\sigma_k)(\chi^*)\widetilde{\chi}\right)u_k
       +(\chi^*+\widetilde{\chi})\mathcal{G}_k(u,v)
-      +\mathcal{O}_{u,k}\left(\|u\|_{\ell^1}^4\right),
+      +\mathcal{O}_k\left(\|u\|_{\ell^1}^4\right),
       \quad k\ge1,\ k\ne n_0,
       \\[3mm]
       \displaystyle
@@ -2140,8 +2155,7 @@ model.
 
   \noindent\textbf{Step $4'$:~} We use the same argument as in Step 5 for the
   non-minimal model, now in the fixed-mass space.
-  \textcolor{magenta}{The same Taylor argument gives the derivative remainder estimate used there, with the constant mode excluded.}
-  This proves Theorem~\ref{T:local-bifurcation} in the minimal case.
+  Theorem~\ref{T:local-bifurcation} in the minimal case.
 \end{proof}
 
 
@@ -2558,7 +2572,6 @@ Hence, the large-domain bifurcation is super-critical for $\beta <
   \caption{Roots of $P(\lambda,\beta)$ with $\lambda>1/2$ for selected values of $\beta$, rounded to six decimal places.}
   \label{Tb:polynomial-roots}
 \end{table}
-
 For $\lambda > 1/2$, $P(\lambda, \beta)$ decreases strictly with $\beta$.
 Moreover, $P(\lambda, 1) > 0$ and $P(\lambda, 7/3) < 0$. Thus, the bifurcation
 is super-critical for $0 \le \beta \le 1$ and sub-critical for $\beta \ge 7/3$
@@ -2796,7 +2809,7 @@ In this subsection, we give the outline of the proof of
 Theorem~\ref{T:global-extension}(1).
 
 
-\begin{proof}[Outline of the proof of Theorem~\ref{T:global-extension}(1)]\leavevmode\par
+\begin{proof}[Outline of the proof of Theorem~\ref{T:global-extension}(1)]
   Let $(u^*,v^*)$ be a positive constant stationary solution
   of~\eqref{E:main-PE}. Let $X$ and $\mathcal{A} = \mathcal{A}(u^*)$ be as
   in~\eqref{E:X-eq} and~\eqref{E:A-eq}, respectively. Let
@@ -2805,8 +2818,7 @@ Theorem~\ref{T:global-extension}(1).
       \{u\in L^2((0,L))\,|\, \int_0^L u(x)dx=0\}\quad &{\rm if}\quad a=b=0
     \end{cases}
   \end{equation}
-  with norm $\|u\| = \|u\|_{L^2((0,L))}$.
-  Let
+  with norm $\|u\| = \|u\|_{L^2((0,L))}$. Let
   \begin{equation}\label{E:B-eq}
     \mathcal{B}=\mathcal{B}(u^*):=\{u\in X\,|\, u+u^*\in\mathcal{A}\}.
   \end{equation}
@@ -3466,22 +3478,22 @@ sub-critical regime.
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_supercritical/beta=2-0_chi=47-846_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sup_fig1.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_supercritical/beta=2-0_chi=47-9_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sup_fig2.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_supercritical/beta=2-0_chi=70-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sup_fig3.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_supercritical/beta=2-0_chi=150-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sup_fig4.jpeg}
   \end{subfigure}
 
   \caption{Numerical experiments for the parameters $a = b = \alpha = m = \mu =
@@ -3496,22 +3508,22 @@ sub-critical regime.
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_subcritical/beta=3-0_chi=95-76_mu=1-0_nu=1-0_gamma=1-0_meshsize=100_time=30-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sub_fig1.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_subcritical/beta=3-0_chi=95-766_mu=1-0_nu=1-0_gamma=1-0_meshsize=100_time=30-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sub_fig2.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_subcritical/beta=3-0_chi=300-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=100_time=30-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sub_fig3.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{non-minimal_subcritical/beta=3-0_chi=600-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=100_time=30-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{non-minimal_sub_fig4.jpeg}
   \end{subfigure}
 
   \caption{Numerical experiments for the parameters $a = b = \alpha = m = \mu =
@@ -3538,22 +3550,22 @@ Figure~\ref{F:beta5-sub-minimal} uses parameters in the sub-critical regime.
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_supercritical/beta=4-0_chi=25-8_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=100-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sup_fig1.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_supercritical/beta=4-0_chi=25-9_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=100-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sup_fig2.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_supercritical/beta=4-0_chi=100-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=100-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sup_fig3.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_supercritical/beta=4-0_chi=500-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=100-0_epsilon=0-01.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sup_fig4.jpeg}
   \end{subfigure}
 
   \caption{Numerical experiments for the parameters $a = b = 0$, $u^* = 1$,
@@ -3570,22 +3582,22 @@ Figure~\ref{F:beta5-sub-minimal} uses parameters in the sub-critical regime.
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_subcritical/beta=5-0_chi=51-6_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sub_fig1.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_subcritical/beta=5-0_chi=52-2_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sub_fig2.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_subcritical/beta=5-0_chi=200-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sub_fig3.jpeg}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{/minimal_subcritical/beta=5-0_chi=500-0_mu=1-0_nu=1-0_gamma=1-0_meshsize=30_time=1000-0_epsilon=0-5.jpeg}
+    \includegraphics[width=\textwidth]{minimal_sub_fig4.jpeg}
   \end{subfigure}
 
   \caption{Numerical experiments for the parameters $a = b = 0$, $u^* = 1$,
@@ -3631,6 +3643,11 @@ performed using \texttt{simulation.py}. The script
 experiments and generates the figures stored in
 \texttt{paper\_iii\_numerical\_experiments} that were used in this paper.
 
+A Lean 4 companion formalizing selected results and conditional deductions is
+available at \url{https://chenle02.github.io/chemotaxis-paper-iii-lean/}.
+It documents the verified statements, their assumptions, and the remaining
+exclusions; it does not constitute a formal verification of the entire paper.
+
 \subsection*{AI declaration}
 The authors manually derived all the expressions involved in  the proofs of
 Theorems  \ref{T:local-bifurcation} and \ref{T:direction-change}  in the paper.
@@ -3641,10 +3658,10 @@ hand-derived expressions matched the models' expressions.
 
 
 
-\bibliographystyle{amsrefs}
+\bibliographystyle{amsrn}
 \phantomsection
 \addcontentsline{toc}{section}{References}
-\bibliography{paper-III}
+\bibliography{references}
 \end{document}
 
 

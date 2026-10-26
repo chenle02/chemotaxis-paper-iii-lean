@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <section class="hero">
-<p class="eyebrow">Lean 4 / Mathlib companion · release v0.1.0</p>
+<p class="eyebrow">Lean 4 / Mathlib companion · release v0.1.1</p>
 <h1>Chemotaxis III in Lean</h1>
 <img class="banner" src="{{ '/assets/chemotaxis-banner.svg' | relative_url }}" alt="Cells drifting up a signal gradient toward a spike-like stationary profile">
 <p class="lead">A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary estimates, compactness and conditional bifurcation deductions for Chemotaxis III.</p>
@@ -60,7 +60,7 @@ cd chemotaxis-paper-iii-lean
 [[require]]
 name = "chemotaxis-bifurcation-lean"
 git = "https://github.com/chenle02/chemotaxis-paper-iii-lean"
-rev = "v0.1.0"
+rev = "v0.1.1"
 ```
 
 Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).

@@ -55,3 +55,5 @@ Three ledger scopes refer to proof sentences that v2 no longer states. Each keep
 ## What did not change
 
 The Lean sources, `claims.yaml` and the release receipts are unchanged. This update changes documentation and metadata only, so the accepted gate receipt at `c749b53b` still binds the published source. `formalization.yaml` still names arXiv v1 as its source, because changing that key needs a new gate receipt. The [Palomar submission](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/main/palomar) was prepared against v1.
+
+The arXiv v2 re-anchor and the move of the manuscript into `manuscript/` are tagged as release `v0.1.1`, a documentation release. `lakefile.toml` keeps the Lake package version 0.1.0, because the Lean source is unchanged and the lakefile is a build input.

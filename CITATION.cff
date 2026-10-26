@@ -40,5 +40,5 @@ references:
     value: arXiv:2610.20976v2
     description: arXiv preprint, version 2 (October 23, 2026); the public scope ledger
       and coverage map target this version
-version: 0.1.0
-date-released: '2026-10-22'
+version: 0.1.1
+date-released: '2026-10-26'

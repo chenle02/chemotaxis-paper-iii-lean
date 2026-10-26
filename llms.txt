@@ -1,6 +1,6 @@
 # Chemotaxis III Lean companion
 
-> Partial Lean 4 / Mathlib formalization of "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions" (Le Chen, Ian Ruau, Wenxian Shen). Lake package chemotaxis-bifurcation-lean, release v0.1.0. The Lean source on main is unchanged since v0.1.0.
+> Partial Lean 4 / Mathlib formalization of "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions" (Le Chen, Ian Ruau, Wenxian Shen). Lake package chemotaxis-bifurcation-lean, release v0.1.1. v0.1.1 is a documentation release (arXiv v2 re-anchor, manuscript/ folder); the Lean source and the Lake package version 0.1.0 are unchanged since v0.1.0.
 
 Public repository: https://github.com/chenle02/chemotaxis-paper-iii-lean
 Paper: https://arxiv.org/abs/2610.20976v2 (source and PDF in manuscript/)

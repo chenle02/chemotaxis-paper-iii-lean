@@ -2,13 +2,13 @@
   "schema": "chemotaxis-public-scope-ledger/1",
   "manuscript": {
     "arxiv": "2610.20976v2",
-    "repo": "https://github.com/chenle02/chemotaxis-paper-iii",
+    "repo": "https://github.com/chenle02/chemotaxis-paper-iii-lean",
     "commit": "f9aed4653e6312726ed1544d6f135fa14a5c6b29",
     "file": "Chen-Ruau-Shen-JMB.tex",
     "sha256": "0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948",
     "eprint_sha256": "475d1c153c47b18f3392deef874e008fc13ef398ac688969e14d941321fdf1ea",
     "previous_input": {
-      "repo": "https://github.com/chenle02/chemotaxis-paper-iii",
+      "repo": "https://github.com/chenle02/chemotaxis-paper-iii-lean",
       "commit": "c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4",
       "file": "10-20-2026-CRS-3-Le-v2.tex",
       "sha256": "545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae",

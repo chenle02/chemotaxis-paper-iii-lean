@@ -16,7 +16,7 @@ DOCS = pathlib.Path(__file__).resolve().parent.parent
 SOURCE = DOCS / "verification.md"
 TARGET = DOCS / "results.md"
 
-# Section titles of the October 20, 2026 v2 manuscript (\section commands), without the
+# Section titles of arXiv:2610.20976v2 (\section commands), without the
 # "and proof of Theorem ..." suffixes.
 SECTIONS = {
     1: "Introduction",
@@ -88,7 +88,7 @@ def render(results, missing) -> str:
         "Each entry opens the result on the [verification page](verification.html), which shows the",
         "Lean statement, its hypotheses, the checks that ran and, where it is quoted, the paper's",
         "statement. The class in",
-        "brackets repeats that page's own wording. Section titles follow the October 20, 2026 v2",
+        "brackets repeats that page's own wording. Section titles follow the arXiv v2",
         "manuscript; results are grouped by the section whose number they carry.",
         "",
         f"Listed here: {len(results)} results ({own} with the paper's own hypotheses, {extra} with extra",

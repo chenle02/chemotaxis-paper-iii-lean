@@ -1,0 +1,38 @@
+{
+  "arxiv": {
+    "id": "2610.20976",
+    "version": 2,
+    "versioned_id": "2610.20976v2"
+  },
+  "compare": {
+    "differing_lines": 0,
+    "eprint_tex": "Chen-Ruau-Shen-JMB.tex",
+    "identical": true,
+    "local_sha256": "0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948",
+    "local_tex": "Chen-Ruau-Shen-JMB.tex"
+  },
+  "eprint": {
+    "bytes": 1116914,
+    "format": "tar.gz",
+    "members": 19,
+    "sha256": "475d1c153c47b18f3392deef874e008fc13ef398ac688969e14d941321fdf1ea"
+  },
+  "files": [
+    {
+      "bytes": 150829,
+      "path": "Chen-Ruau-Shen-JMB.tex",
+      "sha256": "0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948"
+    },
+    {
+      "bytes": 20871,
+      "path": "references.bib",
+      "sha256": "c349ddae613e13a13e1fb1ff1b78580a0e74f3fdbce16b8c658b1147529ef88b"
+    }
+  ],
+  "main_tex": "Chen-Ruau-Shen-JMB.tex",
+  "schema": "source-baseline/1",
+  "source": {
+    "file_name": "src.tar",
+    "kind": "file"
+  }
+}

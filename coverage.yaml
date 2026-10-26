@@ -3,10 +3,8 @@ package: chemotaxis-bifurcation-lean
 manuscript:
   title: 'Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like
     solutions'
-  version:
-    repo: https://github.com/chenle02/chemotaxis-paper-iii
-    commit: c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4
-    sha256: 545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae
+  version: "arXiv:2610.20976v2"
+  eprint_sha256: "475d1c153c47b18f3392deef874e008fc13ef398ac688969e14d941321fdf1ea"
 summary: 47 verified scopes, 23 conditional scopes, and 3 exclusions across 73 overlapping scopes. This is partial
   formalization, not whole-paper certification. See data/public-scope-ledger.json for exact boundaries.
 rows:
@@ -29,7 +27,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-physicalgrowth-zero-iff
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-strictcriticalmode-other-growth-neg
   note: 'V2 scope: The semigroup and nonlinear PDE stability conclusions in the proposition are excluded; this row
-    covers only modewise ordered-field algebra. Source locator: p. 5, TeX line 501.'
+    covers only modewise ordered-field algebra. Source locator: p. 5, TeX line 500.'
   inputs: []
 - paper:
     number: Theorem 1.1 (PDE branches and stability)
@@ -37,7 +35,7 @@ rows:
     label: T:local-bifurcation
   class: outside
   note: 'V2 scope: Requires center-manifold construction, finite-regularity remainder control, implicit bifurcation,
-    and PDE spectral stability. Source locator: p. 6, TeX line 581.'
+    and PDE spectral stability. Source locator: p. 6, TeX line 580.'
   claims: []
 - paper:
     number: Theorem 1.1 (reduced scalar equation)
@@ -67,9 +65,7 @@ rows:
   - uniform bound |R(η,s)|≤C(|s|η²+|s|³|η|+s⁴) on |η|,|s|≤r, or its stronger Eq. 2.43 version
   - HasDerivAt (R η) (Rs η s) s throughout that box
   - uniform derivative bound |Rs(η,s)|≤C(η²+s²|η|+|s|³), or the stronger matching version
-  note: 'V2 scope: The finite scalar side, derivative-sign, and amplitude conclusions are proved from the explicit
-    reduced equation and separate remainder interfaces. Center-manifold reduction, branch existence, and PDE stability
-    lifting remain outside this row. Source locator: p. 6, TeX line 581.'
+  note: "V2 scope: The finite scalar side, derivative-sign, and amplitude conclusions are proved from the explicit reduced equation and separate remainder interfaces. Center-manifold reduction, branch existence, and PDE stability lifting remain outside this row. Source locator: p. 6, TeX line 580. arXiv v2: Step 5 of the proof drops the derivative remainder estimate (ledger arxiv_v2_note)."
 - paper:
     number: Theorem 1.2(1)
     title: beta_n0 is a quadratic in beta with negative leading coefficient
@@ -130,7 +126,7 @@ rows:
   - quadratic graph coefficients E:a_0,i and E:a_k,i>0 and cubic assembly E:Gamma-n0-explicit
   - fixed-mass coefficient identification E:beta-n0-minimal with a=b=a₀=0
   note: 'Case (iii) is covered for the corrected statement (negativity for beta >= 0, beta != beta_0); see finding
-    v1-misprint-thm12-iii-beta-range. Source locator: p. 8, TeX line 700.'
+    v1-misprint-thm12-iii-beta-range. Source locator: p. 8, TeX line 699.'
 - paper:
     number: Theorem 1.2(2)
     title: beta_n0 as a rational function of lambda_n0; sign changes and domain-size limits
@@ -169,7 +165,7 @@ rows:
   - its quadratic graph and cubic assembly formulas E:a_0,i, E:a_k,i>0, and E:Gamma-n0-explicit
   note: 'V2 scope: The all-parameter physical rational formula, degree/cancellation bounds, admissible mode corridors,
     roots, limits, and finite sign consequences are proved. Excluded tie bifurcations and PDE branch/stability conclusions
-    are not classified. Source locator: p. 8, TeX line 700.'
+    are not classified. Source locator: p. 8, TeX line 699.'
 - paper:
     number: Remark 1.1(1)
     title: Reduction to the scalar ODE for u_n0
@@ -201,16 +197,14 @@ rows:
   - differentiability in s and the uniform weak derivative bound for the full mapped scalar interface
   - 'For the stronger v2 value and derivative bounds: C4 reduced-field JetHyp and exact TrivialBranchLinearization
     in the physical Fourier amplitude and original time coordinate.'
-  note: 'V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates
-    from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE
-    reduction and PDE spectral stability remain inputs. Source locator: p. 7, TeX line 639.'
+  note: "V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE reduction and PDE spectral stability remain inputs. Source locator: p. 7, TeX line 638. arXiv v2: Step 4' of the proof drops the derivative remainder sentence (ledger arxiv_v2_note)."
 - paper:
     number: Theorem 1.3
     title: Extension of the local bifurcation branches
     label: T:global-extension
   class: outside
   note: 'V2 scope: Requires unilateral global bifurcation, compactness, and PDE a priori theory. Source locator:
-    p. 10, TeX line 932.'
+    p. 10, TeX line 933.'
   claims: []
 - paper:
     number: Theorem 1.4
@@ -230,7 +224,7 @@ rows:
       gamma$.\n\\end{theorem}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:spiky-solu-thm.
-    This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 991.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-minimal-gradient-blowup
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-gradient-blowup-of-eventual-peak
@@ -260,7 +254,7 @@ rows:
       \  \\end{itemize}\n\\end{remark}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/R:no-delta-concentration.
-    This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 1019.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-classicalprofile-window-mass-bounds
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-window-mass-decay-of-classical-profiles
@@ -305,7 +299,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-semidiscrete-threshold-lower-bound
   note: 'V2 scope: The discrete eigenvalue/threshold functions, changing-mode minima, physical identification, and
     convergence are proved together with the concrete scheme-to-modal bridge. No semidiscrete trajectory existence
-    or nonlinear stability theorem is asserted. Source locator: p. 12, TeX line 1109.'
+    or nonlinear stability theorem is asserted. Source locator: p. 12, TeX line 1110.'
   inputs: []
 - paper:
     number: Equation (1.24)
@@ -325,7 +319,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemodes-linearindependent
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discreteeigenmodes-discretecosinemode-exhaustion
   note: 'Verified for the corrected statement: Equation 1.24 read with -Delta_h (eigenvalues 4 h^-2 sin^2(n pi/(2N)),
-    n=0..N, of the reflected Neumann stencil). Source locator: p. 12, TeX line 1074.'
+    n=0..N, of the reflected Neumann stencil). Source locator: p. 12, TeX line 1075.'
   inputs: []
 - paper:
     number: Equation (6.1)
@@ -357,7 +351,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-represented-disclam-pos
   note: 'V2 scope: Directional derivatives of both literal schemes, the conservative all-node identity, fixed-mass
     composition, elliptic elimination, modal growth, and threshold minimum are proved. No ODE trajectory existence,
-    nonlinear stability, or PDE semigroup conclusion is asserted. Source locator: p. 36, TeX line 3316.'
+    nonlinear stability, or PDE semigroup conclusion is asserted. Source locator: p. 36, TeX line 3328.'
   inputs: []
 - paper:
     number: Lemma 2.1, Equations 2.1-2.4
@@ -411,7 +405,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-hassum-intervalintegral-boundedphase
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-infinitecosineprojection-cosinephase
   note: 'V2 scope: Current scope is finite identities only; the former ell-one infinite-series lemma is a different
-    statement. Source locator: p. 13, TeX line 1152.'
+    statement. Source locator: p. 13, TeX line 1153.'
   inputs: []
 - paper:
     number: Equation (2.16)
@@ -422,7 +416,7 @@ rows:
       }\n  \\end{align}"
   class: outside
   note: 'V2 scope: The center graph is an analytic input to conditional finite-jet theorems. Source locator: p.
-    15, TeX line 1378.'
+    15, TeX line 1389.'
   claims: []
 - paper:
     number: Equation (2.8)
@@ -447,7 +441,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-b0-bu-bv-eq
   note: 'V2 scope: The retained declarations are the derivative formulas of the mobility from which B0, Bu and Bv
     follow at (u*, 1+v*); the formulas are identical with the same positive-base domain. Their later infinite-mode
-    use does not change the primitive derivative types. Source locator: p. 14, TeX line 1284.'
+    use does not change the primitive derivative types. Source locator: p. 14, TeX line 1285.'
   inputs: []
 - paper:
     number: Equation (2.9)
@@ -472,7 +466,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-mobility-mixed-hasderivat
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawcubicprojectiondata-taylor-fields
   note: 'V2 scope: The factorial-normalized Buu, Buv and Bvv formulas and positive-base hypotheses are unchanged.
-    Source locator: p. 14, TeX line 1288.'
+    Source locator: p. 14, TeX line 1289.'
   inputs: []
 - paper:
     number: Equation (2.10)
@@ -490,7 +484,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-normalizedlogistic-hasderivat
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rawtaylor-logistic-coefficients
   note: 'V2 scope: A-prime, A-second and A-third retain the same factorial convention (Taylor coefficients of the
-    logistic source at u*). Source locator: p. 14, TeX line 1290.'
+    logistic source at u*). Source locator: p. 14, TeX line 1291.'
   inputs: []
 - paper:
     number: Equation (2.11)
@@ -506,15 +500,13 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalsourcesecond-hasderivat
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalsource-deriv-eq-first
   note: 'V2 scope: The three signal-source Taylor coefficients are formula-identical and retain the same factorial
-    normalization. Source locator: p. 14, TeX line 1297.'
+    normalization. Source locator: p. 14, TeX line 1298.'
   inputs: []
 - paper:
     number: Equation (2.20)
     title: Signal coefficients C_k^(1), C_k^(2), C_k^(3)
     label: E:Ck-restated
-    statement: "\\begin{equation}\\label{E:Ck-restated}\n    C_k^{(1)} \\coloneqq \\frac{C'}{\\mu+\\lambda_k}, \\\
-      qquad\n    C_k^{(2)} \\coloneqq \\frac{C''}{2\\bigl(\\mu+\\lambda_k\\bigr)}, \\qquad\n    C_k^{(3)} \\coloneqq\
-      \ \\frac{C'''}{4\\bigl(\\mu+\\lambda_k\\bigr)},\\quad\n    k\\ge0.\n  \\end{equation}"
+    statement: "\\begin{equation}\\label{E:Ck-restated}\n    C_k^{(1)} \\coloneqq \\frac{C'}{\\mu+\\lambda_k}, \\qquad\n    C_k^{(2)} \\coloneqq \\frac{C''}{2\\bigl(\\mu+\\lambda_k\\bigr)}, \\qquad\n    C_k^{(3)} \\coloneqq \\frac{C'''}{4\\bigl(\\mu+\\lambda_k\\bigr)},\\quad\n    k\\ge0,\n  \\end{equation}"
   class: same-assumptions
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalmode1-residual
@@ -526,7 +518,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-signalresponsejetinterface-actual-modal-derivative
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:Ck-restated.
-    This display summary does not extend that scope. Source locator: p. 16, TeX line 1471.'
+    This display summary does not extend that scope. Source locator: p. 16, TeX line 1482.'
 - paper:
     number: Equation (2.32)
     title: Quadratic coefficient Gamma_{2 n0}
@@ -547,7 +539,7 @@ rows:
   - L>0 and n0>0 with x=lambda_n0
   note: 'V2 scope: The displayed second-harmonic coefficient is identical. Current infinite convolution formulas
     reduce at quadratic center order to the same constant/second-mode support; no infinite-series theorem is claimed
-    by this row. Source locator: p. 19, TeX line 1808.'
+    by this row. Source locator: p. 19, TeX line 1828.'
 - paper:
     number: Equation (2.33)
     title: Constant-mode coefficients a_{0,1}, a_{0,2}
@@ -597,7 +589,7 @@ rows:
   - positive physical parameters and equilibrium relations
   - unique strict critical mode, supplying nonzero stable growth rates, particularly sigma_(2n0)
   note: 'V2 scope: The bA''''/2 term is mandatory. Any legacy wrapper omitting it is rejected. Source locator: p.
-    20, TeX line 1873.'
+    20, TeX line 1893.'
 - paper:
     number: Equation (2.42)
     title: Auxiliary quantities F, G, H
@@ -670,7 +662,7 @@ rows:
   - positive physical equilibrium and L>0,n0>0
   note: 'V2 scope: Conditional on weighted interval integrability and the analytic center-graph condition that the
     critical projection of h3 is zero; all remaining cubic extraction/projection algebra is proved. Source locator:
-    p. 20, TeX line 1918.'
+    p. 20, TeX line 1938.'
 - paper:
     number: Equation (2.44)
     title: Crossing coefficient alpha_n0
@@ -691,7 +683,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-chistartimesb0-pos
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalmodeguards-signalmode1-pos
   note: 'V2 scope: The linear crossing coefficient and positivity hypotheses are unchanged. Source locator: p. 21,
-    TeX line 1949.'
+    TeX line 1969.'
   inputs: []
 - paper:
     number: Equation (2.45)
@@ -713,7 +705,7 @@ rows:
   - nonzero critical eigenvalue and valid stable-mode denominators when identifying the jet with the center graph
   note: 'V2 scope: The corrected finite cubic assembly is derived from the accepted quadratic and cubic projection
     components. It proves the coefficient identity, not center-manifold or PDE branch existence. Source locator:
-    p. 21, TeX line 1959.'
+    p. 21, TeX line 1979.'
 - paper:
     number: Equation (2.43)
     title: Reduced equation on the centre manifold
@@ -752,7 +744,7 @@ rows:
   note: 'V2 scope: Only the exact cubic polynomial and deductions from an explicit remainder interface are formalized.
     The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct
     branch-side filter, derived from the remainder estimates and amplitude localization. Source locator: p. 20,
-    TeX line 1941.'
+    TeX line 1961.'
 - paper:
     number: Equation (2.49)
     title: beta_n0 in the minimal model
@@ -769,7 +761,7 @@ rows:
   - audited fixed-mass quadratic jet and cubic projection, including their analytic application inputs and nonzero
     modal denominators
   note: 'V2 scope: The fixed-mass coefficient remains -chi-star Gamma3 with a0=0 and no logistic channels. The constant
-    signal correction is still retained. Source locator: p. 22, TeX line 2133.'
+    signal correction is still retained. Source locator: p. 22, TeX line 2148.'
 - paper:
     number: Equation (3.1)
     title: beta_n0 in terms of p(beta) and q(beta)
@@ -792,7 +784,7 @@ rows:
   - quadratic graph coefficient formulas and the model-appropriate constant mode
   - positive equilibrium relations and strict critical-mode guards supplied in the surrounding manuscript
   note: 'V2 scope: The p(beta), q(beta), beta-independent Pi and coefficient decomposition are unchanged after movement
-    to Section 3. Source locator: p. 23, TeX line 2186.'
+    to Section 3. Source locator: p. 23, TeX line 2200.'
 - paper:
     number: Equation (3.3)
     title: Coefficients A, B, C of the quadratic in beta
@@ -809,7 +801,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-deriv-qterm-zero
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-betadecomposition-iterderiv-two-qterm-zero
   note: 'V2 scope: The exact derivative formulas A=-q''''(0)/2, B=bA''''p''(0)-q''(0), and C at beta=0 are unchanged.
-    Source locator: p. 23, TeX line 2234.'
+    Source locator: p. 23, TeX line 2248.'
   inputs: []
 - paper:
     number: Equation (3.4)
@@ -827,7 +819,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-upow-mul-piscaled
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-coefficientdictionary-physicalbetaa-neg-fixedmass
   note: 'V2 scope: The closed form and strict negative sign under a strict critical mode are unchanged for both
-    model classes. Source locator: p. 24, TeX line 2253.'
+    model classes. Source locator: p. 23, TeX line 2267.'
   inputs: []
 - paper:
     number: Equation (1.15)
@@ -868,7 +860,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rationalcoefficient-physical-chigamma3
   note: 'V2 scope: The general physical numerator/denominator construction, positive denominator, degree-five bound,
     and balanced degree-four cancellation are proved; the normalized example is only a downstream specialization.
-    Source locator: p. 8, TeX line 732.'
+    Source locator: p. 8, TeX line 731.'
   inputs: []
 - paper:
     number: Equation (3.6)
@@ -886,7 +878,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tied-minimizers-exact
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-tied-modes-strictly-below-others
   note: 'V2 scope: The unique minimizing mode cells and exactly two adjacent modes at tie lengths are unchanged.
-    Source locator: p. 26, TeX line 2458.'
+    Source locator: p. 26, TeX line 2472.'
   inputs: []
 - paper:
     number: Theorem 1.2(2), eigenvalue intervals
@@ -903,7 +895,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-modeintervals-physical-realization-iff
   note: 'V2 scope: The exact lambda corridor is unchanged but no longer has its own label; it appears in Theorem
     1.2(2) and again in the proof near line 2564. Large-length convergence to sqrt(a alpha mu) is unchanged along
-    admissible lengths. Source locator: p. 8, TeX line 700.'
+    admissible lengths. Source locator: p. 8, TeX line 699.'
   inputs: []
 - paper:
     number: Equation (3.7)
@@ -939,7 +931,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator-pos-of-beta-mem-icc
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-specializedpolynomial-numerator-shift
   note: 'V2 scope: This is a downstream specialization and regression test, never a replacement for the all-parameter
-    M4 theorem. Source locator: p. 27, TeX line 2529.'
+    M4 theorem. Source locator: p. 26, TeX line 2543.'
   inputs: []
 - paper:
     number: Equation (3.8)
@@ -964,7 +956,7 @@ rows:
   - β≥0 for the stated nonnegative-parameter sign classification
   - the local bifurcation theorem converting a nonzero cubic-coefficient sign into bifurcation direction
   note: 'V2 scope: The normalized large-domain quadratic, positive root beta_ld and sign split are unchanged. Source
-    locator: p. 27, TeX line 2536.'
+    locator: p. 27, TeX line 2550.'
 - paper:
     number: Table 3.2
     title: Real roots of P(lambda, beta) for selected beta
@@ -1016,7 +1008,7 @@ rows:
   - the local bifurcation theorem converting coefficient signs into super-critical or sub-critical bifurcation
   note: 'V2 scope: Exact rational isolating intervals, exhaustive admissible-root counts, rounding cells, physical
     signs, and finite mode comparisons are proved. Decimal displays are presentation corollaries. Source locator:
-    p. 27, TeX line 2559.'
+    p. 27, TeX line 2573.'
 - paper:
     number: Lemma 4.1
     title: Bounds for stationary solutions of the non-minimal model
@@ -1034,7 +1026,7 @@ rows:
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:spiky-solu-lm1.
-    This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
+    This display summary does not extend that scope. Source locator: p. 28, TeX line 2633.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-logistic-uniform-norm-bound
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholderinterface-logistic-uniform-norm-bound
@@ -1056,7 +1048,7 @@ rows:
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-bounds.
-    This display summary does not extend that scope. Source locator: p. 29, TeX line 2752.'
+    This display summary does not extend that scope. Source locator: p. 29, TeX line 2765.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholdernorm-minimal-uniform-norm-bound
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalholderinterface-minimal-uniform-norm-bound
@@ -1079,7 +1071,7 @@ rows:
       \      \\end{equation}\n  \\end{enumerate}\n\\end{lemma}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:bounded-sensitivity-compactness.
-    This display summary does not extend that scope. Source locator: p. 28, TeX line 2620.'
+    This display summary does not extend that scope. Source locator: p. 28, TeX line 2633.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalboundedcompactness-logistic-stationary-limit
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalboundedcompactness-minimal-stationary-limit
@@ -1100,7 +1092,7 @@ rows:
       frac\\nu\\mu c\\,\\, \\text{ in }\\,\\, W^{2,q}.\n  \\end{equation}\n\\end{lemma}"
   class: same-assumptions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-limit.
-    This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
+    This display summary does not extend that scope. Source locator: p. 34, TeX line 3155.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikesubsequence-exists-constant-signal-and-weak-tests
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeinterface-classical-all-test-subsequence
@@ -1122,7 +1114,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-discretelinearization-conservativenoderate-directionalderivative
   note: 'V2 scope: The literal finite face-flux divergence telescopes under trapezoidal weights, and its directional
     derivative is connected to the reflected fixed-mass modal system. Numerical trajectory existence and differentiability
-    are not asserted. Source locator: p. 36, TeX line 3370.'
+    are not asserted. Source locator: p. 36, TeX line 3382.'
   inputs: []
 - paper:
     number: Theorem 1.2
@@ -1140,7 +1132,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-natdegree-m3poly-le
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-minimalrational-natdegree-minimalnumeratorpoly-le
   note: 'Minimal-model degree-three numerator/denominator clause; existing non-minimal bindings do not certify it.
-    Source locator: p. 8, TeX line 700.'
+    Source locator: p. 8, TeX line 699.'
   inputs: []
 - paper:
     number: Lemma 2.1, Equations 2.1-2.4 (infinite-fourier-convolution)
@@ -1171,7 +1163,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-trigintegrals-cos-cos-cos-cos
   note: 'ell1 summability, exchange of sums/integrals, and convolution multiplicities; finite identities are ingredients
-    only. Source locator: p. 13, TeX line 1152.'
+    only. Source locator: p. 13, TeX line 1153.'
   inputs: []
 - paper:
     number: Equation (2.43) (current-remainder-consumer)
@@ -1209,7 +1201,7 @@ rows:
   - the corresponding independently supplied uniform derivative bound
   note: 'Current mixed remainder and derivative interface; retain analytic hypotheses. The actual scalar BranchCurves
     branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from
-    the remainder estimates and amplitude localization. Source locator: p. 20, TeX line 1941.'
+    the remainder estimates and amplitude localization. Source locator: p. 20, TeX line 1961.'
 - paper:
     number: Theorem 1.3(1)
     title: Relative component construction of the global branch
@@ -1305,7 +1297,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/tail-mass-dirac-consumer.
-    This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
+    This display summary does not extend that scope. Source locator: p. 10, TeX line 933.'
 - paper:
     number: Lemma 4.1(1), Equation 4.1
     title: Mass and moment bounds for stationary solutions of the non-minimal model
@@ -1331,7 +1323,7 @@ rows:
   note: 'ClassicalProfile.interval_bounds proves all four strict extremum/moment conclusions for every given positive
     nonconstant classical stationary profile. The literal flux, equation and both u/v Neumann data derive mass balance;
     no independent mass identity remains. Verified within this entire classical-solution statement, without asserting
-    existence. Source locator: p. 28, TeX line 2626.'
+    existence. Source locator: p. 28, TeX line 2639.'
 - paper:
     number: Lemma 4.1(2), Equation 4.6
     title: Moment step for 0 < gamma <= 1 + alpha
@@ -1345,7 +1337,7 @@ rows:
   inputs: []
   note: 'The new direct ClassicalProfile.power_moment supplies the exact gamma-moment bound for0<gamma<=1+alpha
     from the actual stationary equation through interval_bounds; the higher moment is no longer independently assumed.
-    Its current kernel type was printed and read. Source locator: p. 28, TeX line 2686.'
+    Its current kernel type was printed and read. Source locator: p. 28, TeX line 2699.'
 - paper:
     number: Equation 4.14 (proof of Lemma 4.2(2))
     title: Flux identity of the minimal model
@@ -1361,7 +1353,7 @@ rows:
   inputs: []
   note: 'ClassicalMinimalEstimates.flux_identity derives the literal flux identity from the actual a=b=0 stationary
     population equation and Neumann data. No first-integral assumption remains; classical derivatives and the original
-    equation are standing solution data. Source locator: p. 30, TeX line 2780.'
+    equation are standing solution data. Source locator: p. 30, TeX line 2793.'
 - paper:
     number: Lemma 4.2(1)
     title: Mass and moment bounds for stationary solutions of the minimal model
@@ -1385,7 +1377,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-interval-bounds
   inputs: []
   note: 'Actual prescribed-mass positive nonconstant classical solution supplies both strict extrema and strict
-    second moment; prescribed mass is the ordinary model hypothesis. Source locator: p. 29, TeX line 2752.'
+    second moment; prescribed mass is the ordinary model hypothesis. Source locator: p. 29, TeX line 2765.'
 - paper:
     number: Proof of Lemma 4.2(2) (applies Equation 4.6, p. 28, TeX line 2687)
     title: Fixed-mass Jensen step
@@ -1409,7 +1401,7 @@ rows:
   inputs: []
   note: 'ClassicalMinimalEstimates.power_moment proves the exact prescribed-mass concave moment estimate for all0<=r<=1.
     Prescribed mass is an explicit model hypothesis of the manuscript, not an unresolved analytic inference. In
-    particular r=m-1 covers both endpoints m=1 and m=2. Source locator: p. 29, TeX line 2752.'
+    particular r=m-1 covers both endpoints m=1 and m=2. Source locator: p. 29, TeX line 2765.'
 - paper:
     number: Proof of Lemma 4.2(2), m=1 case of the variation-of-constants display
     title: Exponential representation for m = 1
@@ -1431,7 +1423,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-exp-representation
   inputs: []
   note: 'Literal minimal PDE derives flux at m=1; integrating-factor continuity follows from actual signal regularity
-    and1+v>0. The exact exponential representation is concluded. Source locator: p. 29, TeX line 2752.'
+    and1+v>0. The exact exponential representation is concluded. Source locator: p. 29, TeX line 2765.'
 - paper:
     number: Remark 1.3(2) (local-mass)
     title: Uniformly small local mass
@@ -1472,7 +1464,7 @@ rows:
   note: 'ClassicalProfile.window_mass_bounds states both the exact Holder-type displayed inequality and its strict
     equilibrium envelope; mass balance is derived. window_mass_decay_of_classical_profiles proves uniform decay
     in the family index and center. This covers the quantitative local-mass row end to end for given profiles. Source
-    locator: p. 11, TeX line 1018.'
+    locator: p. 11, TeX line 1019.'
 - paper:
     number: Theorem 1.3(3) (part-3-concentration)
     title: Concentration at an endpoint along the global branch
@@ -1507,7 +1499,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicalendpointconcentration-increasing-actual-concentration
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:global-extension/part-3-concentration.
-    This display summary does not extend that scope. Source locator: p. 10, TeX line 932.'
+    This display summary does not extend that scope. Source locator: p. 10, TeX line 933.'
 - paper:
     number: Theorem 1.1
     title: Two continuous branch curves of the reduced equation
@@ -1544,8 +1536,7 @@ rows:
   - HasDerivAt identifying Rs
   - the stated derivative remainder bound
   - continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded
-  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:local-bifurcation/branch-curves.
-    This display summary does not extend that scope. Source locator: p. 6, TeX line 581.'
+  note: "Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:local-bifurcation/branch-curves. This display summary does not extend that scope. Source locator: p. 6, TeX line 580. arXiv v2 note: Step 5 of the v2 proof drops the derivative remainder estimate; see the ledger row's arxiv_v2_note."
 - paper:
     number: Lemma 2.1 and Equation 2.17
     title: Cosine-series bridge for the Neumann phase space
@@ -1572,7 +1563,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-h2cosineidentities-cos-cos-cos-cos-of-h2
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:trig-integrals/phase-space-bridge.
-    This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
+    This display summary does not extend that scope. Source locator: p. 13, TeX line 1153.'
 - paper:
     number: Proof of Lemma 4.2(2), Equations 4.7-4.8
     title: Signal bounds in the minimal model
@@ -1592,7 +1583,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-signal-sobolev-bound
   inputs: []
   note: 'Actual second PDE and both Neumann conditions supply the exact signal sup-plus-L1 component bound and displayed
-    constant; no separately assumed signal estimate. Source locator: p. 29, TeX line 2696.'
+    constant; no separately assumed signal estimate. Source locator: p. 29, TeX line 2709.'
 - paper:
     number: 'Proof of Lemma 4.2(2): the uniform bounds on u and u_x from the flux identity (4.14), before the elliptic
       step to (4.13) (alternative estimate for 1<=m<2)'
@@ -1611,7 +1602,7 @@ rows:
   inputs: []
   note: 'Literal minimal PDE derives flux; actual signal PDE derives gradient; M is the actual gamma moment. The
     complete original sharp power envelope and derivative estimate hold for0<m<2. Source locator: p. 30, TeX line
-    2780.'
+    2793.'
 - paper:
     number: Proof of Lemma 4.2(2), m=1 case
     title: Sup bound for m = 1 in the minimal model
@@ -1632,7 +1623,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalminimalestimates-exp-sup-bound
   inputs: []
   note: 'Actual PDEs and prescribed mass derive flux, signal-gradient and integrating-factor regularity; the exact
-    historical exponential supremum envelope follows for m=1. Source locator: p. 29, TeX line 2752.'
+    historical exponential supremum envelope follows for m=1. Source locator: p. 29, TeX line 2765.'
 - paper:
     number: Lemma 4.1(2), Equation 4.11 (alternative route for 1<=m<(alpha+2)/2)
     title: Gradient bound chain in the non-minimal model
@@ -1658,7 +1649,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikeestimates-sup-le-of-derivative-power-bound
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:spiky-solu-lm1/part-2-C1-chain.
-    This display summary does not extend that scope. Source locator: p. 29, TeX line 2725.'
+    This display summary does not extend that scope. Source locator: p. 29, TeX line 2738.'
 - paper:
     number: Proof of Lemma 5.1, W^{2,q} step with r=1+alpha
     title: W^{2,q} bound for the signal (step in the proof of Lemma 5.1)
@@ -1680,7 +1671,7 @@ rows:
   note: 'retained auxiliary quantitative W2q deduction for actual given classical profiles: actual testing, Holder,
     Minkowski and population moment premises are all discharged in ClassicalLogisticEstimates.w2q_bound. The old
     part3 name is historical; frozen v2 Lemma4.1(p28) has no part3. Do not present this auxiliary as a current numbered
-    part3 theorem. Source locator: p. 34, TeX line 3143.'
+    part3 theorem. Source locator: p. 34, TeX line 3155.'
 - paper:
     number: Remark 1.3(2) (no-atom-limit)
     title: No atom in the limit measure
@@ -1716,7 +1707,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-stationarymassidentity-no-dirac-subsequence-of-classical-profiles
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/R:no-delta-concentration/no-atom-limit.
-    This display summary does not extend that scope. Source locator: p. 11, TeX line 1018.'
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 1019.'
 - paper:
     number: Lemma 5.1 (deductions)
     title: Deductions of the constant-limit lemma
@@ -1753,7 +1744,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-spikelimit-source-integral-tendsto-zero-of-nonzero-limit-gradient
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:minimal-spike-limit/deductions.
-    This display summary does not extend that scope. Source locator: p. 34, TeX line 3143.'
+    This display summary does not extend that scope. Source locator: p. 34, TeX line 3155.'
 - paper:
     number: Theorem 1.4 (deductions)
     title: Deductions of the spike theorem
@@ -1787,7 +1778,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-classicalspikeblowup-logistic-spike-all-tests-of-eventual-peak
   inputs: []
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:spiky-solu-thm/deductions.
-    This display summary does not extend that scope. Source locator: p. 11, TeX line 990.'
+    This display summary does not extend that scope. Source locator: p. 11, TeX line 991.'
 - paper:
     number: Theorem 1.3(1)-(3)
     title: Logical deductions of the global extension theorem
@@ -1872,7 +1863,7 @@ rows:
   - axis cancellation R_s(η,0)=0 additionally for the Eq. 2.43 bound
   - center-manifold existence and transfer of scalar conclusions to the PDE are outside this row
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:center-ODE-final/remainder-from-jet.
-    This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
+    This display summary does not extend that scope. Source locator: p. 20, TeX line 1961.'
 - paper:
     number: Theorem 1.3(2)-(3), ambient-limit proof paragraphs
     title: Ambient closure of the admissible set
@@ -1971,7 +1962,7 @@ rows:
     point; the full weak-H2 population embedding, actual ODE identification, signal C2 topology and pointwise continuity
     are derived'
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/T:global-extension/monotone-locus.
-    This display summary does not extend that scope. Source locator: p. 32, TeX line 2968.'
+    This display summary does not extend that scope. Source locator: p. 32, TeX line 2980.'
 - paper:
     number: Lemma 2.1 and Equation 2.17 (phase-space-H2)
     title: Neumann H^2 phase space as cosine series
@@ -1990,7 +1981,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-eqon-of-ae-eq-continuouson
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-weakderivative1d-intervalintegrable-of-memlp
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/L:trig-integrals/phase-space-H2.
-    This display summary does not extend that scope. Source locator: p. 13, TeX line 1152.'
+    This display summary does not extend that scope. Source locator: p. 13, TeX line 1153.'
   inputs: []
 - paper:
     number: Equation (2.43) (axis-condition)
@@ -2034,14 +2025,12 @@ rows:
   - TrivialBranchLinearization throughout |η|≤r
   - β_n₀≠0 for the branch conclusions
   note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:center-ODE-final/axis-condition.
-    This display summary does not extend that scope. Source locator: p. 20, TeX line 1941.'
+    This display summary does not extend that scope. Source locator: p. 20, TeX line 1961.'
 - paper:
     number: Equation (2.22) (projected-remainder)
     title: Projection of the fourth-order remainder onto a cosine mode
     label: E:ode-eq0
-    statement: "\\begin{equation}\\label{E:ode-eq0}\n    u'_k(t)\\int_0^L \\cos^2\\big(\\tfrac{k\\pi x}{L}\\big)dx=\\\
-      sum_{\\ell=0}^6\n    \\mathcal{F}_k^{(\\ell)} \\textcolor{magenta}{+\\mathcal{O}_{u,k}(\\|u\\|_{\\ell^1}^4)}\\\
-      quad {\\rm for}\\quad k=0,1,2,\\cdots,\n  \\end{equation}"
+    statement: "\\begin{equation}\\label{E:ode-eq0}\n    u'_k(t)\\int_0^L \\cos^2\\big(\\tfrac{k\\pi x}{L}\\big)dx=\\sum_{\\ell=0}^6\n    \\mathcal{F}_k^{(\\ell)} {+\\mathcal{O}_{k,u}(\\|u\\|_{l^1}^4)}\\quad {\\rm for}\\quad k=0,1,2,\\cdots,\n  \\end{equation}"
   class: same-assumptions
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-projectedremainder-projected-remainder-bound
@@ -2063,8 +2052,7 @@ rows:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-populationmodalresidual-actual-population-projection-quartic-uniform
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-rpow-quadratic-remainder
   inputs: []
-  note: 'Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:ode-eq0/projected-remainder.
-    This display summary does not extend that scope. Source locator: p. 17, TeX line 1566.'
+  note: "Exact public scope, hypotheses and exclusions: data/public-scope-ledger.json, row paper3/E:ode-eq0/projected-remainder. This display summary does not extend that scope. Source locator: p. 17, TeX line 1586. arXiv v2 note: v2 keeps the flux-form remainder decomposition only as a TeX comment; see the ledger row's arxiv_v2_note."
 - paper:
     number: Equations 2.18-2.19
     title: Normalized signal Taylor remainder
@@ -2094,5 +2082,5 @@ rows:
   note: 'actual nonlinear signal-profile modal residual: exact zero/positive normalization, actual source Taylor
     estimate, original elliptic projected balance, summability, and full physical-signal equilibrium wrapper are
     derived. Ordinary given-profile regularity/PDE/small-amplitude inputs remain; no center-manifold or full Fourier-convolution
-    existence is claimed. Source locator: p. 16, TeX line 1447.'
+    existence is claimed. Source locator: p. 16, TeX line 1458.'
   inputs: []

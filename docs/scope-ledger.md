@@ -60,6 +60,8 @@ Reference: p. 7; `paper3/R:local-bifurcation-minimal`.
 
 V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE reduction and PDE spectral stability remain inputs.
 
+**arXiv v2:** Step 4' of the proof of Theorem 1.1 (minimal case) no longer states that the same Taylor argument gives the derivative remainder estimate, as the October 20 source did; the remark is unchanged. The derivative bound remains an explicit conditional input here.
+
 Supplied inputs:
 
 - identification of the minimal-model scalar equation and its coefficients, including the fixed-mass reduction
@@ -361,7 +363,7 @@ V2 scope: The exact derivative formulas A=-q''(0)/2, B=bA''p'(0)-q'(0), and C at
 
 ## Equation 3.4 — verified
 
-Reference: p. 24; `paper3/E:A-closed-form`.
+Reference: p. 23; `paper3/E:A-closed-form`.
 
 V2 scope: The closed form and strict negative sign under a strict critical mode are unchanged for both model classes.
 
@@ -385,7 +387,7 @@ V2 scope: The exact lambda corridor is unchanged but no longer has its own label
 
 ## Equation 3.7 — verified
 
-Reference: p. 27; `paper3/E:new-beta-eq1/normalized-rational-chain`.
+Reference: p. 26; `paper3/E:new-beta-eq1/normalized-rational-chain`.
 
 V2 scope: This is a downstream specialization and regression test, never a replacement for the all-parameter M4 theorem.
 
@@ -1098,6 +1100,8 @@ to the concentration clause under its explicitly separate ordinary monotonicity 
 Reference: p. 6; `paper3/T:local-bifurcation/branch-curves`.
 
 Scalar level of the claim that the nontrivial equilibria form two continuous curves through the bifurcation point: under the MixedRemainder interface (alpha>0, beta!=0, value and derivative remainder bounds, HasDerivAt) each signed small nontrivial root is unique, these are the only small nontrivial equilibria, and (with the extra hypothesis that eta -> R(eta,s) is continuous for each small s) the branch functions are continuous with branch(0)=0 and branch -> 0. Not claimed: center-manifold reduction and the lift to the PDE curves in function space. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.
+
+**arXiv v2:** Step 5 of the proof of Theorem 1.1 no longer states the derivative remainder estimate |R_z(tau,z)| <= C(|z||tau|^2+|z|^2|tau|+|z|^3) that the October 20 source gave; the theorem statement is unchanged. The Lean deductions are unchanged and keep the derivative remainder bound as an explicit conditional input.
 
 Supplied inputs:
 
@@ -2393,6 +2397,8 @@ Supplied inputs:
 Reference: p. 17; `paper3/E:ode-eq0/projected-remainder`.
 
 The actual physical logistic source residual and signed chemotactic flux residual are identified with the nonlinear-operator difference. Taylor bounds, actual signal C1 size, zero endpoint flux, flux derivative integrability and normalized all-mode projections are derived. The final actual_population_projection_cosine_l1_uniform theorem uses the actual Neumann cosine coefficients of U, with summability/reconstruction proved from NeumannW21, and yields C_k*||u||_l1^4 uniformly for |chi|<=X. Remaining premises are ordinary given-classical-profile regularity, positivity near the interval, Neumann data and the actual shifted signal equation; no Taylor, projected-balance, Fourier-reconstruction or signal-size estimate is assumed. This supports verified status within that classical coefficient-l1 residual scope, not the whole infinite modal dynamics or a generic X_theta embedding theorem.
+
+**arXiv v2:** v2 writes the remainder in (2.21) as O(|u~|^4) and its projection in (2.22) as the integral of O(|u~|^4)cos(k pi x/L); the October 20 source also stated the source/flux decomposition R_u = R_u^(0) + d_x R_u^(1), with |R_u^(0)| <= C|u~|^4, which v2 keeps only as a TeX comment. The verified status is retained: the Lean result applies with the remainder read in that flux form, as the application note records (its TeX line refers to the October 20 source).
 
 Supporting ingredients and their precise inputs:
 

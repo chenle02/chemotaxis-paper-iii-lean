@@ -10,7 +10,7 @@ description: Every formalized result of Chemotaxis III, grouped by the manuscrip
 Each entry opens the result on the [verification page](verification.html), which shows the
 Lean statement, its hypotheses, the checks that ran and, where it is quoted, the paper's
 statement. The class in
-brackets repeats that page's own wording. Section titles follow the October 20, 2026 v2
+brackets repeats that page's own wording. Section titles follow the arXiv v2
 manuscript; results are grouped by the section whose number they carry.
 
 Listed here: 70 results (47 with the paper's own hypotheses, 23 with extra

@@ -46,6 +46,6 @@ Cite the software with [CITATION.cff](https://github.com/chenle02/chemotaxis-pap
 }
 ```
 
-- [Public manuscript and source](https://github.com/chenle02/chemotaxis-paper-iii).
+- [Manuscript source and PDF](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/main/manuscript), in this repository's `manuscript/` folder.
 - [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), October 23, 2026: the version the coverage map and scope ledger target. Its source has SHA-256 `0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948`.
 - The scopes were first reviewed against the October 20, 2026 source (SHA-256 `545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae`), which has the same theorem and equation numbering; see [manuscript versions](manuscript-versions.html).

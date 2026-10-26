@@ -3,6 +3,12 @@ Copyright 2026 Le Chen
 
 This product is licensed under the Apache License, Version 2.0 (see LICENSE).
 
+The manuscript/ folder holds the paper "Chemotaxis models with signal-dependent
+sensitivity and a logistic-type source, III: Bifurcation and spike-like
+solutions" (arXiv:2610.20976) by Le Chen, Ian Ruau and Wenxian Shen. Its text
+and figures remain copyright their authors and are not covered by the Apache
+License; no additional license is granted for them.
+
 The reused finite-verification Lean modules were first published by their
 sole author, Le Chen, under the MIT license in chenle02/Chemataxis_Numerics;
 he has relicensed them here under the Apache License, Version 2.0.

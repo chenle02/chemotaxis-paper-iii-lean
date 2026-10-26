@@ -3,7 +3,7 @@
 > Partial Lean 4 / Mathlib formalization of "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions" (Le Chen, Ian Ruau, Wenxian Shen). Lake package chemotaxis-bifurcation-lean, release v0.1.0. The Lean source on main is unchanged since v0.1.0.
 
 Public repository: https://github.com/chenle02/chemotaxis-paper-iii-lean
-Paper: https://github.com/chenle02/chemotaxis-paper-iii
+Paper: https://arxiv.org/abs/2610.20976v2 (source and PDF in manuscript/)
 Documentation site: https://chenle02.github.io/chemotaxis-paper-iii-lean/
 
 Read README.md, docs/what-is-proved.md, docs/verification.md and data/public-scope-ledger.json before interpreting claims. Coverage is 47 verified scopes, 23 conditional scopes and 3 exclusions across 73 overlapping scopes, not a whole-paper correctness percentage. There are 1525 indexed public declarations including definitions. Whole PDE bifurcation, center manifolds, global alternatives/correspondence and stability are not certified. Supplied analytic family/jet/branch hypotheses remain explicit. Build with ./verify.sh; toolchain and dependency pins are immutable for a release. See LICENSE and CITATION.cff.
@@ -21,6 +21,12 @@ Read README.md, docs/what-is-proved.md, docs/verification.md and data/public-sco
 - [verify.sh](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/verify.sh): cache restore, full build, owned-declaration axiom audit, negative control
 - [lean-toolchain](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/lean-toolchain), [lake-manifest.json](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/lake-manifest.json): exact pins
 - [claims.yaml](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/claims.yaml), [coverage.yaml](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/coverage.yaml): claim and coverage data behind the generated pages; do not edit generated output by hand
+
+## Manuscript
+
+- [manuscript/README.md](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/manuscript/README.md): abstract, files, build and rights (the manuscript is not Apache-licensed)
+- [manuscript/Chen-Ruau-Shen-JMB.tex](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/manuscript/Chen-Ruau-Shen-JMB.tex): arXiv v2 LaTeX source; theorems are stated in the Introduction
+- [docs/manuscript-versions.md](https://raw.githubusercontent.com/chenle02/chemotaxis-paper-iii-lean/main/docs/manuscript-versions.md): v1, October 20 and v2 compared
 
 ## Optional
 

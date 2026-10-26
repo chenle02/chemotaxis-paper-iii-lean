@@ -5,15 +5,15 @@ description: How arXiv v1, the October 20 source and arXiv v2 of Chemotaxis III 
 
 # Manuscript versions
 
-The coverage map and the [scope ledger](scope-ledger.html) target [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), submitted on October 23, 2026. Its source is in the [paper repository](https://github.com/chenle02/chemotaxis-paper-iii) at commit `f9aed465`.
+The coverage map and the [scope ledger](scope-ledger.html) target [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), submitted on October 23, 2026. Its source is in this repository's [`manuscript/`](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/main/manuscript) folder, unchanged from the arXiv e-print.
 
 | Version | Date | Source SHA-256 | Where |
 |---|---|---|---|
 | arXiv v1 | October 14, 2026 | — | [arXiv:2610.20976v1](https://arxiv.org/abs/2610.20976v1) |
-| October 20 source | October 20, 2026 | `545c93f8…` | paper repository at [`c8aa57b3`](https://github.com/chenle02/chemotaxis-paper-iii/tree/c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4) |
-| arXiv v2 | October 23, 2026 | `0907a3b4…` | [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2); paper repository at [`f9aed465`](https://github.com/chenle02/chemotaxis-paper-iii/tree/f9aed4653e6312726ed1544d6f135fa14a5c6b29) |
+| October 20 source | October 20, 2026 | `545c93f8…` | manuscript history at [`c8aa57b3`](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4) |
+| arXiv v2 | October 23, 2026 | `0907a3b4…` | [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2); [`manuscript/`](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/main/manuscript), first added at [`f9aed465`](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/f9aed4653e6312726ed1544d6f135fa14a5c6b29) |
 
-The scopes were first reviewed against the October 20 source. [`data/source-baselines/arXiv-2610.20976v2.json`](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/data/source-baselines/arXiv-2610.20976v2.json) records the v2 e-print and shows that its main TeX file is the one the paper repository holds.
+The scopes were first reviewed against the October 20 source. [`data/source-baselines/arXiv-2610.20976v2.json`](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/main/data/source-baselines/arXiv-2610.20976v2.json) records the v2 e-print and shows that its main TeX file is the one in `manuscript/`.
 
 ## Numbering
 

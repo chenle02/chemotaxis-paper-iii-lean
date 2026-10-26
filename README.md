@@ -17,7 +17,7 @@ A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary es
 [scope ledger](docs/scope-ledger.md) ·
 [reproduce](docs/reproducing.md) ·
 [evidence](docs/evidence/README.md) ·
-[paper](https://github.com/chenle02/chemotaxis-paper-iii) ·
+[paper](manuscript/) ·
 for coding agents: [`llms.txt`](llms.txt)
 
 ## What is proved
@@ -35,7 +35,7 @@ Read [what is proved](docs/what-is-proved.md), [scope ledger](docs/scope-ledger.
 
 Le Chen, Ian Ruau and Wenxian Shen, *Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions*.
 
-- [Public manuscript and source](https://github.com/chenle02/chemotaxis-paper-iii).
+- [Manuscript source and PDF](manuscript/), the files of the arXiv v2 e-print, unchanged ([PDF](manuscript/arXiv-2610.20976v2.pdf)). The manuscript and figures remain copyright their authors; the Apache-2.0 license does not cover them.
 - [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), October 23, 2026: the version the coverage map and scope ledger target, source SHA-256 `0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948`.
 - The scopes were first reviewed against the October 20, 2026 source. It has the same theorem and equation numbering as v1 and v2; [manuscript versions](docs/manuscript-versions.md) lists what v2 changed and the three scopes that carry an arXiv v2 note.
 

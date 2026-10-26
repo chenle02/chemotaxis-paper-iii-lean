@@ -1,19 +1,9 @@
-<p align="center">
-  <img src="assets/chemotaxis-banner.svg" width="560" alt="Cells drifting up a signal gradient toward a spike-like stationary profile">
-</p>
+# Chemotaxis III manuscript
 
-# Chemotaxis III: bifurcation and spike-like solutions
+The source and PDF of **Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions**, by Le Chen, Ian Ruau, and Wenxian Shen: [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), submitted October 23, 2026. The first version is [v1](https://arxiv.org/abs/2610.20976v1).
 
-Public manuscript and reproducibility materials for **Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions**, by Le Chen, Ian Ruau, and Wenxian Shen.
-
-[![arXiv](https://img.shields.io/badge/arXiv-2610.20976v2-b31b1b)](https://arxiv.org/abs/2610.20976v2)
-[![Manuscript](https://img.shields.io/badge/manuscript-arXiv%20v2%2C%20Oct%2023%2C%202026-2a9d8f)](arXiv-2610.20976v2.pdf)
-[![Lean companion](https://img.shields.io/badge/Lean%204-partial%20companion-264653)](https://github.com/chenle02/chemotaxis-paper-iii-lean)
-[![Docs](https://img.shields.io/badge/Lean%20docs-GitHub%20Pages-1d4a52)](https://chenle02.github.io/chemotaxis-paper-iii-lean/)
-
-- [Read the manuscript PDF](arXiv-2610.20976v2.pdf) (arXiv v2).
-- [Published preprint, arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2); the first version is [v1](https://arxiv.org/abs/2610.20976v1).
-- [Lean companion and verification boundary](https://github.com/chenle02/chemotaxis-paper-iii-lean), with its [documentation site](https://chenle02.github.io/chemotaxis-paper-iii-lean/).
+- [Read the PDF](arXiv-2610.20976v2.pdf), as served by arXiv.
+- The Lean companion is the rest of [this repository](../README.md), with its [documentation site](https://chenle02.github.io/chemotaxis-paper-iii-lean/). It formalizes selected results and conditional deductions; **the whole paper is not Lean-certified**.
 
 ## Abstract
 
@@ -32,29 +22,9 @@ where $`\Omega`$ is a bounded smooth domain in $`\mathbb{R}^N`$, and the paramet
 
 By applying center manifold reduction, we derive a quantity $`\beta_{n_0}`$ at a simple bifurcation mode $`n_0`$ of a positive constant solution $`(u^*,v^*)`$, and show that super-critical (resp. sub-critical) pitchfork bifurcation occurs if $`\beta_{n_0} > 0`$ (resp. $`\beta_{n_0} < 0`$) when $`\chi_0`$ passes through the bifurcation threshold $`\chi^*`$. We find two interesting ways in which $`\beta`$ enters: it shifts the bifurcation *threshold*, namely, larger signal-dependence exponent $`\beta`$ needs proportionately larger $`\chi_0`$ for the constant equilibrium to lose linear stability, and it also selects bifurcation *type*, namely, when $`\beta`$ is small, the bifurcation may be super-critical, but when $`\beta`$ is sufficiently large, the bifurcation is always sub-critical. Biologically, $`\beta`$ thus acts twice in the same direction: it makes patterns harder to trigger, and it makes them more likely to appear abruptly rather than to grow continuously from the constant state. We also find some interesting effects of the domain size. For example, it is found that, in the non-minimal model, the bifurcation mode $`n_0`$ becomes larger and larger when the domain size increases and hence a large domain creates more complicated bifurcation patterns. In addition, under suitable conditions we prove unbounded continuation of the local bifurcation branches and prove that sequences of stationary solutions with large sensitivity develop spike-like solutions. We give some numerical analysis of the continuation of local bifurcation and spike-like solutions. Our numerical time-evolution experiments suggest unbounded continuation of local bifurcation branches and increasingly sharp stationary profiles.
 
-## Manuscript version
+## Files
 
-This repository holds [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), submitted on October 23, 2026. The TeX source, bibliography and 16 figures are the files of the arXiv e-print, unchanged, and [`arXiv-2610.20976v2.pdf`](arXiv-2610.20976v2.pdf) is the PDF served by arXiv. Their SHA-256 hashes, and that of the e-print archive, are in [manuscript-manifest.json](manuscript-manifest.json). The earlier October 20 source, which the Lean companion was first checked against, remains in this repository's history at commit [`c8aa57b3`](https://github.com/chenle02/chemotaxis-paper-iii/tree/c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4). It has the same theorem and equation numbering as v2. This repository does not assert journal submission or acceptance.
-
-## Lean verification
-
-The companion distinguishes **47 verified scopes, 23 conditional scopes, and 3 exclusions** across 73 overlapping manuscript-facing scopes. These are not percentages of whole-paper correctness. The current formal library includes 1,525 indexed public declarations; definitions and compiler-generated helpers are not theorem counts.
-
-The actual weak-H2 cosine complement, critical signal response from a supplied population jet and actual elliptic solution family, and conserved-mean quadratic coefficient are formalized. Actual operator/Fredholm identification, local PDE bifurcation, center-manifold construction and invariance, global bifurcation alternatives/correspondence, and PDE stability remain substantive foundations. **The whole paper is not Lean-certified.** See the companion's scope ledger for each precise boundary.
-
-Browse the formal results [by paper section](https://chenle02.github.io/chemotaxis-paper-iii-lean/results.html), or read [what is proved](https://chenle02.github.io/chemotaxis-paper-iii-lean/what-is-proved.html).
-
-## Build
-
-Install TeX Live with pdfLaTeX, latexmk, BibTeX and amsrefs, then run:
-
-```sh
-./build.sh
-```
-
-The build writes to `build/`, using pdfLaTeX as arXiv does. Its `.aux` and `.bbl` match the committed copies. The committed PDF is the one arXiv serves; a fresh PDF differs in the arXiv stamp, timestamps, metadata and font encoding. The bibliography and all 16 numerical figures are included, at the top level as in the e-print.
-
-## What is in this repository
+The TeX source, bibliography and 16 figures are the files of the arXiv e-print, unchanged. [`manuscript-manifest.json`](manuscript-manifest.json) records the SHA-256 of every file and of the e-print archive.
 
 | Path | Contents |
 |---|---|
@@ -64,34 +34,17 @@ The build writes to `build/`, using pdfLaTeX as arXiv does. Its `.aux` and `.bbl
 | `minimal_{sub,sup}_fig1-4.jpeg`, `non-minimal_{sub,sup}_fig1-4.jpeg` | The 16 numerical figures, in four regimes (minimal/non-minimal, sub-/supercritical) |
 | [`manuscript-manifest.json`](manuscript-manifest.json) | SHA-256 of every manuscript file and of the e-print |
 | [`build.sh`](build.sh) | Build script with an unresolved-reference check |
-| [`CITATION.cff`](CITATION.cff), [`llms.txt`](llms.txt) | Citation metadata; a short map for coding agents |
 
-## Related reusable libraries
+## Build
 
-- [neumann-cosine-lean](https://github.com/chenle02/neumann-cosine-lean): cosine modes and Neumann spectral calculations.
-- [scalar-pitchfork-lean](https://github.com/chenle02/scalar-pitchfork-lean): scalar pitchfork and branch-topology results under explicit hypotheses.
+Install TeX Live with pdfLaTeX, latexmk, BibTeX and amsrefs, then run `manuscript/build.sh` from anywhere. The build writes to `manuscript/build/`, using pdfLaTeX as arXiv does; its `.aux` and `.bbl` match the committed copies. A fresh PDF differs from the arXiv one in the arXiv stamp, timestamps, metadata and font encoding.
 
-These standalone libraries have their own versioned theorem scopes and receipts; later companion results do not silently extend their APIs.
+## History
 
-## Citation and rights
+This folder was the separate repository `chenle02/chemotaxis-paper-iii` until October 26, 2026, and keeps its full history. The October 20, 2026 source, against which the Lean scopes were first reviewed, is at commit [`c8aa57b3`](https://github.com/chenle02/chemotaxis-paper-iii-lean/tree/c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4); it has the same theorem and equation numbering as v2. See [manuscript versions](https://chenle02.github.io/chemotaxis-paper-iii-lean/manuscript-versions.html).
 
-Cite the authors and arXiv:2610.20976v2. See [CITATION.cff](CITATION.cff). Manuscript and figures remain copyright their authors; this repository grants no additional manuscript license. The Lean repositories specify their own software licenses.
+## Rights and citation
 
-```bibtex
-@misc{chen_ruau_shen_2026_chemotaxis_iii,
-  author = {Chen, Le and Ruau, Ian and Shen, Wenxian},
-  title = {Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions},
-  eprint = {2610.20976},
-  archivePrefix = {arXiv},
-  primaryClass = {math.AP},
-  year = {2026}
-}
-```
-
-## Reproducibility, tools and acknowledgments
-
-The manuscript files are copied from the arXiv e-print without edits. Lean verification was developed and checked with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([concept DOI](https://doi.org/10.5281/zenodo.23272098)). AI assistance was used in formalization, tooling, and documentation; the exact Lean statements and explicit hypotheses govern the formal claims.
-
-An accepted verification gate of the Lean companion ran on the [Auburn University Easley Cluster](https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/intro.html), during its private development; see the companion's [acknowledgments](https://chenle02.github.io/chemotaxis-paper-iii-lean/acknowledgments.html) for the scope of that run.
+The manuscript and figures remain copyright their authors. The repository's Apache-2.0 license covers the Lean companion and its tooling, not the files in this folder; no additional manuscript license is granted. Cite the authors and arXiv:2610.20976v2; see the repository's [CITATION.cff](../CITATION.cff).
 
 The manuscript's own acknowledgments, funding statement, data and code availability, and AI declaration are at the end of the [PDF](arXiv-2610.20976v2.pdf).

@@ -6,7 +6,7 @@
 
 A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary estimates, compactness and conditional bifurcation deductions for Chemotaxis III.
 
-![Lean](https://img.shields.io/badge/Lean-4.35.0-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green) ![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Lean](https://img.shields.io/badge/Lean-4.35.0-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green) ![Version](https://img.shields.io/badge/version-0.1.1-blue)
 [![Release](https://img.shields.io/github/v/release/chenle02/chemotaxis-paper-iii-lean)](https://github.com/chenle02/chemotaxis-paper-iii-lean/releases/tag/v0.1.0)
 [![arXiv](https://img.shields.io/badge/arXiv-2610.20976v2-b31b1b)](https://arxiv.org/abs/2610.20976v2)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-1d4a52)](https://chenle02.github.io/chemotaxis-paper-iii-lean/)
@@ -68,7 +68,7 @@ To use the library from another Lake project:
 [[require]]
 name = "chemotaxis-bifurcation-lean"
 git = "https://github.com/chenle02/chemotaxis-paper-iii-lean"
-rev = "v0.1.0"
+rev = "v0.1.1"
 ```
 
 ## Trust and axioms
@@ -12730,7 +12730,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *Lean companion to "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions"*. Version 0.1.0.
+Le Chen. *Lean companion to "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions"*. Version 0.1.1.
 
 It formalizes results of *Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions*, [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2). See [CITATION.cff](CITATION.cff).
 

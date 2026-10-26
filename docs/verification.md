@@ -12632,7 +12632,7 @@ Expected: `#print axioms` on any declaration above reports a subset of {`Classic
 
 ## Citation
 
-Le Chen. *Lean companion to "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions"*. Version 0.1.0.
+Le Chen. *Lean companion to "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions"*. Version 0.1.1.
 
 It formalizes results of *Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions*, [arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2). See [CITATION.cff](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/HEAD/CITATION.cff).
 

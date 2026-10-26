@@ -1,0 +1,65 @@
+{
+  "schema": "chemotaxis-paper-iii-public-manuscript/1",
+  "version": "arXiv:2610.20976v2",
+  "published_preprint": "arXiv:2610.20976v2",
+  "arxiv": {
+    "id": "2610.20976v2",
+    "submitted": "2026-10-23T14:25:30Z",
+    "eprint_url": "https://arxiv.org/e-print/2610.20976v2",
+    "eprint_sha256": "475d1c153c47b18f3392deef874e008fc13ef398ac688969e14d941321fdf1ea",
+    "eprint_retrieved": "2026-10-26",
+    "main_tex": "Chen-Ruau-Shen-JMB.tex",
+    "compiler": "pdflatex"
+  },
+  "provenance": {
+    "from_eprint": [
+      "Chen-Ruau-Shen-JMB.tex",
+      "references.bib",
+      "minimal_sub_fig1.jpeg",
+      "minimal_sub_fig2.jpeg",
+      "minimal_sub_fig3.jpeg",
+      "minimal_sub_fig4.jpeg",
+      "minimal_sup_fig1.jpeg",
+      "minimal_sup_fig2.jpeg",
+      "minimal_sup_fig3.jpeg",
+      "minimal_sup_fig4.jpeg",
+      "non-minimal_sub_fig1.jpeg",
+      "non-minimal_sub_fig2.jpeg",
+      "non-minimal_sub_fig3.jpeg",
+      "non-minimal_sub_fig4.jpeg",
+      "non-minimal_sup_fig1.jpeg",
+      "non-minimal_sup_fig2.jpeg",
+      "non-minimal_sup_fig3.jpeg",
+      "non-minimal_sup_fig4.jpeg"
+    ],
+    "arxiv_pdf": "arXiv-2610.20976v2.pdf, as served by https://arxiv.org/pdf/2610.20976v2",
+    "local_build": [
+      "Chen-Ruau-Shen-JMB.aux",
+      "Chen-Ruau-Shen-JMB.bbl"
+    ]
+  },
+  "whole_paper_lean_verified": false,
+  "files": {
+    "Chen-Ruau-Shen-JMB.tex": "0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948",
+    "references.bib": "c349ddae613e13a13e1fb1ff1b78580a0e74f3fdbce16b8c658b1147529ef88b",
+    "Chen-Ruau-Shen-JMB.aux": "f9c19139cd55d50c4057b124165b26f771b4216ce2f5554d03dd1d4829154c6e",
+    "Chen-Ruau-Shen-JMB.bbl": "85f269ae5c9d2d73ec0e3ddcea21789b0eed6fc32aea6fe9fc75b5975c3414e7",
+    "arXiv-2610.20976v2.pdf": "562a7f2b8abeb0ffa0018dd4f10aac1f48d923a5fd8ff6971517e923740709d7",
+    "minimal_sub_fig1.jpeg": "289717b29e6cf359d93ccecebcf12daff6d20a155f7387348665a774edf92e7a",
+    "minimal_sub_fig2.jpeg": "10c97f26e1b95adfe4bf43b873f185b5a9ee75122ce2f9f51b80653f793d3c83",
+    "minimal_sub_fig3.jpeg": "b9ccee18402e4923be583ca0ea9db5dcc84d8ec306f629f7ef8ff01832e3ac6a",
+    "minimal_sub_fig4.jpeg": "a7198d9dbf74cfc3fde9dba75ef24553f4d0cd0bc2bb4a229bab2f76600fdd57",
+    "minimal_sup_fig1.jpeg": "2f3c955b0de1523ddb193825e51f9ef047f4e46cdeda2f7214f0e92805ffdca2",
+    "minimal_sup_fig2.jpeg": "c51d9b3f6fa4760e7127282cf1706fe117522a27f0897dd7e74fd27b63f2200a",
+    "minimal_sup_fig3.jpeg": "84dfd72f68e78c75aff46a878abbf44d7e6d176c91b42ce62be2f8ba2f5d8a94",
+    "minimal_sup_fig4.jpeg": "4b415d20f9ccbd855d4b53b031b792bbc82345d2325107ec731314608049b128",
+    "non-minimal_sub_fig1.jpeg": "799b34f0469962444d412c46795e5697c2667006be3cec510e6e269efc8e3a13",
+    "non-minimal_sub_fig2.jpeg": "ed845bf8fda8f051408a80652d3ca69b2fe8c87db53a58e91fa3f0708a3718c5",
+    "non-minimal_sub_fig3.jpeg": "bf0322663401f01e0a94a8512c029b910e736298a1801c950669315392d2b1a3",
+    "non-minimal_sub_fig4.jpeg": "91ea82b45e702cef713ac658b37c41949d18ad3409877ae0b1a182ae58a9198f",
+    "non-minimal_sup_fig1.jpeg": "7b742a1bacf6bd63f4a741be478547fc58c9112187539b13b6d11131dd724ece",
+    "non-minimal_sup_fig2.jpeg": "b9fd273738eb21a936df84f5e91ff0caaf84d3b42ecb8420bd27155327cad0c9",
+    "non-minimal_sup_fig3.jpeg": "fe656e857257047f875a794b5cca84aecfc5c459961300646c22f34520ca94d6",
+    "non-minimal_sup_fig4.jpeg": "1bb23d1a9c8d8d2d67b3589ae34a2127b0dcec33f058a152c055e5aa4e1140f6"
+  }
+}

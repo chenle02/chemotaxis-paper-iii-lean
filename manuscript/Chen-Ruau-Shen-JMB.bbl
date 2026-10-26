@@ -1,0 +1,500 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{baghaei:24:global}{article}{
+      author={Baghaei, Khadijeh},
+       title={Global boundedness of solutions to a chemotaxis consumption model
+  with signal dependent motility and logistic source},
+        date={2024},
+        ISSN={1631-073X},
+     journal={C. R. Math. Acad. Sci. Paris},
+      volume={362},
+      number={G10},
+       pages={1131\ndash 1145},
+         url={https://doi.org/10.5802/crmath.605},
+      review={\MR{4824914}},
+}
+
+\bib{black.lankeit.ea:20:stabilization}{article}{
+      author={Black, Tobias},
+      author={Lankeit, Johannes},
+      author={Mizukami, Masaaki},
+       title={Stabilization in the {K}eller-{S}egel system with
+  signal-dependent sensitivity},
+        date={2020},
+        ISSN={0003-6811},
+     journal={Appl. Anal.},
+      volume={99},
+      number={16},
+       pages={2877\ndash 2891},
+         url={https://doi.org/10.1080/00036811.2019.1585534},
+      review={\MR{4174428}},
+}
+
+\bib{chen.ruau.ea:26:chemotaxis*1}{article}{
+      author={Chen, Le},
+      author={Ruau, Ian},
+      author={Shen, Wenxian},
+       title={Chemotaxis models with signal-dependent sensitivity and a
+  logistic-type source, {I}: {B}oundedness and global existence},
+        date={2026},
+        ISSN={0022-0396,1090-2732},
+     journal={J. Differential Equations},
+      volume={476},
+       pages={Paper No. 114477, 54},
+      eprint={2512.14858},
+         url={https://doi.org/10.1016/j.jde.2026.114477},
+      review={\MR{5070860}},
+}
+
+\bib{chen.ruau.ea:26:chemotaxis}{article}{
+      author={Chen, Le},
+      author={Ruau, Ian},
+      author={Shen, Wenxian},
+       title={Chemotaxis models with signal-dependent sensitivity and a
+  logistic-type source, {II}: Persistence and stabilization},
+        date={2026},
+     journal={Preprint arXiv:2604.02599v1},
+         url={https://arxiv.org/abs/2604.02599v1},
+}
+
+\bib{chen.hao.ea:14:stability}{article}{
+      author={Chen, Xinfu},
+      author={Hao, Jianghao},
+      author={Wang, Xuefeng},
+      author={Wu, Yaping},
+      author={Zhang, Yajing},
+       title={Stability of spiky solution of {K}eller-{S}egel's minimal
+  chemotaxis model},
+        date={2014},
+        ISSN={0022-0396,1090-2732},
+     journal={J. Differential Equations},
+      volume={257},
+      number={9},
+       pages={3102\ndash 3134},
+         url={https://doi.org/10.1016/j.jde.2014.06.008},
+      review={\MR{3258133}},
+}
+
+\bib{crandall.rabinowitz:71:bifurcation}{article}{
+      author={Crandall, Michael~G.},
+      author={Rabinowitz, Paul~H.},
+       title={Bifurcation from simple eigenvalues},
+        date={1971},
+        ISSN={0022-1236},
+     journal={J. Functional Analysis},
+      volume={8},
+       pages={321\ndash 340},
+         url={https://doi.org/10.1016/0022-1236(71)90015-2},
+      review={\MR{288640}},
+}
+
+\bib{galakhov.salieva.ea:16:on}{article}{
+      author={Galakhov, Evgeny},
+      author={Salieva, Olga},
+      author={Tello, J.~Ignacio},
+       title={On a parabolic-elliptic system with chemotaxis and logistic type
+  growth},
+        date={2016},
+        ISSN={0022-0396},
+     journal={J. Differential Equations},
+      volume={261},
+      number={8},
+       pages={4631\ndash 4647},
+         url={https://doi.org/10.1016/j.jde.2016.07.008},
+      review={\MR{3537839}},
+}
+
+\bib{henry:81:geometric}{book}{
+      author={Henry, Daniel},
+       title={Geometric theory of semilinear parabolic equations},
+      series={Lecture Notes in Mathematics},
+   publisher={Springer-Verlag, Berlin-New York},
+        date={1981},
+      volume={840},
+        ISBN={3-540-10557-3},
+      review={\MR{610244}},
+}
+
+\bib{herrero.medina.ea:97:finite-time}{article}{
+      author={Herrero, M.~A.},
+      author={Medina, E.},
+      author={Vel\'{a}zquez, J. J.~L.},
+       title={Finite-time aggregation into a single point in a
+  reaction-diffusion system},
+        date={1997},
+        ISSN={0951-7715},
+     journal={Nonlinearity},
+      volume={10},
+      number={6},
+       pages={1739\ndash 1754},
+         url={https://doi.org/10.1088/0951-7715/10/6/016},
+      review={\MR{1483563}},
+}
+
+\bib{herrero.velazquez:96:singularity}{article}{
+      author={Herrero, Miguel~A.},
+      author={Vel\'{a}zquez, Juan J.~L.},
+       title={Singularity patterns in a chemotaxis model},
+        date={1996},
+        ISSN={0025-5831},
+     journal={Math. Ann.},
+      volume={306},
+      number={3},
+       pages={583\ndash 623},
+         url={https://doi.org/10.1007/BF01445268},
+      review={\MR{1415081}},
+}
+
+\bib{hu.tao:17:boundedness}{article}{
+      author={Hu, Bingran},
+      author={Tao, Youshan},
+       title={Boundedness in a parabolic-elliptic chemotaxis-growth system
+  under a critical parameter condition},
+        date={2017},
+        ISSN={0893-9659},
+     journal={Appl. Math. Lett.},
+      volume={64},
+       pages={1\ndash 7},
+         url={https://doi.org/10.1016/j.aml.2016.08.003},
+      review={\MR{3564732}},
+}
+
+\bib{jin.wang.ea:16:pattern}{article}{
+      author={Jin, Ling},
+      author={Wang, Qi},
+      author={Zhang, Zengyan},
+       title={Pattern formation in {K}eller--{S}egel chemotaxis models with
+  logistic growth},
+        date={2016},
+     journal={Internat. J. Bifur. Chaos Appl. Sci. Engrg.},
+      volume={26},
+      number={2},
+       pages={1650033, 15},
+      eprint={1407.5246},
+         url={https://arxiv.org/abs/1407.5246},
+}
+
+\bib{keller.segel:70:initiation}{article}{
+      author={Keller, Evelyn~F.},
+      author={Segel, Lee~A.},
+       title={Initiation of slime mold aggregation viewed as an instability},
+        date={1970},
+        ISSN={0022-5193},
+     journal={J. Theoret. Biol.},
+      volume={26},
+      number={3},
+       pages={399\ndash 415},
+         url={https://doi.org/10.1016/0022-5193(70)90092-5},
+      review={\MR{3925816}},
+}
+
+\bib{keller.segel:71:model}{article}{
+      author={Keller, Evelyn~F},
+      author={Segel, Lee~A},
+       title={Model for chemotaxis},
+        date={1971},
+     journal={J. Theoret. Biol.},
+      volume={30},
+      number={2},
+       pages={225\ndash 234},
+}
+
+\bib{keller.segel:71:traveling}{article}{
+      author={Keller, Evelyn~F},
+      author={Segel, Lee~A},
+       title={Traveling bands of chemotactic bacteria: a theoretical analysis},
+        date={1971},
+     journal={J. Theoret. Biol.},
+      volume={30},
+      number={2},
+       pages={235\ndash 248},
+}
+
+\bib{kong.wang:22:stability}{article}{
+      author={Kong, Fanze},
+      author={Wang, Qi},
+       title={Stability, free energy and dynamics of multi-spikes in the
+  minimal {K}eller-{S}egel model},
+        date={2022},
+        ISSN={1078-0947,1553-5231},
+     journal={Discrete Contin. Dyn. Syst.},
+      volume={42},
+      number={5},
+       pages={2499\ndash 2523},
+         url={https://doi.org/10.3934/dcds.2021200},
+      review={\MR{4405278}},
+}
+
+\bib{kong.ward.ea:24:existence}{article}{
+      author={Kong, Fanze},
+      author={Ward, Michael~J.},
+      author={Wei, Juncheng},
+       title={Existence, stability and slow dynamics of spikes in a 1{D}
+  minimal {K}eller-{S}egel model with logistic growth},
+        date={2024},
+        ISSN={0938-8974,1432-1467},
+     journal={J. Nonlinear Sci.},
+      volume={34},
+      number={3},
+       pages={Paper No. 51, 76},
+         url={https://doi.org/10.1007/s00332-024-10025-7},
+      review={\MR{4728829}},
+}
+
+\bib{kong.wei.ea:23:existence}{article}{
+      author={Kong, Fanze},
+      author={Wei, Juncheng},
+      author={Xu, Liangshun},
+       title={The existence and stability of spikes in the one-dimensional
+  {K}eller-{S}egel model with logistic growth},
+        date={2023},
+        ISSN={0303-6812,1432-1416},
+     journal={J. Math. Biol.},
+      volume={86},
+      number={1},
+       pages={Paper No. 6, 54},
+         url={https://doi.org/10.1007/s00285-022-01840-1},
+      review={\MR{4519183}},
+}
+
+\bib{kurt.shen.ea:24:stability}{article}{
+      author={Kurt, Halil~Ibrahim},
+      author={Shen, Wenxian},
+      author={Xue, Shuwen},
+       title={Stability, bifurcation and spikes of stationary solutions in a
+  chemotaxis system with singular sensitivity and logistic source},
+        date={2024},
+     journal={Mathematical Models and Methods in Applied Sciences},
+      volume={34},
+      number={9},
+       pages={1649\ndash 1700},
+      eprint={2403.14907v1},
+         url={https://doi.org/10.1142/S0218202524500325},
+        note={The theorem numbers cited in the text refer to
+  arXiv:2403.14907v1},
+      review={\MR{4780931}},
+}
+
+\bib{kuto.osaki.ea:12:spatial}{article}{
+      author={Kuto, Kousuke},
+      author={Osaki, Koichi},
+      author={Sakurai, Tatsunari},
+      author={Tsujikawa, Tohru},
+       title={Spatial pattern formation in a chemotaxis-diffusion-growth
+  model},
+        date={2012},
+        ISSN={0167-2789},
+     journal={Phys. D},
+      volume={241},
+      number={19},
+       pages={1629\ndash 1639},
+         url={https://doi.org/10.1016/j.physd.2012.06.009},
+      review={\MR{2965808}},
+}
+
+\bib{li:18:spiky}{article}{
+      author={Li, Huicong},
+       title={Spiky steady states of a chemotaxis system with singular
+  sensitivity},
+        date={2018},
+        ISSN={1040-7294,1572-9222},
+     journal={J. Dynam. Differential Equations},
+      volume={30},
+      number={4},
+       pages={1775\ndash 1795},
+         url={https://doi.org/10.1007/s10884-017-9621-3},
+      review={\MR{3871622}},
+}
+
+\bib{lin.ni.ea:88:large}{article}{
+      author={Lin, C.-S.},
+      author={Ni, W.-M.},
+      author={Takagi, I.},
+       title={Large amplitude stationary solutions to a chemotaxis system},
+        date={1988},
+        ISSN={0022-0396,1090-2732},
+     journal={J. Differential Equations},
+      volume={72},
+      number={1},
+       pages={1\ndash 27},
+         url={https://doi.org/10.1016/0022-0396(88)90147-7},
+      review={\MR{929196}},
+}
+
+\bib{nagai:01:blowup}{article}{
+      author={Nagai, Toshitaka},
+       title={Blowup of nonradial solutions to parabolic-elliptic systems
+  modeling chemotaxis in two-dimensional domains},
+        date={2001},
+        ISSN={1025-5834},
+     journal={J. Inequal. Appl.},
+      volume={6},
+      number={1},
+       pages={37\ndash 55},
+         url={https://doi.org/10.1155/S1025583401000042},
+      review={\MR{1887324}},
+}
+
+\bib{nagai.senba:98:global}{article}{
+      author={Nagai, Toshitaka},
+      author={Senba, Takasi},
+       title={Global existence and blow-up of radial solutions to a
+  parabolic-elliptic system of chemotaxis},
+        date={1998},
+        ISSN={1343-4373},
+     journal={Adv. Math. Sci. Appl.},
+      volume={8},
+      number={1},
+       pages={145\ndash 156},
+      review={\MR{1623326}},
+}
+
+\bib{shemtaga.shen.ea:23:stability}{article}{
+      author={Shemtaga, Hewan},
+      author={Shen, Wenxian},
+      author={Sukhtaiev, Selim},
+       title={Stability and bifurcation for logistic {K}eller--{S}egel models
+  on compact graphs},
+        date={2024},
+     journal={Pure Appl. Funct. Anal.},
+      volume={9},
+      number={5},
+       pages={1359\ndash 1385},
+         url={https://arxiv.org/abs/2310.00756},
+}
+
+\bib{shi.wang:09:on}{article}{
+      author={Shi, Junping},
+      author={Wang, Xuefeng},
+       title={On global bifurcation for quasilinear elliptic systems on bounded
+  domains},
+        date={2009},
+        ISSN={0022-0396,1090-2732},
+     journal={J. Differential Equations},
+      volume={246},
+      number={7},
+       pages={2788\ndash 2812},
+         url={https://doi.org/10.1016/j.jde.2008.09.009},
+      review={\MR{2503022}},
+}
+
+\bib{tello.winkler:07:chemotaxis}{article}{
+      author={Tello, J.~Ignacio},
+      author={Winkler, Michael},
+       title={A chemotaxis system with logistic source},
+        date={2007},
+        ISSN={0360-5302},
+     journal={Comm. Partial Differential Equations},
+      volume={32},
+      number={4-6},
+       pages={849\ndash 877},
+         url={https://doi.org/10.1080/03605300701319003},
+      review={\MR{2334836}},
+}
+
+\bib{viglialoro.woolley:18:boundedness}{article}{
+      author={Viglialoro, Giuseppe},
+      author={Woolley, Thomas~E.},
+       title={Boundedness in a parabolic-elliptic chemotaxis system with
+  nonlinear diffusion and sensitivity and logistic source},
+        date={2018},
+        ISSN={0170-4214},
+     journal={Math. Methods Appl. Sci.},
+      volume={41},
+      number={5},
+       pages={1809\ndash 1824},
+         url={https://doi.org/10.1002/mma.4707},
+      review={\MR{3778089}},
+}
+
+\bib{wang.yan.ea:16:qualitative}{article}{
+      author={Wang, Qi},
+      author={Yan, Jingda},
+      author={Gai, Chunyi},
+       title={Qualitative analysis of stationary {K}eller--{S}egel chemotaxis
+  models with logistic growth},
+        date={2016},
+     journal={Z. Angew. Math. Phys.},
+      volume={67},
+      number={3},
+       pages={Paper No. 51, 25},
+      eprint={1312.0258},
+         url={https://arxiv.org/abs/1312.0258},
+}
+
+\bib{wang.xu:13:spiky}{article}{
+      author={Wang, Xuefeng},
+      author={Xu, Qian},
+       title={Spiky and transition layer steady states of chemotaxis systems
+  via global bifurcation and {H}elly's compactness theorem},
+        date={2013},
+        ISSN={0303-6812,1432-1416},
+     journal={J. Math. Biol.},
+      volume={66},
+      number={6},
+       pages={1241\ndash 1266},
+         url={https://doi.org/10.1007/s00285-012-0533-x},
+      review={\MR{3040975}},
+}
+
+\bib{wang.xu:22:radial}{article}{
+      author={Wang, Zhi-An},
+      author={Xu, Xin},
+       title={Radial spiky steady states of a flux-limited {K}eller-{S}egel
+  model: existence, asymptotics, and stability},
+        date={2022},
+        ISSN={0022-2526,1467-9590},
+     journal={Stud. Appl. Math.},
+      volume={148},
+      number={3},
+       pages={1251\ndash 1273},
+         url={https://doi.org/10.1111/sapm.12474},
+      review={\MR{4429085}},
+}
+
+\bib{winkler:10:absence}{article}{
+      author={Winkler, Michael},
+       title={Absence of collapse in a parabolic chemotaxis system with
+  signal-dependent sensitivity},
+        date={2010},
+        ISSN={0025-584X},
+     journal={Math. Nachr.},
+      volume={283},
+      number={11},
+       pages={1664\ndash 1673},
+         url={https://doi.org/10.1002/mana.200810838},
+      review={\MR{2759803}},
+}
+
+\bib{xiang:19:dynamics}{article}{
+      author={Xiang, Tian},
+       title={Dynamics in a parabolic-elliptic chemotaxis system with growth
+  source and nonlinear secretion},
+        date={2019},
+        ISSN={1534-0392},
+     journal={Commun. Pure Appl. Anal.},
+      volume={18},
+      number={1},
+       pages={255\ndash 284},
+         url={https://doi.org/10.3934/cpaa.2019014},
+      review={\MR{3845565}},
+}
+
+\bib{xu:21:existence}{article}{
+      author={Xu, Xin},
+       title={Existence of spiky steady state of chemotaxis models with
+  logarithm sensitivity},
+        date={2021},
+        ISSN={0170-4214,1099-1476},
+     journal={Math. Methods Appl. Sci.},
+      volume={44},
+      number={2},
+       pages={1484\ndash 1499},
+         url={https://doi.org/10.1002/mma.6846},
+      review={\MR{4185328}},
+}
+
+\end{biblist}
+\end{bibdiv}

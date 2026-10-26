@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" role="img" aria-labelledby="t d">
+  <title id="t">Chemotaxis III</title>
+  <desc id="d">Cells drifting up a chemical signal gradient toward a spike-like stationary profile.</desc>
+  <defs>
+    <linearGradient id="sig" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#eef7f5"/>
+      <stop offset="1" stop-color="#a8dbd3"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="160" rx="18" fill="url(#sig)"/>
+  <!-- spike-like stationary profile u(x) -->
+  <path d="M20 136 C 200 136, 300 132, 360 120 C 410 108, 430 30, 460 24 C 490 30, 510 108, 560 120 C 590 128, 610 134, 620 136"
+        fill="none" stroke="#e76f51" stroke-width="5" stroke-linecap="round"/>
+  <!-- cells moving toward the peak -->
+  <g fill="#264653" stroke="#f4f1de" stroke-width="2">
+    <circle cx="70" cy="110" r="9"/>
+    <circle cx="150" cy="96" r="8"/>
+    <circle cx="230" cy="104" r="9"/>
+    <circle cx="300" cy="86" r="8"/>
+    <circle cx="372" cy="72" r="9"/>
+    <circle cx="545" cy="84" r="8"/>
+  </g>
+  <g stroke="#264653" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M84 110 h22 m-7 -6 l7 6 l-7 6"/>
+    <path d="M163 96 h22 m-7 -6 l7 6 l-7 6"/>
+    <path d="M244 104 h22 m-7 -6 l7 6 l-7 6"/>
+    <path d="M313 86 h22 m-7 -6 l7 6 l-7 6"/>
+    <path d="M386 72 h22 m-7 -6 l7 6 l-7 6"/>
+    <path d="M531 84 h-22 m7 -6 l-7 6 l7 6"/>
+  </g>
+</svg>

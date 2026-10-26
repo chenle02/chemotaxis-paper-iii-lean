@@ -16,10 +16,10 @@ bifurcation reductions, concentration and singular limits. The results separate
 reusable analytic deductions from the PDE constructions needed to apply them.
 They support the paper by Le Chen, Ian Ruau and Wenxian Shen,
 [Chemotaxis III, arXiv:2610.20976v1](https://arxiv.org/abs/2610.20976v1).
-The repository's current manuscript mapping also uses the October 20 candidate;
-that candidate is not asserted to be an uploaded arXiv v2. Numerical paper
-locators already in the Challenge refer to v1 and have not been independently
-rechecked as part of this submission preparation. The formal types govern scope.
+This submission was prepared against v1. The repository's manuscript mapping now
+targets arXiv v2 (October 23, 2026), which has the same theorem and equation
+numbering as v1. Numerical paper locators in the Challenge refer to v1 and have
+not been independently rechecked as part of this submission preparation. The formal types govern scope.
 
 ## Mathematical account of every selected result
 

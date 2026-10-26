@@ -46,7 +46,7 @@ The [scope ledger](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/ma
 
 Le Chen, Ian Ruau and Wenxian Shen, *Chemotaxis models with signal-dependent sensitivity and a logistic-type source, III: Bifurcation and spike-like solutions*.
 [Public manuscript and source](https://github.com/chenle02/chemotaxis-paper-iii) ·
-[arXiv:2610.20976v1](https://arxiv.org/abs/2610.20976v1), the published preprint.
+[arXiv:2610.20976v2](https://arxiv.org/abs/2610.20976v2), the version the scope ledger maps ([manuscript versions](manuscript-versions.html)).
 
 ## Use it
 

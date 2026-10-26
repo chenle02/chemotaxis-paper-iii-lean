@@ -34,11 +34,11 @@ references:
   - family-names: Shen
     given-names: Wenxian
   year: 2026
-  url: https://arxiv.org/abs/2610.20976v1
+  url: https://arxiv.org/abs/2610.20976v2
   identifiers:
   - type: other
-    value: arXiv:2610.20976v1
-    description: Published preprint predecessor; the public scope ledger targets the
-      October 20, 2026 v2 candidate
+    value: arXiv:2610.20976v2
+    description: arXiv preprint, version 2 (October 23, 2026); the public scope ledger
+      and coverage map target this version
 version: 0.1.0
 date-released: '2026-10-22'

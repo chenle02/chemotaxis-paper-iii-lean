@@ -1,10 +1,19 @@
 {
   "schema": "chemotaxis-public-scope-ledger/1",
   "manuscript": {
+    "arxiv": "2610.20976v2",
     "repo": "https://github.com/chenle02/chemotaxis-paper-iii",
-    "commit": "c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4",
-    "file": "10-20-2026-CRS-3-Le-v2.tex",
-    "sha256": "545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae"
+    "commit": "f9aed4653e6312726ed1544d6f135fa14a5c6b29",
+    "file": "Chen-Ruau-Shen-JMB.tex",
+    "sha256": "0907a3b4dd79a158374d51caa3aebc9a8ddd3fd12bdcc09af0d53ab4b44d2948",
+    "eprint_sha256": "475d1c153c47b18f3392deef874e008fc13ef398ac688969e14d941321fdf1ea",
+    "previous_input": {
+      "repo": "https://github.com/chenle02/chemotaxis-paper-iii",
+      "commit": "c8aa57b3afffe683a2c5baa38a0fbaaf1c688ad4",
+      "file": "10-20-2026-CRS-3-Le-v2.tex",
+      "sha256": "545c93f8dc375ca9c57547e1cb6a28b8c47209da9ee6c77e42e60884e44ccaae",
+      "note": "October 20, 2026 source against which these scopes were first reviewed; every theorem and equation number is the same in arXiv v2, and page and TeX-line references here follow v2."
+    }
   },
   "scope_semantics": "These 73 overlapping scopes retain the accepted manuscript correspondence and explicit input boundaries. This public summary does not reproduce private review histories or count full theorems. Fresh release receipts check the exported proof source; they do not by themselves re-review prose fidelity.",
   "counts": {
@@ -20,7 +29,7 @@
         "label": "P:review-prop-2",
         "number": "Proposition 1.1",
         "page": 5,
-        "label_line": 501,
+        "label_line": 500,
         "aux_number": "1.1"
       },
       "source_assessment": "V2 scope: The semigroup and nonlinear PDE stability conclusions in the proposition are excluded; this row covers only modewise ordered-field algebra.",
@@ -45,7 +54,7 @@
         "label": "T:local-bifurcation",
         "number": "Theorem 1.1",
         "page": 6,
-        "label_line": 581,
+        "label_line": 580,
         "aux_number": "1.1"
       },
       "source_assessment": "V2 scope: Requires center-manifold construction, finite-regularity remainder control, implicit bifurcation, and PDE spectral stability.",
@@ -62,7 +71,7 @@
         "label": "T:local-bifurcation",
         "number": "Theorem 1.1",
         "page": 6,
-        "label_line": 581,
+        "label_line": 580,
         "aux_number": "1.1"
       },
       "source_assessment": "V2 scope: The finite scalar side, derivative-sign, and amplitude conclusions are proved from the explicit reduced equation and separate remainder interfaces. Center-manifold reduction, branch existence, and PDE stability lifting remain outside this row.",
@@ -102,7 +111,7 @@
         "label": "T:direction-change",
         "number": "Theorem 1.2(1)",
         "page": 8,
-        "label_line": 700,
+        "label_line": 699,
         "aux_number": "1.2"
       },
       "scope": "Case (iii) is covered for the corrected statement (negativity for beta >= 0, beta != beta_0); see finding v1-misprint-thm12-iii-beta-range.",
@@ -174,7 +183,7 @@
         "label": "T:direction-change",
         "number": "Theorem 1.2(2)",
         "page": 8,
-        "label_line": 700,
+        "label_line": 699,
         "aux_number": "1.2"
       },
       "source_assessment": "V2 scope: The all-parameter physical rational formula, degree/cancellation bounds, admissible mode corridors, roots, limits, and finite sign consequences are proved. Excluded tie bifurcations and PDE branch/stability conclusions are not classified.",
@@ -222,7 +231,7 @@
         "label": "R:local-bifurcation-minimal",
         "number": "Remark 1.1(1)",
         "page": 7,
-        "label_line": 639,
+        "label_line": 638,
         "aux_number": "1.1"
       },
       "source_assessment": "V2 scope: scalar zero exclusion, sign, local branches and stronger value/derivative remainder estimates from the explicit reduced equation, C4 jets and exact trivial-branch linearization. The actual fixed-mass PDE reduction and PDE spectral stability remain inputs.",
@@ -255,7 +264,8 @@
         "differentiability in s and the uniform weak derivative bound for the full mapped scalar interface",
         "For the stronger v2 value and derivative bounds: C4 reduced-field JetHyp and exact TrivialBranchLinearization in the physical Fourier amplitude and original time coordinate."
       ],
-      "supporting_ingredients": []
+      "supporting_ingredients": [],
+      "arxiv_v2_note": "arXiv v2: Step 4' of the proof of Theorem 1.1 (minimal case) no longer states that the same Taylor argument gives the derivative remainder estimate, as the October 20 source did; the remark is unchanged. The derivative bound remains an explicit conditional input here."
     },
     {
       "id": "paper3/T:global-extension",
@@ -264,7 +274,7 @@
         "label": "T:global-extension",
         "number": "Theorem 1.3",
         "page": 10,
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "source_assessment": "V2 scope: Requires unilateral global bifurcation, compactness, and PDE a priori theory.",
@@ -281,7 +291,7 @@
         "label": "T:spiky-solu-thm",
         "number": "Theorem 1.4",
         "page": 11,
-        "label_line": 990,
+        "label_line": 991,
         "aux_number": "1.4"
       },
       "scope": "the whole frozen Theorem 1.4 is proved for given actual positive nonconstant classical stationary families: gradient blowup for every gamma>0 in both models, with prescribed mass only in the minimal model and actual PDE-derived mass in the logistic model; for logistic gamma<1+alpha the same subsequence has constant C1 signal limit, every conjugate-Lq source and signal derivative test, and 0<=c<=uStar^gamma. Actual maxima and all analytic compactness/extraction inputs are constructed, not assumed. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.",
@@ -303,7 +313,7 @@
         "label": "R:spike-solution-rk",
         "number": "Remark 1.3(2)",
         "page": 11,
-        "label_line": 1018,
+        "label_line": 1019,
         "aux_number": "1.3"
       },
       "scope": "The exact quantitative local-mass bounds, uniform decay and atomless-limit/no-Dirac wrappers together prove the whole exclusion remark for all given stationary spike families. The remark does not assert such a family exists; the manuscript explicitly leaves nonminimal-family existence open. Promotion of this parent exclusion to verified is honest within that universal exclusion scope.",
@@ -326,7 +336,7 @@
         "label": "P:semidiscrete-threshold",
         "number": "Proposition 1.2",
         "page": 12,
-        "label_line": 1109,
+        "label_line": 1110,
         "aux_number": "1.2"
       },
       "source_assessment": "V2 scope: The discrete eigenvalue/threshold functions, changing-mode minima, physical identification, and convergence are proved together with the concrete scheme-to-modal bridge. No semidiscrete trajectory existence or nonlinear stability theorem is asserted.",
@@ -370,7 +380,7 @@
         "label": "E:disc-eigenvalues",
         "number": "Equation 1.24 (read with -Delta_h)",
         "page": 12,
-        "label_line": 1074,
+        "label_line": 1075,
         "aux_number": "1.24"
       },
       "scope": "Verified for the corrected statement: Equation 1.24 read with -Delta_h (eigenvalues 4 h^-2 sin^2(n pi/(2N)), n=0..N, of the reflected Neumann stencil).",
@@ -398,7 +408,7 @@
         "label": "E:main-DIS",
         "number": "Equation 6.1",
         "page": 36,
-        "label_line": 3316,
+        "label_line": 3328,
         "aux_number": "6.1"
       },
       "source_assessment": "V2 scope: Directional derivatives of both literal schemes, the conservative all-node identity, fixed-mass composition, elliptic elimination, modal growth, and threshold minimum are proved. No ODE trajectory existence, nonlinear stability, or PDE semigroup conclusion is asserted.",
@@ -432,7 +442,7 @@
         "label": "L:trig-integrals",
         "number": "Lemma 2.1, Equations 2.1-2.4",
         "page": 13,
-        "label_line": 1152,
+        "label_line": 1153,
         "aux_number": "2.1"
       },
       "source_assessment": "V2 scope: Current scope is finite identities only; the former ell-one infinite-series lemma is a different statement.",
@@ -495,7 +505,7 @@
         "label": "E:center-manifold-eq",
         "number": "Equation 2.16",
         "page": 15,
-        "label_line": 1378,
+        "label_line": 1389,
         "aux_number": "2.16"
       },
       "source_assessment": "V2 scope: The center graph is an analytic input to conditional finite-jet theorems.",
@@ -512,7 +522,7 @@
         "label": "E:B0-Bu-Bv-eq",
         "number": "Equation 2.8",
         "page": 14,
-        "label_line": 1284,
+        "label_line": 1285,
         "aux_number": "2.8"
       },
       "source_assessment": "V2 scope: The retained declarations are the derivative formulas of the mobility from which B0, Bu and Bv follow at (u*, 1+v*); the formulas are identical with the same positive-base domain. Their later infinite-mode use does not change the primitive derivative types.",
@@ -539,7 +549,7 @@
         "label": "E:Buu-Buv-Bvv-eq",
         "number": "Equation 2.9",
         "page": 14,
-        "label_line": 1288,
+        "label_line": 1289,
         "aux_number": "2.9"
       },
       "source_assessment": "V2 scope: The factorial-normalized Buu, Buv and Bvv formulas and positive-base hypotheses are unchanged.",
@@ -567,7 +577,7 @@
         "label": "E:L1-L2-eq",
         "number": "Equation 2.10",
         "page": 14,
-        "label_line": 1290,
+        "label_line": 1291,
         "aux_number": "2.10"
       },
       "source_assessment": "V2 scope: A-prime, A-second and A-third retain the same factorial convention (Taylor coefficients of the logistic source at u*).",
@@ -591,7 +601,7 @@
         "label": "E:C-const",
         "number": "Equation 2.11",
         "page": 14,
-        "label_line": 1297,
+        "label_line": 1298,
         "aux_number": "2.11"
       },
       "source_assessment": "V2 scope: The three signal-source Taylor coefficients are formula-identical and retain the same factorial normalization.",
@@ -613,7 +623,7 @@
         "label": "E:Ck-restated",
         "number": "Equation 2.20",
         "page": 16,
-        "label_line": 1471,
+        "label_line": 1482,
         "aux_number": "2.20"
       },
       "scope": "actual nonlinear Neumann signal response: all three physical Ck coefficients are identified by a derived actual cubic response jet with quartic bound, preserving zero/positive mode normalization and manuscript factors2 and4. The first actual normalized modal derivative is derived, including the Mathlib-only actual_modal_derivative interface, without a projected balance, response differentiability, response Taylor remainder or abstract resolvent-response assumption. Positive base/equilibrium/mu/L and ordinary given actual solution-family regularity/PDE/Neumann data are explicit. Equation2.20(p16) is covered at this coefficient/actual-family scope; center-manifold or response-family existence is not claimed.",
@@ -639,7 +649,7 @@
         "label": "E:Gamma2n0-explicit",
         "number": "Equation 2.32",
         "page": 19,
-        "label_line": 1808,
+        "label_line": 1828,
         "aux_number": "2.32"
       },
       "source_assessment": "V2 scope: The displayed second-harmonic coefficient is identical. Current infinite convolution formulas reduce at quadratic center order to the same constant/second-mode support; no infinite-series theorem is claimed by this row.",
@@ -666,7 +676,7 @@
         "label": "E:a_0,i",
         "number": "Equation 2.33",
         "page": 19,
-        "label_line": 1841,
+        "label_line": 1861,
         "aux_number": "2.33"
       },
       "scope": "All original quadratic coefficient extraction and logistic formula scope are retained; center-graph existence and actual invariance remain conditional. Separately, the minimal fixed-mass constant coefficient is now derived: an actual mean-zero weak-H2 perturbation family with the prescribed cubic phase-norm Peano expansion and eventual zero population mass has jet.a0=0. Positive length and mode remain explicit; no mass or critical-kernel hypothesis on H3 is needed. For a physical positive fixed-mean population, the mean-zero family is obtained by the existing homogeneous subtraction dictionary; the theorem does not claim that a positive population has zero mass. This is a conservation-based minimal consumer, not a proof of the logistic coefficient value, actual graph construction, or dynamical invariance. No primary promotion is inferred.",
@@ -720,7 +730,7 @@
         "label": "E:a_k,i>0",
         "number": "Equation 2.36b",
         "page": 20,
-        "label_line": 1873,
+        "label_line": 1893,
         "aux_number": "2.36b"
       },
       "source_assessment": "V2 scope: The bA''/2 term is mandatory. Any legacy wrapper omitting it is rejected.",
@@ -750,7 +760,7 @@
         "label": "E:E-F-G-H",
         "number": "Equation 2.42",
         "page": 20,
-        "label_line": 1923,
+        "label_line": 1943,
         "aux_number": "2.42"
       },
       "scope": "All original finite E, F, G, Q, R and S algebra and prior H evidence are retained. The critical cubic H signal response now follows for an actual Neumann elliptic signal family from a genuine weak-H2 population cubic norm Peano expansion with prescribed constant/second-harmonic quadratic term and critical-orthogonal H3. Weighted integrability, projection algebra and negligible modal residual are derived; no projected cubic signal balance or signal response jet is assumed in this consumer. Positive length/mode, positive uStar and mu, SignalEquilibrium, exact representatives and eventual actual elliptic solutions remain explicit. The given a0/a2 and population jet are not derived from center-graph invariance. The conclusion is a critical Fourier-coordinate asymptotic at fixed physical parameters and two-sided amplitude nhds0, not a full signal-space jet, mixed parameter jet, or graph/branch/stability construction. Parent scope remains conditional and earlier histories are retained.",
@@ -823,7 +833,7 @@
         "label": "E:Gamma-n0-explicit",
         "number": "Equation 2.41",
         "page": 20,
-        "label_line": 1918,
+        "label_line": 1938,
         "aux_number": "2.41"
       },
       "source_assessment": "V2 scope: Conditional on weighted interval integrability and the analytic center-graph condition that the critical projection of h3 is zero; all remaining cubic extraction/projection algebra is proved.",
@@ -858,7 +868,7 @@
         "label": "E:alpha_n0",
         "number": "Equation 2.44",
         "page": 21,
-        "label_line": 1949,
+        "label_line": 1969,
         "aux_number": "2.44"
       },
       "source_assessment": "V2 scope: The linear crossing coefficient and positivity hypotheses are unchanged.",
@@ -884,7 +894,7 @@
         "label": "E:beta-n0",
         "number": "Equation 2.45",
         "page": 21,
-        "label_line": 1959,
+        "label_line": 1979,
         "aux_number": "2.45"
       },
       "source_assessment": "V2 scope: The corrected finite cubic assembly is derived from the accepted quadratic and cubic projection components. It proves the coefficient identity, not center-manifold or PDE branch existence.",
@@ -909,7 +919,7 @@
         "label": "E:center-ODE-final",
         "number": "Equation 2.43",
         "page": 20,
-        "label_line": 1941,
+        "label_line": 1961,
         "aux_number": "2.43"
       },
       "scope": "V2 scope: Only the exact cubic polynomial and deductions from an explicit remainder interface are formalized. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.",
@@ -956,7 +966,7 @@
         "label": "E:beta-n0-minimal",
         "number": "Equation 2.49",
         "page": 22,
-        "label_line": 2133,
+        "label_line": 2148,
         "aux_number": "2.49"
       },
       "source_assessment": "V2 scope: The fixed-mass coefficient remains -chi-star Gamma3 with a0=0 and no logistic channels. The constant signal correction is still retained.",
@@ -980,7 +990,7 @@
         "label": "E:beta-n0-pq",
         "number": "Equation 3.1",
         "page": 23,
-        "label_line": 2186,
+        "label_line": 2200,
         "aux_number": "3.1"
       },
       "source_assessment": "V2 scope: The p(beta), q(beta), beta-independent Pi and coefficient decomposition are unchanged after movement to Section 3.",
@@ -1011,7 +1021,7 @@
         "label": "E:A-B-C-simple",
         "number": "Equation 3.3",
         "page": 23,
-        "label_line": 2234,
+        "label_line": 2248,
         "aux_number": "3.3"
       },
       "source_assessment": "V2 scope: The exact derivative formulas A=-q''(0)/2, B=bA''p'(0)-q'(0), and C at beta=0 are unchanged.",
@@ -1034,8 +1044,8 @@
       "reference": {
         "label": "E:A-closed-form",
         "number": "Equation 3.4",
-        "page": 24,
-        "label_line": 2253,
+        "page": 23,
+        "label_line": 2267,
         "aux_number": "3.4"
       },
       "source_assessment": "V2 scope: The closed form and strict negative sign under a strict critical mode are unchanged for both model classes.",
@@ -1059,7 +1069,7 @@
         "label": "E:beta-n0-eq1",
         "number": "Equation 1.15 and Section 3.2",
         "page": 8,
-        "label_line": 732,
+        "label_line": 731,
         "aux_number": "1.15"
       },
       "source_assessment": "V2 scope: The general physical numerator/denominator construction, positive denominator, degree-five bound, and balanced degree-four cancellation are proved; the normalized example is only a downstream specialization.",
@@ -1106,7 +1116,7 @@
         "label": "E:n0-branch",
         "number": "Equation 3.6",
         "page": 26,
-        "label_line": 2458,
+        "label_line": 2472,
         "aux_number": "3.6"
       },
       "source_assessment": "V2 scope: The unique minimizing mode cells and exactly two adjacent modes at tie lengths are unchanged.",
@@ -1131,7 +1141,7 @@
         "label": "T:direction-change",
         "number": "Theorem 1.2(2) interval display",
         "page": 8,
-        "label_line": 700,
+        "label_line": 699,
         "aux_number": "1.2"
       },
       "source_assessment": "V2 scope: The exact lambda corridor is unchanged but no longer has its own label; it appears in Theorem 1.2(2) and again in the proof near line 2564. Large-length convergence to sqrt(a alpha mu) is unchanged along admissible lengths.",
@@ -1155,8 +1165,8 @@
       "reference": {
         "label": "E:new-beta-eq1",
         "number": "Equation 3.7",
-        "page": 27,
-        "label_line": 2529,
+        "page": 26,
+        "label_line": 2543,
         "aux_number": "3.7"
       },
       "source_assessment": "V2 scope: This is a downstream specialization and regression test, never a replacement for the all-parameter M4 theorem.",
@@ -1199,7 +1209,7 @@
         "label": "E:new-beta-eq2",
         "number": "Equation 3.8",
         "page": 27,
-        "label_line": 2536,
+        "label_line": 2550,
         "aux_number": "3.8"
       },
       "source_assessment": "V2 scope: The normalized large-domain quadratic, positive root beta_ld and sign split are unchanged.",
@@ -1231,7 +1241,7 @@
         "label": "Tb:polynomial-roots",
         "number": "Table 3.2",
         "page": 27,
-        "label_line": 2559,
+        "label_line": 2573,
         "aux_number": "3.2"
       },
       "source_assessment": "V2 scope: Exact rational isolating intervals, exhaustive admissible-root counts, rounding cells, physical signs, and finite mode comparisons are proved. Decimal displays are presentation corollaries.",
@@ -1285,7 +1295,7 @@
         "label": "L:spiky-solu-lm1",
         "number": "Lemma 4.1",
         "page": 28,
-        "label_line": 2620,
+        "label_line": 2633,
         "aux_number": "4.1"
       },
       "scope": "to the COMPLETE frozen Lemma4.1(p28), L:spiky-solu-lm1, not merely its Holder proof step. Part(1), for every alpha,gamma,m>0, follows from StationaryMassIdentity.ClassicalProfile.interval_bounds: actual stationary population PDE and Neumann data derive mass_balance, then strict min/equilibrium/max and strict first/(1+alpha)-moments, with NO m>=1 restriction on this part. Part(2) for 0<gamma<=1+alpha and1<=m<=alpha+2 follows from ClassicalHolderNorm.logistic_uniform_norm_bound on literal physical classical solutions. It proves actual C2+theta norms bounded by C, with theta,C existential BEFORE all sensitivities and solutions; a,b,alpha,mu>0,nu>=0,beta>=0,abs(chi)<=X. The frozen nu>0 and0<=chi<=X,X>0 are contained. Ordinary positive nonconstant population/classical solution hypotheses remain; no bound, target regularity, coefficient-Holder estimate, extraction or Schauder conclusion is assumed. Supplied continuous second derivatives and closed-interval derivative identities are ordinary C2 classical data; their Holder regularity is DERIVED. The full parent can be promoted after required gates/registry binding, preserving the exact two-part frozen statement rather than conflating historical extra subrows.",
@@ -1307,7 +1317,7 @@
         "label": "L:minimal-spike-bounds",
         "number": "Lemma 4.2",
         "page": 29,
-        "label_line": 2752,
+        "label_line": 2765,
         "aux_number": "4.2"
       },
       "scope": "to the COMPLETE frozen Lemma4.2(p29), L:minimal-spike-bounds. Standing1<=m<=2,0<gamma<=1,a=b=0,positive prescribed-mass solutions. Part(1) is exactly IntervalMoments.minimal_interval_bounds for continuous positive nonconstant u with actual model mass int u=LuStar: strict min/mean/max and strict quadratic moment. There is no missing PDE conclusion in that mass hypothesis; it is literally the model assumption. Part(2) follows from ClassicalHolderNorm.minimal_uniform_norm_bound: theta,C are chosen BEFORE every actual physical solution; all actual C2+theta norms bounded, including m=2. The theorem even covers constant positive families and gamma=0, stronger than the frozen nonconstant/gamma>0 statement. alpha=0 in the minimal physical profile is harmless because a=b=0 removes the reaction term; no alpha dependence enters C. The positive constant vStar need not be constructed: neither assertion uses it except the ordinary specified positive mass uStar. No independent flux, gradient, moment estimate or target regularity assumption remains. The full parent can be promoted after required gates/registry binding, while historical extra support subrows retain their own scope.",
@@ -1334,7 +1344,7 @@
           "L:minimal-spike-bounds",
           "T:global-extension"
         ],
-        "label_line": 2620,
+        "label_line": 2633,
         "aux_number": "4.1"
       },
       "scope": "actual bounded-sensitivity stationary-family compactness in the genuine all-weak-H2 Neumann phase norm. Both physical logistic and fixed-mass minimal families yield strict parameter/phase norm-convergent subsequences to original classical PDE profiles. The all-positive logistic extension derives the constant case from actual population mass balance, removing the earlier all-nonconstant family restriction.",
@@ -1357,7 +1367,7 @@
         "label": "L:minimal-spike-limit",
         "number": "Lemma 5.1",
         "page": 34,
-        "label_line": 3143,
+        "label_line": 3155,
         "aux_number": "5.1"
       },
       "scope": "actual positive classical stationary solution families and the manuscript uniform Lr bound yield one strict subsequence with constant source c>=0, uniform C1 signal limit, and EVERY conjugate-Lq test for the source and signal derivatives of orders zero, one and two. Population first integral, mass/source bounds and denominator bound are derived from actual PDE/Neumann data; no weak or extraction premises remain. Weak Lq/W2q is represented explicitly by all conjugate integral tests of classical derivative representatives, not a claimed Mathlib WeakSpace/bundled Sobolev equivalence. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.",
@@ -1378,7 +1388,7 @@
         "label": "E:main-DIS-conservative",
         "number": "Equation 6.2",
         "page": 36,
-        "label_line": 3370,
+        "label_line": 3382,
         "aux_number": "6.2"
       },
       "source_assessment": "V2 scope: The literal finite face-flux divergence telescopes under trapezoidal weights, and its directional derivative is connected to the reflected fixed-mass modal system. Numerical trajectory existence and differentiability are not asserted.",
@@ -1401,7 +1411,7 @@
         "label": "T:direction-change",
         "number": "1.2",
         "page": 8,
-        "label_line": 700,
+        "label_line": 699,
         "aux_number": "1.2"
       },
       "scope": "Minimal-model degree-three numerator/denominator clause; existing non-minimal bindings do not certify it.",
@@ -1427,7 +1437,7 @@
         "label": "L:trig-integrals",
         "number": "Lemma 2.1, Equations 2.1-2.4",
         "page": 13,
-        "label_line": 1152,
+        "label_line": 1153,
         "aux_number": "2.1"
       },
       "scope": "ell1 summability, exchange of sums/integrals, and convolution multiplicities; finite identities are ingredients only.",
@@ -1466,7 +1476,7 @@
         "label": "E:center-ODE-final",
         "number": "2.43",
         "page": 20,
-        "label_line": 1941,
+        "label_line": 1961,
         "aux_number": "2.43"
       },
       "scope": "Current mixed remainder and derivative interface; retain analytic hypotheses. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.",
@@ -1510,7 +1520,7 @@
         "label": "T:global-extension",
         "number": "Theorem 1.3(1)",
         "page": 10,
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "scope": "All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier curve topology retains half-curve continuity, stationary membership and open-neighborhood exhaustion. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.",
@@ -1977,7 +1987,7 @@
         "label": "T:global-extension",
         "number": "Theorem 1.3(3)",
         "page": 10,
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "scope": "to the scoped finite-density-measure implication, now with its actual-PDE tail producer. PhysicalEndpointConcentration constructs the genuine finite measure q.u(x)dx on the closed interval from ordinary continuous nonnegative classical solutions and proves full finite-measure weak convergence to L*uStar times the endpoint Dirac. No finite measure, common-mass identification, sine bound, pointwise decay, tail bound, neighborhood containment or density/test integral identification is assumed. Minimal population and signal equations, actual Neumann data, positive population, nonnegative signal, fixed prescribed mass, chi->infinity and ordinary strict decreasing/increasing orientation are explicit. Parameter range m>=1,beta>=0,mu,nu>0,0<gamma<=1 contains the entire frozen1<=m<=2 range. Scoped consumer/tail production can be certified after gates; deriving that orientation from branch membership is not this row and remains separate.",
@@ -2005,7 +2015,7 @@
         "label": "E:bound-u-eq1-2",
         "number": "Lemma 4.1(1), Equation 4.1",
         "page": 28,
-        "label_line": 2626,
+        "label_line": 2639,
         "aux_number": "4.1"
       },
       "scope": "ClassicalProfile.interval_bounds proves all four strict extremum/moment conclusions for every given positive nonconstant classical stationary profile. The literal flux, equation and both u/v Neumann data derive mass balance; no independent mass identity remains. Verified within this entire classical-solution statement, without asserting existence.",
@@ -2078,7 +2088,7 @@
         "label": "E:M-eta",
         "number": "Lemma 4.1(2), Equation 4.6",
         "page": 28,
-        "label_line": 2686,
+        "label_line": 2699,
         "aux_number": "4.6"
       },
       "scope": "The new direct ClassicalProfile.power_moment supplies the exact gamma-moment bound for0<gamma<=1+alpha from the actual stationary equation through interval_bounds; the higher moment is no longer independently assumed. Its current kernel type was printed and read.",
@@ -2098,7 +2108,7 @@
         "label": "E:minimal-spike-flux",
         "number": "Equation 4.14 (proof of Lemma 4.2(2))",
         "page": 30,
-        "label_line": 2780,
+        "label_line": 2793,
         "aux_number": "4.14"
       },
       "scope": "ClassicalMinimalEstimates.flux_identity derives the literal flux identity from the actual a=b=0 stationary population equation and Neumann data. No first-integral assumption remains; classical derivatives and the original equation are standing solution data.",
@@ -2120,7 +2130,7 @@
         "label": "L:minimal-spike-bounds",
         "number": "Lemma 4.2(1)",
         "page": 29,
-        "label_line": 2752,
+        "label_line": 2765,
         "aux_number": "4.2"
       },
       "scope": "Actual prescribed-mass positive nonconstant classical solution supplies both strict extrema and strict second moment; prescribed mass is the ordinary model hypothesis.",
@@ -2143,7 +2153,7 @@
         "label": "L:minimal-spike-bounds",
         "number": "Proof of Lemma 4.2(2) (applies Equation 4.6, p. 28, TeX line 2687)",
         "page": 29,
-        "label_line": 2752,
+        "label_line": 2765,
         "aux_number": "4.2"
       },
       "scope": "ClassicalMinimalEstimates.power_moment proves the exact prescribed-mass concave moment estimate for all0<=r<=1. Prescribed mass is an explicit model hypothesis of the manuscript, not an unresolved analytic inference. In particular r=m-1 covers both endpoints m=1 and m=2.",
@@ -2179,7 +2189,7 @@
         "label": "L:minimal-spike-bounds",
         "number": "Proof of Lemma 4.2(2), m=1 case of the variation-of-constants display",
         "page": 29,
-        "label_line": 2752,
+        "label_line": 2765,
         "aux_number": "4.2"
       },
       "scope": "Literal minimal PDE derives flux at m=1; integrating-factor continuity follows from actual signal regularity and1+v>0. The exact exponential representation is concluded.",
@@ -2200,7 +2210,7 @@
         "label": "R:spike-solution-rk",
         "number": "Remark 1.3(2)",
         "page": 11,
-        "label_line": 1018,
+        "label_line": 1019,
         "aux_number": "1.3"
       },
       "scope": "ClassicalProfile.window_mass_bounds states both the exact Holder-type displayed inequality and its strict equilibrium envelope; mass balance is derived. window_mass_decay_of_classical_profiles proves uniform decay in the family index and center. This covers the quantitative local-mass row end to end for given profiles.",
@@ -2244,7 +2254,7 @@
         "label": "T:global-extension",
         "number": "Theorem 1.3(3)",
         "page": 10,
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "scope": "to the concentration clause under its explicitly separate ordinary monotonicity input. For actual positive strictly decreasing/increasing fixed-mass minimal classical stationary families, m>=1 and0<gamma<=1, the code DERIVES the sine-test obstruction, sensitivity-uniform actual signal envelope, every interior u_n(delta)->0, tail/head decay, every continuous-test integral limit, actual finite-density-measure Dirac convergence, and endpoint population value->infinity. Endpoint values are the genuine maxima by monotonicity, so the frozen max->infinity conclusion follows. The right endpoint is proved directly using the positive-gradient ODE and a right interior interval, then the exact right-endpoint measure consumer; no reflected solution or reflection-PDE premise is assumed. Strict orientation is NOT inferred from membership in C1+/- by these four modules; full Theorem1.3(3), branch membership/orientation, noncompactness and alternatives(ii)/(iii) remain outside this scoped row. Thus do not promote the whole global-extension parent solely from this review.",
@@ -2288,7 +2298,7 @@
         "label": "T:local-bifurcation",
         "number": "1.1",
         "page": 6,
-        "label_line": 581,
+        "label_line": 580,
         "aux_number": "1.1"
       },
       "scope": "Scalar level of the claim that the nontrivial equilibria form two continuous curves through the bifurcation point: under the MixedRemainder interface (alpha>0, beta!=0, value and derivative remainder bounds, HasDerivAt) each signed small nontrivial root is unique, these are the only small nontrivial equilibria, and (with the extra hypothesis that eta -> R(eta,s) is continuous for each small s) the branch functions are continuous with branch(0)=0 and branch -> 0. Not claimed: center-manifold reduction and the lift to the PDE curves in function space. The actual scalar BranchCurves branches also satisfy derivative = -2 alpha eta + o(|eta|) along the correct branch-side filter, derived from the remainder estimates and amplitude localization.",
@@ -2360,7 +2370,8 @@
             "continuity in η for every fixed small s. Center-manifold construction and lifting to PDE curves remain excluded"
           ]
         }
-      ]
+      ],
+      "arxiv_v2_note": "arXiv v2: Step 5 of the proof of Theorem 1.1 no longer states the derivative remainder estimate |R_z(tau,z)| <= C(|z||tau|^2+|z|^2|tau|+|z|^3) that the October 20 source gave; the theorem statement is unchanged. The Lean deductions are unchanged and keep the derivative remainder bound as an explicit conditional input."
     },
     {
       "id": "paper3/L:trig-integrals/phase-space-bridge",
@@ -2369,7 +2380,7 @@
         "label": "L:trig-integrals",
         "number": "Lemma 2.1 and Equation 2.17",
         "page": 13,
-        "label_line": 1152,
+        "label_line": 1153,
         "aux_number": "2.1"
       },
       "scope": "Genuine weak-H2 functions and their Neumann trace data produce the absolutely continuous NeumannW21 representatives; all actual normalized cosine coefficients are unchanged by a.e. equality. The four exact function/integral identities are proved for the original representatives with original coefficients. Absolute summability and reconstruction are derived. Pointwise reconstruction of the original function on the closed interval is proved when it is continuous, exactly as in the old classical-function scope; for arbitrary raw H2 representatives reconstruction correctly targets the constructed continuous representative. The prior external one-dimensional Sobolev/trace identification is discharged, without asserting any Banach-space topology or phase-E map.",
@@ -2405,7 +2416,7 @@
         "label": "E:vx-sup",
         "number": "Proof of Lemma 4.2(2), Equations 4.7-4.8",
         "page": 29,
-        "label_line": 2696,
+        "label_line": 2709,
         "aux_number": "4.7"
       },
       "scope": "Actual second PDE and both Neumann conditions supply the exact signal sup-plus-L1 component bound and displayed constant; no separately assumed signal estimate.",
@@ -2449,7 +2460,7 @@
         "label": "E:minimal-spike-flux",
         "number": "Proof of Lemma 4.2(2): the uniform bounds on u and u_x from the flux identity (4.14), before the elliptic step to (4.13) (alternative estimate for 1<=m<2)",
         "page": 30,
-        "label_line": 2780,
+        "label_line": 2793,
         "aux_number": "4.14"
       },
       "scope": "Literal minimal PDE derives flux; actual signal PDE derives gradient; M is the actual gamma moment. The complete original sharp power envelope and derivative estimate hold for0<m<2.",
@@ -2473,7 +2484,7 @@
         "label": "L:minimal-spike-bounds",
         "number": "Proof of Lemma 4.2(2), m=1 case",
         "page": 29,
-        "label_line": 2752,
+        "label_line": 2765,
         "aux_number": "4.2"
       },
       "scope": "Actual PDEs and prescribed mass derive flux, signal-gradient and integrating-factor regularity; the exact historical exponential supremum envelope follows for m=1.",
@@ -2493,7 +2504,7 @@
         "label": "E:u-ux-sup",
         "number": "Lemma 4.1(2), Equation 4.11 (alternative route for 1<=m<(alpha+2)/2)",
         "page": 29,
-        "label_line": 2725,
+        "label_line": 2738,
         "aux_number": "4.11"
       },
       "scope": "actual given classical stationary-system C1 consumers. c1_bound discharges mass/moment inputs over the old energy range0<m<(alpha+2)/2; c1_gronwall_bound independently covers the current full range1<=m<=alpha+2, including both endpoints. Supremum and Gronwall conclusions are derived from actual equations and moments, not assumptions. The higher Holder/Schauder C^(2+theta) conclusion remains excluded.",
@@ -2565,7 +2576,7 @@
         "label": "L:minimal-spike-limit",
         "number": "Proof of Lemma 5.1, W^{2,q} step with r=1+alpha",
         "page": 34,
-        "label_line": 3143,
+        "label_line": 3155,
         "aux_number": "5.1"
       },
       "scope": "retained auxiliary quantitative W2q deduction for actual given classical profiles: actual testing, Holder, Minkowski and population moment premises are all discharged in ClassicalLogisticEstimates.w2q_bound. The old part3 name is historical; frozen v2 Lemma4.1(p28) has no part3. Do not present this auxiliary as a current numbered part3 theorem.",
@@ -2629,7 +2640,7 @@
         "label": "R:spike-solution-rk",
         "number": "Remark 1.3(2)",
         "page": 11,
-        "label_line": 1018,
+        "label_line": 1019,
         "aux_number": "1.3"
       },
       "scope": "Every given weak finite-measure limit of an arbitrary family of actual positive nonconstant classical stationary profiles is atomless on the closed interval, including endpoints. The explicit weak convergence premise is the ordinary quantifier of an all-weak-limits claim, not an unproved compactness theorem. The subsequence wrapper also directly rules out any positive multiple of a Dirac measure.",
@@ -2656,7 +2667,7 @@
         "label": "L:minimal-spike-limit",
         "number": "Lemma 5.1",
         "page": 34,
-        "label_line": 3143,
+        "label_line": 3155,
         "aux_number": "5.1"
       },
       "scope": "actual positive classical stationary solution families and the manuscript uniform Lr bound yield one strict subsequence with constant source c>=0, uniform C1 signal limit, and EVERY conjugate-Lq test for the source and signal derivatives of orders zero, one and two. Population first integral, mass/source bounds and denominator bound are derived from actual PDE/Neumann data; no weak or extraction premises remain. Weak Lq/W2q is represented explicitly by all conjugate integral tests of classical derivative representatives, not a claimed Mathlib WeakSpace/bundled Sobolev equivalence. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.",
@@ -3029,7 +3040,7 @@
         "label": "T:spiky-solu-thm",
         "number": "1.4",
         "page": 11,
-        "label_line": 990,
+        "label_line": 991,
         "aux_number": "1.4"
       },
       "scope": "the whole frozen Theorem 1.4 is proved for given actual positive nonconstant classical stationary families: gradient blowup for every gamma>0 in both models, with prescribed mass only in the minimal model and actual PDE-derived mass in the logistic model; for logistic gamma<1+alpha the same subsequence has constant C1 signal limit, every conjugate-Lq source and signal derivative test, and 0<=c<=uStar^gamma. Actual maxima and all analytic compactness/extraction inputs are constructed, not assumed. Weak Lq/W2q is stated by EVERY conjugate-Lq integral test of actual classical source/derivative representatives on interval Lebesgue measure; no named Mathlib WeakSpace/bundled Sobolev equivalence is claimed.",
@@ -3060,7 +3071,7 @@
         "label": "T:global-extension",
         "number": "Theorem 1.3(1)-(3)",
         "page": 10,
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "scope": "All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier actual PDE closure/compactness and selected-component consequences retain all physical ranges and classical-solution hypotheses. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.",
@@ -3342,7 +3353,7 @@
         "label": "E:center-ODE-final",
         "number": "2.43",
         "page": 20,
-        "label_line": 1941,
+        "label_line": 1961,
         "aux_number": "2.43"
       },
       "scope": "The remainder interface used by the scalar core (value bound C(|s|eta^2+|s|^3|eta|+s^4), derivative bound C(eta^2+s^2|eta|+|s|^3), differentiability in s, continuity in eta) follows from C^4 smoothness of the remainder R(eta,s) on a neighbourhood of the origin plus R(eta,0)=0 and five point jet conditions at (0,0); hence the branch existence, amplitude, stability sign and branch-curve theorems hold with smoothness and the jet conditions as the only analytic input. The Eq. 2.43 (s^2 eta^2) value bound holds on the box iff d_s R(eta,0)=0 for all small eta. Not claimed: center-manifold existence, C^4 regularity of the reduced field, and the derivation of the jet values from the Fourier computation.",
@@ -3409,7 +3420,7 @@
           30,
           33
         ],
-        "label_line": 932,
+        "label_line": 933,
         "aux_number": "1.3"
       },
       "scope": "All original parent scope and earlier evidence are retained. The actual cosine Neumann jet and its positive-mode coefficient=1 are now constructed in the genuine weak-H2 phase. The literal Fourier kernel is a closed complement of its span; every phase point splits continuously and uniquely into its physical amplitude and orthogonal remainder. The canonical remainder supplies the profile expansion without a separate remainder-existence or orthogonality assumption. The minimal fixed-mean population has the unique affine decomposition with mean-zero orthogonal remainder. This is the actual weak-H2 complement, not fractional-domain X_theta, physical operator range, stable spectral identity, center-manifold or branch construction. A curve still needs actual amplitude=t; that fact is not implied for arbitrary curves. Earlier actual PDE closure/compactness and selected-component consequences retain all physical ranges and classical-solution hypotheses. Critical sensitivity/mode identity, curve/chart construction, manuscript weak/operator/classical identification, global alternatives or noncompactness of the same component, and PDE stability remain explicit missing or supplied inputs. No full parent promotion or extension of the ambient m-range is inferred.",
@@ -3736,7 +3747,7 @@
         "label": "E:y-eq",
         "number": "Theorem 1.3(3), Equation 4.18, full range 1 <= m <= 2",
         "page": 32,
-        "label_line": 2968,
+        "label_line": 2980,
         "aux_number": "4.18"
       },
       "scope": "Actual weak-H2 phase, canonical continuous profile map and the physical signal-continuity/ODE machinery are now constructed internally, so the former generic phase-realization assumptions are removed. The clopen/strict-orientation consumers still require hConst (local constant-limit bifurcation representation) and hStar (local half-branch parametrization), together with component/branch foundations. These are genuine missing local/global bifurcation inputs, not mere constant-state identification. Keep this row conditional.",
@@ -3803,7 +3814,7 @@
         "label": "L:trig-integrals",
         "number": "Lemma 2.1 and Equation 2.17",
         "page": 13,
-        "label_line": 1152,
+        "label_line": 1153,
         "aux_number": "2.1"
       },
       "scope": "Every w in X = {w in H^2(0,L) : w_x(0)=w_x(L)=0}, with H^2 defined by L^2 weak derivatives on (0,L) and the Neumann condition on the continuous representative of w_x, has a representative satisfying NeumannW21; consequently its Neumann cosine coefficients are absolutely summable and its cosine series converges to that representative on [0,L], so Lemma 2.1 applies to elements of X. Includes the 1-D du Bois-Reymond lemma and the W^{1,1} absolutely continuous representative.",
@@ -3831,7 +3842,7 @@
         "label": "E:center-ODE-final",
         "number": "2.43",
         "page": 20,
-        "label_line": 1941,
+        "label_line": 1961,
         "aux_number": "2.43"
       },
       "scope": "(a) The five point jet conditions plus C^4 smoothness and R(eta,0)=0 do NOT imply the Eq. 2.43 value bound: R(eta,s)=eta^2 s satisfies all of them but violates the bound on every box. (b) For the model, with the named reduction hypothesis TrivialBranchLinearization (d_s f(eta,0) = sigma_{n0}(chi*+eta) for the reduced field f, which is what the Fourier-diagonal linearization at u=u* and h~(0,chi~)=0 give), the affine form of sigma_{n0} (slope alpha_{n0}, zero at chi*) yields the axis condition d_s R(eta,0)=0 for R = f - alpha_{n0} eta s + beta_{n0} s^3, hence both Eq. 2.43 bounds (value C(s^2 eta^2+|s|^3|eta|+s^4), derivative C(|s|eta^2+s^2|eta|+|s|^3)) and the full branch-curve package (continuous curves, local uniqueness, amplitude sqrt(alpha eta/beta)+O(|eta|), derivative sign). Non-vacuity: the exact normal form satisfies the hypotheses. Not claimed: center-manifold existence, C^4 regularity of f, the jet values, or TrivialBranchLinearization itself.",
@@ -3880,7 +3891,7 @@
         "label": "E:ode-eq0",
         "number": "Equation 2.22",
         "page": 17,
-        "label_line": 1566,
+        "label_line": 1586,
         "aux_number": "2.22"
       },
       "scope": "The actual physical logistic source residual and signed chemotactic flux residual are identified with the nonlinear-operator difference. Taylor bounds, actual signal C1 size, zero endpoint flux, flux derivative integrability and normalized all-mode projections are derived. The final actual_population_projection_cosine_l1_uniform theorem uses the actual Neumann cosine coefficients of U, with summability/reconstruction proved from NeumannW21, and yields C_k*||u||_l1^4 uniformly for |chi|<=X. Remaining premises are ordinary given-classical-profile regularity, positivity near the interval, Neumann data and the actual shifted signal equation; no Taylor, projected-balance, Fourier-reconstruction or signal-size estimate is assumed. This supports verified status within that classical coefficient-l1 residual scope, not the whole infinite modal dynamics or a generic X_theta embedding theorem.",
@@ -3941,7 +3952,8 @@
             }
           }
         }
-      ]
+      ],
+      "arxiv_v2_note": "arXiv v2: v2 writes the remainder in (2.21) as O(|u~|^4) and its projection in (2.22) as the integral of O(|u~|^4)cos(k pi x/L); the October 20 source also stated the source/flux decomposition R_u = R_u^(0) + d_x R_u^(1), with |R_u^(0)| <= C|u~|^4, which v2 keeps only as a TeX comment. The verified status is retained: the Lean result applies with the remainder read in that flux form, as the application note records (its TeX line refers to the October 20 source)."
     },
     {
       "id": "paper3/E:vk-eq/modal-remainders",
@@ -3951,7 +3963,7 @@
         "number": "Equations 2.18-2.19",
         "page": 16,
         "aux_number": "2.19",
-        "label_line": 1447
+        "label_line": 1458
       },
       "scope": "actual nonlinear signal-profile modal residual: exact zero/positive normalization, actual source Taylor estimate, original elliptic projected balance, summability, and full physical-signal equilibrium wrapper are derived. Ordinary given-profile regularity/PDE/small-amplitude inputs remain; no center-manifold or full Fourier-convolution existence is claimed.",
       "source_assessment": "actual nonlinear signal-profile modal residual: exact zero/positive normalization, actual source Taylor estimate, original elliptic projected balance, summability, and full physical-signal equilibrium wrapper are derived. Ordinary given-profile regularity/PDE/small-amplitude inputs remain; no center-manifold or full Fourier-convolution existence is claimed.",

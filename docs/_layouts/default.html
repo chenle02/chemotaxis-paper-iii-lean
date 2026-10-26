@@ -18,7 +18,7 @@
     <span class="tagline">Partial Lean 4 formalization · release v0.1.0</span>
   </header>
   {% capture menu %}
-  {% assign groups = "Start::/|Overview;/reproducing.html|Reproduce##Results::/what-is-proved.html|What is proved;/results.html|Results by paper section;/verification.html|All Lean statements;/scope-ledger.html|Scope ledger;/coverage.html|Coverage table##Trust::/trust.html|Trust and axioms;/evidence/|Release evidence;/public-release-review.html|Release review##About::/acknowledgments.html|Acknowledgments and citation" | split: "##" %}
+  {% assign groups = "Start::/|Overview;/reproducing.html|Reproduce##Results::/what-is-proved.html|What is proved;/results.html|Results by paper section;/verification.html|All Lean statements;/scope-ledger.html|Scope ledger;/manuscript-versions.html|Manuscript versions;/coverage.html|Coverage table##Trust::/trust.html|Trust and axioms;/evidence/|Release evidence;/public-release-review.html|Release review##About::/acknowledgments.html|Acknowledgments and citation" | split: "##" %}
   {% for group in groups %}{% assign g = group | split: "::" %}
     <p class="group">{{ g[0] }}</p>
     <ul>{% assign items = g[1] | split: ";" %}{% for item in items %}{% assign it = item | split: "|" %}
@@ -29,7 +29,7 @@
     <ul>
       <li><a href="https://github.com/chenle02/chemotaxis-paper-iii-lean">Source on GitHub</a></li>
       <li><a href="https://github.com/chenle02/chemotaxis-paper-iii">Paper repository</a></li>
-      <li><a href="https://arxiv.org/abs/2610.20976v1">arXiv:2610.20976v1</a></li>
+      <li><a href="https://arxiv.org/abs/2610.20976v2">arXiv:2610.20976v2</a></li>
     </ul>
   {% endcapture %}
   <div class="shell">

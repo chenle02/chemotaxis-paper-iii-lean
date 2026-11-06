@@ -13,6 +13,7 @@ A Lean 4 / Mathlib companion formalizing coefficient calculations, stationary es
 
 **Start here:** [documentation site](https://chenle02.github.io/chemotaxis-paper-iii-lean/) ·
 [what is proved](docs/what-is-proved.md) ·
+[where the Lean differs from the paper](docs/DEVIATIONS.md) ·
 [exact Lean statements](docs/verification.md) ·
 [scope ledger](docs/scope-ledger.md) ·
 [reproduce](docs/reproducing.md) ·
@@ -22,12 +23,64 @@ for coding agents: [`llms.txt`](llms.txt)
 
 ## What is proved
 
-The library supplies finite coefficient and modal identities, classical stationary mass and regularity estimates, weak limits and spike subsequences under stated inputs, bounded-sensitivity compactness, actual weak-H2 cosine coordinates and complement splitting, and conditional local/global branch deductions. The latest additions also derive the critical modal signal response from an actual elliptic solution family and a supplied population jet, and a quadratic coefficient from conserved mass.
+The paper's main results, numbered as in arXiv v2 (v1 has the same numbers), and how much of each is proved in
+Lean. Each status is one of: **Proved in Lean** (the paper's full conclusion under its hypotheses); **Proved with
+supplied inputs** (the inputs are named); **Proved only in part** (the part is named); **Not formalized**.
 
-The [scope ledger](data/public-scope-ledger.json) retains **47 verified scopes, 23 conditional scopes, and 3 exclusions** across **73 overlapping manuscript-facing scopes**. These counts are not a percentage of whole-paper correctness. The library has 1,525 indexed declarations, including definitions; compiler-generated auxiliaries are not counted as new mathematical theorems.
+| Result (arXiv v2) | Status in Lean | Lean statements |
+|---|---|---|
+| **Proposition 1.1** (linear stability, quoted from Part II). The constant solution $(u^{\ast},v^{\ast})$ is linearly exponentially stable if $\chi_0<\chi^{\ast}(u^{\ast})$ and linearly unstable if $\chi_0>\chi^{\ast}(u^{\ast})$. | **Proved only in part.** Proved: the sign of each Fourier mode's linear growth rate (negative, zero or positive exactly when $\chi_0$ is below, at or above that mode's threshold), and that at the critical value every other positive mode decays. Not formalized: the semigroup estimates and the stability of the PDE. The "Verified" on its generated card refers to these growth-rate statements only. | `PhysicalLinearRegime.physicalGrowth_neg_iff`, `physicalGrowth_pos_iff`, `strictCriticalMode_other_growth_neg` ([card](docs/verification.md#proposition-11-linear-stabilityinstability)) |
+| **Theorem 1.1** (local pitchfork bifurcation). If $\beta_{n_0}\ne0$, two continuous curves of nonconstant stationary solutions branch off $(u^{\ast},v^{\ast})$ at $\chi^{\ast}$, on the side fixed by the sign of $\beta_{n_0}$, with amplitude $\sqrt{\alpha_{n_0}(\chi_0-\chi^{\ast})/\beta_{n_0}}$; they are stable (super-critical case) or unstable (sub-critical case). | **Proved only in part.** Proved only for the scalar reduced equation $\dot s=\alpha\eta s-\beta s^3+R(\eta,s)$, $\eta=\chi_0-\chi^{\ast}$, with bounds on $R$ and on its $s$-derivative (and, for continuity, continuity of $R$ in $\eta$) as supplied inputs: for small $\eta$ on the correct side there is exactly one small root of each sign, within $O(\eta)$ of $\pm\sqrt{\alpha\eta/\beta}$, continuous in $\eta$, with the derivative sign that gives stability or instability. Not formalized: the centre-manifold reduction, the curves of PDE solutions, the expansions of $u^\pm,v^\pm$ and their stability. | `MixedRemainder.mixed_branch_eventually`, `BranchCurves.branchRoot_existsUnique_eventually`, `BranchCurves.branch_curves` ([card](docs/verification.md#theorem-11-reduced-scalar-equation-local-pitchfork-bifurcation-equilibria-of-the-reduced-scalar-equation), [card](docs/verification.md#theorem-11-two-continuous-branch-curves-of-the-reduced-equation)) |
+| **Theorem 1.2(1)** (effect of $\beta$). With the other parameters fixed, $\beta_{n_0}=A\beta^2+B\beta+C$ with $A<0$, so the sign of $\beta_{n_0}$ follows one of four patterns (i)–(iv) as $\beta\ge0$ varies. | **Proved with supplied inputs.** Input: that the explicit formula (2.45) for $\beta_{n_0}$ ((2.49) in the minimal model) is the cubic coefficient of the reduced equation, which is the centre-manifold computation of Section 2. For that formula, $A<0$ and all four patterns are proved, in both models. | `physicalBetaA_neg`, `logisticBetaCoefficient_physical_quadratic`, `fixedMassBetaCoefficient_physical_quadratic`, `physical_regime_case_i` … `_iv_*` ([card](docs/verification.md#theorem-121-beta_n0-is-a-quadratic-in-beta-with-negative-leading-coefficient)) |
+| **Theorem 1.2(2)** (effect of the length $L$). On an admissible interval, $\beta_{n_0}=P(\lambda_{n_0})/Q(\lambda_{n_0})$ with $P$ of degree at most 5 (at most 3 in the minimal model) and $Q>0$; $\beta_{n_0}$ has limits as $L\to0$ and $L\to\infty$; so the bifurcation type changes at most five (three) times. | **Proved only in part.** Non-minimal model: every statement about $\beta_{n_0}$ is proved, with the same supplied input as (1). Minimal model: only the rational form, with $P$ of degree at most 3 and $Q>0$; the limits in $L$ and the count of sign changes are not stated in Lean. Reading a sign of $\beta_{n_0}$ as super- or sub-critical is Theorem 1.1, not formalized for the PDE. | `PhysicalPolynomial.logisticBetaCoefficient_eq_paperRatio`, `ModeRootCounts.actual_zero_lengths_card_le_five`, `CoefficientLimits.physical_critical_coefficient_tendsto_large_domain`, `MinimalRational.fixedMassBetaCoefficient_eq_cubic_ratio` ([card](docs/verification.md#theorem-122-beta_n0-as-a-rational-function-of-lambda_n0-sign-changes-and-domain-size-limits), [minimal model](docs/verification.md#theorem-12-degree-three-numerator-and-denominator-of-beta_n0-in-the-minimal-model)) |
+| **Theorem 1.3(1)** (global continuation). Each branch component $\mathcal{C}^\pm_{n_0}$ contains $(\chi^{\ast},u^{\ast})$, is relatively closed, and either is non-compact, or returns to the constant branch at another $\chi_0$, or meets $u^{\ast}+W$ away from $u^{\ast}$. | **Proved only in part.** Proved, from supplied topological inputs: relative closedness and the base point. Not proved: the three alternatives. They are Shi and Wang's global bifurcation theorem (J. Differential Equations 246 (2009), Theorem 4.4), which the Lean takes as a supplied input. | `selectedComponent_isClosed`, `base_mem_selectedComponent` ([card](docs/verification.md#theorem-131-relative-component-construction-of-the-global-branch)) |
+| **Theorem 1.3(2)** ($a,b>0$, $0<\gamma\le1+\alpha$, $1\le m\le\alpha+2$). A non-compact component reaches arbitrarily large $\chi_0$. | **Proved with supplied inputs.** Inputs: the paper's solution sets are the sets the Lean uses; the component is relatively closed in the admissible set and lies in the closure of the solution set, which lies in the admissible set; every set of solutions with bounded $\chi_0$ has compact closure (the paper's PDE estimates). | `GlobalBranch.part2_sSup_eq_top`, `AmbientClosure.part2_sSup_eq_top_of_ambient` ([card](docs/verification.md#theorem-131-3-logical-deductions-of-the-global-extension-theorem)) |
+| **Theorem 1.3(3)** (minimal model, $1\le m\le2$, $0<\gamma\le1$). Neither component returns to the constant branch or meets $u^{\ast}+W$, so both are non-compact and unbounded in $\chi_0$; the solutions on $\mathcal{C}^+_1$ ($\mathcal{C}^-_1$) are strictly decreasing (increasing); as $\chi_j\to\infty$, $u_j(x)dx$ converges to $Lu^{\ast}$ times the Dirac mass at $0$ (at $L$) and $\max u_j\to\infty$. | **Proved only in part.** Proved in full: the concentration, for every sequence of positive, strictly decreasing (increasing) stationary solutions with mass $Lu^{\ast}$ and $\chi_j\to\infty$. Proved only from supplied inputs (the Shi–Wang alternatives; the local form of the branch near the constant solution): that the other alternatives fail, that the components are unbounded, and that every solution on them is monotone. | `PhysicalEndpointConcentration.decreasing_actual_concentration`, `increasing_actual_concentration`, `GlobalBranch.part3_global`, `MonotoneLocusGeneral.part3_strictAnti_of_ode` ([card](docs/verification.md#theorem-133-part-3-concentration-concentration-at-an-endpoint-along-the-global-branch), [card](docs/verification.md#theorem-133-fixed-mass-and-vanishing-tails-give-a-dirac-limit)) |
+| **Theorem 1.4** (spike-like solutions). Positive nonconstant stationary solutions with $\chi_n\to\infty$ (and mass $Lu^{\ast}$ in the minimal model) and $\liminf_n\max u_n>u^{\ast}$ have a subsequence whose gradient blows up near some point $x^{\ast}$. In the non-minimal model with $0<\gamma<1+\alpha$, also $u^\gamma\rightharpoonup c$ in $L^q$, $v\to\nu c/\mu$ in $C^1$ and weakly in $W^{2,q}$, with $0\le c\le(u^{\ast})^\gamma$. | **Proved in Lean.** The full conclusion, under the paper's hypotheses. Weak convergence is stated by testing against every function in $L^{q'}$; the minimal-model statement does not need the solutions to be nonconstant ([details](docs/DEVIATIONS.md)). | `ClassicalSpikeBlowup.minimal_gradient_blowup`, `logistic_gradient_blowup_of_eventual_peak`, `logistic_spike_all_tests_of_eventual_peak` ([card](docs/verification.md#theorem-14-spike-like-stationary-solutions)) |
+| **Proposition 1.2** (consistency of thresholds). The instability threshold of the finite-difference scheme with $N$ cells converges to $\chi^{\ast}(u^{\ast})$ as $N\to\infty$, for $a,b>0$ and for $a=b=0$. | **Proved in Lean.** | `Semidiscrete.logistic_discreteCritical_tendsto`, `Semidiscrete.fixedMass_discreteCritical_tendsto` ([card](docs/verification.md#proposition-12-consistency-of-thresholds)) |
+
+Lean names are relative to the namespace `ChemotaxisBifurcation`. Each status was read from the coverage map
+([`coverage.yaml`](coverage.yaml)), the scope ledger and the Lean statements, against the v2 statement.
 
 > [!IMPORTANT]
 > **Not proved here:** whole-paper correctness, actual stationary operator/Fredholm identification, construction/exhaustion of the local PDE branch, a center manifold with dynamical invariance, global bifurcation alternatives and correspondence, or PDE stability. Supplied families, phase-norm jets, chart/exhaustion data, critical-parameter identifications and other named inputs remain explicit where used. A geometric Fourier complement is not identification with an operator's range or stable spectrum.
+
+**Not formalized.**
+
+- Theorem 1.1 for the PDE: the centre-manifold reduction, the curves of stationary solutions, the expansions of
+  $u^\pm$ and $v^\pm$, and their stability.
+- Theorem 1.3 as a global bifurcation theorem: the alternatives of part (1) and the PDE a priori estimates behind
+  them.
+- The centre manifold itself, Eq. (2.16).
+- Proposition 1.1's semigroup estimates and PDE stability.
+- Theorem 1.2(2) in the minimal model: the limits in $L$ and the count of sign changes.
+
+The first three are also listed under "Not formalized" at the end of the generated record below; the last two are
+parts of results that the record shows as formalized.
+
+**Words used here.**
+A *supplied input* is a hypothesis of a Lean theorem that stands in for a step the Lean does not prove, such as a
+cited theorem or a computation done elsewhere in the paper.
+The *comparator* is a separate checker that confirms a proof proves exactly a given statement, using only Lean's
+three standard axioms.
+A *Challenge* file restates chosen theorems using only Mathlib, with the proofs left out, so they can be compared
+with the mathematics without reading the proof library.
+
+**Where the Lean differs from the paper:** [docs/DEVIATIONS.md](docs/DEVIATIONS.md) lists every weaker
+conclusion, supplied input and definitional choice in one numbered list.
+
+**The Challenge.** [`HeadlineChallenge.lean`](HeadlineChallenge.lean) states twelve key lemmas, not the theorems
+in the table: a cosine-series product formula, the scalar branch roots of Theorem 1.1, an asymptotic of
+$\beta_{n_0}$, bounds and identities for stationary solutions, and limit lemmas used for Theorems 1.3(3) and 1.4.
+Its comments cite arXiv v1, whose numbering v2 keeps. Restating Theorems 1.1, 1.3 and 1.4 there, or changing its
+citation to v2, needs a new comparator run: any edit to the file changes what the build reads, and the recorded
+evidence would no longer certify the published commit.
+
+### In numbers
+
+The library supplies finite coefficient and modal identities, classical stationary mass and regularity estimates, weak limits and spike subsequences under stated inputs, bounded-sensitivity compactness, actual weak-H2 cosine coordinates and complement splitting, and conditional local/global branch deductions. The latest additions also derive the critical modal signal response from an actual elliptic solution family and a supplied population jet, and a quadratic coefficient from conserved mass.
+
+The [scope ledger](data/public-scope-ledger.json) retains **47 verified scopes, 23 conditional scopes, and 3 exclusions** across **73 overlapping manuscript-facing scopes**. These counts are not a percentage of whole-paper correctness. The library has 1,525 indexed declarations, including definitions; compiler-generated auxiliaries are not counted as new mathematical theorems.
 
 Read [what is proved](docs/what-is-proved.md), [scope ledger](docs/scope-ledger.md), and the generated [verification page](docs/verification.md).
 

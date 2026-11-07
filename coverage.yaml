@@ -18,6 +18,8 @@ rows:
       \ to\n  perturbations with spatial average $u^*$ in the case $a = b = 0$. If $\\chi_0 >\n  \\chi^*(u^*)$,\
       \ then $(u^*,v^*)$ is linearly unstable.\n\\end{proposition}"
   class: same-assumptions
+  conclusion: weaker
+  conclusion_scope: 'Only the modewise algebra: for each Fourier mode with eigenvalue x > 0, the linear growth rate is negative, zero or positive exactly when the sensitivity is below, at or above that mode''s threshold chiStar, and at a strict critical mode every other mode decays; the semigroup and PDE exponential stability or instability is not proved.'
   claims:
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-criticalsensitivity-eq-chistar
   - chemotaxis-bifurcation-lean/chemotaxisbifurcation-physicallinearregime-minimizingmode-beta-iff

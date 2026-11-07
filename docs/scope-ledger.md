@@ -186,7 +186,7 @@ Further accepted input reductions:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -249,7 +249,7 @@ Further accepted input reductions:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -503,7 +503,7 @@ Further accepted input reductions:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -948,7 +948,7 @@ ClassicalProfile.interval_bounds proves all four strict extremum/moment conclusi
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1027,7 +1027,7 @@ ClassicalMinimalEstimates.power_moment proves the exact prescribed-mass concave 
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1065,7 +1065,7 @@ ClassicalProfile.window_mass_bounds states both the exact Holder-type displayed 
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1115,7 +1115,7 @@ Supplied inputs:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1174,7 +1174,7 @@ Actual second PDE and both Neumann conditions supply the exact signal sup-plus-L
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1221,7 +1221,7 @@ actual given classical stationary-system C1 consumers. c1_bound discharges mass/
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1278,7 +1278,7 @@ retained auxiliary quantitative W2q deduction for actual given classical profile
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1345,7 +1345,7 @@ actual positive classical stationary solution families and the manuscript unifor
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1733,7 +1733,7 @@ Further accepted input reductions:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -1986,7 +1986,7 @@ Supplied inputs:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -2037,7 +2037,7 @@ Further accepted input reductions:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -2341,7 +2341,7 @@ Supplied inputs:
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json
@@ -2402,7 +2402,7 @@ The actual physical logistic source residual and signed chemotactic flux residua
 
 Supporting ingredients and their precise inputs:
 
-<details>
+<details markdown="1">
 <summary>Expand supporting scopes and input lists</summary>
 
 ```json

@@ -36,6 +36,15 @@
       shown.remove();
     });
   }
+  // A formula wider than its column gets .mjx-wide (site.css), so it scrolls inside its own box
+  // instead of widening the whole page on a narrow screen (same rule as growth-rates-lean).
+  function markWideMath() {
+    document.querySelectorAll("mjx-container").forEach(function (m) {
+      m.classList.remove("mjx-wide");
+      var col = m.parentElement && m.parentElement.closest("p, li, td, th, dd, blockquote, section, article, main, div");
+      if (col && m.getBoundingClientRect().width > col.clientWidth + 1) m.classList.add("mjx-wide");
+    });
+  }
   var typesetHref = null;   // the page MathJax has already typeset
   window.texBlocks = { convert: convertTexBlocks };
   window.MathJax = {
@@ -51,8 +60,13 @@
       ready: function () {
         convertTexBlocks(document);
         MathJax.startup.defaultReady();
-        MathJax.startup.promise.then(fallBackToSource);
+        MathJax.startup.promise.then(fallBackToSource).then(markWideMath);
         typesetHref = location.href;
+        var resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(markWideMath, 200);
+        });
       }
     }
   };
@@ -65,7 +79,7 @@
       MathJax.startup.output.clearCache();
       MathJax.typesetClear();
       MathJax.texReset();
-      MathJax.typesetPromise().then(function () { fallBackToSource(); typesetHref = location.href; });
+      MathJax.typesetPromise().then(function () { fallBackToSource(); markWideMath(); typesetHref = location.href; });
     });
   }
 })();

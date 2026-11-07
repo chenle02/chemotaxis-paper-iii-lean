@@ -14,7 +14,7 @@ The primary scientific objects are positive parameters, classical stationary pop
 
 [The complete scope ledger](scope-ledger.md) gives all 73 primary scopes with current manuscript numbering and pages. References were inherited from the frozen manuscript AUX and accepted correspondence mapping, not guessed from theorem names. The manuscript source hash is fixed in the public ledger. A numbered parent may occur in multiple overlapping rows with different proven cores.
 
-<details>
+<details markdown="1">
 <summary>Sign-off boundary</summary>
 
 | Check | Meaning |
@@ -46,7 +46,7 @@ The types below are complete elaborated output from the fresh public-root source
 
 [Lean source](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/c749b53b02211901063228f52af123419b0dbaf5/ChemotaxisBifurcation/WeakH2CosineMode.lean#L77).
 
-<details>
+<details markdown="1">
 <summary>Complete Lean type (elaborated output)</summary>
 
 ```text
@@ -58,7 +58,7 @@ ChemotaxisBifurcation.WeakH2CosineMode.coefficient_mode : ∀ {L : ℝ} (hL : LT
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sign-off and exclusions</summary>
 
 | Item | Scope |
@@ -84,7 +84,7 @@ ChemotaxisBifurcation.WeakH2CosineMode.coefficient_mode : ∀ {L : ℝ} (hL : LT
 
 [Lean source](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/c749b53b02211901063228f52af123419b0dbaf5/ChemotaxisBifurcation/FourierComplement.lean#L73).
 
-<details>
+<details markdown="1">
 <summary>Complete Lean type (elaborated output)</summary>
 
 ```text
@@ -97,7 +97,7 @@ ChemotaxisBifurcation.FourierComplement.isCompl_span_complement : ∀ {L : ℝ} 
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sign-off and exclusions</summary>
 
 | Item | Scope |
@@ -123,7 +123,7 @@ ChemotaxisBifurcation.FourierComplement.isCompl_span_complement : ∀ {L : ℝ} 
 
 [Lean source](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/c749b53b02211901063228f52af123419b0dbaf5/ChemotaxisBifurcation/FourierComplement.lean#L111).
 
-<details>
+<details markdown="1">
 <summary>Complete Lean type (elaborated output)</summary>
 
 ```text
@@ -143,7 +143,7 @@ ChemotaxisBifurcation.FourierComplement.existsUnique_fixedMean_decomposition : �
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sign-off and exclusions</summary>
 
 | Item | Scope |
@@ -169,7 +169,7 @@ ChemotaxisBifurcation.FourierComplement.existsUnique_fixedMean_decomposition : �
 
 [Lean source](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/c749b53b02211901063228f52af123419b0dbaf5/ChemotaxisBifurcation/CurvedSignalResponse.lean#L294).
 
-<details>
+<details markdown="1">
 <summary>Complete Lean type (elaborated output)</summary>
 
 ```text
@@ -227,7 +227,7 @@ ChemotaxisBifurcation.CurvedSignalResponse.actual_phase_cubic_response : ∀ (p 
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sign-off and exclusions</summary>
 
 | Item | Scope |
@@ -253,7 +253,7 @@ ChemotaxisBifurcation.CurvedSignalResponse.actual_phase_cubic_response : ∀ (p 
 
 [Lean source](https://github.com/chenle02/chemotaxis-paper-iii-lean/blob/c749b53b02211901063228f52af123419b0dbaf5/ChemotaxisBifurcation/WeakH2MeanJet.lean#L11).
 
-<details>
+<details markdown="1">
 <summary>Complete Lean type (elaborated output)</summary>
 
 ```text
@@ -279,7 +279,7 @@ ChemotaxisBifurcation.WeakH2MeanJet.quadratic_constant_zero : ∀ {L : ℝ} (hL 
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sign-off and exclusions</summary>
 
 | Item | Scope |
